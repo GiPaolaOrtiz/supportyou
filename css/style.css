@@ -2,11 +2,13 @@
     background: #02c5fd;
     color: white;
     align-content: center;
+    margin-left: 45px;
 }
 
 #estilo_input2 {
     background: #ff0080;
     color: white;
+     margin-left: 40px;
 }
 
 #estilo_footer {
@@ -27,6 +29,28 @@
     border-right: 0px;
 }
 
-#estilo_id {
+#estilodiv {
     text-align: center;
+}
+
+#estilodiv2 {
+    text-align: center;
+}
+#estilodiv3 {
+    text-align: center;
+}
+#estilo_btn1{
+    background: #ff0080;
+    color: white;
+}
+#login{
+    background-color: #ff0080;
+    color: white;
+    align-content: center;
+     margin-left: 45px;
+}
+
+#divfoo{
+    background-color:#FAFAFA;
+    color: lightslategray;
 }
