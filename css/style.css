@@ -1,0 +1,32 @@
+#estilo_input1 {
+    background: #02c5fd;
+    color: white;
+    align-content: center;
+}
+
+#estilo_input2 {
+    background: #ff0080;
+    color: white;
+}
+
+#estilo_footer {
+    background: #f9f9f9;
+}
+
+#estilo_logo {
+    width: 220px;
+    height: 75px;
+}
+
+#form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#img {
+    border-right: 0px;
+}
+
+#estilo_id {
+    text-align: center;
+}
