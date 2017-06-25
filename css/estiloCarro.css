@@ -1,0 +1,29 @@
+table{
+    margin-left: 25%;
+    width: 100%;
+}
+table img{
+    height: 140px;
+    width: 125px;
+    padding: 10px 20px;
+}
+table td span{
+    font-weight: bold;
+}
+.tt{
+    font-weight: bold;
+}
+.table2{
+    margin-top: 30px;
+    margin-left: -5px;
+}
+.table2 p{
+    text-align: center;
+}
+.bt{
+    border-top: 1px solid black;
+}
+#ali{
+    margin-left: 45%;
+    margin-right: auto;
+}
