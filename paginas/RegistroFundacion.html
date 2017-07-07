@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro de fundación</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='css/estiloRegistro.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        
+        
+        <div class="container">
+            
+            <div>
+        <img class="logo" src="img/LogoSupportYou.png" alt="logotipo"> 
+            </div>
+            
+            <hr>
+            
+            <div class="titulo">
+                
+                <h2 style="color:#ababab" class="colorTexto"> <span>Registro</span> </h2>
+                
+                 
+            </div>
+            
+            <div>
+            <h4 class="colorTexto">Completa los datos de la organización a la que perteneces</h4>
+            </div>
+            
+            <div id="formulario">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <h1>Datos de la organización</h1>
+                    
+                     <hr id="linea">
+
+                    <form id="contact-form" method="post">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Nombre *</label>
+                                        <input id="form_name" type="text" name="nombre" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> Categoría *</label>                                        
+                                        <select id="selectbasic" name="categoria" class="form-control">
+                                        <option value="1"> Niñez y juventud</option>
+                                        <option value="2">Discapacidad</option>
+                                        <option value="3">Animales</option>
+                                        <option value="4">Jubilación y mayores</option>
+                                        <option value="5">Vivienda y falta de techo</option>
+                                        <option value="6">Pobreza y hambre</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_activity">Actividad *</label>
+                                        <textarea id="form_activity" name="actividad" class="form-control" placeholder="Describa su organización *" cols="1" rows="4" required="required"></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div> 
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">País *</label>
+                                        <select autofocus id="select" name="selectbasic" class="form-control">
+                                
+                                        <option value="1">Ecuador</option>
+                                        <option value="2">Argentina</option>
+                                        <option value="3">Bolivia</option>
+                                        <option value="4">Brasil</option>
+                                        <option value="5">Chile</option>
+                                        <option value="6">Colombia</option>
+                                        <option value="7">España</option>
+                                        <option value="8">Guatemala</option>
+                                        <option value="9">Honduras</option>
+                                        <option value="10">Mexico</option>
+                                        <option value="11">Perú</option>
+                                        <option value="12">Uruguay</option>
+                                        <option value="13">Venezuela</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_city">Ciudad *</label>
+                                        <input id="form_city" type="text" name="ciudad" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Dirección *</label>
+                                        <input id="form_address" type="text" name="direccion" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_phone">Teléfono *</label>
+                                        <input id="form_phone" type="tel" name="phone" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="correo" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_pass">Contraseña *</label>
+                                        <input id="form_pass" type="password" name="contraseña" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_number">N. de cuenta *</label>
+                                        <input id="form_number" type="text" name="name" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_ruc">RUC *</label>
+                                        <input id="form_ruc" type="text" name="surname" class="form-control" required="required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="row">
+                                <div class="col-md-12" id="boton">
+                                    <input id="botonRegistro" type="submit" class="btn btn-default" value="Registrar organización">
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div>
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div><!-- /.8 -->
+               
+
+            </div> <!-- /.row-->
+                
+                
+                
+        </div>
+            
+            <br>
+            <br>
+                
+
+        </div> <!-- /.container-->
+        
+        <footer>Copyright 2017 SupportYou   Todos los derechos reservados</footer>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="validator.js" type="text/javascript"></script>
+        <script src="contact.js" type="text/javascript"></script>
+    </body>
+</html>

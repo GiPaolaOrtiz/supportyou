@@ -1,0 +1,263 @@
+body {
+          background-color: #e4e4e4;
+          
+      }
+      
+pre {
+          tab-size: 8;
+      }
+
+#background{
+    background-color: aqua
+}
+
+
+#img{
+    width: 15%;
+}
+
+#carrito{
+    width: 140%;
+    margin-top: -10px;
+    margin-left: -45px
+}
+
+#estilologo {
+    width: 220px;
+    height: 75px;
+    padding: 1px;
+}
+
+#datosUsuario{
+    margin-top: 70px;
+    width: auto;
+    height: 100px;
+}
+
+.row{
+    margin-top: 77px;
+    background-color: #e4e4e4;
+    width: auto;
+    height: auto;
+}
+
+.imagenes{
+    width: 45%;
+    height: 160px;
+    margin-left: 40px;    
+}
+
+.texto{
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 90px;
+}
+
+.foto{
+    width: 170%;
+    height: 150%;
+}
+
+#fotoPerfil{
+    width: 100%;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.derecha{
+    margin-top: -100px;
+    margin-right: 356px;
+    float: right;
+}
+
+.der{
+    float: right;
+    margin-right: 50px;
+}
+
+.izquierda{
+    float: left;
+    margin-left: 60px;
+}
+
+.opciones{
+    color: #ff0080;
+    height: 30px;
+    width: 90%;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+#containerImg{
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+a:link {
+    color: #ff0080;
+}
+
+/* visited link */
+a:visited {
+    color: #ff0080;
+}
+
+/* mouse over link */
+a:hover {
+    color: #00a5ed;
+}
+
+
+#fotoIzq{
+    margin-left: 600px;
+    width: 20%;
+    height: 110px
+    
+}
+
+footer{
+    width: 101%;
+	height: 40px;
+    background-color: #d4f0fc;
+    color: #9c9c9c;
+    text-align: center;
+    padding-top: 0.7%;
+    margin-top: 66.5px;
+}
+
+@media only screen and (min-device-width: 481px) and (max-width: 800px) {
+
+#fotoIzq{    
+    margin-left: 200px;   
+}
+    
+#fotoPerfil{
+    width: 200%;
+}
+    
+    
+#nombreUsuario{
+    margin-left: -20px;
+    margin-top: 40px;
+    
+}
+    
+#datosUsuario{
+    margin-top: 40px;
+}
+    
+h2{
+    font-size: large;
+}
+    
+    
+    
+#containerImg{
+    margin-top: 60px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 25px;
+}
+    
+.imagenes{
+    width: 40%;
+    height: 125px;   
+}
+  
+
+    
+.texto{
+    margin-left: 70px;
+    width: 50%;
+    margin-top: 70px;
+}
+    
+.opciones{
+    margin-top: 5px; 
+    margin-left: -5px;
+}
+
+ h4{
+         font-size: medium;
+    }
+    
+footer{
+    padding-top: 15px;
+    font-size: 10px;
+}
+
+}
+
+
+@media only screen and (max-width: 480px) {
+
+#fotoIzq{    
+    margin-left: 25px;   
+}
+    
+#fotoPerfil{
+    width: 400%;
+}
+    
+    
+#nombreUsuario{
+    margin-left: -25px;
+    margin-top: 20px;
+    
+}
+    
+#datosUsuario{
+    margin-top: 80px;
+}
+    
+h2{
+    font-size: medium;
+}
+    
+    
+    
+#containerImg{
+    margin-top: 10px;
+  
+}
+    
+.imagenes{
+    width: 50%;
+    height: 70px;
+    margin-left: -1px;
+}
+    
+.texto{
+    margin-left: 7px;
+    width: 70%;
+    margin-top: 45px;
+}
+    
+.opciones{
+    margin-top: -10px;
+}
+
+ h4{
+         font-size: small;
+    }
+    
+    
+.der{
+    margin-right: 25px;
+    width: 20%;
+}
+
+.izquierda{
+    margin-left: -5px;
+    width: 20%;
+}
+    
+    h5{
+       font-size: small; 
+    }
+
+}
+
+
+

@@ -1,0 +1,60 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+h1{
+    margin-bottom: 40px;
+}
+label {
+    color: #333;
+}
+.btn-send {
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+#formulario{
+    background-color: #f1fafe;
+    box-shadow: 2px 2px 3px 3px #e4e4e4;
+}
+
+#botonRegistro{
+    background-color: #ff0080;
+}
+
+#boton{
+    margin-left: 36.5%
+}
+
+
+#linea {
+  height: 10px;
+  border-color: #df90c2;
+}
+
+.logo{
+    width: 15%;
+}
+
+.colorTexto{
+    text-align: center;
+}
+
+.titulo {
+position: absolute;
+top: 40px;
+left: 750.5px;
+width: 9%;
+background-color: white
+}
+
+footer{
+    width: 100%;
+    height: 40px;
+    background-color: #d4f0fc;
+    color: #9c9c9c;
+    text-align: center;
+    padding-top: 0.7%;
+}
+
