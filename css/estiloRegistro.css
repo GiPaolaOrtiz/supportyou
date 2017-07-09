@@ -17,6 +17,7 @@ label {
 #formulario{
     background-color: #f1fafe;
     box-shadow: 2px 2px 3px 3px #e4e4e4;
+    padding: 10px;
 }
 
 #botonRegistro{
@@ -37,16 +38,21 @@ label {
     width: 15%;
 }
 
-.colorTexto{
+#colorTexto{
     text-align: center;
+    color: #ababab;
 }
 
 .titulo {
-position: absolute;
-top: 40px;
-left: 750.5px;
-width: 9%;
+margin-top: -60px;
+margin-left: 500px;
+width: auto;
 background-color: white
+}
+
+#parrafo{
+   margin-top: 30px; 
+   text-align: center;
 }
 
 footer{
@@ -57,4 +63,75 @@ footer{
     text-align: center;
     padding-top: 0.7%;
 }
+
+@media only screen and (min-device-width: 480px) and (max-width: 800px){
+
+.logo{
+width: 20%;
+}
+    
+.titulo {
+margin-top: -55px;
+margin-left: 260px;
+}
+    
+h1{
+font-size: 200%;     
+}
+    
+h2{
+font-size: 150%;
+}
+    
+h4{
+font-size: 110%;
+}
+    
+hr{
+   margin-top: 37px;     
+}
+    
+#parrafo{
+   margin-top: 25px;
+}
+    
+#formulario{
+    margin-top: 10px;
+} 
+    
+footer{
+    padding-top: 15px;
+    font-size: 10px;
+}
+    
+}
+
+@media only screen and (max-width: 480px) {
+    .logo{
+width: 40%;
+}
+    
+    .titulo {
+margin-left: 60px;
+}
+    
+    h1{
+font-size: 150%;     
+}
+    
+    h2{
+font-size: 130%;
+}
+    
+h4{
+font-size: 90%;
+}
+    
+    
+#boton{
+    margin-left: 15px;
+    margin-top: 10px;
+}
+}
+
 
