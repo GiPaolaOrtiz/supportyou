@@ -3,6 +3,7 @@ body {
           
       }
 
+
 #background{
     background-color: aqua
 }
@@ -24,7 +25,7 @@ body {
 }
 
 #datosUsuario{
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .row{
@@ -80,7 +81,7 @@ body {
 }
 
 #containerImg{
-    margin-top: -70px;
+    margin-top: 200px;
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -99,18 +100,57 @@ a:hover {
     color: #00a5ed;
 }
 
-
-#fotoIzq{   
-    width: 50%;
-    margin-left: 350px;
-    margin-top: -10px;
-}
-
 #nombreUsuario{
-    margin-left: 200px;
-    margin-top: -30px; 
-    
+    margin-left: 10px;
+    float: left;
 }
+
+
+#image-preview {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  color: #ecf0f1;
+  border-radius: 10px;
+  width: 12%;
+  height: 150px;
+  margin-left: 450px;
+  margin-top: -30px;
+  float: left
+}
+
+
+#image-preview input {
+  line-height: 200px;
+  font-size: 200px;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  z-index: 10;
+
+}
+
+
+#image-preview label {
+  position: absolute;
+  z-index: 5;
+  opacity: 0.8;
+  cursor: pointer;
+  width: 200px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  background-color: aliceblue;
+  color: gainsboro;
+  text-transform: uppercase;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
 
 footer{
     width: 101%;
@@ -126,19 +166,11 @@ footer{
 
 @media only screen and (min-device-width: 481px) and (max-width: 800px) {
 
-#fotoIzq{    
-    margin-left: 150px; 
-    width: 60%;
+#image-preview {
+  width: 20%;
+  margin-left: 240px;
 }
-    
-#fotoPerfil{
-    width: 35%;
-} 
-    
-#nombreUsuario{
-    margin-left: 160px;
-    margin-top: -30px;    
-}
+
     
 #datosUsuario{
     margin-top: 30px;
@@ -176,37 +208,32 @@ h5{
     margin-left: 10px;
  
 }
+   
+    h4{
+        font-size: 100%;
+    }    
     
 footer{
     padding-top: 15px;
     font-size: 10px;
 }
-
 }
 
 
 @media only screen and (max-width: 480px) {
 
-#fotoIzq{    
-    margin-left: 12px;
-    width: 90%;
-}
-    
-#fotoPerfil{
-    width: 40%;
+#image-preview {
+  width: 30%;
+  height: 80px;
+  margin-left: 20px;
 }
        
-#nombreUsuario{
-    margin-left: 115px;
-    margin-top: -45px;    
-}
-    
 #datosUsuario{
     margin-top: 70px;
 }
        
 #containerImg{
-    margin-top: -60px;
+    margin-top: 140px;
     margin-left: 20px;
     margin-right: 20px;
 }
@@ -237,7 +264,7 @@ footer{
  
 }
     h4{
-        font-size: 120%;
+        font-size: 100%;
     }
 
     h5{
