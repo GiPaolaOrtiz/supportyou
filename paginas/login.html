@@ -16,6 +16,7 @@
     <link href="../css/portfolio-item.css" rel="stylesheet">
     <link rel="icon" href="../img/LogoSupportYou.png">
     <link href="../css/style.css" rel="stylesheet">
+     <link href="signin.css" rel="stylesheet">
 
 </head>
 
@@ -39,10 +40,10 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">REGISTRATE COMO FUNDACION</a>
+                        <a class="page-scroll" href="../paginas/RegistroFundacion.html">REGISTRATE COMO FUNDACION</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">CONTACTENOS</a>
+                        <a class="page-scroll" href="../paginas/contactos.html">CONTACTENOS</a>
                     </li>
                 </ul>
             </div>
@@ -50,7 +51,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-
+ 
     <div class="container">
         <!-- Portfolio Item Heading -->
         <div class="row">
@@ -67,20 +68,31 @@
             <div class="col-md-4">
                <br><br><br>       
                 <br>
-                <form id="form">
-                    <input type="text" name="usuario" placeholder="Usuario">
-                    <br><br>
+              
+   
 
-                    <input type="text" name="password" placeholder="Contraseña">
-                    <br><br>
-                    <input id="estilo_input2" type="submit" name="login" value="Iniciar Sesion">
-                </form>
-                <br>
-                <h5>¿No tienes una cuenta?<a href="../index.html">  Regístrate </a></h5> 
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Inicia Sesión</h2>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+           <h5>¿No tienes una cuenta?<a href="../index.html">  Regístrate </a></h5> 
+      </form>
+
+    
+               
             </div>
             <br>
             <div class="col-md-8">
                 <img class="img-responsive" src="../img/1.jpg" alt="">
+                
             </div>
         </div>
 
@@ -88,34 +100,44 @@
        
     </div>
     
-    <div id="divfoo">
-        <br>
-     <div class="row">
-            <div class="col-md-4">
-                <div id="estilodiv">
+    
+         <br><br>
+     <br>
+      <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+           <div id="estilodiv">
                     <img alt="dona" src="../img/heart.png">
-                    <h5>DONA</h5>
+                    
                 </div>
-            </div>
-
-            <div class="col-md-4">
-                <div id="estilodiv2">
+          <h4>DONA</h4>
+         <p>Con cada aporte, trabajamos juntos por el futuro de niños y jovenes, conoce nuestra comunidad y comienza tu misión</p>
+          
+          
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+           <div id="estilodiv2">
                     <img alt="compra" src="../img/diamond.png">
-                    <h5>COMPRA</h5>
+                   
                 </div>
-            </div>
-
-            <div class="col-md-4">
-                <div id="estilodiv3">
+          <h4>COMPRA</h4>
+          <p>El dinero de tus compras seran destinadas a casusas humanitarias y serás parte del cambio, y un futuro mejor.</p>
+         
+         
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+           <div id="estilodiv3">
                     <img alt="vende" src="../img/earth-globe.png">
-                    <h5>VENDE</h5>
+                    
                 </div>
-            </div>
-        </div>
+          <h4>VENDE</h4>
+           <p>Vende y dona a la vez, en cada venta apoyaras a las fundaciones que tu elijas y ayudarán a mejorar la vida de varias personas.</p>
+         
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
 
-        <footer>
-
-        </footer>
 </div>
 
     <script src="../js/jquery.js"></script>
