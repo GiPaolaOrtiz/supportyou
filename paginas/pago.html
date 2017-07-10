@@ -62,7 +62,7 @@
                         </td>
                          <td>
                             <div>
-                            <p><span class="bold">PAYPAL</span></p>
+                                <input type="radio" id="paypal" name="gender" value="male" class="bold" onchange="seleccion()"> PAYPAL<br>
                             </div>
                         </td>
                         
@@ -72,12 +72,17 @@
                             <img src="../img/cc.png" alt="credits cards">
                         </td>
                         <td>
-                            <p><span class="bold">Others</span></p>
+                            <input type="radio" name="gender" value="male" class="bold" id="other" onchange="seleccion()"> Others<br>
                     </tr>
                 </table>
             </div>
             <div class="col-lg-6">
                 <table class="table2">
+                    <tr>
+                        <td>
+                            <p id="eleccion"></p>
+                        </td>
+                    </tr>
                     <tr>
                         <td class="bt">
                             <p class="center"><span class="tt">Subtotal</span>: 82.5</p>
@@ -105,6 +110,7 @@
         </div>
         </main>
          <script src="../js/jquery.js"></script>
+        <script src="../js/pago.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
         <script src="../js/pago.js"></script>
