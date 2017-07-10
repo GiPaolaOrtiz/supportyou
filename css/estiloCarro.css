@@ -13,6 +13,9 @@ table td span{
 .tt{
     font-weight: bold;
 }
+#cantidad{
+ padding-bottom: 15px;   
+}
 .table2{
     margin-top: 30px;
     margin-left: -5px;
