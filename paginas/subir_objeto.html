@@ -12,16 +12,21 @@
     <title>SupportYou</title>
  
     <!-- Bootstrap Core CSS -->
-     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+          <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+
      
      
  
- <link href="css/portfolio-item.css" rel="stylesheet">
+ <link href="bootstrap-3.3.7-dist/css/portfolio-item.css" rel="stylesheet">
      <link rel="icon" href="img/LogoSupportYou.png">
-     <link href="css/style2.css" rel="stylesheet">
+     <link href="bootstrap-3.3.7-dist/css/style.css" rel="stylesheet">
  
  </head>
     <body>
+        <input type="file" id="files" name="files[]" />
+<br />
+        <output id="list"></output>
      <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
          <div class="container">
              <!-- Brand and toggle get grouped for better mobile display -->
@@ -42,10 +47,12 @@
                          <a href="#page-top"></a>
                      </li>
                      <li>
-                         <a class="page-scroll" href="#team">REGISTRATE COMO FUNDACION</a>
+
+                         <a class="page-scroll" href="paginas/RegistroFundacion.html" target="_blank">REGISTRATE COMO FUNDACION</a>
+                         
                      </li>
                      <li>
-                         <a class="page-scroll" href="#contact">CONTACTENOS</a>
+                         <a class="page-scroll" href="paginas/contactos.html" target="_blank">CONTACTENOS</a>
                      </li>
                  </ul>
              </div>
@@ -90,13 +97,37 @@
 
 <!-- Text input-->
 
-              <div class="form-group">
-    <label for="ejemplo_archivo_1">Subir una imagen del Objeto</label>
-                  <br><br><br>
-    <input type="file" id="ejemplo_archivo_1">
-    <p class="help-block">Buscar una imagen en mi galeria</p>
-  </div> 
+    <div class="form-group">
+     
+        <script>
+                      function archivo(evt) {
+      var files = evt.target.files; // FileList object
+       
+        //Obtenemos la imagen del campo "file". 
+      for (var i = 0, f; f = files[i]; i++) {         
+           //Solo admitimos imágenes.
+           if (!f.type.match('image.*')) {
+                continue;
+           }
+       
+           var reader = new FileReader();
            
+           reader.onload = (function(theFile) {
+               return function(e) {
+               // Creamos la imagen.
+                      document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+               };
+           })(f);
+ 
+           reader.readAsDataURL(f);
+       }
+}
+             
+      document.getElementById('files').addEventListener('change', archivo, false);
+                  </script>
+           
+    <p class="help-block">Buscar una imagen en mi galeria</p>
+  </div>
 <!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="cep">Datos de envio y Recogida</label>
