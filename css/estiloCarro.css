@@ -20,6 +20,10 @@ table td span{
 .table2 p{
     text-align: center;
 }
+.pie{
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
 .bt{
     border-top: 1px solid black;
 }
