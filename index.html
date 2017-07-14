@@ -9,59 +9,110 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SupportYou</title>
+    <title>Support You</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-
-    <link href="css/portfolio-item.css" rel="stylesheet">
-    <link rel="icon" href="img/LogoSupportYou.png">
     <link href="css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
 
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 
 <body>
-    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-        <div class="container">
+
+     <nav class="navbar navbar-default navbar-fixed-top topnav" >
+        <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a href="index.html"><img alt="LogoAplicacion" id="estilo_logo" src="img/LogoSupportYou.png"></a>
             </div>
-
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                 <br>
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="paginas/RegistroFundacion.html">REGÍSTRATE COMO FUNDACIÓN</a>
+                    </li>
                    
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
                     <li>
-                        <a class="page-scroll" href="paginas/RegistroFundacion.html">REGISTRATE COMO FUNDACION</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="paginas/contactos.html">CONTACTENOS</a>
+                        <a class="page-scroll" href="paginas/contactos.html">CONTÁCTENOS</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
+        <!-- /.container -->
+        
+      
     </nav>
 
-    <!-- Navigation -->
+
+    <!-- Header -->
+    
+    <div class="intro-header">
+        
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <br>
+                        <h1>DONA</h1>
+                        <h3>Regístrate para apoyar a una Fundación</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="#registro" class="btn btn-default btn-lg"> <span class="network-name">REGÍSTRATE</span></a>
+                            </li>
+                            <li>
+                                <a href="paginas/login.html" class="btn btn-default btn-lg"> <span class="network-name">INICIA SESION</span></a>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+      
+ 
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	
+    <div class="content-section-a">
+
+     <hr>
+          <!-- Navigation -->
 
     <!-- Page Content -->
     <div class="container">
+        
+        
 
         <!-- Portfolio Item Heading -->
         <div class="row">
+
             <div class="col-lg-12">
 
             </div>
@@ -70,24 +121,29 @@
 
         <br><br>
         <!-- Portfolio Item Row -->
+        <a id="registro"></a>
         <div class="row">
 
              
             <div class="col-md-4">
-                <br><br><br>
+               <br>
+                <h4>Regístrate...</h4>
+                
                  <form class="form-signin">
-      <h4>Regístrate para apoyar a una Fundación...</h4>
+    <br> 
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputName" class="form-control" placeholder="Nombre" required>
-        <label for="inputPassword" class="sr-only">Usuario</label>
-        <input type="password" id="inputUsuario" class="form-control" placeholder="Usuario" required>
+        <label  class="sr-only">Nombre</label>
+        <input type="text" id="inputName" class="form-control" placeholder="Nombre" required>
+        <label for="inputUsuario" class="sr-only">Usuario</label>
+        <input type="text" id="inputUsuario" class="form-control" placeholder="Usuario" required>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
       
-        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='index.html'">Regístrate</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='paginas/RegistroConfirmacion.html'">Regístrate</button>
              <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='paginas/login.html'">Iniciar sesion</button>
+                     <br>
+                     <h4 id="styleh4">Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo.</h4>
       </form>
                
           
@@ -105,11 +161,11 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="img/1.jpg" alt="First slide">
+          <img class="first-slide" src="img/4.jpg" alt="First slide">
          
         </div>
         <div class="item">
-          <img class="second-slide" src="img/2.jpg" alt="Second slide">
+          <img class="second-slide" src="img/1.jpg" alt="Second slide">
          
         </div>
         <div class="item">
@@ -130,53 +186,23 @@
             </div>
 
 
-
         </div>
-        <!-- /.row -->
 
-        <!-- Related Projects Row -->
-
-         <br><br>
+    </div>
+        <!-- /.container -->
+      
      
 
     </div>
-    
-      <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="container marketing">
+    <footer id="footer1">
+       
+            
+                     <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-           <div id="estilodiv">
-                    <img alt="dona" src="img/heart.png">
-                    
-                </div>
-          <h4>DONA</h4>
-          <p>Con cada aporte, trabajamos juntos por el futuro de niños y jovenes, conoce nuestra comunidad y comienza tu misión</p>
-          
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-           <div id="estilodiv2">
-                    <img alt="compra" src="img/diamond.png">
-                   
-                </div>
-          <h4>COMPRA</h4>
-          <p>El dinero de tus compras seran destinadas a casusas humanitarias y serás parte del cambio, y un futuro mejor.</p>
-         
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-           <div id="estilodiv3">
-                    <img alt="vende" src="img/earth-globe.png">
-                    
-                </div>
-          <h4>VENDE</h4>
-          <p>Vende y dona a la vez, en cada venta apoyaras a las fundaciones que tu elijas y ayudarán a mejorar la vida de varias personas.</p>
-         
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
+    </footer>
 
-</div>
+    <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
