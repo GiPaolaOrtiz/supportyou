@@ -9,17 +9,19 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="description" content="">
      <meta name="author" content="">
-    <title>SupportYou</title>
+    <title>Support You</title>
  
     <!-- Bootstrap Core CSS -->
-     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="../css/bootstrap.min.css" rel="stylesheet"> 
      
-     
- 
- <link href="bootstrap-3.3.7-dist/css/portfolio-item.css" rel="stylesheet">
-     <link rel="icon" href="img/LogoSupportYou.png">
-     <link href="bootstrap-3.3.7-dist/css/style.css" rel="stylesheet">
- 
+     <link href="../css/portfolio-item.css" rel="stylesheet">
+     <link rel="icon" href="../img/LogoSupportYou.png">
+     <link href="../css/style.css" rel="stylesheet">
+     <link href='../css/estiloContactos.css' rel='stylesheet' type='text/css'>
+
+
+     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
  </head>
     <body>
      <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -29,46 +31,59 @@
                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                      <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                  </button>
-                 <img id="estilo_logo" src="img/LogoSupportYou.png" alt="logo">
+                   <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../img/LogoSupportYou.png"></a>
              </div>
  
              <!-- Collect the nav links, forms, and other content for toggling -->
-             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
- 
- 
-                 <ul class="nav navbar-nav navbar-right">
-                     
-                     <li class="hidden">
-                         <a href="#page-top"></a>
-                     </li>
-                     <li>
-                         <a class="page-scroll" href="paginas/RegistroFundacion.html" target="_blank">REGISTRATE COMO FUNDACION</a>
-                     </li>
-                     <li>
-                         <a class="page-scroll" href="paginas/contactos.html" target="_blank">CONTACTENOS</a>
-                     </li>
-                 </ul>
-             </div>
+               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <br>
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="MiPerfil.html">MI PERFIL</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="carrito.html">CARRITO</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="pago.html">PAGO</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="catalogo.html">CATALOGO</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+
              <!-- /.navbar-collapse -->
          </div>
          <!-- /.container-fluid -->
     </nav>
+        
+        <div class="titulo col-xs-12"> 
+                <h2 id="titulo"> <span>Contáctanos</span> </h2>  
+            </div>
+            
+            <div id="subtitulo">
+            <h4>Envianos tus dudas o problemas, te responderemos pronto.</h4>
+            </div>
+        
+        
+        
+        
+        
         <section>
         
-         <div class="estilo1">
-        <h4>si deseas ser parte del grupo de fundaciones, escribenos a nuestro correo electronico para que sepas que pasos debes seguir para pertenecer a la comunidad de SupportYou.</h4>
-        
-        </div>
-          
+
+       
          <div class="container">
-             
-              <div class="left">
-                
-                <h4>Si tienes alguna duda, ya se que hayas tenido algun problema con la venta o compra de algun articulo comunicate con nosotros a traves de nuestro correo electronico</h4>
-            </div>
+       
              
              
-				<form>
+				
 				
 			  		<div class="col-md-6">
                         <div class="form-group">
@@ -78,18 +93,19 @@
 			  			<div class="form-group">
 			  			 	<textarea  class="form-control" id="description" placeholder="Enter Your Message"></textarea>
 			  			</div>
-			  			
-
-			  				<button type="button" class="btn btn-default submit"> ENVIAR</button>
-			  			
+			  			<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../index.html'">ENVIAR</button> 			  			
 			  			
 					</div>
-				</form>
+			
 			</div>
         
         </section>
         
        
     </body>
+    <footer>Copyright 2017 SupportYou   Todos los derechos reservados</footer>
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
  
     </html>
