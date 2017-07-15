@@ -1,0 +1,30 @@
+footer{
+        width: 100%;
+    height: 40px;
+    background-color: #d4f0fc;
+    color: #9c9c9c;
+    text-align: center;
+    padding-top: 0.7%;
+}
+   #contacto{
+    background-color:  #fdb0cd ;
+    box-shadow: 2px 2px 3px 3px #e4e4e4;
+    padding: 10px;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+#titulo{
+    text-align: center;
+    color: #ababab;
+}
+#subtitulo{
+   margin-top: 30px; 
+   text-align: center;
+}
+
+#formulario{
+    background-color: #f1fafe;
+    box-shadow: 2px 2px 3px 3px #e4e4e4;
+    padding: 10px;
+}
