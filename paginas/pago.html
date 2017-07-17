@@ -53,30 +53,24 @@
         <div id="magenta">
             <h2>Pago</h2>
         </div>
-        <div class="contenedor row">
-            <div id="obj-carro" class="col-lg-6">
-                <table>
-                    <tr>
-                        <td>
-                            <img src="../img/paypal.png" alt="paypal">
-                        </td>
-                         <td>
-                            <div>
-                                <input type="radio" id="paypal" name="gender" value="male" class="bold" onchange="seleccion()"> PAYPAL<br>
-                            </div>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td>
-                            <img src="../img/cc.png" alt="credits cards">
-                        </td>
-                        <td>
-                            <input type="radio" name="gender" value="male" class="bold" id="other" onchange="seleccion()"> Others<br>
-                    </tr>
-                </table>
+<div class="container">
+
+        <!-- Introduction Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header"></h2>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/paypal.png" alt="Paypal">
+                <input type="radio" id="paypal" name="paypal" value="paypal" class="bold" onchange="seleccion()"> PAYPAL<br>
+            </div>
+            <div class="col-lg-6 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/cc.png" alt="Credit cards">
+                <input type="radio" name="cc" value="credit cards" class="bold" id="other" onchange="seleccion()" > Others<br>
+            </div>
+    </div>
+            </div>
+            <div class="col-lg-12">
                 <table class="table2">
                     <tr>
                         <td>
@@ -102,12 +96,11 @@
                     </tr>
                     <tr>
                         <td>
-                            <button id="ali" onclick="pagar()">PAGO</button>            
+                            <a class="btn btn-default" id="ali" onclick="pagar()">PAGO</a>            
                         </td>                        
                     </tr>
                 </table>
             </div>
-        </div>
         </main>
          <script src="../js/jquery.js"></script>
         <script src="../js/pago.js"></script>
