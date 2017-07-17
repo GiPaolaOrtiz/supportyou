@@ -9,6 +9,7 @@
         <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet"  href="../css/style.css">
         <link rel="stylesheet"  href="../css/estiloCatalogo.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     </head>
     <body>
         <main>
@@ -17,7 +18,10 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                    <span class="sr-only">Toggle navigation</span> <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
                 <a href="../index.html"><img id="estilo_logo" alt="logo" src="../img/LogoSupportYou.png"></a>
             </div>
@@ -51,113 +55,77 @@
         <div id="magenta">
             <h2>Cátalogo</h2>
         </div>
-        <div class="contenedor row">
-            <div id="submenu-opciones" class="col-lg-1">
-                        <ul>
-                <li>
-                    <a href="catalogo.html">Ropa</a>                    
+            
+            <div id="nav"> <a href="#nav" title="Show navigation">Show navigation</a> <a href="#" title="Hide navigation">Hide navigation</a>
+              <ul class="clearfix">
+            <li><a href="catalogo.html" class="use">Ropa</a></li>
+            <li> <a href="catalogoTecno.html"><span>Tecnologia</span></a>
                 </li>
-                 <li>
-                     <a href="catalogoTecno.html">Tecnología</a>
-                </li>
-                 <li>
-                     <a href="catalogoHogar.html">Hogar</a>
-                </li>
-                 <li>    
-                     <a href="catalogoToys.html">Juguetes</a>
-                </li>
-            </ul>
-        </div>
-        <div id="obj-venta" class="col-lg-11">
-            <div class="limpiar"></div>
-            <ul class="row">
-                <li>
-                    <div>
-                        <img src="../img/vestidoRojo.jpg" alt="vestido" class="jalar col-lg-12">
-                        <p>Vestido Rojo</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/camisaFlash.jpg" alt="camisa" class="col-lg-12">
-                        <p>Camisa Flash</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/vestidoNegro.jpeg" alt="vestido" class="col-lg-12">
-                        <p>Vestido negro</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/jeans.jpg" alt="jeans" class="col-lg-12">
-                        <p>Grey jeans</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                                <li>
-                    <div>
-                        <img src="../img/vestidoRojo.jpg" alt="vestido" class="col-lg-12">
-                        <p>Vestido Rojo</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/camisaFlash.jpg" alt="camisa" class="col-lg-12">
-                        <p>Camisa Flash</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/vestidoNegro.jpeg" alt="vestido" class="col-lg-12">
-                        <p>Vestido negro</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/jeans.jpg" alt="jeans" class="col-lg-12">
-                        <p>Grey jeans</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                                <li>
-                    <div>
-                        <img src="../img/vestidoRojo.jpg" alt="vestido" class="col-lg-12">
-                        <p>Vestido Rojo</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/camisaFlash.jpg" alt="camisa" class="col-lg-12">
-                        <p>Camisa Flash</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/vestidoNegro.jpeg" alt="vestido" class="col-lg-12">
-                        <p>Vestido negro</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <img src="../img/jeans.jpg" alt="jeans" class="col-lg-12">
-                        <p>Grey jeans</p>
-                        <button class="btn-mag">ADD</button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        </div>
+            <li> <a href="catalogoHogar.html"><span>Hogar</span></a></li>
+            <li><a href="catalogoToys.html">Jueguetes</a></li>
+          </ul>
+            </div>
+            
+    <div class="container">
+
+        <!-- Introduction Row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header"></h2>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoNegro.jpeg" alt="Vestido negro">
+                <h3>Vestido negro</h3>
+                <small>Carolina Herrera</small>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoRojo.jpg" alt="Vestido rojo">
+                 <h3>Vestido rojo</h3>
+                <small>Versage</small>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/abrigoAzul.jpg" alt="Abrigo">
+                 <h3>Abrigo</h3>
+                <small>Tommy</small>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/camisaFlash.jpg" alt="Camisa de flash">
+                 <h3>Camisa de superheroe</h3>
+                <small>!Comic</small>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/jeans.jpg" alt="Jeans">
+                 <h3>Jean Grises</h3>
+                <small>Lee</small>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/ropaBebe.jpg" alt="Ropa de bebe">
+                 <h3>Ropa de bebe</h3>
+                <small>Fisher Price</small>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/abrigoAzul.jpg" alt="Abrigo azul">
+                 <h3>Abrigo Azul</h3>
+                <small>Tommy</small>
+            </div>
+                    
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/camisa.jpg" alt="Camisa">
+                 <h3>Camisa</h3>
+                <small>Unkown</small>
+            </div>
+                <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/pantaloneta.jpg" alt="Pantaloneta">
+                 <h3>Pantaloneta</h3>
+                <small>Ramas</small>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center">
+                <img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoAzul.jpg" alt="">
+                 <h3>VBlue dressestido azul</h3>
+                <small>Steffannie</small>
+            </div>
+    </div>
+    </div>
         </main>
          <script src="../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
