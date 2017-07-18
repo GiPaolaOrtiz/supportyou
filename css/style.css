@@ -224,6 +224,7 @@ body {
 }
 #boton2{
     background-color: deeppink;
+    
 }
 #botonRegFund{
     background-color: deeppink;
@@ -232,6 +233,7 @@ body {
 #footer1{
     background-color:white;
     text-align: center;
+   
 
 }
 #styleh4{
@@ -240,4 +242,12 @@ body {
 }
 #estilo_p1{
     color: grey;
+}
+#btn_mensaje{
+    margin: auto;
+     background-color: deeppink;
+    width: 200px;
+}
+#estilo_message{
+    height: 134px;
 }
