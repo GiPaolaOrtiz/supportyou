@@ -1,4 +1,6 @@
-
+footer{
+    text-align: center;
+}
 #estilo_logo {
     width: 220px;
     height: 75px;
@@ -223,6 +225,10 @@ body {
 #boton2{
     background-color: deeppink;
 }
+#botonRegFund{
+    background-color: deeppink;
+   color: white;
+}
 #footer1{
     background-color:white;
     text-align: center;
@@ -231,4 +237,7 @@ body {
 #styleh4{
     text-align: center;
     color: #A4A4A4;
+}
+#estilo_p1{
+    color: grey;
 }
