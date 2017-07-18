@@ -3,30 +3,25 @@
 <html lang="en">
  
  <head>
- 
+     <title>Subir un Objeto</title>
      <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="description" content="">
      <meta name="author" content="">
-    <title>SupportYou</title>
- 
-    <!-- Bootstrap Core CSS -->
-     <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-          <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
+     
+      <link href="../css/bootstrap.min.css" rel="stylesheet" type='text/css'> 
+    <link href="../css/estiloobjeto.css" rel="stylesheet" type='text/css'> 
 
      
+     <link href="../css/portfolio-item.css" rel="stylesheet" type='text/css'>
+     <link rel="icon" href="../img/LogoSupportYou.png" type='text/css'>
+     <link href="../css/stylecentral.css" rel="stylesheet" type='text/css'>
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" type='text/css'>
      
- 
- <link href="bootstrap-3.3.7-dist/css/portfolio-item.css" rel="stylesheet">
-     <link rel="icon" href="img/LogoSupportYou.png">
-     <link href="bootstrap-3.3.7-dist/css/style.css" rel="stylesheet">
- 
+
  </head>
-    <body>
-        <input type="file" id="files" name="files[]" />
-<br />
-        <output id="list"></output>
+    
      <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
          <div class="container">
              <!-- Brand and toggle get grouped for better mobile display -->
@@ -34,138 +29,78 @@
                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                      <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                  </button>
-                 <img id="estilo_logo" alt="logo" src="img/LogoSupportYou.png" >
+                   <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../img/LogoSupportYou.png"></a>
              </div>
  
              <!-- Collect the nav links, forms, and other content for toggling -->
-             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
- 
- 
-                 <ul class="nav navbar-nav navbar-right">
-                     
-                     <li class="hidden">
-                         <a href="#page-top"></a>
-                     </li>
-                     <li>
+               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <br>
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="MiPerfil.html">MI PERFIL</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="carrito.html">CARRITO</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="pago.html">PAGO</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="catalogo.html">CATÁLOGO</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
 
-                         <a class="page-scroll" href="paginas/RegistroFundacion.html" target="_blank">REGISTRATE COMO FUNDACION</a>
-                         
-                     </li>
-                     <li>
-                         <a class="page-scroll" href="paginas/contactos.html" target="_blank">CONTACTENOS</a>
-                     </li>
-                 </ul>
-             </div>
              <!-- /.navbar-collapse -->
          </div>
          <!-- /.container-fluid -->
     </nav>
-        <form class="form-horizontal">
-            
-            
-          
-         
-            
-<fieldset>
-<br> <br> <br><br> <br> <br>
+    <body>
+        
 
-       <div class="control-group">
-  <div class="controls">
-
-        <label class="control-label" for="cep">Datos Personales</label>
-<br><br>
-    <input name="nome" class="input-xlarge" id="nome" required="" type="text" placeholder="Nombre">
-    
-  </div>
-</div>
-<br>
-<!-- Text input-->
-<div class="control-group">
-  <div class="controls">
-    <input name="telefone" class="input-xlarge" id="telefone" required="" type="text" placeholder="Usuario">
-    
-  </div>
-</div>
-<br>
-<!-- Text input-->
-<div class="control-group">
-  <div class="controls">
-    <input name="endereco" class="input-xlarge" id="endereco" required="" type="text" placeholder="Email">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-
-    <div class="form-group">
-     
-        <script>
-                      function archivo(evt) {
-      var files = evt.target.files; // FileList object
-       
-        //Obtenemos la imagen del campo "file". 
-      for (var i = 0, f; f = files[i]; i++) {         
-           //Solo admitimos imágenes.
-           if (!f.type.match('image.*')) {
-                continue;
-           }
-       
-           var reader = new FileReader();
-           
-           reader.onload = (function(theFile) {
-               return function(e) {
-               // Creamos la imagen.
-                      document.getElementById("list").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-               };
-           })(f);
- 
-           reader.readAsDataURL(f);
-       }
-}
-             
-      document.getElementById('files').addEventListener('change', archivo, false);
-                  </script>
-           
-    <p class="help-block">Buscar una imagen en mi galeria</p>
-  </div>
-<!-- Text input-->
-<div class="control-group">
-  <label class="control-label" for="cep">Datos de envio y Recogida</label>
-    <br><br>
-  <div class="controls">
-    <input name="cep" class="input-xlarge" id="cep" required="" type="text" placeholder="Dirección">
-    
-  </div>
-</div>
-    <br>
-    <div class="control-group">
-    
-  <div class="controls">
-    <input name="cep2" class="input-xlarge" id="cep2" required="" type="text" placeholder="Localidad">
-    
-  </div>
-</div>
-<br>
-<!-- Select Basic -->
-<div class="control-group">
-  <label>Provincia</label>
-  <div class="controls">
-    <select size = 1>
-      <option>Guayas</option>
-      <option>Pichincha</option>
-      <option>Azuay</option>
+<div id="formulario">
+    <form>
+  
+  <div class="form-group">
+    <label for="exampleSelect1">Seleccionar Elemento</label>
+    <select class="form-control" id="exampleSelect1">
+      <option>Ropa</option>
+      <option>Zapatos</option>
+      <option>Accesorios</option>
+      <option>Tecnologia</option>
+      <option>Otros</option>
     </select>
   </div>
-</div>
-
-<!-- Select Basic -->
-
-</fieldset>
+  
+  <div class="form-group">
+    <label for="exampleTextarea">Describir objeto</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+        <div class="form-group">
+    <label for="exampleSelect1">Uso del objeto</label>
+    <select class="form-control" id="exampleSelect1">
+      <option>Nuevo</option>
+      <option>Semi nuevo, poco uso</option>
+      <option>Usado, en buen estado</option>
     
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">Subir Foto </label>
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    <small id="fileHelp" class="form-text text-muted"></small>
+  </div>
+  <button type="submit" class="btn btn-primary">Todo Listo!</button>
 </form>
-
         
-       
+        </div>
+
+          <footer>Copyright 2017 SupportYou   Todos los derechos reservados</footer>
     </body>
  
     </html>
