@@ -50,13 +50,13 @@
 	display: block;
 }
 #nav li a:active {
-	background-color: #8ff !important;
+	background-color:#0BB1F8 !important;
 }
 /* first level */
 
 			#nav > ul {
 	height: 3.75em; /* 60 */
-	background-color: #8ff;
+	background-color: #0BB1F8;
 }
 #nav > ul > li {
 	width: 25%;
