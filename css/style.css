@@ -262,6 +262,9 @@ body {
 #pFundacion{
   color: gray;
 }
+#pFundacion1{
+  color: gray;
+}
 #estiloTabla{
     background-color:#f1fafe;
 }
@@ -286,5 +289,5 @@ body {
     margin: auto;
 }
 #don{
-    background-color: #EEF8FC;
+    background-color: #DEF2FA;
 }
