@@ -259,4 +259,32 @@ body {
      text-align: center;
     color: gray;
 }
-
+#pFundacion{
+  color: gray;
+}
+#estiloTabla{
+    background-color:#f1fafe;
+}
+#estiloDon{
+    color: deeppink;
+     margin: auto;
+     text-align: center;
+}
+#estiloDon2{
+ color: black;
+     margin: auto;
+     text-align: center;
+}
+#estiloDonaciones{
+    background-color: antiquewhite;
+  
+    text-align: center;
+    width:10%;;
+    height:20%;
+  
+    padding: 25px;
+    margin: auto;
+}
+#don{
+    background-color: #EEF8FC;
+}
