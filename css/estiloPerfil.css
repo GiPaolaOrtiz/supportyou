@@ -80,6 +80,8 @@ body {
     margin-left: 20px;
 }
 
+
+
 #containerImg{
     margin-top: 200px;
     margin-left: 100px;
@@ -226,6 +228,10 @@ footer{
   width: 30%;
   height: 80px;
   margin-left: 20px;
+}
+    
+#nombreUsuario{
+    margin-top: -20px;
 }
        
 #datosUsuario{
