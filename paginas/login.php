@@ -101,7 +101,7 @@ session_start();
                             <input type="checkbox" value="remember-me"> Recuérdame
                         </label>
                     </div>
-                    <input type="submit" id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">Ini
+                    <input type="submit" id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">
                     <h5>¿No tienes una cuenta?<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../index.html'">Regístrate</button> </h5>
                 </form>
 
