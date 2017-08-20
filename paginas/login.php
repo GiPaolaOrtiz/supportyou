@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -87,22 +90,25 @@
 
 
 
-                <form class="form-signin">
+                <form class="form-signin" action = "loginDatos.php" method = "post">
                     <h2 class="form-signin-heading">Inicia Sesión</h2>
-                    <label for="inputEmail" class="sr-only">Email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                    <label for="inputUsername" class="sr-only">Username</label>
+                    <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Contraseña" required>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Recuérdame
                         </label>
                     </div>
-                    <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../paginas/MiPerfil.html'">Iniciar sesión</button>
+                    <input type="submit" id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">Ini
                     <h5>¿No tienes una cuenta?<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../index.html'">Regístrate</button> </h5>
                 </form>
 
             </div>
+
+
+
             <br>
             <br>
             <br>
