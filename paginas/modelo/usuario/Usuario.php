@@ -16,18 +16,36 @@ class Usuario
        $this->pass = $pass;
      }
     
-     function setIdUsuario($idusuario){
+     function setIdusuario($idusuario){
        $this->idusuario = $idusuario;
      } 
-     function getIdUsuario(){
+     function getIdusuario(){
        return $this->idusuario;
+     } 
+     function setEmail($email){
+       $this->email = $email;
+     } 
+     function getEmail(){
+       return $this->email;
      } 
      function setNombre($nombre){
        $this->nombre = $nombre;
      } 
      function getNombre(){
        return $this->nombre;
+     }
+     function setUsername($username){
+       $this->username = $username;
      } 
+     function getUsername(){
+       return $this->username;
+     }
+     function setPass($pass){
+       $this->pass = $pass;
+     } 
+     function getPass(){
+       return $this->pass;
+     }
 }
 
 ?> 
