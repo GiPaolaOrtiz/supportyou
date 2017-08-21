@@ -12,7 +12,7 @@ class productoCollector extends Collector
     echo "linea 1";
     $arrayProducto= array();        
     foreach ($rows as $c){
-      $aux = new Usuario($c{'idproducto'},$c{'idcategoriaproducto'},$c{'idfundacion'},$c{'descripcion'},$c{'estado'},$c{'precio'},$c{'img'},$c{'idperfil'},$c{'estadoventa'});
+      $aux = new Producto($c{'idproducto'},$c{'idcategoriaproducto'},$c{'idfundacion'},$c{'descripcion'},$c{'estado'},$c{'precio'},$c{'img'},$c{'idperfil'},$c{'estadoventa'});
       array_push($arrayProducto, $aux);
     }
     return $arrayProducto;        
