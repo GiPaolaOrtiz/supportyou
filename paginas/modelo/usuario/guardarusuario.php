@@ -68,7 +68,7 @@
 
                 <ul class="list-inline intro-social-buttons">
                     <li>
-                        <a href="../paginas/login.html" class="btn btn-default btn-lg"> <span class="network-name">INICIA SESION</span></a>
+                        <a href="../../paginas/login.html" class="btn btn-default btn-lg"> <span class="network-name">INICIA SESION</span></a>
                         <br>
 
 
