@@ -12,9 +12,9 @@ $id_producto=$_POST["id_producto"];
 
 echo "Edicion en proceso... </br>";
 
-include_once("collectorPerfil.php");
+include_once("collectorProducto.php");
 
-$ProductoCollectorObj = new collectorPerfil();
+$ProductoCollectorObj = new collectorProducto();
 $ProductoCollectorObj->updateProducto($id_producto,$descripcion,$estado,$precio,$fundacion,$categoria);
 
 echo "id : ".$id_producto. " actualizado </br>";

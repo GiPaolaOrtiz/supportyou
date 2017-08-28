@@ -13,19 +13,19 @@ Descripcion: <input type="text" name="descripcion" value="<?php echo $ObjProduct
 </p>
 
 <p>
-Id: <input type="text" name="estado" value="<?php echo $ObjProducto->getEstado(); ?>" readonly />
+Precio: <input type="text" name="precio" value="<?php echo $ObjProducto->getPrecio(); ?>" readonly />
 </p>
 
 <p>
-Descripcion: <input type="text" name="precio" value="<?php echo $ObjProducto->getPrecio(); ?>" readonly />
+Estado de venta: <input type="text" name="fundacion" value="<?php echo $ObjProducto->getEstadoventa(); ?>" readonly />
 </p>
 
 <p>
-Id: <input type="text" name="fundacion" value="<?php echo $ObjProducto->getFundacion(); ?>" readonly />
+Fundación: <input type="text" name="categoria" value="<?php echo $ObjProducto->getIdfundacion(); ?>" readonly />
 </p>
 
 <p>
-Descripcion: <input type="text" name="categoria" value="<?php echo $ObjProducto->getCategoria(); ?>" readonly />
+Categoría: <input type="text" name="categoria" value="<?php echo $ObjProducto->getIdcategoriaproducto(); ?>" readonly />
 </p>
 
 

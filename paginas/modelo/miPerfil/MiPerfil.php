@@ -9,9 +9,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Perfil</title>
-    <link href="../css/bootstrap.min.css" rel="stylesheet" type='text/css'>
-    <link href="../css/estiloPerfil.css" rel='stylesheet' type='text/css'>
-    <link rel="icon" href="../img/LogoSupportYou.png">
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet" type='text/css'>
+    <link href="../../../css/estiloPerfil.css" rel='stylesheet' type='text/css'>
+    <link rel="icon" href="../../../img/LogoSupportYou.png">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
-                <a href="../paginas/MiPerfil.php"><img alt="LogoAplicacion" id="estilologo" src="../img/LogoSupportYou.png"></a>
+                <a href="../paginas/MiPerfil.php"><img alt="LogoAplicacion" id="estilologo" src="../../../img/LogoSupportYou.png"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -71,7 +71,7 @@
             <div id="nombreUsuario">
                 <h4>Nombre usuario</h4>
                 
-                <button id="botonSubirObjeto" type="submit" onClick="location.href='../paginas/subir_objeto.php'">Subir Objeto</button>
+                <button id="botonSubirObjeto" type="submit" onClick="location.href='../subir/subir_objeto.php'">Subir Objeto</button>
 
             </div>
 
@@ -84,7 +84,7 @@
         <div id="containerImg">
             <div class="col-md-4 col-xs-6">
                 <div class="imagenes">
-                    <img class="foto" src="../img/ropa.jpg" alt="ropa">
+                    <img class="foto" src="../../../img/ropa.jpg" alt="ropa">
                 </div>
                 <div class="texto">
                     <h5>Categoría</h5>
@@ -92,18 +92,18 @@
                 </div>
                 <div class="opciones">
                     <div class="izquierda">
-                        <h5><a href="../paginas/modificarObjeto.php">Modificar</a></h5>
+                        <h5><a href="../miPerfil/modificarObjeto.php">Modificar</a></h5>
                     </div>
 
                     <div class="der">
-                        <h5><a href="../paginas/eliminarObjeto.php"> Eliminar </a></h5>
+                        <h5><a href="../miPerfil/eliminarObjeto.php"> Eliminar </a></h5>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 col-xs-6">
                 <div class="imagenes">
-                    <img class="foto" src="../img/cuna.jpg" alt="cuna">
+                    <img class="foto" src="../../../img/cuna.jpg" alt="cuna">
                 </div>
                 <div class="texto">
                     <h5>Categoría</h5>
@@ -111,18 +111,18 @@
                 </div>
                 <div class="opciones">
                     <div class="izquierda">
-                        <h5><a href="../paginas/modificarObjeto.php">Modificar</a></h5>
+                        <h5><a href="../miPerfil/modificarObjeto.php">Modificar</a></h5>
                     </div>
 
                     <div class="der">
-                        <h5><a href="../paginas/eliminarObjeto.php"> Eliminar </a></h5>
+                        <h5><a href="../miPerfil/eliminarObjeto.php"> Eliminar </a></h5>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4 col-xs-6">
                 <div class="imagenes">
-                    <img class="foto" src="../img/oso.jpg" alt="oso">
+                    <img class="foto" src="../../../img/oso.jpg" alt="oso">
                 </div>
                 <div class="texto">
                     <h5>Categoría</h5>
@@ -130,11 +130,11 @@
                 </div>
                 <div class="opciones">
                     <div class="izquierda">
-                        <h5><a href="../paginas/modificarObjeto.php">Modificar</a></h5>
+                        <h5><a href="../miPerfil/modificarObjeto.php">Modificar</a></h5>
                     </div>
 
                     <div class="der">
-                        <h5><a href="../paginas/eliminarObjeto.php"> Eliminar </a></h5>
+                        <h5><a href="../miPerfil/eliminarObjeto.php"> Eliminar </a></h5>
                     </div>
                 </div>
             </div>
@@ -150,10 +150,10 @@
 
     <footer>Copyright 2017 SupportYou Todos los derechos reservados</footer>
 
-    <script src="../js/jquery.js" type="text/javascript"></script>
-    <script src="../js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../js/perfil.js" type="text/javascript"></script>
-    <script type="text/javascript" src="../js/uploadPreview.min.js"></script>
+    <script src="../../../js/jquery.js" type="text/javascript"></script>
+    <script src="../../../js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../../../js/perfil.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../../js/uploadPreview.min.js"></script>
 
 </body>
 
