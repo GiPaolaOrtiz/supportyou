@@ -9,11 +9,11 @@
     <title>Registro de fundación</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" type="image/png" href="../img/LogoSupportYou.png" />
     <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='../css/estiloRegistro.css' rel='stylesheet' type='text/css'>
-    <link href="../css/style.css" rel="stylesheet">
+    <link href='../../../css/estiloRegistro.css' rel='stylesheet' type='text/css'>
+    <link href="../../../css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../img/LogoSupportYou.png"></a>
+                <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,18 +57,19 @@
         <div class="row">
 
             <div class="col-md-3">
-                <form class="form-signin">
+
+                <form action="" class="form-signin" method="post">
                     <h2 class="form-signin-heading">Inicia Sesión</h2>
                     <label for="inputEmail" class="sr-only">Email</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Contraseña" required>
                     <div class="checkbox">
                         <label>
                             <input type="checkbox" value="remember-me"> Recuérdame
                         </label>
                     </div>
-                    <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../paginas/PerfilFundacion.html'">Iniciar sesión</button>
+                    <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
 
                 </form>
 
@@ -97,7 +98,7 @@
 
                                 <hr id="linea">
 
-                                <form action="datosFundacion.php" id="contact-form" method="post">
+                                <form action="guardarFundacion.php" id="contact-form" method="post">
 
                                     <div class="messages"></div>
 
@@ -223,7 +224,7 @@
 
                                         </div>
 
-
+                                        
                                         <div class="row">
                                             <div class="col-md-12" id="boton">
 
