@@ -18,8 +18,8 @@ class fundacionCollector extends Collector
   }
 
   function showFundacion($id) {
-    $row = self::$db->getRows("SELECT * FROM fundacion WHERE id_fundacion = ? ", array("{$id}"));        
-    $ObjFundacion = new claseRegistroFundacion($row[0]{'id_fundacion'},$row[0]{'nombre'});
+    $row = self::$db->getRows("SELECT actividad, direccion, telefono, nombre FROM fundacion WHERE id_fundacion = ? ", array("{$id}"));        
+    $ObjFundacion = new claseRegistroFundacion($row[0]{'direccion'},$row[0]{'telefono'},$row[0]{'nombre'});
 
     return $ObjFundacion;        
   }

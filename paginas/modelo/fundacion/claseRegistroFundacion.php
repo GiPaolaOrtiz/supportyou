@@ -3,29 +3,31 @@
 class claseRegistroFundacion
 {
     private $id_fundacion;
-    private $actividad;
+   
     private $direccion;
     private $email;
     private $pass;
     private $ruc;
-    private $usuario_id;
     private $pais_id;
     private $fundacioncategoria_id;
     private $ciudad_id;
     private $cuenta_id;
+    private $telefono;
+    private $nombre;
+
     
-     function __construct($id_fundacion, $actividad, $direccion, $email, $pass, $ruc, $usuario_id, $pais_id, $fundacioncategoria_id, $ciudad_id, $cuenta_id) {
+     function __construct($id_fundacion, $direccion, $email, $pass, $ruc, $pais_id, $fundacioncategoria_id, $ciudad_id, $cuenta_id, $telefono, $nombre) {
        $this->id_fundacion = $id_fundacion;
-       $this->actividad = $actividad;
        $this->direccion = $direccion;
        $this->email = $email;
        $this->pass = $pass;
        $this->ruc = $ruc;
-       $this->usuario_id = $usuario_id;
        $this->pais_id = $pais_id;
        $this->fundacioncategoria_id = $fundacioncategoria_id;
        $this->ciudad_id = $ciudad_id;
        $this->cuenta_id = $cuenta_id;
+       $this->telefono = $telefono;
+       $this->nombre = $nombre;
      }
     
      function setIdFundacion($id_fundacion){
@@ -34,12 +36,7 @@ class claseRegistroFundacion
      function getIdFundacion(){
        return $this->id_fundacion;
      } 
-     function setActividad($actividad){
-       $this->actividad = $actividad;
-     } 
-     function getActividad(){
-       return $this->actividad;
-     } 
+    
      function setDireccion($direccion){
        $this->direccion = $direccion;
      } 
@@ -63,12 +60,6 @@ class claseRegistroFundacion
      } 
      function getRuc(){
        return $this->ruc;
-     } 
-     function setUsuario_id($usuario_id){
-       $this->usuario_id = $usuario_id;
-     } 
-     function getUsuario_id(){
-       return $this->usuario_id;
      } 
      function setPais_id($pais_id){
        $this->pais_id = $pais_id;
@@ -94,7 +85,18 @@ class claseRegistroFundacion
      function getCuenta_id(){
        return $this->cuenta_id;
      } 
-     
+     function setTelefono($telefono){
+       $this->telefono = $telefono;
+     } 
+     function getTelefono(){
+       return $this->telefono;
+     } 
+     function setNombre($nombre){
+       $this->nombre = $nombre;
+     } 
+     function getNombre(){
+       return $this->nombre;
+     }
 }
 
 ?> 
