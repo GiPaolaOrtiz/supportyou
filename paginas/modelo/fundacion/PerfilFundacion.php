@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +31,8 @@
 <body>
 
 
+
+
     <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -45,11 +51,11 @@
                 <br>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="../paginas/PerfilFundacion.html">PERFIL</a>
+                        <a class="page-scroll" href="../paginas/PerfilFundacion.php">PERFIL</a>
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="../index.html">SALIR</a>
+                        <a class="page-scroll" href="../index.php">SALIR</a>
                     </li>
                 </ul>
             </div>
@@ -60,12 +66,19 @@
     <!-- Contact Section -->
     <section id="contact">
         <br>
+        <?php
+$id="10";
+include_once("fundacionCollector.php");
+include_once("claseRegistroFundacion.php");
+$FundacionCollectorObj = new fundacionCollector();
+$ObjFundacion = $FundacionCollectorObj->showFundacion($id);
+?>
 
 
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 id="titulo"> <span>UNICEF</span> </h2>
+                    <h2 id="titulo"> <span> <?php echo $ObjFundacion->getNombre(); ?> </span> </h2>
                     <hr>
                     <br>
                 </div>
@@ -84,18 +97,18 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="../../../img/fundaciones/unicef.png" alt="">
+                <img class="img-responsive" src="../../../img/fundaciones/<?php echo $ObjFundacion->getFoto(); ?>" alt="">
             </div>
 
             <div class="col-md-4">
-                <h3 id="tituloFundacion">Descripcion</h3>
-                <p id="pFundacion">Somos el Fondo de las Naciones Unidas para la Infancia. Llevamos 70 años trabajando en la defensa de los derechos de todas las niñas y niños en más de 190 países y territorios. Y no lo hacemos solos, trabajamos con gobiernos, ONGs, madres y padres, profesores, empresas y personas interesadas en conseguir un mundo mejor para la infancia.</p>
-                <h3>Programas y Acciones</h3>
+                <h3 id="tituloFundacion">Descripción</h3>
+                <p id="pFundacion"> <?php echo $ObjFundacion->getActividad(); ?> </p>
+                <h3>Información</h3>
                 <ul id="pFundacion1">
-                    <li>Supervivencia</li>
-                    <li>Educacion</li>
-                    <li>Proteccion e inclusion social</li>
-                    <li>Accion en Emergencias</li>
+                    <li><?php echo $ObjFundacion->getDireccion(); ?> </li>
+                    <li><?php echo $ObjFundacion->getPais_id(); ?></li>
+                    <li><?php echo $ObjFundacion->getTelefono(); ?></li>
+                    <li><?php echo $ObjFundacion->getEmail(); ?></li>
                 </ul>
             </div>
 
