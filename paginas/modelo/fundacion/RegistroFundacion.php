@@ -115,13 +115,20 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label> Categoría *</label>
-                                                    <select id="selectbasic" name="categoria" class="form-control">
-                                                        <option value="1"> Niñez y juventud</option>
-                                                        <option value="2">Discapacidad</option>
-                                                        <option value="3">Animales</option>
-                                                        <option value="4">Jubilación y mayores</option>
-                                                        <option value="5">Vivienda y falta de techo</option>
-                                                        <option value="6">Pobreza y hambre</option>
+
+                                                    <select id="selectbasic" method="post" name="categoria" class="form-control" required>
+                                                        <option value="" selected>Selecione</option> 
+                                                        <?php
+                                                        include_once("../fundacionCategoria/fundacionCategoriaCollector.php");
+     
+                                                            $id =1;
+                                                            $CategoriaCollectorObj = new fundacionCategoriaCollector();
+
+                                                            foreach ($CategoriaCollectorObj->showFundacionCategorias() as $c){
+                                                                $id =$c->getIdCategoria();
+                                                                echo "<option value= ".$c->getIdCategoria(). ">". $c->getNombre(). "</option>";
+                                                            }
+                                                        ?>
                                                     </select>
                                                     <div class="help-block with-errors"></div>
                                                 </div>
@@ -142,22 +149,24 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="form_name">País *</label>
-                                                    <select  name="pais" class="form-control">
 
-                                                        <option value="1">Ecuador</option>
-                                                        <option value="2">Argentina</option>
-                                                        <option value="3">Bolivia</option>
-                                                        <option value="4">Brasil</option>
-                                                        <option value="5">Chile</option>
-                                                        <option value="6">Colombia</option>
-                                                        <option value="7">España</option>
-                                                        <option value="8">Guatemala</option>
-                                                        <option value="9">Honduras</option>
-                                                        <option value="10">Mexico</option>
-                                                        <option value="11">Perú</option>
-                                                        <option value="12">Uruguay</option>
-                                                        <option value="13">Venezuela</option>
+
+                                                    <select name="pais" method="post" class="form-control" required>
+  
+                                                        <option value="" selected>Selecione</option> 
+                                                        <?php
+                                                        include_once("../pais/paisCollector.php");
+     
+                                                            $id =1;
+                                                            $PaisCollectorObj = new paisCollector();
+
+                                                            foreach ($PaisCollectorObj->showPaises() as $c){
+                                                                $id =$c->getIdPais();
+                                                                echo "<option value= ".$c->getIdPais(). ">". $c->getNombre(). "</option>";
+                                                            }
+                                                        ?>
                                                     </select>
+              
                                                     <div class="help-block with-errors"></div>
                                                 </div>
                                             </div>
