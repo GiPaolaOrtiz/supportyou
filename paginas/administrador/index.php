@@ -5,7 +5,7 @@
         <title>Administración</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../img/LogoSupportYou.png">
+        <link rel="icon" href="../../img/LogoSupportYou.png">
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet"  href="../../css/style.css">
         <link rel="stylesheet"  href="../../css/estiloCatalogo.css">
@@ -23,85 +23,71 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../paginas/MiPerfil.html"><img id="estilo_logo" alt="logo" src="../../img/LogoSupportYou.png"></a>
+                <a href="index.php"><img id="estilo_logo" alt="logo" src="../../img/LogoSupportYou.png"></a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <br>
                 <ul class="nav navbar-nav navbar-right">
-                    
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
                     <li>
-                        <a class="page-scroll" href="MiPerfil.html">MI PERFIL</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="catalogo.html">CATALOGO</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="pago.html">PAGO</a>
-                    </li>
-                     <li>
-                        <a class="page-scroll" href="../paginas/ContactoPerfil.html">CONTÁCTENOS</a>
-                    </li>
-                                         <li>
-                       <a class="page-scroll" href="../index.html">SALIR</a>
+                       <a class="page-scroll" href="../../index.html">SALIR</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-            <div class="container topspace">
-                <h3>Saludos (administrador)</h3>
-                <div class="row topspace2">
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div> 
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div> 
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div>                   
-                    <div class="col-md-4">
-                        <a href="#" class="btn btn-info">Boton</a>
-                    </div> 
+            <div class="container">
+               <div class="topspace">
+                     <h3>Saludos (administrador)</h3>
+                     <div class="row topspace2 center-block">
+                     <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Usuarios</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Bancos</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Categoria Productos</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Ciudades</a>
+                    </div>
+                     <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Clientes</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Comentarios</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Cuentas</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Fundaciones</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Fundacion Categorias</a>
+                    </div>
+                     <div class="col-md-4  col-sm-6">
+                        <a href="metodopago/view.php" class="btn btn-info topspace2">Metodos Pago</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Pais</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Productos</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Roles</a>
+                    </div>
+                    <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Roles x Usuario</a>
+                    </div>
+                     <div class="col-md-4  col-sm-6">
+                        <a href="#" class="btn btn-info topspace2">Ventas</a>
+                    </div>
                 </div>
+               </div>
             </div>
         </main>
          <script src="../../js/jquery.js"></script>

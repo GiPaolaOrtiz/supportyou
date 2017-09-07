@@ -1,18 +1,16 @@
 <?php
 
 include_once('MetodoPago.php');
-include_once('../Collector.php');
-
+include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
 
 class metodopagoCollector extends Collector
 {
   
-  function showMetodoPago() {
-    $rows = self::$db->getRows("SELECT * FROM metodopago ");        
-    echo "linea 1";
+  function showMetodoPagos() {
+    $rows = self::$db->getRows("SELECT * FROM metodopago "); 
     $arrayMetodoPago= array();        
     foreach ($rows as $c){
-      $aux = new MetodoPago($c{'idmetodopago'},$c{'metodo'});
+      $aux = new MetodoPago($c{'idmetodopago'},$c{'nombre'});
       array_push($arrayMetodoPago, $aux);
     }
     return $arrayMetodoPago;        
