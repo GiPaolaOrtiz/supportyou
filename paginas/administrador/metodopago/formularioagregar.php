@@ -32,7 +32,7 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.html">HOME</a>
+                               <a class="page-scroll" href="../index.php">HOME</a>
                             </li>
                             <li>
                                <a class="page-scroll" href="../../../index.html">SALIR</a>
@@ -47,8 +47,8 @@
         ?>
          <form method="post" action="agregar.php">
                 <div class="form-group">
-                  <label for="email">Metodo de pago</label>
-                  <input type="email" class="form-control" id="metodo" placeholder="Escriba el metodo de pago" name="metodo">
+                  <label for="metodo">Metodo de pago</label>
+                  <input type="text" class="form-control w40po" id="metodo" placeholder="Escriba el metodo de pago" name="metodo">
                 </div>
                 <button type="submit" class="btn btn-info">Enviar</button>
             </form>

@@ -1,14 +1,42 @@
+
 footer{
     margin-top: 100px;
     margin-bottom: -300px;
 }
-
 .w10{
     width: 40px;
     margin-bottom: 20px;
     margin-top: 20px;
 }
-table{
-    margin: 10px;
-    padding: 0;
+.w40po{
+    width: 40%;
+}
+.w70{
+    width: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.w50p{
+    width: 50px;
+    margin-top: 20px;
+}
+.w30{
+    width: 30%;
+}
+.red{
+    font-weight: bold;
+    color: #e33;
+}
+.green{
+    font-weight: bold;
+    color: #3e3;
+}
+.botspace{
+    margin-bottom: 100px;
+}
+.topspace{
+    margin-top: 130px;
+}
+.topspace2{
+    margin-top: 40px;
 }

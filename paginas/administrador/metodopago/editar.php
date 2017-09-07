@@ -7,7 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../../../img/LogoSupportYou.png">
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet"  href="../../../css/style.css">  
+        <link rel="stylesheet"  href="../../../css/style.css">        
+        <link rel="stylesheet"  href="../../../css/estiloCatalogo.css">
+        <link rel="stylesheet"  href="../../../css/estiloCarro.css">
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
@@ -30,7 +32,7 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.html">HOME</a>
+                               <a class="page-scroll" href="../index.php">HOME</a>
                             </li>
                             <li>
                                <a class="page-scroll" href="../../../index.html">SALIR</a>
@@ -40,28 +42,21 @@
                 </div>
             </nav>    
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
-            $MetodoPagoCollectorObj = new metodopagoCollector();
                 echo '<h2 class="topspace text-center">Metodos de pago</h2>';
-                echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
-                echo '<div class="">';                     
-                echo '<table class="table table-condensed">';
-                    echo ' <thead><tr>';   
-                        echo '<th>ID</th>';
-                        echo '<th>Nombre del metodo</th>';
-                        echo '<th>Acciones</th>';
-                    echo '</tr> </thead><tbody>';            
-                      foreach ($MetodoPagoCollectorObj->showMetodoPagos() as $c){
-                          echo '<tr>'; 
-                              echo '<td>' . $c->getIdmetodopago() . '</td>';
-                              echo '<td>' . $c->getMetodo() . '</td>';
-                              echo "<td> <a href='formularioeditar.php?id=" . $c->getIdmetodopago() . "' class='btn btn-info mg'>Editar</a>";
-                              echo "<a href='eliminar.php?id=" . $c->getIdmetodopago() . "' class='btn btn-info'>Delete</a></td>";
-                          echo '</tr>'; 
-                      }
-                     echo '</tbody><table>';
-                 echo '</div>';
             ?>
+            <?php
+                $id=$_POST['id'];
+		        $metodo=$_POST['metodo'];
+            
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
+                $MetodoPagoCollectorObj = new metodopagoCollector();
+                $MetodoPagoCollectorObj-> updateMetodoPago($id,$metodo);
+
+                echo "<h3 class='topspace text-center'>El metodo de pago <span class='green'>" . $id . "</span> ha sido actualizado a <span class='green'>" . $metodo . "</span></h3>";
+            ?>
+            <div>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+            </div>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

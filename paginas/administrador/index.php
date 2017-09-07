@@ -39,16 +39,16 @@
     </nav>
             <div class="container">
                <div class="topspace">
-                     <h3>Saludos (administrador)</h3>
-                     <div class="row topspace2 center-block">
+                     <h3 class="botspace">Saludos (administrador)</h3>
+                     <div class="row topspace center-block">
                      <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Usuarios</a>
+                        <a href="#" class="btn btn-info topspace">Usuarios</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Bancos</a>
+                        <a href="#" class="btn btn-info topspace">Bancos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Categoria Productos</a>
+                        <a href="#" class="btn btn-info topspace">Categoria Productos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="#" class="btn btn-info topspace2">Ciudades</a>
@@ -93,7 +93,7 @@
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-        <footer id="footer1">
+        <footer id="footer1" class="pie">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  

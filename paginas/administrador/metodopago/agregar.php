@@ -32,7 +32,7 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.html">HOME</a>
+                               <a class="page-scroll" href="../index.php">HOME</a>
                             </li>
                             <li>
                                <a class="page-scroll" href="../../../index.html">SALIR</a>
@@ -43,19 +43,18 @@
             </nav>    
         <?php 
                 echo '<h2 class="topspace text-center">Metodos de pago</h2>';
-                echo '<h3 class="text-center">Agregar</h3>';
             ?>
             <?php
-                metodo=$_POST['metodo'];
+                $metodo=$_POST['metodo'];
             
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
                 $MetodoPagoCollectorObj = new metodopagoCollector();
-                $MetodoPagoCollectorObj-> createDemo($nombre,$password);
+                $MetodoPagoCollectorObj-> createMetodoPago($metodo);
 
-                echo "Nombre: ". $nombre . "agregando con password: " . $password . "<br>";
+                echo "<h3 class='topspace text-center'>El metodo de pago <b>" . $metodo . "</b> ha sido agregado</h3>";
             ?>
             <div>
-                <a href="index.php">Volver al inicio</a>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
             </div>
         </main>
          <script src="../../js/jquery.js"></script>
