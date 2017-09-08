@@ -41,24 +41,33 @@
                     </div>
                 </div>
             </nav>    
-        <?php 
-                $id= $_GET['id'];
-                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
-                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
-                $MetodoPagoCollectorObj = new metodopagoCollector();
-                $ObjMetodo=$MetodoPagoCollectorObj->showMetodoPago($id);
-        ?>
-         <form method="post" action="editar.php">
-                <div class="form-group">
-                  <label for="idm">ID</label>
-                  <input type="text" class="form-control w40po" id="idm" value="<?php echo $ObjMetodo->getIdMetodoPago(); ?>" readonly name="id">
+            <?php 
+                    $id= $_GET['id'];
+                    echo '<h2 class="topspace text-center">Metodos de pago</h2>';
+                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
+                    $MetodoPagoCollectorObj = new metodopagoCollector();
+                    $ObjMetodo=$MetodoPagoCollectorObj->showMetodoPago($id);
+            ?>
+            <div class="container topspace">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <form method="post" action="editar.php">
+                            <div class="form-group">
+                              <label for="idm">ID</label>
+                              <input type="text" class="form-control" id="idm" value="<?php echo $ObjMetodo->getIdMetodoPago(); ?>" readonly name="id">
+                            </div>
+                             <div class="form-group">
+                              <label for="metodo">Metodo de pago</label>
+                              <input type="text" class="form-control" id="metodo" value="<?php echo $ObjMetodo->getMetodo(); ?>" name="metodo">
+                            </div>
+                            <button type="submit" class="btn btn-info">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
                 </div>
-                 <div class="form-group">
-                  <label for="metodo">Metodo de pago</label>
-                  <input type="text" class="form-control w40po" id="metodo" value="<?php echo $ObjMetodo->getMetodo(); ?>" name="metodo">
-                </div>
-                <button type="submit" class="btn btn-info">Enviar</button>
-            </form>
+            </div>
+             <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

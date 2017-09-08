@@ -42,7 +42,7 @@
                      <h3 class="botspace">Saludos (administrador)</h3>
                      <div class="row topspace center-block">
                      <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace">Usuarios</a>
+                        <a href="usuario/view.php" class="btn btn-info topspace">Usuarios</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="#" class="btn btn-info topspace">Bancos</a>

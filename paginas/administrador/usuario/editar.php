@@ -41,31 +41,30 @@
                     </div>
                 </div>
             </nav>    
-            <?php 
-                    echo '<h2 class="topspace text-center">Metodos de pago</h2>';
-                    echo '<h3 class="text-center">Agregar</h3>';                
+        <?php 
+                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
             ?>
-            <div class="container topspace">
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-                         <form method="post" action="agregar.php">
-                            <div class="form-group">
-                              <label for="metodo">Metodo de pago</label>
-                              <input type="text" class="form-control" id="metodo" placeholder="Escriba el metodo de pago" name="metodo">
-                            </div>
-                            <button type="submit" class="btn btn-info">Enviar</button>
-                        </form>
-                    </div>
-                    <div class="col-md-4"></div>
-                </div>
+            <?php
+                $id=$_POST['id'];
+		        $email=$_POST['email'];
+                $nombre=$_POST['nombre'];
+		        $username=$_POST['username'];
+                $pass=$_POST['pass'];
+            
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                $UsuarioCollectorObj = new usuarioCollector();
+                $UsuarioCollectorObj-> updateUsuario($id,$email,$nombre,$username,$pass);
+
+                echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $id . "</span> ha sido actualizado a <span class='green'>" . $username . "</span></h3>";
+            ?>
+            <div>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
             </div>
-            <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-        <footer class="pie" id="footer1">
+        <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  

@@ -41,31 +41,50 @@
                     </div>
                 </div>
             </nav>    
-            <?php 
-                    echo '<h2 class="topspace text-center">Metodos de pago</h2>';
-                    echo '<h3 class="text-center">Agregar</h3>';                
-            ?>
-            <div class="container topspace">
+        <?php 
+                $id= $_GET['id'];
+                echo '<h2 class="topspace text-center">Usuarios</h2>';
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                $UsuarioCollectorObj = new usuarioCollector();
+                $ObjUsuario=$UsuarioCollectorObj->showUsuario($id);
+        ?>
+         <div class="container topspace">
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                         <form method="post" action="agregar.php">
+                        <form method="post" action="editar.php">
                             <div class="form-group">
-                              <label for="metodo">Metodo de pago</label>
-                              <input type="text" class="form-control" id="metodo" placeholder="Escriba el metodo de pago" name="metodo">
+                              <label for="idu">ID</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getIdUsuario(); ?>" readonly name="id">
                             </div>
-                            <button type="submit" class="btn btn-info">Enviar</button>
+                             <div class="form-group">
+                              <label for="metodo">Email</label>
+                              <input type="email" class="form-control" id="metodo" value="<?php echo $ObjUsuario->getEmail(); ?>" name="email">
+                            </div>
+                            <div class="form-group">
+                              <label for="idu">Nombre</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getNombre(); ?>" name="nombre">
+                            </div>
+                            <div class="form-group">
+                              <label for="idu">Username</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getUsername(); ?>" name="username">
+                            </div>
+                            <div class="form-group">
+                              <label for="idu">Password</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getPass(); ?>" name="pass">
+                            </div>
+                            <button type="submit" class="btn btn-info center-block">Enviar</button>
                         </form>
                     </div>
                     <div class="col-md-4"></div>
                 </div>
             </div>
-            <a href="view.php" class="btn btn-danger pull-right">Volver</a>
+             <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-        <footer class="pie" id="footer1">
+        <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  

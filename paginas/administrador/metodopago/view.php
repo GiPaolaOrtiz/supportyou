@@ -30,7 +30,7 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.html">HOME</a>
+                               <a class="page-scroll" href="../index.php">HOME</a>
                             </li>
                             <li>
                                <a class="page-scroll" href="../../../index.html">SALIR</a>

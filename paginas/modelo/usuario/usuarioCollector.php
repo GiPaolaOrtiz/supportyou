@@ -1,21 +1,40 @@
 <?php
 
 include_once('Usuario.php');
-include_once('../Collector.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
 
 
 class usuarioCollector extends Collector
 {
-  
   function showUsuarios() {
-    $rows = self::$db->getRows("SELECT * FROM usuario ");        
-    echo "linea 1";
+    $rows = self::$db->getRows("SELECT * FROM usuario "); 
     $arrayUsuario= array();        
     foreach ($rows as $c){
-      $aux = new Usuario($c{'idusuario'},$c{'email'},$c{'nombre'},$c{'username'},$c{'pass'});
+      $aux = new Usuario($c{'idusuario'},$c{'email'},$c{'nombre'},$c{'username'},$c{'password'});
       array_push($arrayUsuario, $aux);
     }
     return $arrayUsuario;        
   }
+  function showUsuario($id) {
+    $row = self::$db->getRows("SELECT * FROM usuario where idusuario= ?", array("{$id}"));
+    $ObjDemo= new Usuario($row[0]{'idusuario'},$row[0]{'email'},$row[0]{'nombre'},$row[0]{'username'},$row[0]{'password'});
+    return $ObjDemo;        
+  }
+
+  function updateUsuario($id, $email, $nombre, $username, $pass){
+      $insertrow= self::$db->updateRow
+                  ("UPDATE public.usuario SET email= ?, nombre= ?, username= ?, password= ? where idusuario = ?", 
+                  array( "{$email}","{$nombre}","{$username}","{$pass}",$id ));
+  }
+
+  function deleteUsuario($id){
+    $insertrow= self::$db->deleteRow
+                  ("DELETE FROM public.usuario where idusuario = ?", 
+                  array( $id ));
+  }
+  function createUsuario($email, $nombre, $username, $pass){
+    $insertrow= self::$db->insertRow
+                  ("INSERT INTO public.usuario (email,nombre, username, password) VALUES (?,?,?,?)", array("{$email}","{$nombre}","{$username}","{$pass}"));
+  }    
 }
 ?>

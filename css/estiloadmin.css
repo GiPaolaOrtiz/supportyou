@@ -8,6 +8,9 @@ footer{
     margin-bottom: 20px;
     margin-top: 20px;
 }
+.mleft{
+    margin-left: 20%;
+}
 .w40po{
     width: 40%;
 }
@@ -26,6 +29,10 @@ footer{
 .red{
     font-weight: bold;
     color: #e33;
+}
+.pie{
+    margin-top: -220px;
+    margin-bottom: 50px;
 }
 .green{
     font-weight: bold;
