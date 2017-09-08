@@ -45,46 +45,46 @@
                         <a href="usuario/view.php" class="btn btn-info topspace">Usuarios</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace">Bancos</a>
+                        <a href="bancos/view.php" class="btn btn-info topspace">Bancos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace">Categoria Productos</a>
+                        <a href="categoriaproductos/view.php" class="btn btn-info topspace">Categoria Productos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Ciudades</a>
+                        <a href="ciudades/view.php" class="btn btn-info topspace2">Ciudades</a>
                     </div>
                      <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Clientes</a>
+                        <a href="clientes/view.php" class="btn btn-info topspace2">Clientes</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Comentarios</a>
+                        <a href="comentarios/view.php" class="btn btn-info topspace2">Comentarios</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Cuentas</a>
+                        <a href="cuentas/view.php" class="btn btn-info topspace2">Cuentas</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Fundaciones</a>
+                        <a href="fundaciones/view.php" class="btn btn-info topspace2">Fundaciones</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Fundacion Categorias</a>
+                        <a href="fundacioncategorias/view.php" class="btn btn-info topspace2">Fundacion Categorias</a>
                     </div>
                      <div class="col-md-4  col-sm-6">
                         <a href="metodopago/view.php" class="btn btn-info topspace2">Metodos Pago</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Pais</a>
+                        <a href="paises/view.php" class="btn btn-info topspace2">Pais</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Productos</a>
+                        <a href="productos/view.php" class="btn btn-info topspace2">Productos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Roles</a>
+                        <a href="roles/view.php" class="btn btn-info topspace2">Roles</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Roles x Usuario</a>
+                        <a href="rolesxusuarios/view.php" class="btn btn-info topspace2">Roles x Usuario</a>
                     </div>
                      <div class="col-md-4  col-sm-6">
-                        <a href="#" class="btn btn-info topspace2">Ventas</a>
+                        <a href="ventas/view.php" class="btn btn-info topspace2">Ventas</a>
                     </div>
                 </div>
                </div>
