@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +30,8 @@ session_start();
 
 </head>
 
-
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top topnav">
+     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -60,44 +56,54 @@ session_start();
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
+           
         </div>
         <!-- /.container -->
 
-
     </nav>
+     <br> <br><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <?php
+    //AQUI CONECTAMOS A LA BASE DE DATOS DE POSTGRES
+    $conex = "host=localhost port=5432 dbname=supportyou user=postgres password=postgres";
+    $cnx = pg_connect($conex) or die ("<h1>Error de conexion.</h1> ". pg_last_error());
+    session_start();
 
-    <div class="container">
-        <!-- Portfolio Item Heading -->
-        row -->
-<br>
-        <br><br>
-        <br>
-        <br>
-        <br>
-        <!-- Portfolio Item Row -->
-        
-<h2>USUARIO</h2>
-
-<?php
-$_SESSION['MiSesion']= $_POST['username'];
-$username = $_POST['username'];
-$pass = $_POST['pass'];
-
- echo "Usuario " . $username. " pass ". $pass;
- echo "</br>";
- echo "<a href='MiPerfil.html'>Ir a Perfil</a>";
+    function quitar($mensaje)
+    {
+        $nopermitidos = array("'",'\\','<','>',"\"");
+        $mensaje = str_replace($nopermitidos, "", $mensaje);
+        return $mensaje;
+    }
+    if(trim($_POST["username"]) != "" && trim($_POST["pass"]) != "")
+    {
+    // Puedes utilizar la funcion para eliminar algun caracter en especifico
+    //$usuario = strtolower(quitar($HTTP_POST_VARS["usuario"]));
+    //$password = $HTTP_POST_VARS["password"];
+    // o puedes convertir los a su entidad HTML aplicable con htmlentities
+    $usuario = strtolower(htmlentities($_POST["username"], ENT_QUOTES));
+    $password = $_POST["pass"];
+    $result = pg_query('SELECT password, username FROM usuario WHERE username=\''.$usuario.'\'');
+    if($row = pg_fetch_array($result)){
+    if($row["password"] == $password){
+      
+      
+   //$_SESSION["MiSesion"] = $row['username'];<-- OJOOOOOOOO
+        echo 'Has sido logueado correctamente '.$_SESSION['k_username'].' <p>';
+        echo "Usuario " . $usuario. " pass ". $password;
+        echo '<br>';
+        echo '<a href="index.php">Index</a></p>';
+   //Elimina el siguiente comentario si quieres que re-dirigir automáticamente a index.php
+    }else{
+        echo 'Password incorrecto';
+    }
+    }else{
+        echo 'Usuario no existente en la base de datos';
+    }
+    pg_free_result($result);
+    }else{
+        echo 'Debe especificar un usuario y password';
+    }
+pg_close();
 ?>
-        <br>
-        <br>
-
-    </div>
-   
-    <script src="../js/main.js"></script>
-
-    <script src="../js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
-
+    
 </body>
-
-</html>
