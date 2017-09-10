@@ -21,12 +21,17 @@
     <!-- Custom Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="icon" type="image/png" href="../img/LogoSupportYou.png" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
 
 </head>
 
@@ -56,12 +61,12 @@
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
-           
+            
         </div>
         <!-- /.container -->
 
     </nav>
-     <br> <br><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <br> <br><br> <br> <br> <br> <br> <br> <br> <br> 
     <?php
     //AQUI CONECTAMOS A LA BASE DE DATOS DE POSTGRES
     $conex = "host=localhost port=5432 dbname=supportyou user=postgres password=postgres";
@@ -82,16 +87,27 @@
     // o puedes convertir los a su entidad HTML aplicable con htmlentities
     $usuario = strtolower(htmlentities($_POST["username"], ENT_QUOTES));
     $password = $_POST["pass"];
-    $result = pg_query('SELECT password, username FROM usuario WHERE username=\''.$usuario.'\'');
+    
+    $result = pg_query('SELECT password, username , idrol FROM usuario WHERE username=\''.$usuario.'\'');
     if($row = pg_fetch_array($result)){
     if($row["password"] == $password){
+    
       
       
-   //$_SESSION["MiSesion"] = $row['username'];<-- OJOOOOOOOO
-        echo 'Has sido logueado correctamente '.$_SESSION['k_username'].' <p>';
+   $_SESSION["MiSesion"] = $row['username'];
+        echo 'Has sido logueado correctamente '.$_SESSION['MiSesion'].' <p>';
         echo "Usuario " . $usuario. " pass ". $password;
         echo '<br>';
-        echo '<a href="index.php">Index</a></p>';
+        
+        if($row["idrol"]==1)  {
+            echo '<a href="administrador/index.php">Opciones de Administrador</a></p>';
+        }
+        if($row["idrol"]==2){
+            echo '<a href="MiPerfil.html">Ir a Perfil</a></p>';
+        }
+        if($row["idrol"]==3){
+            echo '<a href="PerfilFundacion.html">Ir a Perfil de Fundacion</a></p>';
+        }
    //Elimina el siguiente comentario si quieres que re-dirigir automáticamente a index.php
     }else{
         echo 'Password incorrecto';
@@ -103,7 +119,13 @@
     }else{
         echo 'Debe especificar un usuario y password';
     }
+    
+    
 pg_close();
 ?>
-    
+     <script src="../js/main.js"></script>
+
+    <script src="../js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
 </body>
