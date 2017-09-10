@@ -53,11 +53,15 @@ session_start();
                 <ul class="nav navbar-nav navbar-right">
                     
                     <li>
-                        <a class="page-scroll" href="../paginas/RegistroFundacion.html">FUNDACIONES</a>
+                        <?php
+                        echo"<a class='page-scroll' href='../paginas/RegistroFundacion.php'>FUNDACIONES</a>"
+                        ?>
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="../paginas/contactos.html">CONTÁCTENOS</a>
+                        <?php
+                        echo"<a class='page-scroll' href='../paginas/contactos.php'>CONTÁCTENOS</a>"
+                        ?>
                     </li>
                 </ul>
             </div>
@@ -102,7 +106,7 @@ session_start();
                         </label>
                     </div>
                     <input type="submit" id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">
-                    <h5>¿No tienes una cuenta?<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../index.html'">Regístrate</button> </h5>
+                    <h5>¿No tienes una cuenta?<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../index.php'">Regístrate</button> </h5>
                 </form>
 
             </div>

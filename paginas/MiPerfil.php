@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -45,7 +48,9 @@
                         <a class="page-scroll" href="../paginas/ContactoPerfil.html">CONTÁCTENOS</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="../index.html">SALIR</a>
+                        <?php
+                        echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                        ?>
                     </li>
                 </ul>
             </div>

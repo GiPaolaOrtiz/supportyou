@@ -1,8 +1,3 @@
-<?php
-
-include_once('paginas/modelo/usuario/guardarusuario.php');
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +13,7 @@ include_once('paginas/modelo/usuario/guardarusuario.php');
 
 
     <link rel="icon" type="image/png" href="img/LogoSupportYou.png" />
-    
+
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/landing-page.css" rel="stylesheet">
@@ -32,7 +27,7 @@ include_once('paginas/modelo/usuario/guardarusuario.php');
     <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
-           
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -40,19 +35,29 @@ include_once('paginas/modelo/usuario/guardarusuario.php');
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="index.html"><img alt="LogoAplicacion" id="estilo_logo" src="img/LogoSupportYou.png"></a>
+
+                <?php
+                echo"<a href='index.php'><img alt='LogoAplicacion' id='estilo_logo' src='img/LogoSupportYou.png'></a>"
+                ?>
+                
             </div>
-       
+
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <br>
                 <ul class="nav navbar-nav navbar-right">
+                    
                     <li>
-                        <a class="page-scroll" href="paginas/RegistroFundacion.html">FUNDACIONES</a>
+                        <?php
+                        echo"<a class='page-scroll' href='paginas/RegistroFundacion.php'>FUNDACIONES</a>"
+                        ?>
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="paginas/contactos.html">CONTÁCTENOS</a>
+                        <?php
+                        echo"<a class='page-scroll' href='paginas/contactos.php'>CONTÁCTENOS</a>"
+                        ?>
                     </li>
+
                 </ul>
             </div>
         </div>
@@ -75,7 +80,9 @@ include_once('paginas/modelo/usuario/guardarusuario.php');
                                 <a href="#registro" class="btn btn-default btn-lg"> <span class="network-name">REGÍSTRATE</span></a>
                             </li>
                             <li>
-                                <a href="paginas/login.php" class="btn btn-default btn-lg"> <span class="network-name">INICIA SESION</span></a>
+                                <?php
+                                echo"<a href='paginas/login.php' class='btn btn-default btn-lg'> <span class='network-name'>INICIA SESION</span></a>"
+                                ?>
                             </li>
 
                         </ul>
@@ -96,7 +103,7 @@ include_once('paginas/modelo/usuario/guardarusuario.php');
                 <div class="col-md-4">
                     <br>
                     <h4>Regístrate...</h4>
-                    <form action="paginas/modelo/usuario/guardarusuario.php" method="post" class="form-signin">
+                    <form class="form-signin">
                         <br>
                         <label for="inputEmail" class="sr-only">Email</label>
                         <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
@@ -107,9 +114,11 @@ include_once('paginas/modelo/usuario/guardarusuario.php');
                         <label for="inputPassword" class="sr-only">Password</label>
                         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
 
-                         <input class="btn btn-lg btn-primary btn-block" type="submit" value="Registrate" />
-                        <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='paginas/login.html'">Iniciar sesion</button>
-
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='paginas/RegistroConfirmacion.html'">Regístrate</button>
+                        
+                        
+                        <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='paginas/login.php'">Iniciar sesion</button>
+                        
                         <br>
                         <h4 id="styleh4">Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo.</h4>
                     </form>
@@ -150,7 +159,7 @@ include_once('paginas/modelo/usuario/guardarusuario.php');
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-             
+
 
                 </div>
             </div>

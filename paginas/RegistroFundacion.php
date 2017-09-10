@@ -26,19 +26,25 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../img/LogoSupportYou.png"></a>
+                <a href="../index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../img/LogoSupportYou.png"></a>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <br>
                 <ul class="nav navbar-nav navbar-right">
+                    
                     <li>
-                        <a class="page-scroll" href="../paginas/RegistroFundacion.html">FUNDACIONES</a>
+                        <?php
+                        echo"<a class='page-scroll' href='../paginas/RegistroFundacion.php'>FUNDACIONES</a>"
+                        ?>
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="../paginas/contactos.html">CONTÁCTENOS</a>
+                        <?php
+                        echo"<a class='page-scroll' href='../paginas/contactos.php'>CONTÁCTENOS</a>"
+                        ?>
                     </li>
+                        
                 </ul>
             </div>
         </div>

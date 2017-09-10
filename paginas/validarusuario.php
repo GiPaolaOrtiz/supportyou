@@ -103,10 +103,10 @@
             echo '<a href="administrador/index.php">Opciones de Administrador</a></p>';
         }
         if($row["idrol"]==2){
-            echo '<a href="MiPerfil.html">Ir a Perfil</a></p>';
+            echo '<a href="MiPerfil.php">Ir a Perfil</a></p>';
         }
         if($row["idrol"]==3){
-            echo '<a href="PerfilFundacion.html">Ir a Perfil de Fundacion</a></p>';
+            echo '<a href="PerfilFundacion.php">Ir a Perfil de Fundacion</a></p>';
         }
    //Elimina el siguiente comentario si quieres que re-dirigir automáticamente a index.php
     }else{
