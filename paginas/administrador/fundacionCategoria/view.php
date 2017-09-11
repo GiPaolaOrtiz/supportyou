@@ -52,6 +52,7 @@ $id =1;
 
 $CategoriaCollectorObj = new fundacionCategoriaCollector();
 echo '<h2 class="topspace text-center">Categorías de Fundación</h2>';
+echo "<a href='FormularioNuevaCategoria.php' class='btn btn-warning center-block w10'><b>+</b></a>";
 
 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
@@ -72,8 +73,6 @@ echo '</tr>';
                      echo '</tbody><table>';
                  echo '</div>';
 ?>
-
-<a href='FormularioNuevaCategoria.php' class='btn btn-warning'>Nuevo</a>
 
 
 </div>
