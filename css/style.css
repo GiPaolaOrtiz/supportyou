@@ -291,3 +291,12 @@ body {
 #don{
     background-color: #DEF2FA;
 }
+#logout{
+ text-align: center;   
+}
+.topspace{
+    margin-top: 130px;
+}
+.topspace2{
+    margin-top: 40px;
+}

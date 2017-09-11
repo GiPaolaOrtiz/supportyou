@@ -11,12 +11,12 @@
 
     <title>Support You</title>
 
-    <link rel="icon" type="image/png" href="../../../img/LogoSupportYou.png" />
+    <link rel="icon" type="image/png" href="../img/LogoSupportYou.png" />
 
-    <link rel="icon" type="image/png" href="../../../img/LogoSupportYou.png" />
-    <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../css/style.css" rel="stylesheet">
-    <link href="../../..css/landing-page.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../img/LogoSupportYou.png" />
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/landing-page.css" rel="stylesheet">
 
 
 
@@ -33,7 +33,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                
+               <?php
+                        echo"<a href='../index.php'><img alt='LogoAplicacion' id='estilo_logo' src='../img/LogoSupportYou.png'></a>"
+                  ?>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <br>
@@ -68,7 +71,7 @@
 
                 <ul class="list-inline intro-social-buttons">
                     <li>
-                        <a href="../../paginas/login.html" class="btn btn-default btn-lg"> <span class="network-name">INICIA SESION</span></a>
+                        <a href="../paginas/login.html" class="btn btn-default btn-lg"> <span class="network-name">INICIA SESION</span></a>
                         <br>
 
 
@@ -90,10 +93,10 @@
     <!-- js-canvas -->
 
     <!-- jQuery -->
-    <script src="../../../js/jquery.js"></script>
+    <script src="../js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
 </body>
 

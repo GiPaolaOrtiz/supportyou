@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +49,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../img/LogoSupportYou.png"></a>
+                <?php
+                        echo"<a href='../index.php'><img alt='LogoAplicacion' id='estilo_logo' src='../img/LogoSupportYou.png'></a>"
+                  ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -54,7 +59,9 @@
                 <ul class="nav navbar-nav navbar-right">
                     
                     <li>
-                        <a class="page-scroll" href="../">SALIR</a>
+                        <?php
+                        echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                        ?>
                     </li>
 
                     
@@ -66,12 +73,14 @@
         <!-- /.container -->
 
     </nav>
+      <div id="logout">
     <br> <br><br> <br> <br> <br> <br> <br> <br> <br> 
+    
     <?php
     //AQUI CONECTAMOS A LA BASE DE DATOS DE POSTGRES
     $conex = "host=localhost port=5432 dbname=supportyou user=postgres password=postgres";
     $cnx = pg_connect($conex) or die ("<h1>Error de conexion.</h1> ". pg_last_error());
-    session_start();
+  
 
     function quitar($mensaje)
     {
@@ -95,12 +104,12 @@
       
       
    $_SESSION["MiSesion"] = $row['username'];
-        echo 'Has sido logueado correctamente '.$_SESSION['MiSesion'].' <p>';
+        echo '<h2>Has sido logueado correctamente '.$_SESSION['MiSesion'].' </h2>';
         echo "Usuario " . $usuario. " pass ". $password;
         echo '<br>';
         
         if($row["idrol"]==1)  {
-            echo '<a href="administrador/index.php">Opciones de Administrador</a></p>';
+            echo '<a href="administrador.php">Ir a Opciones de Administrador</a></p>';
         }
         if($row["idrol"]==2){
             echo '<a href="MiPerfil.php">Ir a Perfil</a></p>';
@@ -123,8 +132,8 @@
     
 pg_close();
 ?>
-     <script src="../js/main.js"></script>
-
+         </div>
+   
     <script src="../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
