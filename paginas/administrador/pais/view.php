@@ -21,6 +21,7 @@
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
     <link href="../../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
@@ -38,7 +39,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../../paginas/administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
     </nav>
 
@@ -55,7 +56,7 @@ $id =1;
 
 $PaisCollectorObj = new paisCollector();
 echo '<h2 class="topspace text-center">Países</h2>';
-
+echo "<a href='FormularioNuevoPais.php' class='btn btn-warning center-block w10'><b>+</b></a>";
 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
@@ -75,8 +76,6 @@ echo '</tr>';
                      echo '</tbody><table>';
                  echo '</div>';
 ?>
-
-<a href='FormularioNuevoPais.php' class='btn btn-warning'>Nuevo</a>
 
 </div>
 </div>

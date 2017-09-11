@@ -56,7 +56,7 @@ $PaisCollectorObj->deletePais($id);
 echo "Se ha eliminado id : ".$id. " </br>";
 ?>
 
-<div><a href="listaPaises.php"> Ver lista de paises </a></div>
+<div><a href="view.php" class="btn btn-info mg"> Ver lista de paises </a></div>
 
 
 </div>
