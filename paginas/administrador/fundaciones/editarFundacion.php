@@ -43,39 +43,43 @@
             </nav>    
         <?php 
                 $id= $_GET['id'];
-                echo '<h2 class="topspace text-center">Usuarios</h2>';
-                include_once ("supportyou/paginas/modelo/usuario/usuarioCollector.php");
-                $UsuarioCollectorObj = new usuarioCollector();
-                $ObjUsuario=$UsuarioCollectorObj->showUsuario($id);
+                echo '<h2 class="topspace text-center">Fundacion</h2>';
+                include_once ("../../modelo/fundacion/fundacionCollector.php");
+                $FundacionCollectorObj = new fundacionCollector();
+                $ObjFundacion=$FundacionCollectorObj->showFundacion($id);
         ?>
          <div class="container topspace">
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <form method="post" action="editar.php">
+                        <form method="post" action="Actualizar.php">
                             <div class="form-group">
                               <label for="idu">ID</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getIdUsuario(); ?>" readonly name="id">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getIdFundacion(); ?>" readonly name="idFundacion">
                             </div>
                              <div class="form-group">
                               <label for="metodo">Nombre</label>
-                              <input type="email" class="form-control" id="metodo" value="<?php echo $ObjUsuario->getActividad(); ?>" name="email">
+                              <input type="text" class="form-control" id="metodo" value="<?php echo $ObjFundacion->getNombre(); ?>" name="nombre">
                             </div>
                             <div class="form-group">
                               <label for="idu">Actividad</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getNombre(); ?>" name="nombre">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getActividad(); ?>" name="actividad">
+                            </div>
+                            <div class="form-group">
+                              <label for="idu">Direccion</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getDireccion(); ?>" name="direccion">
                             </div>
                             <div class="form-group">
                               <label for="idu">Ruc</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getUsername(); ?>" name="username">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getRuc(); ?>" name="ruc">
                             </div>
                             <div class="form-group">
                               <label for="idu">Teléfono</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getPass(); ?>" name="pass">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getTelefono(); ?>" name="telefono">
                             </div>
                             <div class="form-group">
                               <label for="idu">Logo</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getPass(); ?>" name="pass">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getFoto(); ?>" name="foto">
                             </div>
                             <button type="submit" class="btn btn-info center-block">Enviar</button>
                         </form>

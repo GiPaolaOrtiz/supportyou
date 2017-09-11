@@ -45,20 +45,28 @@
 <div id="main">
 
 <?php
+$foto=$_POST["foto"];
+$telefono=$_POST["telefono"];
+$ruc=$_POST["ruc"];
+
+
 $nombre=$_POST["nombre"];
-$id_fundacioncategoria=$_POST["id_fundacioncategoria"];
+
+$direccion=$_POST["direccion"];
+$actividad=$_POST["actividad"];
+$id_fundacion=$_POST["idFundacion"];
 
 echo "Edicion en proceso... </br>";
 
-include_once("fundacionCategoriaCollector.php");
+include_once("../../modelo/fundacion/fundacionCollector.php");
 
-$CategoriaCollectorObj = new fundacionCategoriaCollector();
-$CategoriaCollectorObj->updateFundacionCategoria($id_fundacioncategoria,$nombre);
+$FundacionCollectorObj = new fundacionCollector();
+$FundacionCollectorObj->updateFundacion($id_fundacion, $actividad, $direccion,$ruc,$telefono, $nombre,$foto);
 
-echo "id : ".$id_fundacioncategoria. " actualizado a: ".$nombre." </br>";
+echo "id : ".$id_fundacion. " actualizado a: ".$nombre." </br>";
 ?>
 
-<div><a href="listaCategorias.php"> Volver al inicio </a></div>
+<div><a href="view.php"> Volver al inicio </a></div>
 
 </div>
 </div>

@@ -1,4 +1,4 @@
-<?php
+  <?php
   session_start();
 ?>
 
@@ -20,6 +20,7 @@
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
     <link href="../../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
@@ -46,40 +47,45 @@
 
 <?php
 
-include_once("../fundacion/fundacionCollector.php");
+include_once("../../../paginas/modelo/fundacion/fundacionCollector.php");
 
 $id =1;
 
-$fundacionCollectorObj = new fundacionCollector();
-echo '<h2 class="topspace text-center">Categorías de Fundación</h2>';
+$FundacionCollectorObj = new fundacionCollector();
+echo '<h2 class="topspace text-center">Fundaciones</h2>';
 
 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
                         echo '<th>Nombre</th>';
-                        echo '<th>ID</th>';
-                        echo '<th>Nombre</th>';
-                        echo '<th>ID</th>';
-                        echo '<th>Nombre</th>';
-                        echo '<th>ID</th>';
-                        echo '<th>Nombre</th>';
+                        echo '<th>Actividad</th>';
+                        echo '<th>Direccion</th>';
+                        echo '<th>Ruc</th>';
+                        echo '<th>Telefono</th>';
+                        echo '<th>Logo</th>';
                     echo '</tr> </thead><tbody>';
 
-foreach ($CategoriaCollectorObj->showFundacionCategorias() as $c){
+foreach ($FundacionCollectorObj->showFundaciones() as $c){
    echo '<tr>'; 
-                echo '<td>' . $c->getIdCategoria() . '</td>';
+                echo '<td>' . $c->getIdFundacion() . '</td>';
                 echo '<td>' . $c->getNombre() . '</td>';
-  echo "<td> <a href='Editar.php?id=".$c->getIdCategoria()."' class='btn btn-info mg'>  Editar</a>";
+                echo '<td>' . $c->getActividad() . '</td>';
+                echo '<td>' . $c->getDireccion() . '</td>';
+                echo '<td>' . $c->getRuc() . '</td>';
+                echo '<td>' . $c->getTelefono() . '</td>';
+
+                echo "<td><img class='img-responsive' id='imagen' src='../../../img/fundaciones/".$c->getFoto()."' alt=''></td> \n";  
+
+  echo "<td> <a href='editarFundacion.php?id=".$c->getIdFundacion()."' class='btn btn-info mg'>  Editar</a>";
   echo ' ';
-  echo "<a href='Eliminar.php?id=".$c->getIdCategoria() . "' class='btn btn-info'>Eliminar</a></td>";
+  echo "<a href='eliminarFundacion.php?id=".$c->getIdFundacion() . "' class='btn btn-info'>Eliminar</a></td>";
 echo '</tr>'; 
                       }
                      echo '</tbody><table>';
                  echo '</div>';
 ?>
 
-<a href='FormularioNuevaCategoria.php' class='btn btn-warning'>Nuevo</a>
 
 
 </div>
