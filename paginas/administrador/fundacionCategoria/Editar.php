@@ -39,6 +39,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -63,16 +64,13 @@ Id: <input type="text" name="id_fundacioncategoria" value="<?php echo $ObjCatego
 Nombre: <input type="text" name="nombre" value="<?php echo $ObjCategoria->getNombre(); ?>" autofocus required />
 </p>
 
-<a href="listaCategorias.php">  Cancelar</a>
+<a href="view.php">  Cancelar</a>
 <input type="submit" value="Guardar" />
 
 </form>
 
 
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>

@@ -19,7 +19,8 @@
     <link href="../../../css/portfolio-item.css" rel="stylesheet">
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
-    <link href="../../../css/style.css" rel="stylesheet">
+    <link href="../../../css/style.css" rel="stylesheet">    
+    <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
@@ -37,8 +38,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -76,9 +78,6 @@ echo '</tr>';
 
 
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>
