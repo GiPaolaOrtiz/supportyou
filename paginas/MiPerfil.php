@@ -74,7 +74,7 @@ session_start();
             <div id="nombreUsuario">
                 <h4>Nombre usuario</h4>
                 
-                <button id="botonSubirObjeto" type="submit" onClick="location.href='../paginas/subir_objeto.html'">Subir Objeto</button>
+                <button id="botonSubirObjeto" type="submit" onClick="location.href='../paginas/subir_objeto.php ?>'">Subir Objeto</button>
 
             </div>
 
