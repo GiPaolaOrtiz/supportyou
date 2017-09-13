@@ -72,7 +72,12 @@ session_start();
         </div>
         <!-- /.container-fluid -->
     </nav>
-
+     <?php 
+               
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/CategoriaProductoCollector.php";
+                $categoriaProductoCollectorObj = new CategoriaProductoCollector();
+                $ObjCategoriaProducto=$CategoriaProductoCollectorObj->showCategoriaProducto($id);
+        ?>
 
 
     <div id="formulario">
@@ -80,7 +85,7 @@ session_start();
             <div class="form-group">
 
                 <label >Seleccionar Elemento</label>
-                <select class="form-control" >
+                <select name=categoriaProducto class="form-control" >
                     <option>Ropa</option>
                     <option>Zapatos</option>
                     <option>Accesorios</option>
@@ -115,19 +120,11 @@ session_start();
                 </select>
             </div>
 
-            <div class="form-group">
-                <label >Precio</label>
-                <select class="form-control">
-                    <option>$5</option>
-                    <option>$10</option>
-                    <option>$15</option>
-                    <option>$20</option>
-                    <option>$25</option>
-
-
-
-                </select>
+             <div class="form-group">
+                <label for="exampleTextarea">Precio</label>
+                <textarea class="form-control" id="exampleTextarea" rows="1">$</textarea>
             </div>
+
             <div class="form-group">
                 <label for="exampleInputFile">Subir Foto </label>
                 <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">

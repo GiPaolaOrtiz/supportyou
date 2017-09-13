@@ -3,9 +3,7 @@ include_once("modelo/usuario/usuarioCollector.php");
 session_start();
 $username = $_POST['username'];
 $pass = $_POST['pass'];
-
 $UsuarioCollectorObj = new UsuarioCollector();
-
 ?>
 <!DOCTYPE html>
 
@@ -16,8 +14,9 @@ $UsuarioCollectorObj = new UsuarioCollector();
     </head>
     <body>
        
-        <?php
 
+    
+        <?php
         foreach ($UsuarioCollectorObj->showUsuarios() as $c){
             if($c->getUsername() == $username && $c->getPass() == $pass){
                
@@ -25,6 +24,12 @@ $UsuarioCollectorObj = new UsuarioCollector();
                  
                 echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=administrador.php?ID=". $c->getIdusuario(). "'>";
                 
+
+            if($c->getUsername() == $username && $c->getPass() == $pass){
+
+
+            }
+
             }
         }
         if (!isset($_SESSION['Misesion'])){

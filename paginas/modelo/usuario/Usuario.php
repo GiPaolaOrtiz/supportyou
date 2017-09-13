@@ -7,6 +7,7 @@ class Usuario
     private $nombre;
     private $username;
     private $pass;
+    private $idrol;
     
      function __construct($idusuario, $email,$nombre,$username,$pass) {
        $this->idusuario = $idusuario;

@@ -88,7 +88,7 @@ session_start();
                         <a href="cuentas/view.php" class="btn btn-info topspace2">Cuentas</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="fundaciones/view.php" class="btn btn-info topspace2">Fundaciones</a>
+                        <a href="administrador/fundaciones/view.php" class="btn btn-info topspace2">Fundaciones</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="fundacioncategorias/view.php" class="btn btn-info topspace2">Fundacion Categorias</a>
@@ -100,7 +100,7 @@ session_start();
                         <a href="paises/view.php" class="btn btn-info topspace2">Pais</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="productos/view.php" class="btn btn-info topspace2">Productos</a>
+                        <a href="modelo/producto/view.php" class="btn btn-info topspace2">Productos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="roles/view.php" class="btn btn-info topspace2">Roles</a>

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -6,7 +9,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../../../img/LogoSupportYou.png">
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet"  href="../../../css/style.css">  
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
@@ -23,7 +25,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="../../administrador.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
+                        <a href="index.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -34,48 +36,41 @@
                                <a class="page-scroll" href="../../administrador.php">HOME</a>
                             </li>
                             <li>
-                               <a class="page-scroll" href="../../logout.php">SALIR</a>
+                                <?php
+                                    echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                                ?>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>    
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
-            $UsuarioCollectorObj = new usuarioCollector();
-                echo '<h2 class="topspace text-center">Productos</h2>';
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
+            $rolCollectorObj = new rolCollector();
+                echo '<h2 class="topspace text-center">Roles</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
-                        echo '<th>Email</th>';
-                        echo '<th>Nombre</th>';
-                        echo '<th>Username</th>';
-                        echo '<th>Pass</th>';
+                        echo '<th>Nombre del rol</th>';
                         echo '<th>Acciones</th>';
-                        echo '</tr> </thead><tbody>';   
-            
-                      foreach ($UsuarioCollectorObj->showUsuarios() as $c){
+                    echo '</tr> </thead><tbody>';            
+                      foreach ($rolCollectorObj->showRoles() as $c){
                           echo '<tr>'; 
-                              echo '<td>' . $c->getidusuario() . '</td>';
-                              echo '<td>' . $c->getEmail() . '</td>';
+                              echo '<td>' . $c->getIdrol() . '</td>';
                               echo '<td>' . $c->getNombre() . '</td>';
-                              echo '<td>' . $c->getUsername() . '</td>';
-                              echo '<td>' . $c->getPass() . '</td>';
-                              echo "<td> <a href='formularioeditar.php?id=" . $c->getidusuario() . "' class='btn btn-info mg'>Editar</a>";
-                              echo "<a href='eliminar.php?id=" . $c->getidusuario() . "' class='btn btn-info'>Delete</a></td>";
+                              echo "<td> <a href='formularioeditar.php?id=" . $c->getIdrol() . "' class='btn btn-info mg'>Editar</a>";
+                              echo "<a href='eliminar.php?id=" . $c->getIdrol() . "' class='btn btn-info'>Delete</a></td>";
                           echo '</tr>'; 
                       }
                      echo '</tbody><table>';
                  echo '</div>';
             ?>
         </main>
-         <script src="../../../js/jquery.js"></script>
-        
+         <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
-
-        <script src="../../../js/bootstrap.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
         <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 

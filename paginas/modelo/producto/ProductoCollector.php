@@ -1,6 +1,9 @@
 <?php
 
 include_once('Producto.php');
+include_once('CategoriaProducto.php')
+include_once('fundacionCategoria.php')
+
 include_once('../Collector.php');
 
 
