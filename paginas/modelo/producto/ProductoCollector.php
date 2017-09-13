@@ -30,9 +30,9 @@ class productoCollector extends Collector
                   ("DELETE FROM public.producto where idproducto = ?", 
                   array( $idproducto ));
   }
-  function createDemo($nombre,$password){
+  function createProducto($idcategoriaproducto,$idfundacion, $descripcion, $estado, $precio, $img, $estadoventa){
     $insertrow= self::$db->insertRow
-                  ("INSERT INTO public.demo (nombre, password) VALUES (?, ?)", array("{$nombre}","{$password}"));
+                  ("INSERT INTO public.producto (idcategoriaproducto, idfundacion, descripcion, estado, precio, img, estadoventa) VALUES (?, ?)", array("{$idcategoriaproducto}","{idfundacion}","{descripcion}","{estado}","{precio}","{img}","{$estadoventa}"));
   }
 }
 ?>
