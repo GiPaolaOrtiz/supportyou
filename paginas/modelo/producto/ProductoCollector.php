@@ -2,6 +2,8 @@
 
 include_once('Producto.php');
 include_once('CategoriaProducto.php')
+include_once('fundacionCategoria.php')
+
 include_once('../Collector.php');
 
 
@@ -43,7 +45,18 @@ class productoCollector extends Collector
       $aux = new CategoriaProducto($c{'idcategoriaproducto'},$c{'nombre'});
       array_push($arrayCategoria, $aux);
     }
-    return $arrayProducto;        
+    return $arrayCategoria;        
+  }
+
+  function showFundacion() {
+    $rows = self::$db->getRows("SELECT * FROM fundacionCategoria ");        
+    echo "linea 1";
+    $arrayCategoriafundacion= array();        
+    foreach ($rows as $c){
+      $aux = new fundacionCategoria($c{'idfundacioncategoria'},$c{'nombre'});
+      array_push($arrayCategoriafundacion, $aux);
+    }
+    return $arrayCategoriafundacion;        
   }
 
 }
