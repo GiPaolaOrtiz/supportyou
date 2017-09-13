@@ -17,22 +17,18 @@ class productoCollector extends Collector
     }
     return $arrayProducto;        
   }
-  function showDemo($id) {
-    $row = self::$db->getRows("SELECT * FROM demo where id_demo= ?", array("{$id}"));
-    $ObjDemo= new Demo($row[0]{'id_demo'},$row[0]{'nombre'},$row[0]{'password'});
-    return $ObjDemo;        
-  }
+ 
 
-  function updateDemo($id, $nombre,$password){
+  function updateProductos($idproducto, $idcategoriaproducto,  $idfundacion, $descripcion, $estado, $precio, $img, $idperfil, $estadoventa){
       $insertrow= self::$db->updateRow
-                  ("UPDATE public.demo SET nombre= ?, password = ? where id_demo = ?", 
-                  array( "{$nombre}", "{$password}",$id ));
+                  ("UPDATE public.producto SET idcategoriaproducto= ?, idfundacion = ?, descripcion = ?, estado = ?, precio = ?, img = ?,  $estadoventa = ?, $idperfil = ? where idproducto = ?, ", 
+                  array( "{$idcategoriaproducto}", "{$idfundacion}", "{descripcion}","{estado}", "{precio}","{img}","{estadoventa}", "{idperfil}",$idproducto ));
   }
 
-  function deleteDemo($id){
+  function deleteProducto($id){
     $insertrow= self::$db->deleteRow
-                  ("DELETE FROM public.demo where id_demo = ?", 
-                  array( $id ));
+                  ("DELETE FROM public.producto where idproducto = ?", 
+                  array( $idproducto ));
   }
   function createDemo($nombre,$password){
     $insertrow= self::$db->insertRow
