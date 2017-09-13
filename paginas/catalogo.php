@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -25,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="../paginas/MiPerfil.html"><img id="estilo_logo" alt="logo" src="../img/LogoSupportYou.png"></a>
+                    <a href="../paginas/MiPerfil.php"><img id="estilo_logo" alt="logo" src="../img/LogoSupportYou.png"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,21 +40,13 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="MiPerfil.html">MI PERFIL</a>
-                        </li>
+                            <a class="page-scroll" href="MiPerfil.php">MI PERFIL</a>
+                        </li>                      
                         <li>
-                            <a class="page-scroll" href="carrito.html">CARRITO</a>
+                            <?php
+                                echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                            ?>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="pago.html">PAGO</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="../paginas/ContactoPerfil.html">CONTÁCTENOS</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="../index.html">SALIR</a>
-                        </li>
-
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -64,11 +59,11 @@
 
         <div id="nav"> <a href="#nav" title="Show navigation">Show navigation</a> <a href="#" title="Hide navigation">Hide navigation</a>
             <ul class="clearfix">
-                <li><a href="catalogo.html">Ropa</a></li>
-                <li> <a href="catalogoTecno.html" class="use"><span>Tecnologia</span></a>
+                <li><a href="catalogo.php" class="use">Ropa</a></li>
+                <li> <a href="catalogoTecno.php"><span>Tecnologia</span></a>
                 </li>
-                <li> <a href="catalogoHogar.html"><span>Hogar</span></a></li>
-                <li><a href="catalogoToys.html">Jueguetes</a></li>
+                <li> <a href="catalogoHogar.php"><span>Hogar</span></a></li>
+                <li><a href="catalogoToys.php">Jueguetes</a></li>
             </ul>
         </div>
 
@@ -80,55 +75,55 @@
                     <h2 class="page-header"></h2>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/audifonos.jpeg" alt="Audifonos"></a>
-                    <h3>Audifonos</h3>
-                    <small>Audifonos 500w</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoNegro.jpeg" alt="Vestido negro"></a>
+                    <h3>Vestido negro</h3>
+                    <small>Carolina Herrera</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/celular.jpg" alt="Celular"></a>
-                    <h3>Nuevos Telefonos</h3>
-                    <small>LG</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoRojo.jpg" alt="Vestido rojo"></a>
+                    <h3>Vestido rojo</h3>
+                    <small>Versage</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/reloj.jpg" alt="Reloj"></a>
-                    <h3>Reloj</h3>
-                    <small>Cassio</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/abrigoAzul.jpg" alt="Abrigo"></a>
+                    <h3>Abrigo</h3>
+                    <small>Tommy</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/tablet.png" alt="Tablet"></a>
-                    <h3>Tablet</h3>
-                    <small>12 pulgadas</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/camisaFlash.jpg" alt="Camisa de flash"></a>
+                    <h3>Camisa de superheroe</h3>
+                    <small>!Comic</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/camara.jpg" alt="Camara"></a>
-                    <h3>Camara</h3>
-                    <small>Sony</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/jeans.jpg" alt="Jeans"></a>
+                    <h3>Jean Grises</h3>
+                    <small>Lee</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/laptop.jpeg" alt="Laptop"></a>
-                    <h3>Laptop</h3>
-                    <small>Windows</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/ropaBebe.jpg" alt="Ropa de bebe"></a>
+                    <h3>Ropa de bebe</h3>
+                    <small>Fisher Price</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/usb.jpg" alt="Abrigo azul"></a>
-                    <h3>USB</h3>
-                    <small>New Frontier</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/abrigoAzul.jpg" alt="Abrigo azul"></a>
+                    <h3>Abrigo Azul</h3>
+                    <small>Tommy</small>
                 </div>
 
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/parlantes.jpg" alt="Camisa"></a>
-                    <h3>Parlantes</h3>
-                    <small>LG</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/camisa.jpg" alt="Camisa"></a>
+                    <h3>Camisa</h3>
+                    <small>Unkown</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/gb.jpg" alt="Game boy"></a>
-                    <h3>Game boy</h3>
-                    <small>SP</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/pantaloneta.jpg" alt="Pantaloneta"></a>
+                    <h3>Pantaloneta</h3>
+                    <small>Ramas</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Tecno/radio.jpeg" alt="Radio"></a>
-                    <h3>Radio</h3>
-                    <small>Green peace</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoAzul.jpg" alt="vestido azul"></a>
+                    <h3>Blue dress</h3>
+                    <small>Steffannie</small>
                 </div>
             </div>
         </div>
