@@ -110,6 +110,7 @@ session_start();
         
         if($row["idrol"]==1)  {
             echo '<a href="administrador.php">Ir a Opciones de Administrador</a></p>';
+           echo "<meta http-equiv='REFRESH' content='1';URL=administrador.php?>";
         }
         if($row["idrol"]==2){
             echo '<a href="MiPerfil.php">Ir a Perfil</a></p>';

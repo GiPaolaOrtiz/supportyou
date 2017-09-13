@@ -48,9 +48,7 @@ session_start();
                     <li>
                         <a class="page-scroll" href="pago.html">PAGO</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="../paginas/ContactoPerfil.html">CONTÁCTENOS</a>
-                    </li>
+              
                     <li>
                         <?php
                         echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
