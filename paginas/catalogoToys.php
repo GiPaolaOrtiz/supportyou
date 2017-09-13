@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -25,7 +28,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="../paginas/MiPerfil.html"><img id="estilo_logo" alt="logo" src="../img/LogoSupportYou.png"></a>
+                      <a href="../paginas/MiPerfil.html"><img id="estilo_logo" alt="logo" src="../img/LogoSupportYou.png"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,17 +40,14 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="MiPerfil.html">MI PERFIL</a>
-                        </li>                        
-                        <li>
-                            <a class="page-scroll" href="pago.html">PAGO</a>
+                            <a class="page-scroll" href="MiPerfil.php">MI PERFIL</a>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="../paginas/ContactoPerfil.html">CONTÁCTENOS</a>
+                       <li>
+                            <?php
+                                echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                            ?>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="../index.html">SALIR</a>
-                        </li>
+
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -60,11 +60,11 @@
 
         <div id="nav"> <a href="#nav" title="Show navigation">Show navigation</a> <a href="#" title="Hide navigation">Hide navigation</a>
             <ul class="clearfix">
-                <li><a href="catalogo.html" class="use">Ropa</a></li>
-                <li> <a href="catalogoTecno.html"><span>Tecnologia</span></a>
+                <li><a href="catalogo.php">Ropa</a></li>
+                <li> <a href="catalogoTecno.php"><span>Tecnologia</span></a>
                 </li>
-                <li> <a href="catalogoHogar.html"><span>Hogar</span></a></li>
-                <li><a href="catalogoToys.html">Jueguetes</a></li>
+                <li> <a href="catalogoHogar.php"><span>Hogar</span></a></li>
+                <li><a href="catalogoToys.php" class="use">Jueguetes</a></li>
             </ul>
         </div>
 
@@ -76,55 +76,55 @@
                     <h2 class="page-header"></h2>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoNegro.jpeg" alt="Vestido negro"></a>
-                    <h3>Vestido negro</h3>
-                    <small>Carolina Herrera</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/ajedrez.jpg" alt="Tablero de ajedrez"></a>
+                    <h3>Tablero de ajedrez</h3>
+                    <small>Madera de ebano</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoRojo.jpg" alt="Vestido rojo"></a>
-                    <h3>Vestido rojo</h3>
-                    <small>Versage</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/baraja.png" alt="Vestido rojo"></a>
+                    <h3>Baraja de yugioh</h3>
+                    <small>Juego de cartas</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/abrigoAzul.jpg" alt="Abrigo"></a>
-                    <h3>Abrigo</h3>
-                    <small>Tommy</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/carro.jpeg" alt="Carro"></a>
+                    <h3>Carro</h3>
+                    <small>Para todas las edades</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/camisaFlash.jpg" alt="Camisa de flash"></a>
-                    <h3>Camisa de superheroe</h3>
-                    <small>!Comic</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/gui.jpg" alt="Guitarra"></a>
+                    <h3>Guitarra</h3>
+                    <small>Juegute plastico</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/jeans.jpg" alt="Jeans"></a>
-                    <h3>Jean Grises</h3>
-                    <small>Lee</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/legos.jpeg" alt="Legos"></a>
+                    <h3>Paquete de legos</h3>
+                    <small>Legos multicolores</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/ropaBebe.jpg" alt="Ropa de bebe"></a>
-                    <h3>Ropa de bebe</h3>
-                    <small>Fisher Price</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/manos.jpeg" alt="Manos"></a>
+                    <h3>Manos de juguete</h3>
+                    <small>Hulk</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/abrigoAzul.jpg" alt="Abrigo azul"></a>
-                    <h3>Abrigo Azul</h3>
-                    <small>Tommy</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/mascara.jpeg" alt="Mascara"></a>
+                    <h3>Mascara</h3>
+                    <small>Capitan America</small>
                 </div>
 
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/camisa.jpg" alt="Camisa"></a>
-                    <h3>Camisa</h3>
-                    <small>Unkown</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/moto.jpeg" alt="Camisa"></a>
+                    <h3>Moto</h3>
+                    <small>Play Doh</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/pantaloneta.jpg" alt="Pantaloneta"></a>
-                    <h3>Pantaloneta</h3>
-                    <small>Ramas</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/mu%C3%B1eca.jpeg" alt="Barbie doll"></a>
+                    <h3>Muñeca</h3>
+                    <small>Barbie girl</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.html"><img class="img-circle img-responsive img-center" src="../img/Ropa/vestidoAzul.jpg" alt="vestido azul"></a>
-                    <h3>Blue dress</h3>
-                    <small>Steffannie</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/oso.jpeg" alt="Tedy bear"></a>
+                    <h3>Oso</h3>
+                    <small>Peluche</small>
                 </div>
             </div>
         </div>

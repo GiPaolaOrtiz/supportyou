@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -39,18 +42,12 @@
                         <li>
                             <a class="page-scroll" href="MiPerfil.html">MI PERFIL</a>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="carrito.html">CARRITO</a>
+                       <li>
+                            <?php
+                                echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                            ?>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="pago.html">PAGO</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="../paginas/ContactoPerfil.html">CONTÁCTENOS</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="../index.html">SALIR</a>
-                        </li>
+
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -63,11 +60,11 @@
 
         <div id="nav"> <a href="#nav" title="Show navigation">Show navigation</a> <a href="#" title="Hide navigation">Hide navigation</a>
             <ul class="clearfix">
-                <li><a href="catalogo.html">Ropa</a></li>
-                <li> <a href="catalogoTecno.html"><span>Tecnologia</span></a>
+                <li><a href="catalogo.php">Ropa</a></li>
+                <li> <a href="catalogoTecno.php" class="use"><span>Tecnologia</span></a>
                 </li>
-                <li> <a href="catalogoHogar.html" class="use"><span>Hogar</span></a></li>
-                <li><a href="catalogoToys.html">Jueguetes</a></li>
+                <li> <a href="catalogoHogar.php"><span>Hogar</span></a></li>
+                <li><a href="catalogoToys.php">Jueguetes</a></li>
             </ul>
         </div>
 
@@ -79,55 +76,55 @@
                     <h2 class="page-header"></h2>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/almohada.jpeg" alt="Almohada"></a>
-                    <h3>Amohada</h3>
-                    <small>Sweet Dreams</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/audifonos.jpeg" alt="Audifonos"></a>
+                    <h3>Audifonos</h3>
+                    <small>Audifonos 500w</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/ba%C3%B1o.jpg" alt="Baño"></a>
-                    <h3>Baño</h3>
-                    <small>Clean status</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/celular.jpg" alt="Celular"></a>
+                    <h3>Nuevos Telefonos</h3>
+                    <small>LG</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/cortina.jpg" alt="Abrigo"></a>
-                    <h3>Cortinas</h3>
-                    <small>The sunny</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/reloj.jpg" alt="Reloj"></a>
+                    <h3>Reloj</h3>
+                    <small>Cassio</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/cubito.jpeg" alt="Aparador"></a>
-                    <h3>Caja almacenadora</h3>
-                    <small>Madera de cedro</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/tablet.png" alt="Tablet"></a>
+                    <h3>Tablet</h3>
+                    <small>12 pulgadas</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/cuc.jpg" alt="Cucharas"></a>
-                    <h3>Cucharas</h3>
-                    <small>Grand Torino</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/camara.jpg" alt="Camara"></a>
+                    <h3>Camara</h3>
+                    <small>Sony</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/espejo.jpeg" alt="Espejo"></a>
-                    <h3>Espejo</h3>
-                    <small>Big Mirror</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/laptop.jpeg" alt="Laptop"></a>
+                    <h3>Laptop</h3>
+                    <small>Windows</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/mesita.jpeg" alt="mesita"></a>
-                    <h3>Mesita de noche</h3>
-                    <small>Le cuna</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/usb.jpg" alt="Abrigo azul"></a>
+                    <h3>USB</h3>
+                    <small>New Frontier</small>
                 </div>
 
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/silla.jpeg" alt="Silla"></a>
-                    <h3>Silla</h3>
-                    <small>May wood</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/parlantes.jpg" alt="Camisa"></a>
+                    <h3>Parlantes</h3>
+                    <small>LG</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/sofa.jpeg" alt="Sofa"></a>
-                    <h3>Sofa</h3>
-                    <small>Hunger Sofas</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/gb.jpg" alt="Game boy"></a>
+                    <h3>Game boy</h3>
+                    <small>SP</small>
                 </div>
                 <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="carrito.html"><img class="img-circle img-responsive img-center" src="../img/Hogar/ventilador.jpeg" alt="ventilador"></a>
-                    <h3>Ventilador</h3>
-                    <small>Smart Air</small>
+                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/radio.jpeg" alt="Radio"></a>
+                    <h3>Radio</h3>
+                    <small>Green peace</small>
                 </div>
             </div>
         </div>
