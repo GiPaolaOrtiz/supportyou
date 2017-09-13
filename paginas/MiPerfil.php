@@ -39,16 +39,8 @@ session_start();
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="../paginas/catalogo.html">CATÁLOGO</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="../paginas/carrito.html">CARRITO</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="pago.html">PAGO</a>
-                    </li>
-              
+                        <a class="page-scroll" href="../paginas/catalogo.php">CATÁLOGO</a>
+                    </li>              
                     <li>
                         <?php
                         echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
