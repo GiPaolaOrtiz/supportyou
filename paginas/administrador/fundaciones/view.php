@@ -38,8 +38,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -53,7 +54,8 @@ $id =1;
 
 $FundacionCollectorObj = new fundacionCollector();
 echo '<h2 class="topspace text-center">Fundaciones</h2>';
-
+echo "<a href='FormularioNuevoFundacion.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+    
 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
@@ -87,11 +89,7 @@ echo '</tr>';
 ?>
 
 
-
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>
