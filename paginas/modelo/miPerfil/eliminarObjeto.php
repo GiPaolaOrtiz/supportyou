@@ -7,9 +7,9 @@
 
 $id=$_GET["id"];
 
-include_once("collectorProducto.php");
+include_once("../../modelo/producto/ProductoCollector.php");
 
-$ProductoCollectorObj = new collectorProducto();
+$ProductoCollectorObj = new ProductoCollector();
 $ProductoCollectorObj->deleteProducto($id);
 
 echo "Se ha eliminado id : ".$id. " </br>";
