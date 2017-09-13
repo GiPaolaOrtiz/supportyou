@@ -66,13 +66,13 @@
                         <a href="fundaciones/view.php" class="btn btn-info topspace2">Fundaciones</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="fundacioncategorias/view.php" class="btn btn-info topspace2">Fundacion Categorias</a>
+                        <a href="fundacionCategoria/view.php" class="btn btn-info topspace2">Fundacion Categorias</a>
                     </div>
                      <div class="col-md-4  col-sm-6">
                         <a href="metodopago/view.php" class="btn btn-info topspace2">Metodos Pago</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="paises/view.php" class="btn btn-info topspace2">Pais</a>
+                        <a href="pais/view.php" class="btn btn-info topspace2">Pais</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="productos/view.php" class="btn btn-info topspace2">Productos</a>
