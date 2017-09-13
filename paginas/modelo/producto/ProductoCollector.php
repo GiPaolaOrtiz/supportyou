@@ -1,6 +1,7 @@
 <?php
 
 include_once('Producto.php');
+include_once('CategoriaProducto.php')
 include_once('../Collector.php');
 
 
@@ -34,5 +35,16 @@ class productoCollector extends Collector
     $insertrow= self::$db->insertRow
                   ("INSERT INTO public.producto (idcategoriaproducto, idfundacion, descripcion, estado, precio, img, estadoventa) VALUES (?, ?)", array("{$idcategoriaproducto}","{idfundacion}","{descripcion}","{estado}","{precio}","{img}","{$estadoventa}"));
   }
+  function showCategoria() {
+    $rows = self::$db->getRows("SELECT * FROM CategoriaProducto ");        
+    echo "linea 1";
+    $arrayCategoria= array();        
+    foreach ($rows as $c){
+      $aux = new CategoriaProducto($c{'idcategoriaproducto'},$c{'nombre'});
+      array_push($arrayCategoria, $aux);
+    }
+    return $arrayProducto;        
+  }
+
 }
 ?>
