@@ -3,20 +3,21 @@
 class claseRegistroFundacion
 {
     private $id_fundacion;
-   
     private $direccion;
+    private $actividad;
     private $email;
     private $pass;
     private $ruc;
-    private $pais_id;
-    private $fundacioncategoria_id;
-    private $ciudad_id;
-    private $cuenta_id;
-    private $telefono;
+    private $idusuariofk;
+    private $idpaisfk;
+    private $idciudadfk;
+    private $idcuentafk;
+    private $fundacioncategoria;
     private $nombre;
+    private $telefono;
 
     
-     function __construct($id_fundacion, $direccion, $email, $pass, $ruc, $pais_id, $fundacioncategoria_id, $ciudad_id, $cuenta_id, $telefono, $nombre) {
+     function __construct($id_fundacion,$direccion,$actividad,$email,$pass,$ruc,$idusuariofk,$idpaisfk,$idciudadfk,$idcuentafk,$fundacioncategoria,$nombre,$telefono) {
        $this->id_fundacion = $id_fundacion;
        $this->direccion = $direccion;
        $this->email = $email;
@@ -36,12 +37,17 @@ class claseRegistroFundacion
      function getIdFundacion(){
        return $this->id_fundacion;
      } 
-    
      function setDireccion($direccion){
        $this->direccion = $direccion;
      } 
      function getDireccion(){
        return $this->direccion;
+     } 
+     function setActividad($actividad){
+       $this->actividad = $actividad;
+     } 
+     function getActividad(){
+       return $this->actividad;
      } 
      function setEmail($email){
        $this->email = $email;
@@ -61,35 +67,35 @@ class claseRegistroFundacion
      function getRuc(){
        return $this->ruc;
      } 
-     function setPais_id($pais_id){
-       $this->pais_id = $pais_id;
+     function setIdusuariofk($idusuariofk){
+       $this->idusuariofk = $idusuariofk;
      } 
-     function getPais_id(){
-       return $this->pais_id;
+     function getIdusuariofk(){
+       return $this->idusuariofk;
      } 
-     function setFundacioncategoria_id($fundacioncategoria_id){
-       $this->fundacioncategoria_id = $fundacioncategoria_id;
+     function setIdpaisfk($idpaisfk){
+       $this->idpaisfk = $idpaisfk;
      } 
-     function getFundacioncategoria_id(){
-       return $this->fundacioncategoria_id;
+     function getIdpaisfk(){
+       return $this->idpaisfk;
      } 
-     function setCiudad_id($ciudad_id){
-       $this->ciudad_id = $ciudad_id;
+     function setIdciudadfk($idciudadfk){
+       $this->idciudadfk = $idciudadfk;
      } 
-     function getCiudad_id(){
-       return $this->ciudad_id;
+     function getIdciudadfk(){
+       return $this->idciudadfk;
      } 
-     function setCuenta_id($cuenta_id){
-       $this->cuenta_id = $cuenta_id;
+     function setIdcuentafk($idcuentafk){
+       $this->idcuentafk = $idcuentafk;
      } 
-     function getCuenta_id(){
-       return $this->cuenta_id;
+     function getIdcuentafk(){
+       return $this->idcuentafk;
      } 
-     function setTelefono($telefono){
-       $this->telefono = $telefono;
+     function setFundacioncategoria($fundacioncategoria){
+       $this->fundacioncategoria = $fundacioncategoria;
      } 
-     function getTelefono(){
-       return $this->telefono;
+     function getFundacioncategoria(){
+       return $this->fundacioncategoria;
      } 
      function setNombre($nombre){
        $this->nombre = $nombre;
@@ -97,6 +103,12 @@ class claseRegistroFundacion
      function getNombre(){
        return $this->nombre;
      }
+     function setTelefono($telefono){
+       $this->telefono = $telefono;
+     } 
+     function getTelefono(){
+       return $this->telefono;
+     } 
 }
 
 ?> 
