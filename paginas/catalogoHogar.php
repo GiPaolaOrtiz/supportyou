@@ -30,8 +30,6 @@ session_start();
                     </button>
                     <a href="../paginas/MiPerfil.php"><img id="estilo_logo" alt="logo" src="../img/LogoSupportYou.png"></a>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <br>
                     <ul class="nav navbar-nav navbar-right">
