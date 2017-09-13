@@ -3,19 +3,18 @@
 ?>
 
 <?php
-$descripcion=$_POST["descripcion"];
-$estado=$_POST["estado"];
-$precio=$_POST["precio"];
-$fundacion=$_POST["fundacion"];
+
 $categoria=$_POST["categoria"];
+$precio=$_POST["precio"];
+$descripcion=$_POST["descripcion"];
 $id_producto=$_POST["id_producto"];
 
 echo "Edicion en proceso... </br>";
 
-include_once("collectorProducto.php");
+include_once("../../modelo/producto/ProductoCollector.php");
 
-$ProductoCollectorObj = new collectorProducto();
-$ProductoCollectorObj->updateProducto($id_producto,$descripcion,$estado,$precio,$fundacion,$categoria);
+$ProductoCollectorObj = new ProductoCollector();
+$ProductoCollectorObj->updateProducto($id_producto,$descripcion,$precio,$categoria);
 
 echo "id : ".$id_producto. " actualizado </br>";
 ?>
