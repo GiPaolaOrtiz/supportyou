@@ -1,10 +1,10 @@
 <?php
 
-include_once('Producto.php');
-include_once('CategoriaProducto.php')
-include_once('fundacionCategoria.php')
 
-include_once('../Collector.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
+
+include_once('Producto.php');
+
 
 
 class productoCollector extends Collector
