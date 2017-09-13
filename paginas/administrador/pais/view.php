@@ -41,6 +41,7 @@
                 </button>
                 <a href="../../../paginas/administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -78,9 +79,6 @@ echo '</tr>';
 ?>
 
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>
