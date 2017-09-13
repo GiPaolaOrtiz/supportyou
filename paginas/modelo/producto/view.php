@@ -1,3 +1,8 @@
+<?php 
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+            $ProductoObj = new ProductoCollector();
+            ?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -40,36 +45,41 @@
                     </div>
                 </div>
             </nav>    
-        <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
-            $UsuarioCollectorObj = new usuarioCollector();
-                echo '<h2 class="topspace text-center">Productos</h2>';
-                echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
-                echo '<div class="">';                     
-                echo '<table class="table table-condensed">';
-                    echo ' <thead><tr>';   
-                        echo '<th>ID</th>';
-                        echo '<th>Email</th>';
-                        echo '<th>Nombre</th>';
-                        echo '<th>Username</th>';
-                        echo '<th>Pass</th>';
-                        echo '<th>Acciones</th>';
-                        echo '</tr> </thead><tbody>';   
+        
+                <h2 class="topspace text-center">Productos</h2>               
+                <a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>
+                <div class="">                     
+                  '<table class="table table-condensed">
+                      ' <thead><tr>';   
+                          '<th>ID</th>';
+                          '<th>Categoria Producto</th>';
+                          '<th>Categoria Fundacion </th>';
+                          '<th>Descripcion</th>';
+                          '<th>Uso </th>';
+                          '<th>Estado de Venta </th>';
+                          '<th>Precio </th>';
+                          '<th>Foto </th>';
+                          '</tr> </thead><tbody>';   
             
-                      foreach ($UsuarioCollectorObj->showUsuarios() as $c){
-                          echo '<tr>'; 
-                              echo '<td>' . $c->getidusuario() . '</td>';
-                              echo '<td>' . $c->getEmail() . '</td>';
-                              echo '<td>' . $c->getNombre() . '</td>';
-                              echo '<td>' . $c->getUsername() . '</td>';
-                              echo '<td>' . $c->getPass() . '</td>';
-                              echo "<td> <a href='formularioeditar.php?id=" . $c->getidusuario() . "' class='btn btn-info mg'>Editar</a>";
-                              echo "<a href='eliminar.php?id=" . $c->getidusuario() . "' class='btn btn-info'>Delete</a></td>";
-                          echo '</tr>'; 
-                      }
-                     echo '</tbody><table>';
-                 echo '</div>';
-            ?>
+                      <?php  foreach ($UsuarioCollectorObj->showUsuarios() as $c){?>
+                            '<tr>'; 
+                                '<td>' . $c->getIdproducto() . '</td>';
+                                '<td>' . $c->getIdcategoriaproducto() . '</td>';
+                                '<td>' . $c->getItproducto() . '</td>';
+                                '<td>' . $c->getDescripcion() . '</td>';
+                                '<td>' . $c->getEstado() . '</td>';
+                                '<td>' . $c->getEstadoventa() . '</td>';
+                                '<td>' . $c->getPrecio() . '</td>';
+                                '<td>' . $c->getImg() . '</td>';
+
+
+                                "<td> <a href='formularioeditar.php?id=" . $c->getIdproducto() . "' class='btn btn-info mg'>Editar</a>";
+                                "<a href='eliminar.php?id=" . $c->getIdproducto() . "' class='btn btn-info'>Delete</a></td>";
+                            '</tr>'; 
+                     <?php  }?>
+                       '</tbody><table>';
+                   '</div>';
+            
         </main>
          <script src="../../../js/jquery.js"></script>
         
