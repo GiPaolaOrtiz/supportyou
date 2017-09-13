@@ -37,27 +37,5 @@ class productoCollector extends Collector
     $insertrow= self::$db->insertRow
                   ("INSERT INTO public.producto (idcategoriaproducto, idfundacion, descripcion, estado, precio, img, estadoventa) VALUES (?, ?)", array("{$idcategoriaproducto}","{idfundacion}","{descripcion}","{estado}","{precio}","{img}","{$estadoventa}"));
   }
-  function showCategoria() {
-    $rows = self::$db->getRows("SELECT * FROM CategoriaProducto ");        
-    echo "linea 1";
-    $arrayCategoria= array();        
-    foreach ($rows as $c){
-      $aux = new CategoriaProducto($c{'idcategoriaproducto'},$c{'nombre'});
-      array_push($arrayCategoria, $aux);
-    }
-    return $arrayCategoria;        
-  }
-
-  function showFundacion() {
-    $rows = self::$db->getRows("SELECT * FROM fundacionCategoria ");        
-    echo "linea 1";
-    $arrayCategoriafundacion= array();        
-    foreach ($rows as $c){
-      $aux = new fundacionCategoria($c{'idfundacioncategoria'},$c{'nombre'});
-      array_push($arrayCategoriafundacion, $aux);
-    }
-    return $arrayCategoriafundacion;        
-  }
-
 }
 ?>
