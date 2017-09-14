@@ -9,12 +9,13 @@ class Usuario
     private $pass;
     private $idrol;
     
-     function __construct($idusuario, $email,$nombre,$username,$pass) {
+     function __construct($idusuario, $email,$nombre,$username,$pass,$idrol) {
        $this->idusuario = $idusuario;
        $this->email = $email;
        $this->nombre = $nombre;
        $this->username = $username;
        $this->pass = $pass;
+       $this->idrol=$idrol;
      }
     
      function setIdusuario($idusuario){
@@ -46,6 +47,12 @@ class Usuario
      } 
      function getPass(){
        return $this->pass;
+     }
+     function setIdrol($idrol){
+       $this->idrol = $idrol;
+     } 
+     function getIdrol(){
+       return $this->idrol;
      }
 }
 

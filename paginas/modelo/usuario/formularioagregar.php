@@ -66,6 +66,10 @@
                   <label for="metodo">Contraseña del usuario</label>
                   <input type="text" class="form-control" id="password" placeholder="Password" name="password">
                 </div>
+                <div class="form-group">
+                  <label for="metodo">Rol: 1=admin,2=cliente,3=fundacion</label>
+                  <input type="text" class="form-control" id="idrol" placeholder="rol" name="idrol">
+                </div>
                 <button type="submit" class="btn btn-info center-block">Enviar</button>
             </form>
                 </div>

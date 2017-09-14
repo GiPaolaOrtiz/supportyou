@@ -49,11 +49,12 @@
                 $nombre=$_POST['nombre'];
                 $username=$_POST['username'];
                 $password=$_POST['password'];
+                $idrol=$_POST['idrol'];
             
             
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
                 $UsuarioCollectorObj = new usuarioCollector();
-                $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password);
+                $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
 
                 echo "<h3 class='topspace text-center'>El usuario <b>" . $username . "</b> ha sido agregado</h3>";
             ?>

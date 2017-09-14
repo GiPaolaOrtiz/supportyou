@@ -22,13 +22,24 @@ $UsuarioCollectorObj = new UsuarioCollector();
                
                 $_SESSION['Misesion']= $username;
                  
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=administrador.php?ID=". $c->getIdusuario(). "'>";
+                
                 
 
-            if($c->getUsername() == $username && $c->getPass() == $pass){
-
+            if($c->getIdrol() == 1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=administrador.php?ID=". $c->getIdusuario(). "'>";
 
             }
+
+            if($c->getIdrol() == 2){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=MiPerfil.php?ID=". $c->getIdusuario(). "'>";
+
+            }
+
+            if($c->getIdrol() == 3){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=PerfilFundacion.php?ID=". $c->getIdusuario(). "'>";
+
+            }
+
 
             }
         }

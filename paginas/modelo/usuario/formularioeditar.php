@@ -73,6 +73,10 @@
                               <label for="idu">Password</label>
                               <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getPass(); ?>" name="pass">
                             </div>
+                               <div class="form-group">
+                              <label for="idu">Rol</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getIdrol(); ?>" name="idrol">
+                            </div>
                             <button type="submit" class="btn btn-info center-block">Enviar</button>
                         </form>
                     </div>

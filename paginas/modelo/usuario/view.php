@@ -53,6 +53,7 @@
                         echo '<th>Nombre</th>';
                         echo '<th>Username</th>';
                         echo '<th>Pass</th>';
+                        echo '<th>IdRol</th>';
                         echo '<th>Acciones</th>';
                         echo '</tr> </thead><tbody>';   
             
@@ -63,6 +64,7 @@
                               echo '<td>' . $c->getNombre() . '</td>';
                               echo '<td>' . $c->getUsername() . '</td>';
                               echo '<td>' . $c->getPass() . '</td>';
+                              echo '<td>' . $c->getIdrol() . '</td>';
                               echo "<td> <a href='formularioeditar.php?id=" . $c->getidusuario() . "' class='btn btn-info mg'>Editar</a>";
                               echo "<a href='eliminar.php?id=" . $c->getidusuario() . "' class='btn btn-info'>Delete</a></td>";
                           echo '</tr>'; 

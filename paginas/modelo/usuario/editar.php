@@ -42,7 +42,7 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
+                echo '<h2 class="topspace text-center">Editar Usuario</h2>';
             ?>
             <?php
                 $id=$_POST['id'];
@@ -50,10 +50,11 @@
                 $nombre=$_POST['nombre'];
 		        $username=$_POST['username'];
                 $pass=$_POST['pass'];
+                $idrol=$_POST['idrol'];
             
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
                 $UsuarioCollectorObj = new usuarioCollector();
-                $UsuarioCollectorObj-> updateUsuario($id,$email,$nombre,$username,$pass);
+                $UsuarioCollectorObj-> updateUsuario($id,$email,$nombre,$username,$pass,$idrol);
 
                 echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $id . "</span> ha sido actualizado a <span class='green'>" . $username . "</span></h3>";
             ?>
