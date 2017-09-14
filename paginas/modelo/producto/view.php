@@ -61,7 +61,7 @@
                           '<th>Foto </th>';
                           '</tr> </thead><tbody>';   
             
-                      <?php  foreach ($UsuarioCollectorObj->showUsuarios() as $c){?>
+                      <?php  foreach ($ProductoCollectorObj->showProductos() as $c){?>
                             '<tr>'; 
                                 '<td>' . $c->getIdproducto() . '</td>';
                                 '<td>' . $c->getIdcategoriaproducto() . '</td>';
