@@ -35,14 +35,9 @@ $UsuarioCollectorObj = new UsuarioCollector();
 
             }
 
-            if($c->getIdrol() == 3){
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=PerfilFundacion.php?ID=". $c->getIdusuario(). "'>";
-
-            }
-
-
             }
         }
+        
         if (!isset($_SESSION['Misesion'])){
         ?>
             

@@ -42,43 +42,24 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Usuarios</h2>';
-                echo '<h3 class="text-center">Agregar</h3>';                
-        ?>
+                echo '<h2 class="topspace text-center">Cliente</h2>';
+            ?>
+            <?php
+                $idusuario=$_POST['idUsuario'];
+                $foto=$_POST['foto'];
+                $fechanacimiento=$_POST['fechaNacimiento'];
+                $fecharegistro=$_POST['fechaRegistro'];
+              
+            
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
+                $ClienteCollectorObj = new ClienteCollector();
+                $ClienteCollectorObj-> createCliente($idusuario,$foto,$fechanacimiento,$fecharegistro);
 
-     
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <form method="post" class="topspace" action="agregar.php">
-                 <div class="form-group">
-                   <label for="metodo">Email</label>
-                   <input type="email" class="form-control" id="email" placeholder="Em@il" name="email">
-                 </div>
-                 <div class="form-group">
-                  <label for="metodo">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
-                </div>
-                <div class="form-group">
-                  <label for="metodo">Nombre del usuario</label>
-                  <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-                </div>
-                <div class="form-group">
-                  <label for="metodo">Contraseña del usuario</label>
-                  <input type="text" class="form-control" id="password" placeholder="Password" name="password">
-                </div>
-                <div class="form-group">
-                  <label for="metodo">Rol: 1=admin,2=cliente,3=fundacion</label>
-                  <input type="text" class="form-control" id="idrol" placeholder="rol" name="idrol">
-                </div>
-                <button type="submit" class="btn btn-info center-block">Enviar</button>
-            </form>
-                </div>
-                <div class="col-md-4"></div>
+                echo "<h3 class='topspace text-center'>El usuario <b>" . $idusuario . "</b> ha sido agregado como CLIENTE</h3>";
+            ?>
+            <div>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
             </div>
-        </div>
-        <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
