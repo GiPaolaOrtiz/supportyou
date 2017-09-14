@@ -9,17 +9,15 @@ class Producto
     private $estado;
     private $precio;
     private $img;
-    private $idperfil;
     private $estadoventa;
     
-     function __construct($idproducto, $idcategoriaproducto, $idfundacion, $descripcion, $estado, $precio, $img, $idperfil, $estadoventa) {
+     function __construct($idproducto, $idcategoriaproducto, $idfundacion, $descripcion, $estado, $precio, $img, $estadoventa) {
        $this->idproducto = $idproducto;
        $this->idcategoriaproducto = $idcategoriaproducto;
        $this->idfundacion = $idfundacion;
        $this->descripcion = $descripcion;
        $this->estado = $estado;
        $this->img = $img;
-       $this->idperfil = $idperfil;
        $this->estadoventa = $estadoventa;    
      }
     //Idproducto
@@ -70,13 +68,6 @@ class Producto
      } 
      function getImg(){
        return $this->img;
-     } 
-    //
-    function setIdperfil($idperfil){
-       $this->idperfil = $idperfil;
-     } 
-     function getIdperfil(){
-       return $this->idperfil;
      } 
     //
     function setEstadoventa($estadoventa){
