@@ -57,7 +57,7 @@
                 echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $descripcion . "</span> ha sido eliminado</h3>";
             ?>
             <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+                <a href="view.php" class="btn btn-info center-block w70"> Volver </a>
             </div>
         </main>
          <script src="../../js/jquery.js"></script>
