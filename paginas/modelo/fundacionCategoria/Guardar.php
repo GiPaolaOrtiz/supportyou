@@ -37,8 +37,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -65,7 +66,7 @@ $CategoriaCollectorObj->createFundacionCategoria($nombre);
 echo 'Categoría de fundación registrada ' . htmlspecialchars($nombre) . '!';
 ?>
 
-<div><a href="listaCategorias.php">Volver </a></div>
+<div><a href="view.php">Volver </a></div>
                 
 </div>
 

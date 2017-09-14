@@ -39,6 +39,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -56,13 +57,10 @@ $CategoriaCollectorObj->deleteFundacionCategoria($id);
 echo "Se ha eliminado id : ".$id. " </br>";
 ?>
 
-<div><a href="listaCategorias.php"> Ver lista de categorías </a></div>
+<div><a href="view.php"> Ver lista de categorías </a></div>
 
 
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>
