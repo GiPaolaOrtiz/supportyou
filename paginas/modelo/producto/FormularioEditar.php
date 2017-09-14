@@ -67,11 +67,23 @@
                             </div>
                             <div class="form-group">
                               <label for="idu">Descripcion </label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getDescripcion(); ?>" name="pass">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getDescripcion(); ?>" name="descripcion">
                             </div>
                                <div class="form-group">
-                              <label for="idu">Rol</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjUsuario->getIdrol(); ?>" name="idrol">
+                              <label for="idu">Estado</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getEstado(); ?>" name="estado">
+                            </div>
+                            <div class="form-group">
+                              <label for="idu">Precio</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getPrecio(); ?>" name="precio">
+                            </div>
+                            <div class="form-group">
+                              <label for="idu">Imagen </label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getImg(); ?>" name="img">
+                            </div>
+                              <div class="form-group">
+                              <label for="idu">Estado de Venta </label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getEstadoventa(); ?>" name="estadoventa">
                             </div>
                             <button type="submit" class="btn btn-info center-block">Enviar</button>
                         </form>
