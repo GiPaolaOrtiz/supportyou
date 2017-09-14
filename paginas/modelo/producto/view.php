@@ -1,8 +1,3 @@
-<?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
-            $ProductoObj = new ProductoCollector();
-            ?>
-
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -45,41 +40,42 @@
                     </div>
                 </div>
             </nav>    
-        
-                <h2 class="topspace text-center">Productos</h2>               
-                <a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>
-                <div class="">                     
-                  '<table class="table table-condensed">
-                      ' <thead><tr>';   
-                          '<th>ID</th>';
-                          '<th>Categoria Producto</th>';
-                          '<th>Categoria Fundacion </th>';
-                          '<th>Descripcion</th>';
-                          '<th>Uso </th>';
-                          '<th>Estado de Venta </th>';
-                          '<th>Precio </th>';
-                          '<th>Foto </th>';
-                          '</tr> </thead><tbody>';   
+        <?php 
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+            $ProductoCollectorObj = new ProductoCollector();
+                echo '<h2 class="topspace text-center">Productos </h2>';
+                echo "<a href='Agregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+                echo '<div class="">';                     
+                echo '<table class="table table-condensed">';
+                    echo ' <thead><tr>';   
+                        echo '<th>Id producto</th>';
+                        echo '<th>Id Categoria de producto</th>';
+                        echo '<th>Id fundacion</th>';
+                        echo '<th>Descripcion</th>';
+                        echo '<th>Estado</th>';
+                        echo '<th>Precio</th>';
+                        echo '<th>Imagen</th>';
+                        echo '<th>Estado de venta </th>';
+                        echo '</tr> </thead><tbody>';   
             
-                      <?php  foreach ($ProductoCollectorObj->showProductos() as $c){?>
-                            '<tr>'; 
-                                '<td>' . $c->getIdproducto() . '</td>';
-                                '<td>' . $c->getIdcategoriaproducto() . '</td>';
-                                '<td>' . $c->getItproducto() . '</td>';
-                                '<td>' . $c->getDescripcion() . '</td>';
-                                '<td>' . $c->getEstado() . '</td>';
-                                '<td>' . $c->getEstadoventa() . '</td>';
-                                '<td>' . $c->getPrecio() . '</td>';
-                                '<td>' . $c->getImg() . '</td>';
+                      foreach ($ProductoCollectorObj->showProductos() as $c){
+                          echo '<tr>'; 
+                              echo '<td>' . $c->getIdproducto() . '</td>';
+                              echo '<td>' . $c->getIdcategotiaproducto() . '</td>';
+                              echo '<td>' . $c->getIdfundacion() . '</td>';
+                              echo '<td>' . $c->getDescripcion() . '</td>';
+                              echo '<td>' . $c->getEstado() . '</td>';
+                              echo '<td>' . $c->getPrecio() . '</td>';
+                              echo '<td>' . $c->getImg() . '</td>';
+                              echo '<td>' . $c->getEstadoventa() . '</td>';
 
-
-                                "<td> <a href='formularioeditar.php?id=" . $c->getIdproducto() . "' class='btn btn-info mg'>Editar</a>";
-                                "<a href='eliminar.php?id=" . $c->getIdproducto() . "' class='btn btn-info'>Delete</a></td>";
-                            '</tr>'; 
-                     <?php  }?>
-                       '</tbody><table>';
-                   '</div>';
-            
+                              echo "<td> <a href='FormularioEditar.php?id=" . $c->getIdproducto() . "' class='btn btn-info mg'>Editar</a>";
+                              echo "<a href='Eliminar.php?id=" . $c->getIdproducto() . "' class='btn btn-info'>Delete</a></td>";
+                          echo '</tr>'; 
+                      }
+                     echo '</tbody><table>';
+                 echo '</div>';
+            ?>
         </main>
          <script src="../../../js/jquery.js"></script>
         
