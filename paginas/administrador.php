@@ -103,7 +103,7 @@ session_start();
                         <a href="modelo/producto/view.php" class="btn btn-info topspace2">Productos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="roles/view.php" class="btn btn-info topspace2">Roles</a>
+                        <a href="modelo/rol/view.php" class="btn btn-info topspace2">Roles</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="rolesxusuarios/view.php" class="btn btn-info topspace2">Roles x Usuario</a>
