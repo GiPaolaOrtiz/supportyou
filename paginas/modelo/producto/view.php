@@ -44,7 +44,7 @@
         <?php 
             include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
             $ProductoCollectorObj = new ProductoCollector();
-                echo '<h2 class="topspace text-center">Productos </h2>';
+                echo '<h2 class="topspace text-center">Tabla Productos </h2>';
                 echo "<a href='Agregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
