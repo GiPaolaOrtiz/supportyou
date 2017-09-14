@@ -17,6 +17,7 @@ class Producto
        $this->idfundacion = $idfundacion;
        $this->descripcion = $descripcion;
        $this->estado = $estado;
+       $this->precio = $precio;
        $this->img = $img;
        $this->estadoventa = $estadoventa;    
      }
