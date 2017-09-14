@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Contactos</title>
+    <title>Categorías de Fundación</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -37,16 +37,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
         </div>
     </nav>
 
+    <br>
+    <br>
+    <br>
 
 <div id="main">
-    
-    <br>
-    <br>
+<div id="centro">
+
 <?php
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
@@ -56,31 +58,25 @@ $ciudad = $_POST['ciudad'];
 $direccion = $_POST['direccion'];
 $telefono = $_POST['telefono'];
 $email = $_POST['email'];
-$pass = $_POST['contraseña'];
-$cuenta = $_POST['ncuenta'];
+$pass = $_POST['pass'];
+$cuenta = $_POST['cuenta'];
 $ruc = $_POST['ruc'];
 $foto = $_POST['foto'];
+$idfundacion=$_POST["idFundacion"];
 
+echo "Edición en proceso... </br>";
 
-
-include_once("fundacionCollector.php");
+include_once("../../modelo/fundacion/fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
-$FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
+$FundacionCollectorObj->updateFundacion($idfundacion,$direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
 
-    
-    
-    
-    
-    
-    
-
-echo 'Fundación' . htmlspecialchars($nombre) . 'registrada!';
-
-
+echo "id : ".$idfundacion. " actualizado a: ".$nombre." </br>";
 ?>
 
+<div><a href="view.php"> Volver al inicio </a></div>
 
+</div>
 </div>
 
 </body>
