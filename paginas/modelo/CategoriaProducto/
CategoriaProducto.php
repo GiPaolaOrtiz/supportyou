@@ -9,12 +9,12 @@ class CategoriaProducto
        $this->idcategoriaproducto = $idcategoriaproducto;
        $this->nombre = $nombre; 
      }
-    
-    // icatprod
+
     function setIdcategoriaproducto($idcategoriaproducto){
        $this->idcategoriaproducto = $idcategoriaproducto;
      } 
-     function getIdcategoriaproducto(){
+    
+    function getIdcategoriaproducto(){
        return $this->idcategoriaproducto;
      } 
     //nombre

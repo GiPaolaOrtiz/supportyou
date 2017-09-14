@@ -1,29 +1,28 @@
 <?php
 
 include_once('CategoriaProducto.php');
-include_once('../Collector.php');
+include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
 
 
 class CategoriaProductoCollector extends Collector
 {
   
-  function showCategoriaProducto() {
+  function showCategoriaProductos() {
     $rows = self::$db->getRows("SELECT * FROM categoriaproducto ");        
-    echo "linea 1";
     $arrayCategoriaProducto= array();        
     foreach ($rows as $c){
-      $aux = new Usuario($c{'idcategoriaproducto'},$c{'nombre'});
+      $aux = new CategoriaProducto($c{'idcategoriaproducto'},$c{'nombre'});
       array_push($arrayCategoriaProducto, $aux);
     }
     return $arrayCategoriaProducto;        
   }
-  function showcategoriaproducto($id) {
-    $row = self::$db->getRows("SELECT * FROM categoriaproducto where id_categoriaproducto= ?", array("{$id}"));
-    $Obj= new categoriaproducto($row[0]{'idcategoriaproducto'},$row[0]{'nombre'};
-    return $Obj;        
+  function showCategoriaProducto($id) {
+    $row = self::$db->getRows("SELECT * FROM categoriaproducto where idcategoriaproducto= ?", array("{$id}"));
+    $ObjDemo= new Usuario($row[0]{'idusuario'},$row[0]{'email'},$row[0]{'nombre'},$row[0]{'username'},$row[0]{'password'},$row[0]{'idrol'});
+    return $ObjDemo;        
   }
 
-  function updatecategoriaproducto($id, $nombre,$password){
+  function updatecategoriaproducto($id, $nombre){
       $insertrow= self::$db->updateRow
                   ("UPDATE public.categoriaproducto SET nombre= ? where id_categoriaproducto = ?", 
                   array( "{$nombre}", $id ));
@@ -38,6 +37,5 @@ class CategoriaProductoCollector extends Collector
     $insertrow= self::$db->insertRow
                   ("INSERT INTO public.categoriaproducto (nombre) VALUES (?)", array("{$nombre}"));
   }
-
 }
 ?>

@@ -73,7 +73,7 @@ session_start();
                         <a href="bancos/view.php" class="btn btn-info topspace">Bancos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="categoriaproductos/view.php" class="btn btn-info topspace">Categoria Productos</a>
+                        <a href="modelo/CategoriaProducto/view.php" class="btn btn-info topspace">Categoria Productos</a>
                     </div>
                     
                      <div class="col-md-4  col-sm-6">
