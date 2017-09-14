@@ -8,6 +8,7 @@
 <head>
 
     <meta charset="utf-8">
+    <title>Administración</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -20,6 +21,7 @@
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
     <link href="../../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
@@ -37,14 +39,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../../paginas/administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
 <div id="main">
 
-<h2>Lista de países </h2>
+
 
 <?php
 
@@ -53,31 +56,29 @@ include_once("paisCollector.php");
 $id =1;
 
 $PaisCollectorObj = new paisCollector();
+echo '<h2 class="topspace text-center">Países</h2>';
+echo "<a href='FormularioNuevoPais.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+echo '<div class="">';                     
+                echo '<table class="table table-condensed">';
+                    echo ' <thead><tr>';   
+                        echo '<th>ID</th>';
+                        echo '<th>Nombre</th>';
+                    echo '</tr> </thead><tbody>';
 
 foreach ($PaisCollectorObj->showPaises() as $c){
-  $id =$c->getIdPais();
-
-  echo "<div>";
-  echo $c->getIdPais() . "  && " .$c->getNombre();
-
-  
-  echo " ";
-  echo "<a href='Editar.php?id=".$c->getIdPais()."'>  Editar</a>";
-  echo " ";
-  echo "<a href='Eliminar.php?id=".$c->getIdPais()."'>  Eliminar</a>";                                   
-  echo "</div>"; 
-}
+   echo '<tr>'; 
+                echo '<td>' . $c->getIdPais() . '</td>';
+                echo '<td>' . $c->getNombre() . '</td>';
+  echo "<td> <a href='Editar.php?id=".$c->getIdPais()."' class='btn btn-info mg'>  Editar</a>";
+  echo ' ';
+  echo "<a href='Eliminar.php?id=".$c->getIdPais() . "' class='btn btn-info'>Eliminar</a></td>";
+echo '</tr>'; 
+                      }
+                     echo '</tbody><table>';
+                 echo '</div>';
 ?>
 
-<a href='FormularioNuevoPais.php'>Nuevo</a>
-
-
-
-
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>

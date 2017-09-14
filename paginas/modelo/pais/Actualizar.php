@@ -58,7 +58,7 @@ $PaisCollectorObj->updatePais($id_pais,$nombre);
 echo "id : ".$id_pais. " actualizado a: ".$nombre." </br>";
 ?>
 
-<div><a href="listaPaises.php"> Volver al inicio </a></div>
+<div><a href="view.php class="btn btn-danger pull-right"> Volver al inicio </a></div>
 
 </div>
 </div>
