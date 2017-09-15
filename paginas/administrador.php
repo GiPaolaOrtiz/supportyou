@@ -1,6 +1,7 @@
 <?php
-session_start();
+	session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,14 +46,24 @@ session_start();
                   ?>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
+            
+            <?php
+		      if (isset($_SESSION['Misesion'])){
+              $usuario = $_SESSION['Misesion'];
+            ?>
+            
+            
+            
+            
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <br>
                 <ul class="nav navbar-nav navbar-right">
     
                      <li>
-                        <?php
-                        echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
-                        ?>
+                         
+                       
+                         
+                         
                     </li>
                 </ul>
             </div>
@@ -124,5 +135,11 @@ session_start();
                 </div>
                </div>
             </div>
+            
+                        <?php
+                          }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+                             } 
+                        ?>
     </body>
 </html>
