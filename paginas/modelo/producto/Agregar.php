@@ -66,9 +66,9 @@
                 else if($idcategoriaproducto==4){
                      $imagen="/Juguetes/" . $img;
                 }
-                include_once('../../modelo/producto/ProductoCollector.php');
+                include_once('ProductoCollector.php');
                 $ProductoCollectorObj = new ProductoCollector();
-                
+
                 $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $imagen, $estadoventa, $idfundacion, $idcategoriaproducto);
 
                      echo "<h3 class='topspace text-center'> El Producto <span class='green'> " . $descripcion . " </span> ha sido agregado</h3>";

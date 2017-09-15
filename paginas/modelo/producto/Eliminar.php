@@ -49,7 +49,7 @@
             $id=$_GET["id"];
 
             
-                 include_once('../../modelo/producto/ProductoCollector.php');
+                 include_once('ProductoCollector.php');
 
                 $ProductoCollectorObj = new ProductoCollector();
            
