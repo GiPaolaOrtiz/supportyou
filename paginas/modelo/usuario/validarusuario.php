@@ -12,7 +12,7 @@ session_start();
     <body>
         <?php
         
-    include_once("modelo/usuario/usuarioCollector.php");
+    include_once("usuarioCollector.php");
         $username = $_POST['username'];
         $pass = $_POST['pass'];
         $UsuarioCollectorObj = new UsuarioCollector();
@@ -26,7 +26,7 @@ session_start();
                 
 
             if($c->getIdrol() == 1){
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=administrador.php?ID=". $c->getIdusuario(). "'>";
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../administrador.php?ID=". $c->getIdusuario(). "'>";
 
             }
 
