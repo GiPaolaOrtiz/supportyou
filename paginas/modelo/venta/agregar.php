@@ -56,9 +56,17 @@ session_start();
                 $producto=$_POST['producto'];
             
                 include_once('../../modelo/venta/ventaCollector.php');
+                include_once('../../modelo/producto/ProductoCollector.php');
 
                 $ventaCollectorObj = new ventaCollector();
+                $productoCollectorObj = new productoCollector();
                 $ventaCollectorObj-> createventa($total, $cliente, $metodo, $producto);
+                $vende="vendido";
+                foreach ($ventaCollectorObj->showProductos() as $c){
+                    if($c->getIdproducto()==$producto){
+                        $ventaCollectorObj->updateProductos($c->getIdproducto(), $c->getDescripcion(),$c->getEstado(), $c->getPrecio(),$c->getImg(),$vende, $c->getIdfundacion(),$c->getIdcategoriaproducto())
+                    }
+                }
 
                 echo "<h3 class='topspace text-center'>La </b>venta </b> ha sido agregada</h3>";
             ?>
