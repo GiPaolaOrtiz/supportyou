@@ -25,12 +25,21 @@ class fundacionCollector extends Collector
   
 
   function updateFundacion($id,$direccion,$actividad,$email,$pass,$ruc,$idpaisfk,$idciudadfk,$idcuentafk,$nombre,$telefono,$foto,$idfundacioncategoriafk) {
-    $insertrow = self::$db->updateRow
+    
+        if($foto!=NULL){
+            
+            $insertrow = self::$db->updateRow
                    ("UPDATE public.fundacion SET direccion = ?, actividad = ?, email = ?, pass = ?, ruc = ?, idpaisfk = ?, idciudadfk = ?, idcuentafk = ?, nombre = ?, telefono = ?, foto = ?, idfundacioncategoriafk = ? WHERE idfundacion = ? ",
-                   array("{$direccion}","{$actividad}","{$email}","{$pass}","{$ruc}","{$idpaisfk}","{$idciudadfk}","{$idcuentafk}","{$nombre}","{$telefono}","{$foto}","{$idfundacioncategoriafk}", $id ));   
+                   array("{$direccion}","{$actividad}","{$email}","{$pass}","{$ruc}","{$idpaisfk}","{$idciudadfk}","{$idcuentafk}","{$nombre}","{$telefono}","{$foto}","{$idfundacioncategoriafk}", $id ));  
+        
+        }else{ 
+            $insertrow = self::$db->updateRow
+          ("UPDATE public.fundacion SET direccion = ?, actividad = ?, email = ?, pass = ?, ruc = ?, idpaisfk = ?, idciudadfk = ?, idcuentafk = ?, nombre = ?, telefono = ?, idfundacioncategoriafk = ? WHERE idfundacion = ? ",
+                   array("{$direccion}","{$actividad}","{$email}","{$pass}","{$ruc}","{$idpaisfk}","{$idciudadfk}","{$idcuentafk}","{$nombre}","{$telefono}","{$idfundacioncategoriafk}", $id )); 
+        }
+      
   }
     
-
   function deleteFundacion($id) {
     $deletetrow = self::$db->deleteRow("DELETE FROM public.fundacion WHERE idfundacion = ? ", array( "{$id}"));   
   } 
