@@ -24,7 +24,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="index.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
+                        <a href="../index.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,9 +42,10 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Agregar un Producto</h2>';
+                echo '<h2 class="topspace text-center">Agregar Productos </h2>';
             ?>
-            <?php
+           <?php
+
                 $idcategoriaproducto=$_POST['idcategoriaproducto'];
                 $idfundacion=$_POST['idfundacion'];
                 $descripcion=$_POST['descripcion'];
@@ -52,14 +53,15 @@
                 $precio=$_POST['precio'];
                 $img=$_POST['img'];
                 $estadoventa=$_POST['estadoventa'];
-            
-            
+
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
                 $ProductoCollectorObj = new ProductoCollector();
-                $ProductoCollectorObj-> createProducto($idcategoriaproducto,$idfundacion,$descripcion,$estado,$precio, $img, $estadoventa);
+                $ProductoCollectorObj-> createProducto($idcategoriaproducto, $idfundacion, $descripcion, $estado, $precio,$img, $estadoventa);
 
-                echo "<h3 class='topspace text-center'>El Producto tipo <b>" . $idcategoriaproducto . "</b> ha sido agregado</h3>";
-            ?>
+                     echo "<h3 class='topspace text-center'>El Producto ha sido agregado</h3>";
+
+
+           ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
             </div>

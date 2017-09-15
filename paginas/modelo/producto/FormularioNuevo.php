@@ -8,21 +8,35 @@
 	</head>
 	<body>	
 		<?php 			
-			include_once("DemoCollector.php");
-			include_once("Demo.php");
+			include_once("ProductoCollector.php");
+			include_once("Producto.php");
 
-			$DemoCollectorObj = new DemoCollector();
+			$ProductoCollectorObj = new ProductoCollector();
 		?>	
-		<h2 class="text-center">Agrega nuevo usuario</h1>
+		<h2 class="text-center">Agrega nuevo Producto</h1>
 		<br>
 		<br>
 		<br>
 		<form class="form-signin" method="post" action="Agregar.php">
-		    <p class="text-center"><b>NOMBRE</b></p>
-		    <input type="text" id="n" class="form-control center-block" name="nombre">
+		    <p class="text-center"><b>ID CATEGORIA PRODUCTO</b></p>
+		    <input type="text" id="catpro" class="form-control center-block" name="idcategoriaproducto">
 
-		    <p class="text-center"><b>PASSWORD</b></p>
-		    <input type="text" id="p" class="form-control center-block" name="password">
+		    <p class="text-center"><b>ID FUNDACION </b></p>
+		    <input type="text" id="idfun" class="form-control center-block" name="idfundacion">
+		    <p class="text-center"><b>DESCRIPCION</b></p>
+		    <input type="text" id="des" class="form-control center-block" name="descripcion">
+
+		    <p class="text-center"><b>ESTADO </b></p>
+		    <input type="text" id="estado" class="form-control center-block" name="estado">
+
+		    <p class="text-center"><b> PRECIO </b></p>
+		    <input type="text" id="preci" class="form-control center-block" name="precio">
+
+		    <p class="text-center"><b>IMAGEN </b></p>
+		    <input type="file" id="imagen" class="form-control center-block" name="img">
+
+		    <p class="text-center"><b>ESTADO DE VENTA </b></p>
+		    <input type="text" id="estven" class="form-control center-block" name="estadoventa">
 		    <br>
 		    <button class="center-block btn btn-lg btn-primary btn-block" type="submit">SAVE</button>
 		</form>

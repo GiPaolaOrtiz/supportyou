@@ -7,7 +7,7 @@ include_once('Producto.php');
 
 
 
-class productoCollector extends Collector
+class ProductoCollector extends Collector
 {
   
   function showProductos() {
@@ -39,9 +39,9 @@ class productoCollector extends Collector
                   ("DELETE FROM public.producto where idproducto = ?", 
                   array( $id ));
   }
-   function createUsuario($idcategoriaproducto, $idfundacion, $descripcion $estado, $precio,$img, $estadoventa){
+   function createProducto(  $idcategoriaproducto, $idfundacion, $descripcion, $estado, $precio,$img, $estadoventa){
     $insertrow= self::$db->insertRow
-                  ("INSERT INTO public.usuario (idcategoriaproducto,idfundacion, descripcion, estado, precio, img, estadoventa) VALUES (?,?,?,?,?,?,?)", array("{$idcategoriaproducto}","{$idfundacion}","{$descripcion}","{$estado}","{$precio}", "{$img}"));
+                  ("INSERT INTO public.producto (idcategoriaproducto,idfundacion, descripcion, estado, precio, img, estadoventa) VALUES (?,?,?,?,?,?,?)", array("{$idcategoriaproducto}","{$idfundacion}","{$descripcion}","{$estado}","{$precio}", "{$img}", "{estadoventa}"));
   }  
 }
 ?>

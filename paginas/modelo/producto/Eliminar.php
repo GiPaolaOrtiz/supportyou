@@ -52,7 +52,7 @@
                 foreach ($ProductoCollectorObj->showProductos() as $c){
                      $descripcion=$c->getDescripcion();
                  }
-                $ProductoCollectorObj-> deleteProducto($id);
+                $ProductoCollectorObj-> deleteProducto($idproducto);
 
                 echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $descripcion . "</span> ha sido eliminado</h3>";
             ?>
