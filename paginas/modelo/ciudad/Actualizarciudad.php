@@ -48,7 +48,7 @@
 $nombre=$_POST["nombre"];
 $id_ciudad=$_POST["id_ciudad"];
 
-echo "Edicion en proceso... </br>";
+echo "Edicion en proceso.... </br>";
 
 include_once("CiudadCollector.php");
 
