@@ -56,9 +56,9 @@
 
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
                 $ProductoCollectorObj = new ProductoCollector();
-                $ProductoCollectorObj-> createProducto($idcategoriaproducto, $idfundacion, $descripcion, $estado, $precio,$img, $estadoventa);
+                $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto);
 
-                     echo "<h3 class='topspace text-center'>El Producto ha sido agregado</h3>";
+                     echo "<h3 class='topspace text-center'> El Producto <span class='green'> " . $descripcion . " </span> ha sido agregado</h3>";
 
 
            ?>
