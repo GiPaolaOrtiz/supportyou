@@ -44,13 +44,15 @@
 
 <div id="main">
 <?php
-$nombre = $_POST['nombre'];
+$descripcion= $_POST['descripcion'];
+$email= $_POST['email'];
 
 
-include_once("CiudadCollector.php");
 
-$CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->createCiudad($nombre);
+include_once("ComentarioCollector.php");
+
+$ComentarioCollectorObj = new ComentarioCollector();
+$ComentarioCollectorObj->createComentario($descripcion, $email);
 
 ?>
 
@@ -62,7 +64,7 @@ $CiudadCollectorObj->createCiudad($nombre);
 <div class="col-md-4">
 
 <?php
-echo 'Ciudad registrada ' . htmlspecialchars($nombre) . '!';
+echo 'Comentario registrada ' . htmlspecialchars($descripcion, $email) . '!';
 ?>
 
 <div><a href="view.php" class="btn btn-danger pull-right">Volver.</a></div>
