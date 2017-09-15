@@ -42,19 +42,20 @@
         </div>
     </nav>
 
-
+<br>
+    <br>
+    <br>
 <div id="main">
 
 <?php
 $id=$_GET["id"];
-echo "valor de id es ". $id;
 include_once("fundacionCategoriaCollector.php");
 include_once("FundacionCategoria.php");
 $CategoriaCollectorObj = new fundacionCategoriaCollector();
 $ObjCategoria = $CategoriaCollectorObj->showFundacionCategoria($id);
 ?>
 
-<h2>Editar categoria </h2>
+<h2>Editar categoría </h2>
 <form action="Actualizar.php" method="post">
 <p>
 Id: <input type="text" name="id_fundacioncategoria" value="<?php echo $ObjCategoria->getIdCategoria(); ?>" readonly />
