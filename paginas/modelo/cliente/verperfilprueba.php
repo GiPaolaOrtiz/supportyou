@@ -54,6 +54,12 @@
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
                 $ClienteCollectorObj = new clienteCollector();
                 $ObjCliente=$ClienteCollectorObj->showCliente($id);
+
+
+
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                $UsuarioCollectorObj = new usuarioCollector();
+                $ObjUsuario=$UsuarioCollectorObj->showUsuario($ObjCliente->getIdUsuario());
         ?>
 
 
@@ -68,7 +74,7 @@
                         <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
 
                             <div>
-                                <img src="<?php echo $ObjCliente->getFoto(); ?>" alt="stack photo" class="img">
+                                <img src="images/<?php echo $ObjCliente->getFoto(); ?>" alt="stack photo" class="img">
                             </div>
                                                     
                         </div>
@@ -76,18 +82,38 @@
                     <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
 
                         <form method="post" class="topspace" action="agregar.php">
-                            <div class="form-group">
 
-                                <label for="metodo">IdUsuario</label>
-                                <input type="email" class="form-control" id="email" placeholder="Em@il" name="email" value="<?php echo $ObjCliente->getIdusuario(); ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="metodo">FechaNacimiento</label>
-                            <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $ObjCliente->getFechanacimiento(); ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="metodo">Nombre de registro</label>
-                            <input type="text" class="form-control" id="username" placeholder="Username" name="username" value="<?php echo $ObjCliente->getFecharegistro(); ?>">
+
+                            <div class="form-group">
+                                <label for="metodo">Email</label>
+                                <input type="email" class="form-control" id="email"  name="email" value="<?php echo $ObjUsuario->getEmail(); ?>">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="metodo">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $ObjUsuario->getNombre(); ?>">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="metodo">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" value="<?php echo $ObjUsuario->getUsername(); ?>">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="metodo">Contrasena</label>
+                                <input type="text" class="form-control" id="contrasena" name="contrasena" value="<?php echo $ObjUsuario->getPass(); ?>">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="metodo">FechaNacimiento</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $ObjCliente->getFechanacimiento(); ?>">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="metodo">Nombre de registro</label>
+                                <input type="text" class="form-control" id="username" placeholder="Username" name="username" value="<?php echo $ObjCliente->getFecharegistro(); ?>">
                         </div>
 
 

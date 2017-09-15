@@ -44,7 +44,7 @@
             include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
             $UsuarioCollectorObj = new usuarioCollector();
                 echo '<h2 class="topspace text-center">Usuarios</h2>';
-                echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+              
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
@@ -66,7 +66,7 @@
                               echo '<td>' . $c->getPass() . '</td>';
                               echo '<td>' . $c->getIdrol() . '</td>';
                               echo "<td> <a href='formularioeditar.php?id=" . $c->getidusuario() . "' class='btn btn-info mg'>Editar</a>";
-                              echo "<a href='eliminar.php?id=" . $c->getidusuario() . "' class='btn btn-info'>Delete</a></td>";
+                        
                           echo '</tr>'; 
                       }
                      echo '</tbody><table>';
