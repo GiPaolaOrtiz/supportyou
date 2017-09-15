@@ -8,10 +8,8 @@
 	</head>
 	<body>	
 		<?php 			
-			include_once("ProductoCollector.php");
-			include_once("Producto.php");
-
-			$ProductoCollectorObj = new ProductoCollector();
+		 echo '<h2 class="topspace text-center">PRODUCTOS</h2>';
+                    echo '<h3 class="text-center">Agregar</h3>';         
 		?>	
 		<h2 class="text-center">Agrega nuevo Producto</h2>
 		<br>
