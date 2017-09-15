@@ -51,27 +51,29 @@
 
 <?php
 
-include_once("CiudadCollector.php");
+include_once("ComentarioCollector.php");
 
 $id;
 
-$CiudadCollectorObj = new CiudadCollector();
+$ComentarioCollectorObj = new ComentarioCollector();
 echo '<h2 class="topspace text-center">Ciudades</h2>';
-echo "<a href='FormularioNuevoCiudad.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+echo "<a href='FormularioNuevoComentario.php' class='btn btn-warning center-block w10'><b>+</b></a>";
 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
-                        echo '<th>Nombre</th>';
+                        echo '<th>Descripcion</th>';
+                        echo '<th>Email</th>';
                     echo '</tr> </thead><tbody>';
 
-foreach ($CiudadCollectorObj->showCiudades() as $c){
+foreach ($ComentarioCollectorObj->showComentarios() as $c){
    echo '<tr>'; 
-                echo '<td>' . $c->getIdCiudad() . '</td>';
-                echo '<td>' . $c->getNombre() . '</td>';
-  echo "<td> <a href='Editarciudad.php?id=".$c->getIdCiudad()."' class='btn btn-info mg'>  Editar</a>";
+                echo '<td>' . $c->getIdComentarios() . '</td>';
+                echo '<td>' . $c->getDescripcion() . '</td>';
+                echo '<td>' . $c->getEmail() . '</td>';
+  echo "<td> <a href='Editarciudad.php?id=".$c->getIdComentarios()."' class='btn btn-info mg'>  Editar</a>";
   echo ' ';
-  echo "<a href='Eliminarciudad.php?id=".$c->getIdCiudad() . "' class='btn btn-info'> Eliminar. </a></td>";
+  echo "<a href='Eliminarciudad.php?id=".$c->getIdComentarios() . "' class='btn btn-info'> Eliminar. </a></td>";
 echo '</tr>'; 
                       }
                      echo '</tbody><table>';
