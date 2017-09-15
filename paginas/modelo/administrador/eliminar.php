@@ -51,19 +51,12 @@ session_start();
                 $idusuario=$_GET['id'];
                 $idadministrador=$_GET['idadministrador'];
 
-
-
-
-               
-            
-                         
-                 include_once ("../../modelo/administrador/administradorCollector.php");
-            
+                include_once ("administradorCollector.php");
                 $AdministradorCollectorObj = new administradorCollector();
                 $AdministradorCollectorObj-> deleteAdministrador($idadministrador);
 
 
-               include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+               include_once ("../usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> deleteUsuario($idusuario);
 

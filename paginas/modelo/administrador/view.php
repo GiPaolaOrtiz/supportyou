@@ -46,14 +46,14 @@ session_start();
             
          
         <?php 
-            include_once ("../../modelo/administrador/administradorCollector.php");
+            include_once ("administradorCollector.php");
             $AdministradorCollectorObj = new administradorCollector();
 
      
-              include_once ("../../modelo/usuario/usuarioCollector.php");
+            include_once ("../usuario/usuarioCollector.php");
             $UsuarioCollectorObj = new usuarioCollector();
             
-            include_once('../../modelo/Collector.php');
+            include_once('../Collector.php');
 
 
 
