@@ -1,5 +1,6 @@
+
 <?php
-include_once("modelo/usuario/usuarioCollector.php");
+include_once("../paginas/modelo/usuario/usuarioCollector.php");
 session_start();
 $username = $_POST['username'];
 $pass = $_POST['pass'];
