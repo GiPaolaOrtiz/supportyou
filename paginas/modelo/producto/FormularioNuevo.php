@@ -42,7 +42,7 @@
 		</form>
 
 		<div>
-			<a href="index.php">Volver al inicio</a>
+			<a href="index.php">Volver al inicio...</a>
 		</div>
 		<style type="text/css">
 			input[type=text]{
