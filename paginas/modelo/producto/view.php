@@ -40,7 +40,7 @@
                     </div>
                 </div>
             </nav>    <br><br><br>
-              <?php 
+              <?php
               include_once('../../modelo/producto/ProductoCollector.php');
 
             $ProductoCollectorObj = new ProductoCollector();
