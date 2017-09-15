@@ -6,7 +6,6 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.p
 include_once('Producto.php');
 
 
-
 class ProductoCollector extends Collector
 {
   
@@ -14,24 +13,24 @@ class ProductoCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM producto ");        
     $arrayProducto= array();        
     foreach ($rows as $c){
-      $aux = new Producto($c{'idproducto'},$c{'idcategoriaproducto'},$c{'idfundacion'},$c{'descripcion'},$c{'estado'},$c{'precio'},$c{'img'},$c{'estadoventa'});
+      $aux = new Producto($c{'idproducto'},$c{'description'},$c{'estado'},$c{'precio'},$c{'img'},$c{'estadoventa'},$c{'idfundacionfk'},$c{'idcategoriaproductofk'});
       array_push($arrayProducto, $aux);
     }
     return $arrayProducto;        
   }
  
 
-  function showProducto($idproducto) {
-    $row = self::$db->getRows("SELECT * FROM producto where idproducto= ?", array("{$idproducto}"));
-    $ObjDemo= new Producto($row[0]{'idproducto'},$row[0]{'idcategoriaproducto'},$row[0]{'idfundacion'},$row[0]{'descripcion'},$row[0]{'estado'},$row[0]{'precio'},$row[0]{'img'},$row[0]{'estadoventa'});
-    return $ObjDemo;        
+  function showProducto($id) {
+    $row = self::$db->getRows("SELECT * FROM producto where idproducto= ?", array("{$id}"));
+    $ObjProducto= new Producto($row[0]{'idproducto'},$row[0]{'description'},$row[0]{'estado'},$row[0]{'precio'},$row[0]{'img'},$row[0]{'estadoventa'},$row[0]{'idfundacionfk'},$row[0]{'idcategoriaproductofk'});
+    return $ObjProducto;        
   }
 
 
-  function updateProductos( $idproducto, $idcategoriaproducto,  $idfundacion, $descripcion, $estado, $precio, $img, $estadoventa){
+  function updateProductos($id, $descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto){
       $insertrow= self::$db->updateRow
-                  ("UPDATE public.producto SET idcategoriaproducto= ?, idfundacion = ?, descripcion = ?, estado = ?, precio = ?, img = ?,  estadoventa = ? where idproducto = ?, ", 
-                  array( "{$idcategoriaproducto}", "{$idfundacion}", "{$descripcion}","{$estado}", "{$precio}","{img}","{estadoventa}", "{idperfil}",$idproducto ));
+                  ("UPDATE public.producto SET description = ?, estado = ?, precio = ?, img = ?,  estadoventa = ?, idfundacionfk = ?, idcategoriaproductofk = ? where idproducto = ? ", 
+                  array( "{$descripcion}", "{$estado}", "{$precio}","{$img}", "{$estadoventa}","{$idfundacion}","{$idcategoriaproducto}", $id));
   }
 
   function deleteProducto($id){
@@ -39,9 +38,9 @@ class ProductoCollector extends Collector
                   ("DELETE FROM public.producto where idproducto = ?", 
                   array( $id ));
   }
-   function createProducto($idcategoriaproducto, $idfundacion, $descripcion, $estado, $precio,$img, $estadoventa){
+   function createProducto($descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto){
     $insertrow= self::$db->insertRow
-                  ("INSERT INTO public.producto (idcategoriaproducto,idfundacion, descripcion, estado, precio, img, estadoventa) VALUES (?,?,?,?,?,?,?)", array("{$idcategoriaproducto}","{$idfundacion}","{$descripcion}","{$estado}","{$precio}", "{$img}", "{estadoventa}"));
+                  ("INSERT INTO public.producto (description, estado, precio, img, estadoventa, idfundacionfk, idcategoriaproductofk) VALUES (?,?,?,?,?,?,?)", array("{$descripcion}", "{$estado}", "{$precio}","{$img}", "{$estadoventa}","{$idfundacion}","{$idcategoriaproducto}"));
   }  
 }
 ?>
