@@ -39,6 +39,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -55,14 +56,20 @@ $PaisCollectorObj->deletePais($id);
 
 echo "Se ha eliminado id : ".$id. " </br>";
 ?>
-
-<div><a href="listaPaises.php"> Ver lista de paises </a></div>
+<?php
+		  if (isset($_SESSION['supportyoy'])){
+        
+              echo "<p>Se elimino el pais #" . $id ." :c </p>";
+        $paisCollectorObj->deletePais($id);
+       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerPais.php'>";
+                            }else{   
+                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                             } 
+                        ?>
+<div><a href="view.php" class="btn btn-info mg"> Ver lista de paises </a></div>
 
 
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>

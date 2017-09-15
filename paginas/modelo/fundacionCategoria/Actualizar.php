@@ -39,6 +39,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -58,11 +59,9 @@ $CategoriaCollectorObj->updateFundacionCategoria($id_fundacioncategoria,$nombre)
 echo "id : ".$id_fundacioncategoria. " actualizado a: ".$nombre." </br>";
 ?>
 
-<div><a href="listaCategorias.php"> Volver al inicio </a></div>
+<div><a href="view.php"> Volver al inicio </a></div>
 
 </div>
-</div>
-</nav>
 
 
 </body>

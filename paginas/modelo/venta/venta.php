@@ -2,25 +2,53 @@
 
 class venta
 {
-    private $idrol;
-    private $nombre;
+    private $idventa;
+    private $total;
+    private $idclientefk;
+    private $metodopagofk;
+    private $idproductofk;
     
-     function __construct($idrol,$nombre) {
-       $this->idrol = $idrol;
-       $this->nombre = $nombre;
+     function __construct($idventa,$total,$idclientefk,$metodopagofk,$idproductofk) {
+       $this->idventa = $idventa;
+       $this->total = $total;
+       $this->idclientefk = $idclientefk;
+       $this->metodopagofk = $metodopagofk;
+       $this->idproductofk = $idproductofk;
      }
     
-     function setIdrol($idrol){
-       $this->idrol = $idrol;
+     function setIdventa($idventa){
+       $this->idventa = $idventa;
      } 
-     function getIdrol(){
-       return $this->idrol;
+     function getIdventa(){
+       return $this->idventa;
      } 
-     function setNombre($nombre){
-       $this->nombre = $nombre;
+    
+     function setTotal($total){
+       $this->total = $total;
      } 
-     function getNombre(){
-       return $this->nombre;
+     function getTotal(){
+       return $this->total;
+     } 
+    
+     function setIdclientefk($idclientefk){
+       $this->idclientefk = $idclientefk;
+     } 
+     function getIdclientefk(){
+       return $this->idclientefk;
+     } 
+    
+     function setMetodopagofk($metodopagofk){
+       $this->metodopagofk = $metodopagofk;
+     } 
+     function getMetodopagofk(){
+       return $this->metodopagofk;
+     } 
+    
+     function setIdproductofk($idproductofk){
+       $this->idproductofk = $idproductofk;
+     } 
+     function getIdproductofk(){
+       return $this->idproductofk;
      }
 }
 

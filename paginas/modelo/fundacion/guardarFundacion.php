@@ -39,10 +39,14 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
 <div id="main">
+    
+    <br>
+    <br>
 <?php
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
@@ -55,51 +59,27 @@ $email = $_POST['email'];
 $pass = $_POST['contraseña'];
 $cuenta = $_POST['ncuenta'];
 $ruc = $_POST['ruc'];
+$foto = $_POST['foto'];
 
 
 
 include_once("fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
-$FundacionCollectorObj->createFundacion($actividad,$direccion,$email,$pass,$ruc,$pais,$categoria,$ciudad,$cuenta,$telefono,$nombre);
+$FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
+
+    
+    
+    
+    
+    
+    
+
+echo 'Fundación' . htmlspecialchars($nombre) . 'registrada!';
+
 
 ?>
 
-
-</div>
-
-<div class="col-md-12" id="divCentral">
-
-<div class="col-md-4">
-
-<?php
-echo 'Gracias por registrar su fundación ' . htmlspecialchars($nombre) . '!';
-?>
-
-
-
-                <form action="loginFundacion.php" class="form-signin" method="post">
-                    <h2 class="form-signin-heading">Inicia Sesión</h2>
-                    <label for="inputEmail" class="sr-only">Email</label>
-                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Recuérdame
-                        </label>
-                    </div>
-                    <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit"><a href="PerfilFundacion.php">Iniciar Sesion</a></button>
-
-                </form>
-
-            </div>
-
-<div class="col-md-4">
-
-<img alt="Organizaciones" id="estilo" src="../../../img/organizaciones.png">
-
-</div>
 
 </div>
 

@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Administración</title>
+        <title>Administración Producto</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../../../img/LogoSupportYou.png">
@@ -39,11 +39,12 @@
                         </ul>
                     </div>
                 </div>
-            </nav>    <br><br><br>
-              <?php 
+            </nav>
+
+        <?php 
             include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
             $ProductoCollectorObj = new ProductoCollector();
-                echo '<h2 class="topspace text-center">Tabla Productos </h2>';
+                echo '<h2 class="topspace text-center">Productos </h2>';
                 echo "<a href='Agregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
@@ -76,11 +77,7 @@
                      echo '</tbody><table>';
                  echo '</div>';
             ?>
-
-
         </main>
-
-
          <script src="../../../js/jquery.js"></script>
         
     <!-- Bootstrap Core JavaScript -->

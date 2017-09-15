@@ -37,27 +37,46 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../../administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
         </div>
     </nav>
 
+    <br>
+    <br>
+    <br>
 
 <div id="main">
+<div id="centro">
 
-<h2>Nueva Categoría </h2>
-<form action="Guardar.php" method="post">
-<p>
-Nombre: <input type="text" name="nombre" autofocus required />
-</p>
+<?php
+$nombre = $_POST['nombre'];
+$categoria = $_POST['categoria'];
+$actividad = $_POST['actividad'];
+$pais = $_POST['pais'];
+$ciudad = $_POST['ciudad'];
+$direccion = $_POST['direccion'];
+$telefono = $_POST['telefono'];
+$email = $_POST['email'];
+$pass = $_POST['pass'];
+$cuenta = $_POST['cuenta'];
+$ruc = $_POST['ruc'];
+$foto = $_POST['foto'];
+$idfundacion=$_POST["idFundacion"];
 
-<input type="submit" value="Guardar" />
+echo "Edición en proceso... </br>";
 
-</form>
+include_once("../../modelo/fundacion/fundacionCollector.php");
 
+$FundacionCollectorObj = new fundacionCollector();
+$FundacionCollectorObj->updateFundacion($idfundacion,$direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
 
+echo "id : ".$idfundacion. " actualizado a: ".$nombre." </br>";
+?>
 
+<div><a href="view.php"> Volver al inicio </a></div>
 
+</div>
 </div>
 
 </body>

@@ -52,14 +52,11 @@ session_start();
             <?php
                 $id=$_GET['id'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
-                $rolCollectorObj = new rolCollector();
-                foreach ($rolCollectorObj->showRoles() as $c){
-                     $nombre=$c->getNombre();
-                 }
-                $rolCollectorObj-> deleteRol($id);
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
+                $ventaCollectorObj = new ventaCollector();
+                $ventaCollectorObj-> deleteventa($id);
 
-                echo "<h3 class='topspace text-center'>El rol <span class='red'>" . $nombre . "</span> ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>La venta <span class='red'>" . $id . "</span> ha sido eliminada</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>

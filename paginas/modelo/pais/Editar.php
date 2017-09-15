@@ -63,7 +63,7 @@ Id: <input type="text" name="id_pais" value="<?php echo $ObjPais->getIdPais(); ?
 Nombre: <input type="text" name="nombre" value="<?php echo $ObjPais->getNombre(); ?>" autofocus required />
 </p>
 
-<a href="listaPaises.php">  Cancelar</a>
+<a href="view.php" class="btn btn-info mg">  Cancelar</a>
 <input type="submit" value="Guardar" />
 
 </form>

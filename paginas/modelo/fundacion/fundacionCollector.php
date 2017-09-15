@@ -1,7 +1,7 @@
 <?php
 
 include_once('claseRegistroFundacion.php');
-include_once('Collector.php');
+include_once('../Collector.php');
 
 class fundacionCollector extends Collector
 {
@@ -10,23 +10,24 @@ class fundacionCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM fundacion ORDER BY idfundacion ASC ");  
     $arrayFundacion= array();        
     foreach ($rows as $c){
-      $aux = new claseRegistroFundacion($c{'idfundacion'}, $c{'direccion'}, $c{'actividad'}, $c{'email'}, $c{'pass'}, $c{'ruc'}, $c{'idusuariofk'}, $c{'idpaisfk'}, $c{'idciudadfk'}, $c{'idcuentafk'}, $c{'fundacioncategoria'}, $c{'nombre'}, $c{'telefono'});
+      $aux = new claseRegistroFundacion($c{'idfundacion'}, $c{'direccion'}, $c{'actividad'}, $c{'email'}, $c{'pass'}, $c{'ruc'}, $c{'idpaisfk'}, $c{'idciudadfk'}, $c{'idcuentafk'}, $c{'nombre'}, $c{'telefono'}, $c{'foto'}, $c{'idfundacioncategoriafk'});
       array_push($arrayFundacion, $aux);
     }
     return $arrayFundacion;        
   }
 
   function showFundacion($id) {
-    $row = self::$db->getRows("SELECT direccion, actividad, nombre, telefono FROM fundacion WHERE idfundacion = ? ", array("{$id}"));        
-    $ObjFundacion = new claseRegistroFundacion($row[0]{'direccion'},$row[0]{'nombre'},$row[0]{'telefono'});
+    $row = self::$db->getRows("SELECT * FROM fundacion WHERE idfundacion = ? ", array("{$id}"));        
+    $ObjFundacion = new claseRegistroFundacion($row[0]{'idfundacion'},$row[0]{'direccion'},$row[0]{'actividad'},$row[0]{'email'},$row[0]{'pass'},$row[0]{'ruc'},$row[0]{'idpaisfk'},$row[0]{'idciudadfk'},$row[0]{'idcuentafk'},$row[0]{'nombre'},$row[0]{'telefono'},$row[0]{'foto'},$row[0]{'idfundacioncategoriafk'});
 
     return $ObjFundacion;        
   }
+  
 
-  function updateFundacion($id,$direccion,$actividad,$email,$pass,$ruc,$idusuariofk,$idpaisfk,$idciudadfk,$idcuentafk,$fundacioncategoria,$nombre,$telefono) {
+  function updateFundacion($id,$direccion,$actividad,$email,$pass,$ruc,$idpaisfk,$idciudadfk,$idcuentafk,$nombre,$telefono,$foto,$idfundacioncategoriafk) {
     $insertrow = self::$db->updateRow
-                   ("UPDATE public.fundacion SET direccion = ?, actividad = ?, email = ?, pass = ?, ruc = ?, idusuariofk = ?, idpaisfk = ?, idciudadfk = ?, idcuentafk = ?, fundacioncategoria = ?, nombre = ?, telefono = ? WHERE idfundacion = ? ",
-                   array("{$direccion}","{$actividad}","{$email}","{$pass}","{$ruc}","{$idusuariofk}","{$idpaisfk}","{$idciudadfk}","{$idcuentafk}","{$fundacioncategoria}","{$nombre}","{$telefono}", $id ));   
+                   ("UPDATE public.fundacion SET direccion = ?, actividad = ?, email = ?, pass = ?, ruc = ?, idpaisfk = ?, idciudadfk = ?, idcuentafk = ?, nombre = ?, telefono = ?, foto = ?, idfundacioncategoriafk = ? WHERE idfundacion = ? ",
+                   array("{$direccion}","{$actividad}","{$email}","{$pass}","{$ruc}","{$idpaisfk}","{$idciudadfk}","{$idcuentafk}","{$nombre}","{$telefono}","{$foto}","{$idfundacioncategoriafk}", $id ));   
   }
     
 
@@ -35,8 +36,8 @@ class fundacionCollector extends Collector
   } 
 
 
-  function createFundacion($direccion,$actividad,$email,$pass,$ruc,$idusuariofk,$idpaisfk,$idciudadfk,$idcuentafk,$fundacioncategoria,$nombre,$telefono){
-    $insertrow = self::$db->insertRow("INSERT INTO public.fundacion (actividad,direccion,email,pass,ruc,pais_id,fundacioncategoria_id,ciudad_id,cuenta_id,telefono,nombre) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", array("{$actividad}","{$direccion}","{$email}","{$pass}","{$ruc}","{$pais_id}","{$fundacioncategoria_id}","{$ciudad_id}","{$cuenta_id}","{$telefono}","{$nombre}"));
+  function createFundacion($direccion,$actividad,$email,$pass,$ruc,$idpaisfk,$idciudadfk,$idcuentafk,$nombre,$telefono,$foto,$idfundacioncategoriafk){
+    $insertrow = self::$db->insertRow("INSERT INTO public.fundacion (direccion,actividad,email,pass,ruc,idpaisfk,idciudadfk,idcuentafk,nombre,telefono,foto,idfundacioncategoriafk) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", array("{$direccion}","{$actividad}","{$email}","{$pass}","{$ruc}","{$idpaisfk}","{$idciudadfk}","{$idcuentafk}","{$nombre}","{$telefono}","{$foto}","{$idfundacioncategoriafk}"));
   }
 
 }

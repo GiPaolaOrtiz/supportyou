@@ -65,7 +65,9 @@ $PaisCollectorObj->createPais($nombre);
 echo 'País registrado ' . htmlspecialchars($nombre) . '!';
 ?>
 
-<div><a href="listaPaises.php">Volver </a></div>
+<div><a href="view.php" class="btn btn-danger pull-right">Volver</a></div>
+
+
                 
 </div>
 
