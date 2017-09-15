@@ -69,7 +69,7 @@ echo "Se ha eliminado id : ".$id. " </br>";
                         ?>
 
                         <br><br>
-<div><a href="view.php" class="btn btn-info mg"> Ver lista de ciudades </a></div>
+<div><a href="view.php" class="btn btn-info mg"> Ver lista de ciudades.. </a></div>
 
 
 </div>
