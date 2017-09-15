@@ -1,9 +1,10 @@
 <?php
 
 
-include_once('../../modelo/producto/ProductoCollector.php');
 
 include_once('Producto.php');
+include_once('../../modelo/Collector.php');
+
 
 
 class ProductoCollector extends Collector
