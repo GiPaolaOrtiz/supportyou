@@ -13,7 +13,7 @@
 
 			$ProductoCollectorObj = new ProductoCollector();
 		?>	
-		<h2 class="text-center">Agrega nuevo Producto</h1>
+		<h2 class="text-center">Agrega nuevo Producto</h2>
 		<br>
 		<br>
 		<br>
