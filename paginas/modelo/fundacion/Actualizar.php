@@ -71,10 +71,9 @@ include_once("../../modelo/fundacion/fundacionCollector.php");
 $FundacionCollectorObj = new fundacionCollector();
 $FundacionCollectorObj->updateFundacion($idfundacion,$direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
 
-echo "id : ".$idfundacion. " actualizado a: ".$nombre." </br>";
+echo " Fundación ".$nombre." actualizada </br>";
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
-
-<div><a href="view.php"> Volver al inicio </a></div>
 
 </div>
 </div>

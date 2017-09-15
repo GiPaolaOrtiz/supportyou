@@ -210,7 +210,7 @@
                                                 
                                                 
                                                 <label for="exampleInputFile">Subir Foto </label>
-                                                    <input type="file" name="foto" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                                    <input type="file" name="foto" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" accept="image/*">
                                                     <small id="fileHelp" class="form-text text-muted"></small>
                                                 </div>
 

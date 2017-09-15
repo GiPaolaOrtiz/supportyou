@@ -27,23 +27,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="index.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
+                        <a href="../../administrador.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
                     </div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <br>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                               <a class="page-scroll" href="../index.php">HOME</a>
-                            </li>
-                            <li>
-                               <a class="page-scroll" href="../../../index.html">SALIR</a>
-                            </li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </nav> 
+        
+        <br>
+        <br>
+        <br>
 <?php
 
 $id=$_GET["id"];
@@ -54,9 +47,9 @@ $FundacionCollectorObj = new fundacionCollector();
 $FundacionCollectorObj->deleteFundacion($id);
 
 echo "Se ha eliminado id : ".$id. " </br>";
+        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
 
-<div><a href="view.php"> Volver al inicio </a></div>
 
         
 </body>
