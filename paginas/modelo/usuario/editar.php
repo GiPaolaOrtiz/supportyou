@@ -56,7 +56,7 @@ session_start();
                 $pass=$_POST['pass'];
                 $idrol=$_POST['idrol'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                include_once ("usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($id,$email,$nombre,$username,$pass,$idrol);
 
