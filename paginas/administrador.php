@@ -47,10 +47,6 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             
-            <?php
-		      if (isset($_SESSION['Misesion'])){
-              $usuario = $_SESSION['Misesion'];
-            ?>
             
             
             
@@ -136,10 +132,6 @@
                </div>
             </div>
             
-                        <?php
-                          }else{   
-                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
-                             } 
-                        ?>
+                      
     </body>
 </html>
