@@ -37,16 +37,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
         </div>
     </nav>
 
-
+  <br>
+    <br>
+    <br>
 <div id="main">
     
-    <br>
-    <br>
+  
 <?php
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
@@ -57,7 +58,7 @@ $direccion = $_POST['direccion'];
 $telefono = $_POST['telefono'];
 $email = $_POST['email'];
 $pass = $_POST['contraseña'];
-$cuenta = $_POST['ncuenta'];
+$cuenta = $_POST['cuenta'];
 $ruc = $_POST['ruc'];
 $foto = $_POST['foto'];
 
@@ -68,14 +69,9 @@ include_once("fundacionCollector.php");
 $FundacionCollectorObj = new fundacionCollector();
 $FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
 
-    
-    
-    
-    
-    
-    
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 
-echo 'Fundación' . htmlspecialchars($nombre) . 'registrada!';
+echo "  ". htmlspecialchars($nombre) . '   registrada!';
 
 
 ?>

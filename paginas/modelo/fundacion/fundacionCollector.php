@@ -7,7 +7,6 @@ class fundacionCollector extends Collector
 {
   
   function showFundaciones() {
-    //$rows = self::$db->getRows("SELECT *, P.nombre FROM fundacion AS F WHERE F.idpais = (SELECT nombre FROM pais AS P) ");  
     $rows = self::$db->getRows("SELECT * FROM fundacion ORDER BY idfundacion ASC ");  
     $arrayFundacion= array();        
     foreach ($rows as $c){

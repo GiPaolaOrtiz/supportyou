@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
 
         </div>
@@ -148,8 +148,21 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="form_city">Ciudad *</label>
-                                                    <input id="form_city" type="text" name="ciudad" class="form-control" required="required">
-                                                    <div class="help-block with-errors"></div>
+                                                    <select id="selectbasic" method="post" name="ciudad" class="form-control" required>
+                                                        <option value="" selected>Selecione</option> 
+                                                        <?php
+                                                        include_once("../../modelo/ciudad/CiudadCollector.php");
+     
+                                                            $id =1;
+                                                            $CiudadCollectorObj = new CiudadCollector();
+
+                                                            foreach ($CiudadCollectorObj->showCiudades() as $c){
+                                                                $id =$c->getIdciudad();
+                                                                echo "<option value= ".$c->getIdciudad(). ">". $c->getNombre(). "</option>";
+
+                                                            }
+                                                        ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
@@ -192,8 +205,21 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="form_number">N. de cuenta *</label>
-                                                    <input id="form_number" type="text" name="ncuenta" class="form-control" required="required">
-                                                    <div class="help-block with-errors"></div>
+                                                    <select id="selectbasic" name="cuenta" method="post" class="form-control" required>
+                                                        <option value="" selected>Selecione</option> 
+                                                        <?php
+                                                        include_once("../../modelo/cuenta/cuentaCollector.php");
+     
+                                                            $id =1;
+                                                            $cuentaCollectorObj = new cuentaCollector();
+
+                                                            foreach ($cuentaCollectorObj->showcuentas() as $c){
+                                                                $id =$c->getIdcuenta();
+                                                                echo "<option value= ".$c->getIdcuenta(). ">". $c->getNrocuenta(). "</option>";
+
+                                                            }
+                                                        ?>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">

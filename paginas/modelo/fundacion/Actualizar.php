@@ -20,6 +20,7 @@
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
     <link href="../../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
@@ -48,6 +49,10 @@
 
 <div id="main">
 <div id="centro">
+    
+    <?php 
+                echo '<h2 class="topspace text-center">Fundaciones </h2>';
+            ?>
 
 <?php
 $nombre = $_POST['nombre'];
@@ -64,16 +69,19 @@ $ruc = $_POST['ruc'];
 $foto = $_POST['foto'];
 $idfundacion=$_POST["idFundacion"];
 
-echo "Edición en proceso... </br>";
-
 include_once("../../modelo/fundacion/fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
 $FundacionCollectorObj->updateFundacion($idfundacion,$direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
 
-echo " Fundación ".$nombre." actualizada </br>";
-    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
+echo "<h3 class='topspace text-center'> La <span class='green'> " . $nombre . " </span> ha sido actualizada </h3>";
+    
 ?>
+    
+    <div>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+            </div>
+    
 
 </div>
 </div>

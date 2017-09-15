@@ -37,20 +37,33 @@
         <br>
         <br>
         <br>
+        
+         <?php 
+                echo '<h2 class="topspace text-center"> Fundaciones </h2>';
+            ?>
 <?php
 
 $id=$_GET["id"];
+        
+        
 
 include_once("../../modelo/fundacion/fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
-$FundacionCollectorObj->deleteFundacion($id);
 
-echo "Se ha eliminado id : ".$id. " </br>";
-        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
+ foreach ($FundacionCollectorObj->showFundaciones() as $c){
+                     $nombre=$c->getNombre();
+               
+               }
+                 $FundacionCollectorObj->deleteFundacion($id);
+
+            
+                echo "<h3 class='topspace text-center'>La <span class='red'>" . $nombre . "</span> ha sido eliminada</h3>";
 ?>
 
-
+<div>
+                <a href="view.php" class="btn btn-info center-block w70"> Volver </a>
+            </div>
         
 </body>
 </html>
