@@ -42,7 +42,7 @@
                 </div>
             </nav>    
         <?php 
-                $id= $_GET['id'];
+                $idproducto= $_GET['idproducto'];
                 echo '<h2 class="topspace text-center">Productos</h2>';
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
                 $ProductoCollectorObj = new ProductoCollector();
@@ -59,7 +59,7 @@
                             </div>
                             <div class="form-group">
                               <label for="idu">Id Categoria</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getIdcategoriaproducto(); ?>" name="nombre">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getIdcategoriaproducto(); ?>" name="idcategoriaproducto">
                             </div>
                             <div class="form-group">
                               <label for="idu">Id categoria de fundacion</label>
