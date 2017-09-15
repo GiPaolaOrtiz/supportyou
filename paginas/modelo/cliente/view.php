@@ -46,10 +46,12 @@ session_start();
 
  
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "paginas/modelo/cliente/clienteCollector.php";
+            include_once ("clienteCollector.php");
             $ClienteCollectorObj = new clienteCollector();
 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "paginas/modelo/usuario/usuarioCollector.php";
+            
+            
+            include_once ("../usuario/usuarioCollector.php");
             $UsuarioCollectorObj = new usuarioCollector();
 
                 echo '<h2 class="topspace text-center">Clientes</h2>';

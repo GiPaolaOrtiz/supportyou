@@ -54,13 +54,11 @@ session_start();
         <?php 
                 $id= $_GET['id'];
                 
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
+                include_once ("clienteCollector.php");
                 $ClienteCollectorObj = new clienteCollector();
                 $ObjCliente=$ClienteCollectorObj->showCliente($id);
 
-
-
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                include_once ("../usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $ObjUsuario=$UsuarioCollectorObj->showUsuario($ObjCliente->getIdusuario());
         ?>

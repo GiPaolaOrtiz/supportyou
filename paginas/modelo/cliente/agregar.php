@@ -44,11 +44,7 @@ session_start();
                 </div>
             </div>
         </nav>
-
-
-
-
-
+            
             <?php 
                 echo '<h2 class="topspace text-center">Cliente</h2>';
            
@@ -67,7 +63,7 @@ session_start();
               
             
 
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                include_once ("../usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new UsuarioCollector();
                 $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
 
@@ -78,7 +74,7 @@ session_start();
 
                 $usuario = $ultimousuario->getIdusuario();
 
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
+                include_once ("clienteCollector.php");
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> createCliente($usuario,$fechanacimiento,$fecharegistro);
 
