@@ -68,64 +68,30 @@ session_start();
             </ul>
         </div>
 
-        <div class="container">
-
+         <div class="container">
+         
             <!-- Introduction Row -->
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header"></h2>
                 </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/ajedrez.jpg" alt="Tablero de ajedrez"></a>
-                    <h3>Tablero de ajedrez</h3>
-                    <small>Madera de ebano</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/baraja.png" alt="Vestido rojo"></a>
-                    <h3>Baraja de yugioh</h3>
-                    <small>Juego de cartas</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/carro.jpeg" alt="Carro"></a>
-                    <h3>Carro</h3>
-                    <small>Para todas las edades</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/gui.jpg" alt="Guitarra"></a>
-                    <h3>Guitarra</h3>
-                    <small>Juegute plastico</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/legos.jpeg" alt="Legos"></a>
-                    <h3>Paquete de legos</h3>
-                    <small>Legos multicolores</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/manos.jpeg" alt="Manos"></a>
-                    <h3>Manos de juguete</h3>
-                    <small>Hulk</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/mascara.jpeg" alt="Mascara"></a>
-                    <h3>Mascara</h3>
-                    <small>Capitan America</small>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/moto.jpeg" alt="Camisa"></a>
-                    <h3>Moto</h3>
-                    <small>Play Doh</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/mu%C3%B1eca.jpeg" alt="Barbie doll"></a>
-                    <h3>Muñeca</h3>
-                    <small>Barbie girl</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Juguetes/oso.jpeg" alt="Tedy bear"></a>
-                    <h3>Oso</h3>
-                    <small>Peluche</small>
-                </div>
+                <?php 
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+                $ProductoCollectorObj = new ProductoCollector();
+                $ObjProducto=$ProductoCollectorObj->showProductos();
+                            foreach ($ProductoCollectorObj->showProductos() as $c){
+                                if($c->getIdcategoriaproducto()==4){
+                                    if($c->getEstadoventa()=="disponible"){
+                                        echo ' <div class="col-lg-4 col-sm-6 text-center">';
+                                        echo '<a href="pago.php"><img class="img-circle img-responsive img-center" src="../img' . $c->getImg() . '" alt="Vestido negro"></a>';
+                                        echo '<h3>' . $c->getDescripcion() . '</h3>';  
+                                        echo '<h3>$' . $c->getPrecio() . '</h3>';
+                                    echo'</div>';
+                                    }                                    
+                                }
+                              
+                      }
+        ?>
             </div>
         </div>
     </main>
