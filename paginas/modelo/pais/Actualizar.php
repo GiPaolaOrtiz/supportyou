@@ -39,31 +39,31 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
-
+<br>
+    <br>
+    <br>
+    
 <div id="main">
 
 <?php
 $nombre=$_POST["nombre"];
-$id_pais=$_POST["id_pais"];
+$idpais=$_POST["idpais"];
 
 echo "Edicion en proceso... </br>";
 
 include_once("paisCollector.php");
 
 $PaisCollectorObj = new paisCollector();
-$PaisCollectorObj->updatePais($id_pais,$nombre);
+$PaisCollectorObj->updatePais($idpais,$nombre);
 
-echo "id : ".$id_pais. " actualizado a: ".$nombre." </br>";
+echo "id : ".$idpais. " actualizado a: ".$nombre." </br>";
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
 
-<div><a href="view.php" class=btn btn-danger pull-right"> Volver al inicio </a></div>
 
 </div>
-</div>
-</nav>
-
-
 </body>
 </html>

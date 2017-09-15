@@ -41,7 +41,9 @@
             </div>
         </div>
     </nav>
-
+<br>
+    <br>
+    <br>
 
 <div id="main">
 
@@ -55,21 +57,9 @@ $PaisCollectorObj = new paisCollector();
 $PaisCollectorObj->deletePais($id);
 
 echo "Se ha eliminado id : ".$id. " </br>";
-?>
-<?php
-		  if (isset($_SESSION['supportyoy'])){
-        
-              echo "<p>Se elimino el pais #" . $id ." :c </p>";
-        $paisCollectorObj->deletePais($id);
-       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerPais.php'>";
-                            }else{   
-                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
-                             } 
-                        ?>
-<div><a href="view.php" class="btn btn-info mg"> Ver lista de paises </a></div>
-
-
+     echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
+?>                  
+    
 </div>
-
 </body>
 </html>

@@ -39,9 +39,12 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
-
+<br>
+    <br>
+    <br>
 <div id="main">
 
 <h2>Nuevo país </h2>
@@ -58,9 +61,5 @@ Nombre: <input type="text" name="nombre" autofocus required />
 
 
 </div>
-</div>
-</nav>
-
-
 </body>
 </html>
