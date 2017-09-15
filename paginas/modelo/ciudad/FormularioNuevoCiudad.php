@@ -51,7 +51,7 @@
 Nombre: <input type="text" name="nombre" autofocus required />
 </p>
 
-<input type="submit" value="Guardar" />
+<input type="submit" value="Guardar." />
 
 </form>
 
