@@ -45,11 +45,14 @@
 <div id="main">
 <br><br><br>
 
-<h2>Nueva Ciudad </h2>
-<form action="GuardarCiudad.php" method="post">
+<h2>Nueva Comentario </h2>
+<form action="GuardarComentario.php" method="post">
 <p>
-Nombre: <input type="text" name="nombre" autofocus required />
+Descripcion : <input type="text" name="descripcion" autofocus required />
+Email   : <input type="text" name="email" autofocus required />
+
 </p>
+
 
 <input type="submit" value="Guardar." />
 
