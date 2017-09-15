@@ -49,7 +49,7 @@ session_start();
             <?php 
                     $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Metodos de pago</h2>';
-                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
+                     include_once('../../modelo/MetodoPago/MetodoPagoCollector.php');
                     $MetodoPagoCollectorObj = new metodopagoCollector();
                     $ObjMetodo=$MetodoPagoCollectorObj->showMetodoPago($id);
             ?>

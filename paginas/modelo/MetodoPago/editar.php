@@ -47,8 +47,7 @@
             <?php
                 $id=$_POST['id'];
 		        $metodo=$_POST['metodo'];
-            
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
+                include_once('../../modelo/MetodoPago/MetodoPagoCollector.php');
                 $MetodoPagoCollectorObj = new metodopagoCollector();
                 $MetodoPagoCollectorObj-> updateMetodoPago($id,$metodo);
 
