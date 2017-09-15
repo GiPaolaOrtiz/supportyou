@@ -49,7 +49,7 @@ session_start();
             <?php 
                     $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Cuentas</h2>';
-                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cuenta/cuentaCollector.php";
+                    include_once('../../modelo/cuenta/cuentaCollector.php');
                     $cuentaCollectorObj = new cuentaCollector();
                     $Obj=$cuentaCollectorObj->showcuenta($id);
             ?>
