@@ -1,7 +1,7 @@
 <?php
 
 include_once('banco.php');
-include_once('../../modelo/modelo/Collector.php');
+include_once('../../modelo/Collector.php');
 
 
 class bancoCollector extends Collector
