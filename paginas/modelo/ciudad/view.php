@@ -71,7 +71,7 @@ foreach ($CiudadCollectorObj->showCiudades() as $c){
                 echo '<td>' . $c->getNombre() . '</td>';
   echo "<td> <a href='Editarciudad.php?id=".$c->getIdCiudad()."' class='btn btn-info mg'>  Editar</a>";
   echo ' ';
-  echo "<a href='Eliminarciudad.php?id=".$c->getIdCiudad() . "' class='btn btn-info'>Eliminar</a></td>";
+  echo "<a href='Eliminarciudad.php?id=".$c->getIdCiudad() . "' class='btn btn-info'> Eliminar. </a></td>";
 echo '</tr>'; 
                       }
                      echo '</tbody><table>';
