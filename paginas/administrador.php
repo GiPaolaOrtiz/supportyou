@@ -99,7 +99,7 @@ session_start();
                         <a href="modelo/comentarios/view.php" class="btn btn-info topspace2">Comentarios</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="cuentas/view.php" class="btn btn-info topspace2">Cuentas</a>
+                        <a href="modelo/cuenta/view.php" class="btn btn-info topspace2">Cuentas</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="modelo/fundacion/view.php" class="btn btn-info topspace2">Fundaciones</a>
