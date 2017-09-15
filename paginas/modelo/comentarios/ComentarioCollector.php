@@ -1,42 +1,42 @@
 <?php
 
-include_once('Ciudad.php');
+include_once('comentario.php');
 include_once('../../modelo/Collector.php');
 
-class CiudadCollector extends Collector
+class ComentarioCollector extends Collector
 {
   
-  function showCiudades() {
-    $rows = self::$db->getRows("SELECT * FROM ciudad ");        
-    $arrayCiudad= array();        
+  function showComentarios() {
+    $rows = self::$db->getRows("SELECT * FROM comentarios ");        
+    $arrayComentario= array();        
     foreach ($rows as $c){
-      $auxi = new  Ciudad($c{'idciudad'},$c{'nombre'});
-      array_push($arrayCiudad, $auxi);
+      $auxi = new  comentario($c{'idcomentario'},$c{'descripcion'},$c{'email'});
+      array_push($arrayComentario, $auxi);
     }
-    return $arrayCiudad;        
+    return $arrayComentario;        
   }
 
-  function showCiudad($id) {
-    $row = self::$db->getRows("SELECT * FROM ciudad WHERE idciudad= ? ", array("{$id}"));        
-    $ObjCiudad = new Ciudad($row[0]{'idciudad'},$row[0]{'nombre'});
+  function showComentario($id) {
+    $row = self::$db->getRows("SELECT * FROM comentarios WHERE idcomentario= ? ", array("{$id}"));        
+    $ObjComentarios = new comentarios $row[0]{'idcomentario'},$row[0]{'descripcion'},$row[0]{'email'});
 
-    return $ObjCiudad;        
+    return $ObjComentarios;        
   }
 
-  function updateCiudad($id, $nombre){
+  function updateComentario($id, $descripcion, $email){
       $insertrow= self::$db->updateRow
-                  ("UPDATE public.ciudad SET nombre= ? where idciudad = ?", 
-                  array( "{$nombre}", $id ));
+                  ("UPDATE public.comentarios SET descripcion = ? where idcomentario = ?", 
+                  array( "{$descripcion}", $id ));
   }
 
-  function deleteCiudad($id){
+  function deleteComentario($id){
     $insertrow= self::$db->deleteRow
-                  ("DELETE FROM public.ciudad where idciudad = ?", 
+                  ("DELETE FROM public.comentarios where idcomentario = ?", 
                   array( $id ));
   }
-  function createCiudad($nombre){
+  function createComentario($descripcion, $email){
     $insertrow= self::$db->insertRow
-                  ("INSERT INTO public.ciudad (nombre) VALUES (?)", array("{$nombre}"));
+                  ("INSERT INTO public.comentarios (descripcion, email) VALUES (?)", array("{$descripcion}", "{$email}"));
   }
 
 }
