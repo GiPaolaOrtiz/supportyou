@@ -39,6 +39,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -63,11 +64,8 @@ $PaisCollectorObj->createPais($nombre);
 
 <?php
 echo 'País registrado ' . htmlspecialchars($nombre) . '!';
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
-
-<div><a href="view.php" class="btn btn-danger pull-right">Volver</a></div>
-
-
                 
 </div>
 

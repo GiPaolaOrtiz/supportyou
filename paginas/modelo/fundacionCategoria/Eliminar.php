@@ -42,7 +42,9 @@
         </div>
     </nav>
 
-
+<br>
+    <br>
+    <br>
 <div id="main">
 
 <?php
@@ -55,9 +57,9 @@ $CategoriaCollectorObj = new fundacionCategoriaCollector();
 $CategoriaCollectorObj->deleteFundacionCategoria($id);
 
 echo "Se ha eliminado id : ".$id. " </br>";
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
 
-<div><a href="view.php"> Ver lista de categorías </a></div>
 
 
 </div>

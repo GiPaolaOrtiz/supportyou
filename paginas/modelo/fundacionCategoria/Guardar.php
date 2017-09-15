@@ -42,7 +42,9 @@
         </div>
     </nav>
 
-
+<br>
+    <br>
+    <br>
 <div id="main">
 <?php
 $nombre = $_POST['nombre'];
@@ -64,9 +66,9 @@ $CategoriaCollectorObj->createFundacionCategoria($nombre);
 
 <?php
 echo 'Categoría de fundación registrada ' . htmlspecialchars($nombre) . '!';
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
 
-<div><a href="view.php">Volver </a></div>
                 
 </div>
 

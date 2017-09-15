@@ -37,16 +37,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
-
+<br>
+    <br>
+    <br>
 
 <div id="main">
 
 <?php
 $id=$_GET["id"];
-echo "valor de id es ". $id;
 include_once("paisCollector.php");
 include_once("Pais.php");
 $PaisCollectorObj = new paisCollector();
@@ -56,7 +58,7 @@ $ObjPais = $PaisCollectorObj->showPais($id);
 <h2>Editar país </h2>
 <form action="Actualizar.php" method="post">
 <p>
-Id: <input type="text" name="id_pais" value="<?php echo $ObjPais->getIdPais(); ?>" readonly />
+Id: <input type="text" name="idpais" value="<?php echo $ObjPais->getIdPais(); ?>" readonly />
 </p>
 
 <p>
@@ -70,9 +72,5 @@ Nombre: <input type="text" name="nombre" value="<?php echo $ObjPais->getNombre()
 
 
 </div>
-</div>
-</nav>
-
-
 </body>
 </html>

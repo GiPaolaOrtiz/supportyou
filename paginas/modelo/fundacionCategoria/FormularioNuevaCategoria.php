@@ -42,7 +42,9 @@
         </div>
     </nav>
 
-
+<br>
+    <br>
+    <br>
 <div id="main">
 
 <h2>Nueva Categoría </h2>
