@@ -14,6 +14,7 @@ session_start();
 </head>
 
 <body>
+   
     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -22,7 +23,7 @@ session_start();
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
                 </button>
                  <?php
-                echo"<a href='../paginas/MiPerfil.php'><img alt='LogoAplicacion' id='estilologo' src='../img/LogoSupportYou.png'></a>"
+                echo"<img alt='LogoAplicacion' id='estilologo' src='../img/LogoSupportYou.png'></a>"
                 
                   ?>
                
@@ -39,7 +40,7 @@ session_start();
                     </li>
 
                     <li>
-                        <a class="page-scroll" href="../paginas/catalogo.php">CATÁLOGO</a>
+                        <a class="page-scroll" href="catalogo.php">CATÁLOGO</a>
                     </li>              
                     <li>
                         <?php
@@ -62,11 +63,13 @@ session_start();
                 <label for="image-upload" id="image-label">Cambiar foto</label>
                 <input type="file" name="image" id="image-upload" />
             </div>
-
             <div id="nombreUsuario">
-                <h4>Nombre usuario</h4>
                 
-                <button id="botonSubirObjeto" type="submit" onClick="location.href='../paginas/subir_objeto.php ?>'">Subir Objeto</button>
+                <h4><?php
+                    echo "Hola " .$_SESSION['Misesion']
+                    ?></h4>
+                
+                <button id="botonSubirObjeto" type="submit" onClick="location.href='../paginas/subir_objeto.php?>'">Subir Objeto</button>
 
             </div>
 
