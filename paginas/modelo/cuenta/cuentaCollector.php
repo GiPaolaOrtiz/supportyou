@@ -1,7 +1,7 @@
 <?php
 
 include_once('cuenta.php');
-include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
+include_once('../../modelo/Collector.php');
 
 
 class cuentaCollector extends Collector

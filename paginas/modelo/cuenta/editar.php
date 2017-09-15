@@ -48,8 +48,7 @@
                 $id=$_POST['id'];
 		        $numero=$_POST['numero'];
 		        $banco=$_POST['banco'];            
-            
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cuenta/cuentaCollector.php";
+                include_once('../../modelo/cuenta/cuentaCollector.php');
                 $cuentaCollectorObj = new cuentaCollector();
                 $cuentaCollectorObj-> updatecuenta($id,$numero,$banco);
 
