@@ -29,6 +29,10 @@
 </head>
 <body>
 <!-- Menu -->
+    <?php
+if (isset($_SESSION['Misesion'])){
+$usuario = $_SESSION['Misesion'];
+?>
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
 
@@ -79,6 +83,10 @@ echo '</tr>';
 ?>
 
 </div>
-
+<?php
+}else{ 
+echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+} 
+?>
 </body>
 </html>

@@ -26,6 +26,10 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+    <?php
+if (isset($_SESSION['Misesion'])){
+$usuario = $_SESSION['Misesion'];
+?>
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -61,5 +65,10 @@ Nombre: <input type="text" name="nombre" autofocus required />
 
 
 </div>
+    <?php
+}else{ 
+echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+} 
+?>
 </body>
 </html>
