@@ -53,8 +53,7 @@ session_start();
                 $nombre=$_POST['nombre'];
               
             
-            
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+                include_once('../../modelo/categoriaProducto/categoriaproductoCollector.php');
                
 
                 $CategoriaproductoCollectorObj = new categoriaproductoCollector();

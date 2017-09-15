@@ -49,7 +49,7 @@ session_start();
                 $id= $_GET['id'];
                 echo '<h2 class="topspace text-center">Categoria Productos</h2>';
 
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+               include_once('../../modelo/categoriaProducto/categoriaproductoCollector.php');
                 $CategoriaProductoCollectorObj = new categoriaproductoCollector();
 
                 $ObjCategoriaProducto=$CategoriaProductoCollectorObj->showCategoriaProducto($id);

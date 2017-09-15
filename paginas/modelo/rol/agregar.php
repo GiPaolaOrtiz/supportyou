@@ -41,23 +41,24 @@
                 </div>
             </div>
         </nav>
-
+        </main>    
         <?php 
                 echo '<h2 class="topspace text-center">Metodos de pago</h2>';
             ?>
             <?php
                 $rol=$_POST['rol'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
+                include_once ("rolCollector.php");
                 $rolCollectorObj = new rolCollector();
                 $rolCollectorObj-> createRol($rol);
 
                 echo "<h3 class='topspace text-center'>El rol <b>" . $rol . "</b> ha sido agregado</h3>";
             ?>
-            <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
-            </div>
-        </main>
+        
+        
+               
+            <div><a href="view.php" class="btn btn-info center-block w70">Volver</a></div>
+        
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
@@ -65,5 +66,6 @@
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  
+                
     </body>
 </html>

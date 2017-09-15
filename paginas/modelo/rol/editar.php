@@ -41,7 +41,7 @@
                 </div>
             </div>
         </nav>
-
+            
         <?php 
                 echo '<h2 class="topspace text-center">Metodos de pago</h2>';
             ?>
@@ -49,7 +49,7 @@
                 $id=$_POST['id'];
 		        $rol=$_POST['rol'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
+                include_once ("rolCollector.php");
                 $rolCollectorObj = new rolCollector();
                 $rolCollectorObj-> updateRol($id,$rol);
 
