@@ -49,9 +49,9 @@ session_start();
             <?php 
                     $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Roles</h2>';
-                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
-                    $rolCollectorObj = new rolCollector();
-                    $ObjRol=$rolCollectorObj->showRol($id);
+                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
+                    $ventaCollectorObj = new ventaCollector();
+                    $Objventa=$ventaCollectorObj->showventa($id);
             ?>
             <div class="container topspace">
                 <div class="row">
@@ -60,13 +60,17 @@ session_start();
                         <form method="post" action="editar.php">
                             <div class="form-group">
                               <label for="idm">ID</label>
-                              <input type="text" class="form-control" id="id" value="<?php echo $ObjRol->getIdrol(); ?>" readonly name="id">
+                              <input type="text" class="form-control" id="id" value="<?php echo $Objventa->getIdventa(); ?>" readonly name="id">
                             </div>
-                             <div class="form-group">
-                              <label for="metodo">Nombre del rol</label>
-                              <input type="text" class="form-control" id="rol" value="<?php echo $ObjRol->getNombre(); ?>" name="rol">
-                            </div>
-                            <button type="submit" class="btn btn-info">Enviar</button>
+                             <label for="total">Total</label>
+                              <input type="text" class="form-control" id="total" value="<?php echo $Objventa->getTotal(); ?>"  name="total">
+                              <label for="cliente">ID Cliente</label>
+                              <input type="text" class="form-control" id="cliente" value="<?php echo $Objventa->getIdclientefk(); ?>"  name="cliente">
+                              <label for="metodo">ID Metodo Pago</label>
+                              <input type="text" class="form-control" id="metodo" value="<?php echo $Objventa->getMetodopagofk(); ?>"  name="metodo">
+                              <label for="producto">ID Producto</label>
+                              <input type="text" class="form-control" id="producto" value="<?php echo $Objventa->getIdproductofk(); ?>"  name="producto">
+                              <button type="submit" class="btn btn-info">Enviar</button>
                         </form>
                     </div>
                     <div class="col-md-4"></div>

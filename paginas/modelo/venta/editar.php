@@ -47,17 +47,20 @@ session_start();
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
+                echo '<h2 class="topspace text-center">Ventas</h2>';
             ?>
             <?php
                 $id=$_POST['id'];
-		        $rol=$_POST['rol'];
+		        $total=$_POST['total'];
+                $cliente=$_POST['cliente'];
+                $metodo=$_POST['metodo'];
+                $producto=$_POST['producto'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
-                $rolCollectorObj = new rolCollector();
-                $rolCollectorObj-> updateRol($id,$rol);
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
+                $ventaCollectorObj = new ventaCollector();
+                $ventaCollectorObj-> updateventa($id, $total, $cliente, $metodo, $producto);
 
-                echo "<h3 class='topspace text-center'>El rol <span class='green'>" . $id . "</span> ha sido actualizado a <span class='green'>" . $rol . "</span></h3>";
+                echo "<h3 class='topspace text-center'>La venta <span class='green'>" . $id . "</span> ha sido actualizado</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
