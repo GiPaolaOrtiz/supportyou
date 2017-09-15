@@ -51,13 +51,13 @@
 
 <?php
 
-include_once("paisCollector.php");
+include_once("CiudadCollector.php");
 
-$id =1;
+$id;
 
-$PaisCollectorObj = new paisCollector();
-echo '<h2 class="topspace text-center">Países</h2>';
-echo "<a href='FormularioNuevoPais.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+$CiudadCollectorObj = new CiudadCollector();
+echo '<h2 class="topspace text-center">Ciudades</h2>';
+echo "<a href='FormularioNuevoCiudad.php' class='btn btn-warning center-block w10'><b>+</b></a>";
 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
@@ -65,13 +65,13 @@ echo '<div class="">';
                         echo '<th>Nombre</th>';
                     echo '</tr> </thead><tbody>';
 
-foreach ($PaisCollectorObj->showPaises() as $c){
+foreach ($CiudadCollectorObj->showCiudades() as $c){
    echo '<tr>'; 
-                echo '<td>' . $c->getIdPais() . '</td>';
+                echo '<td>' . $c->getIdCiudad() . '</td>';
                 echo '<td>' . $c->getNombre() . '</td>';
-  echo "<td> <a href='Editar.php?id=".$c->getIdPais()."' class='btn btn-info mg'>  Editar</a>";
+  echo "<td> <a href='Editarciudad.php?id=".$c->getIdCiudad()."' class='btn btn-info mg'>  Editar</a>";
   echo ' ';
-  echo "<a href='Eliminar.php?id=".$c->getIdPais() . "' class='btn btn-info'>Eliminar</a></td>";
+  echo "<a href='Eliminarciudad.php?id=".$c->getIdCiudad() . "' class='btn btn-info'>Eliminar</a></td>";
 echo '</tr>'; 
                       }
                      echo '</tbody><table>';

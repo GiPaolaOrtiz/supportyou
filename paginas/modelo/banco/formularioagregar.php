@@ -42,7 +42,7 @@
                 </div>
             </nav>    
             <?php 
-                    echo '<h2 class="topspace text-center">Roles</h2>';
+                    echo '<h2 class="topspace text-center">Bancos</h2>';
                     echo '<h3 class="text-center">Agregar</h3>';                
             ?>
             <div class="container topspace">
@@ -56,7 +56,7 @@
                          <form method="post" action="agregar.php">
                             <div class="form-group">
                               <label for="metodo">Rol</label>
-                              <input type="text" class="form-control" id="metodo" placeholder="Escriba el rol" name="rol">
+                              <input type="text" class="form-control" id="metodo" placeholder="Nombre" name="banco">
                             </div>
                             <button type="submit" class="btn btn-info">Enviar</button>
                         </form>

@@ -49,10 +49,10 @@ $id=$_GET["id"];
 echo "valor de id es ". $id;
 include_once("CiudadCollector.php");
 include_once("Ciudad.php");
-$CiuadadCollectorObj = new CiudadCollector();
+$CiudadCollectorObj = new CiudadCollector();
 $ObjCiudad = $CiudadCollectorObj->showCiudad($id);
 ?>
-
+<br><br>
 <h2>Editar Ciudad </h2>
 <form action="Actualizarciudad.php" method="post">
 <p>

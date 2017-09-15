@@ -43,6 +43,7 @@
 
 
 <div id="main">
+<br><br><br>
 
 <h2>Nueva Ciudad </h2>
 <form action="GuardarCiudad.php" method="post">

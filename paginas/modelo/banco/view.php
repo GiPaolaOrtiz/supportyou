@@ -7,9 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../../../img/LogoSupportYou.png">
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet"  href="../../../css/style.css">        
-        <link rel="stylesheet"  href="../../../css/estiloCatalogo.css">
-        <link rel="stylesheet"  href="../../../css/estiloCarro.css">
+        <link rel="stylesheet"  href="../../../css/style.css">  
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
@@ -32,44 +30,48 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.php">HOME</a>
+                               <a class="page-scroll" href="../../administrador.php">HOME</a>
                             </li>
                             <li>
-                               <a class="page-scroll" href="../../../index.html">SALIR</a>
+                               <a class="page-scroll" href="../../../../index.html">SALIR</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>    
-            <?php 
-                    echo '<h2 class="topspace text-center">Roles</h2>';
-                    echo '<h3 class="text-center">Agregar</h3>';                
+
+        <?php 
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/banco/bancoCollector.php";
+            $bancoCollectorObj = new bancoCollector();
+                echo '<h2 class="topspace text-center">Bancos</h2>';
+
+                echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+
+                echo '<div class="">';                     
+                echo '<table class="table table-condensed">';
+
+                    echo ' <thead><tr>';   
+                        echo '<th>ID</th>';
+                        echo '<th>Nombre de Banco</th>';
+                        echo '<th>Acciones</th>';
+                    echo '</tr> </thead><tbody>';
+
+                      foreach ($bancoCollectorObj->showBancos() as $c){
+                          echo '<tr>'; 
+                              echo '<td>' . $c->getIdbanco() . '</td>';
+                              echo '<td>' . $c->getNombre() . '</td>';
+                              echo "<td> <a href='formularioeditar.php?id=" . $c->getIdbanco() . "' class='btn btn-info mg'>Editar</a>";
+                              echo "<a href='eliminar.php?id=" . $c->getIdbanco() . "' class='btn btn-info'>Delete</a></td>";
+                          echo '</tr>'; 
+                      }
+                     echo '</tbody><table>';
+                 echo '</div>';
             ?>
-            <div class="container topspace">
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
-
-
-
-
-                         <form method="post" action="agregar.php">
-                            <div class="form-group">
-                              <label for="metodo">Rol</label>
-                              <input type="text" class="form-control" id="metodo" placeholder="Escriba el rol" name="rol">
-                            </div>
-                            <button type="submit" class="btn btn-info">Enviar</button>
-                        </form>
-                    </div>
-                    <div class="col-md-4"></div>
-                </div>
-            </div>
-            <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-        <footer class="pie" id="footer1">
+        <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  

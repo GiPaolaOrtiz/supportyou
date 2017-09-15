@@ -10,7 +10,7 @@ class CiudadCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM ciudad ");        
     $arrayCiudad= array();        
     foreach ($rows as $c){
-      $aux = new Ciudad($c{'idciudad'},$c{'nombre'});
+      $aux = new  Ciudad($c{'idciudad'},$c{'nombre'});
       array_push($arrayCiudad, $aux);
     }
     return $arrayCiudad;        
@@ -20,7 +20,7 @@ class CiudadCollector extends Collector
     $row = self::$db->getRows("SELECT * FROM ciudad WHERE idciudad= ? ", array("{$id}"));        
     $ObjCiudad = new Ciudad($row[0]{'idciudad'},$row[0]{'nombre'});
 
-    return $ObjPais;        
+    return $ObjCiudad;        
   }
 
   function updateCiudad($id, $nombre){

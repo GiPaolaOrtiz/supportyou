@@ -41,35 +41,27 @@
                     </div>
                 </div>
             </nav>    
-            <?php 
-                    echo '<h2 class="topspace text-center">Roles</h2>';
-                    echo '<h3 class="text-center">Agregar</h3>';                
+        <?php 
+                echo '<h2 class="topspace text-center">Bancos</h2>';
             ?>
-            <div class="container topspace">
-                <div class="row">
-                    <div class="col-md-4"></div>
-                    <div class="col-md-4">
+            <?php
+                $id=$_POST['id'];
+		        $banco=$_POST['banco'];
+            
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/banco/bancoCollector.php";
+                $bancoCollectorObj = new bancoCollector();
+                $bancoCollectorObj-> updateBanco($id,$banco);
 
-
-
-
-                         <form method="post" action="agregar.php">
-                            <div class="form-group">
-                              <label for="metodo">Rol</label>
-                              <input type="text" class="form-control" id="metodo" placeholder="Escriba el rol" name="rol">
-                            </div>
-                            <button type="submit" class="btn btn-info">Enviar</button>
-                        </form>
-                    </div>
-                    <div class="col-md-4"></div>
-                </div>
+                echo "<h3 class='topspace text-center'>El Banco <span class='green'>" . $id . "</span> ha sido actualizado a <span class='green'>" . $banco . "</span></h3>";
+            ?>
+            <div>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
             </div>
-            <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-        <footer class="pie" id="footer1">
+        <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  
