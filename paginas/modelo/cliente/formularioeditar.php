@@ -49,6 +49,8 @@ session_start();
                 </div>
             </div>
         </nav>
+        
+    </main>
 
 
         <?php 
@@ -143,10 +145,7 @@ session_start();
 
             </div>
 
-
-
-    </main>
-
+    </div>
     <script src="../../../js/jquery.js"></script>
     <script type="text/javascript" src=""></script>
     <!-- Bootstrap Core JavaScript -->

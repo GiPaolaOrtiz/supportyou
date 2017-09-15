@@ -44,7 +44,7 @@ session_start();
                 </div>
             </div>
         </nav>
-
+            
         <?php 
                 echo '<h2 class="topspace text-center">Editar Cliente</h2>';
             ?>
@@ -63,7 +63,7 @@ session_start();
 
 
             
-                include_once ("../usuario/usuarioCollector.php");
+                include_once ("../../modelo/usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($idusuario,$email,$nombre,$username,$pass,$idrol);
 
