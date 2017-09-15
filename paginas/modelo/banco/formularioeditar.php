@@ -42,21 +42,24 @@
                 </div>
             </nav>    
             <?php 
+                    $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Roles</h2>';
-                    echo '<h3 class="text-center">Agregar</h3>';                
+                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/banco/bancoCollector.php";
+                    $bancoCollectorObj = new bancoCollector();
+                    $ObjBanco=$bancoCollectorObj->showBanco($id);
             ?>
             <div class="container topspace">
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-
-
-
-
-                         <form method="post" action="agregar.php">
+                        <form method="post" action="editar.php">
                             <div class="form-group">
-                              <label for="metodo">Rol</label>
-                              <input type="text" class="form-control" id="metodo" placeholder="Escriba el rol" name="rol">
+                              <label for="idm">ID</label>
+                              <input type="text" class="form-control" id="id" value="<?php echo $ObjBanco->getIdbanco(); ?>" readonly name="id">
+                            </div>
+                             <div class="form-group">
+                              <label for="metodo">Banco</label>
+                              <input type="text" class="form-control" id="banco" value="<?php echo $ObjBanco->getNombre(); ?>" name="banco">
                             </div>
                             <button type="submit" class="btn btn-info">Enviar</button>
                         </form>
@@ -64,12 +67,12 @@
                     <div class="col-md-4"></div>
                 </div>
             </div>
-            <a href="view.php" class="btn btn-danger pull-right">Volver</a>
+             <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
-        <footer class="pie" id="footer1">
+        <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  
