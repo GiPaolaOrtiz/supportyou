@@ -69,7 +69,7 @@
                               echo '<td>' . $c->getImg() . '</td>';
                               echo '<td>' . $c->getEstadoventa() . '</td>';
 
-                              echo "<td> <a href='FormularioEditar.php?id=" . $c->getIdproducto() . "' class='btn btn-info mg'>Editar</a>";
+                              echo "<td> <a href='FormularioEditar.php?id=" . $c->getIdproducto() . "' class='btn btn-info mg'>Editar..</a>";
                               echo "<a href='Eliminar.php?id=" . $c->getIdproducto() . "' class='btn btn-info'>Delete</a></td>";
                           echo '</tr>'; 
                       }
