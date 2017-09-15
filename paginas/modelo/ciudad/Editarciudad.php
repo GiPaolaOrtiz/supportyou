@@ -64,7 +64,7 @@ Nombre: <input type="text" name="nombre" value="<?php echo $ObjCiudad->getNombre
 </p>
 
 <a href="view.php" class="btn btn-info mg">  Cancelar</a>
-<input type="submit" value="Guardar" />
+<input type="submit" value="Guardar." />
 
 </form>
 
