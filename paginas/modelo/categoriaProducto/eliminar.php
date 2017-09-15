@@ -42,18 +42,19 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
+                echo '<h2 class="topspace text-center">Categorias de Productos</h2>';
             ?>
             <?php
-                $email=$_POST['email'];
-                $nombre=$_POST['nombre'];
-                
+                $id=$_GET['id'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
-                $UsuarioCollectorObj = new usuarioCollector();
-                $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
+               include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+                $CategoriaProductoCollectorObj = new categoriaproductoCollector();
+                foreach ($CategoriaProductoCollectorObj->showCategoriaProductos() as $c){
+                     $nombre=$c->getNombre();
+                 }
+                $CategoriaProductoCollectorObj-> deleteCategoriaProducto($id);
 
-                echo "<h3 class='topspace text-center'>El usuario <b>" . $username . "</b> ha sido agregado</h3>";
+                echo "<h3 class='topspace text-center'>La categoria <span class='red'>" . $nombre . "</span> ha sida eliminado</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>

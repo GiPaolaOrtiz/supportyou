@@ -39,29 +39,35 @@
                         </ul>
                     </div>
                 </div>
-            </nav> 
-           <br><br>    <br><br>    <br><br>    <br><br>
+            </nav>    
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/CategoriaProducto/CategoriaProductoCollector.php";
-            $CategoriaProductoCollectorObj = new CategoriaProductoCollector();
-                echo '<h2 class="topspace text-center">Usuarios</h2>';
-                echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+            $categoriaproductoCollectorObj = new categoriaproductoCollector();
+
+                echo '<h2 class="topspace text-center">Categoria de Productos</h2>';
+
+                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+              
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
-                       
+                
                         echo '<th>Nombre</th>';
-                       
+                      
+                        echo '<th>Acciones</th>';
+                        echo '</tr> </thead><tbody>';   
             
-                      foreach ($CategoriaProductoCollectorObj->showCategoriaProductos() as $c){
+                      foreach ($categoriaproductoCollectorObj->showCategoriaProductos() as $c){
                           echo '<tr>'; 
                               echo '<td>' . $c->getIdcategoriaproducto() . '</td>';
-                            
+                              
                               echo '<td>' . $c->getNombre() . '</td>';
-                             
-                              echo "<td> <a href='formularioeditar.php?id=" . $c->getidusuario() . "' class='btn btn-info mg'>Editar</a>";
-                              echo "<a href='eliminar.php?id=" . $c->getidusuario() . "' class='btn btn-info'>Delete</a></td>";
+                           
+                              echo "<td> <a href='formularioeditar.php?id=" . $c->getIdcategoriaproducto() . "' class='btn btn-info mg'>Editar</a>";
+
+                              echo "<a href='eliminar.php?id=" . $c->getIdcategoriaproducto() . "' class='btn btn-info'>Eliminar</a></td>";
+                        
                           echo '</tr>'; 
                       }
                      echo '</tbody><table>';
