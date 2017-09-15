@@ -54,7 +54,11 @@ session_start();
 
 
 
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/administrador/administradorCollector.php";
+               
+            
+                         
+                 include_once ("../../modelo/administrador/administradorCollector.php");
+            
                 $AdministradorCollectorObj = new administradorCollector();
                 $AdministradorCollectorObj-> deleteAdministrador($idadministrador);
 

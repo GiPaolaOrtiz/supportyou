@@ -43,12 +43,19 @@ session_start();
                     </div>
                 </div>
             </nav>  
+            
+         
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/administrador/administradorCollector.php";
+            include_once ("../../modelo/administrador/administradorCollector.php");
             $AdministradorCollectorObj = new administradorCollector();
 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+     
+              include_once ("../../modelo/usuario/usuarioCollector.php");
             $UsuarioCollectorObj = new usuarioCollector();
+            
+            include_once('../../modelo/Collector.php');
+
+
 
                 echo '<h2 class="topspace text-center">Administradores</h2>';
 
