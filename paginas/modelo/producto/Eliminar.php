@@ -55,12 +55,12 @@
            
              
                 foreach ($ProductoCollectorObj->showProductos() as $c){
-                     $estado=$c->getDescripcion();
+                     $descripcion=$c->getDescripcion();
                
                }
                  $ProductoCollectorObj-> deleteProducto($id);
             
-                echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $estado . "</span> ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $descripcion . "</span> ha sido eliminado</h3>";
                 
             ?>
             
