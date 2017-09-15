@@ -53,10 +53,22 @@
                 $precio=$_POST['precio'];
                 $img=$_POST['img'];
                 $estadoventa=$_POST['estadoventa'];
-
+                $imagen="";
+                if($idcategoriaproducto==1){
+                      $imagen="/Ropa/" . $img;
+                }
+                else if($idcategoriaproducto==2){
+                     $imagen="/Hogar/" . $img;
+                }
+                else if($idcategoriaproducto==3){
+                     $imagen="/Tecno/" . $img;
+                }
+                else if($idcategoriaproducto==4){
+                     $imagen="/Juguetes/" . $img;
+                }
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
                 $ProductoCollectorObj = new ProductoCollector();
-                $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto);
+                $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $imagen, $estadoventa, $idfundacion, $idcategoriaproducto);
 
                      echo "<h3 class='topspace text-center'> El Producto <span class='green'> " . $descripcion . " </span> ha sido agregado</h3>";
 
