@@ -69,15 +69,19 @@ session_start();
                      <div class="col-md-4  col-sm-6">
                         <a href="modelo/usuario/view.php" class="btn btn-info topspace">Usuarios</a>
                     </div>
-                    <div class="col-md-4  col-sm-6">
-                        <a href="bancos/view.php" class="btn btn-info topspace">Bancos</a>
-                    </div>
+                  
                     <div class="col-md-4  col-sm-6">
                         <a href="modelo/categoriaProducto/view.php" class="btn btn-info topspace">Categoria Productos</a>
+                    </div>
+                      <div class="col-md-4  col-sm-6">
+                        <a href="bancos/view.php" class="btn btn-info topspace">Bancos</a>
                     </div>
                     
                      <div class="col-md-4  col-sm-6">
                         <a href="modelo/cliente/view.php" class="btn btn-info topspace2">Clientes</a>
+                    </div>
+                     <div class="col-md-4  col-sm-6">
+                        <a href="modelo/rol/view.php" class="btn btn-info topspace2">Roles</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="ciudades/view.php" class="btn btn-info topspace2">Ciudades</a>
@@ -103,9 +107,7 @@ session_start();
                     <div class="col-md-4  col-sm-6">
                         <a href="modelo/producto/view.php" class="btn btn-info topspace2">Productos</a>
                     </div>
-                    <div class="col-md-4  col-sm-6">
-                        <a href="modelo/rol/view.php" class="btn btn-info topspace2">Roles</a>
-                    </div>
+                   
                     
                      <div class="col-md-4  col-sm-6">
                         <a href="ventas/view.php" class="btn btn-info topspace2">Ventas</a>

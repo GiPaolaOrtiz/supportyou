@@ -96,10 +96,10 @@
                               echo '<td>' . $c->getFecharegistro() . '</td>';
                                                        
                               echo "<td> <a href='verperfilprueba.php?id=" . $c->getidcliente() ."' class='btn btn-info mg'>Ver Perfil</a>";
-                              echo "<td> <a href='formularioeditar.php?id=" . $c->getidusuario() . "' class='btn btn-info mg'>Editar</a>";
+                              echo "<td> <a href='formularioeditar.php?id=" . $c->getidcliente() . "' class='btn btn-info mg'>Editar</a>";
                           
                          
-                              echo "<a href='eliminar.php?id=" . $c->getidusuario() . "' class='btn btn-info'>Delete</a></td>";
+                              echo "<a href='eliminar.php?id=" . $u->getidusuario() . "&idcliente=". $c->getidcliente() . "' class='btn btn-info'>Eliminar</a></td>";
                           echo '</tr>';
                       }
                      echo '</tbody><table>';

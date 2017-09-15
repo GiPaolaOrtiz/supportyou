@@ -59,77 +59,97 @@
 
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
                 $UsuarioCollectorObj = new usuarioCollector();
-                $ObjUsuario=$UsuarioCollectorObj->showUsuario($ObjCliente->getIdUsuario());
+                $ObjUsuario=$UsuarioCollectorObj->showUsuario($ObjCliente->getIdusuario());
         ?>
 
 
-
-        <div class="container">
+         <div class="container">
             <br><br> <br><br>
+
             <div class="jumbotron">
-                <h2>Cliente</h2>
+                <h2>Agregar Cliente</h2>
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                       
-                        <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
 
-                            <div>
-                                <img src="images/<?php echo $ObjCliente->getFoto(); ?>" alt="stack photo" class="img">
+                    <div class="col-md-12 col-xs-12 col-sm-6 col-lg-12">
+
+                        <form method="post" class="topspace" action="editar.php">
+
+
+                            <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+
+                                <label>Imagen
+                                <input id="campofotografia" name="foto" type="file" />
+                                </label>
+
                             </div>
-                                                    
-                        </div>
-                    </div>
-                    <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+                            <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                                
 
-                        <form method="post" class="topspace" action="agregar.php">
+                                 <div class="form-group">
+
+                                    <label for="metodo">ID Cliente</label>
+                                    <input type="text" class="form-control" id="email"  name="idcliente" readonly="" value="<?php echo $ObjCliente->getIdcliente(); ?>">
+                                </div>
+
+                                 <div class="form-group">
+
+                                    <label for="metodo">ID Usuario</label>
+                                    <input type="text" class="form-control" id="email"  name="idusuario" readonly="" value="<?php echo $ObjCliente->getIdusuario(); ?>">
+                                </div>
 
 
-                            <div class="form-group">
-                                <label for="metodo">Email</label>
-                                <input type="email" class="form-control" id="email"  name="email" value="<?php echo $ObjUsuario->getEmail(); ?>">
+                                 <div class="form-group">
+
+                                    <label for="metodo">Email</label>
+                                    <input type="email" class="form-control" id="email"  name="email" value="<?php echo $ObjUsuario->getEmail(); ?>">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Nombre</label>
+                                   <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $ObjUsuario->getNombre(); ?>">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Username</label>
+                                   <input type="text" class="form-control" id="username" name="username" value="<?php echo $ObjUsuario->getUsername(); ?>">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Contraseña del usuario</label>
+                                      <input type="text" class="form-control" id="contrasena" name="pass" value="<?php echo $ObjUsuario->getPass(); ?>">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Rol</label>
+                                    <input type="text" class="form-control" id="idrol" placeholder="rol" name="idrol" value="2" readonly="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Fecha de Nacimiento (Ejemplo: 1996-02-21)</label>
+                                    <br>
+                                      <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="fechanacimiento" value="<?php echo $ObjCliente->getFechanacimiento(); ?>">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Fecha de Registro (Ejemplo: 1996-02-21)</label>
+                                    <br>
+                                     <input type="text" class="form-control" id="username" placeholder="Username" name="fecharegistro" value="<?php echo $ObjCliente->getFecharegistro(); ?>">
+                                </div>
+
+                                <button type="submit" class="btn btn-info center-block">Enviar</button>
+                                <br>
+                                <a href="view.php" class="btn btn-info center-block">Volver</a>
                             </div>
-
-                            <div class="form-group">
-                                <label for="metodo">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $ObjUsuario->getNombre(); ?>">
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="metodo">Username</label>
-                                <input type="text" class="form-control" id="username" name="username" value="<?php echo $ObjUsuario->getUsername(); ?>">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="metodo">Contrasena</label>
-                                <input type="text" class="form-control" id="contrasena" name="contrasena" value="<?php echo $ObjUsuario->getPass(); ?>">
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="metodo">FechaNacimiento</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $ObjCliente->getFechanacimiento(); ?>">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="metodo">Nombre de registro</label>
-                                <input type="text" class="form-control" id="username" placeholder="Username" name="username" value="<?php echo $ObjCliente->getFecharegistro(); ?>">
-                        </div>
-
-
-
-
-
-                        <br>
-                        <a href="view.php" class="btn btn-info center-block">Volver</a>
                         </form>
                     </div>
+
 
                 </div>
 
             </div>
 
-        </div>
+
+
     </main>
 
     <script src="../../../js/jquery.js"></script>

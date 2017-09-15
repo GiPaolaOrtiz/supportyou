@@ -34,7 +34,7 @@ function showClienteUsuario($id,$idcliente) {
                   array( "{$foto}","{$fechanacimiento}",$id ));
   }
 
-  function deleteUsuario($id){
+  function deleteCliente($id){
     $insertrow= self::$db->deleteRow
                   ("DELETE FROM public.cliente where idcliente = ?", 
                   array( $id ));
