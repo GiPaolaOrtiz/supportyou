@@ -2,7 +2,7 @@
 
 include_once('administrador.php');
 
-include_once('../../modelo/Collector.php');
+include_once('../Collector.php');
 
 
 

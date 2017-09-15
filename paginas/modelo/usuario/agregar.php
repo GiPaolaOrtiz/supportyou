@@ -56,7 +56,7 @@ session_start();
                 $idrol=$_POST['idrol'];
             
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                include_once ("usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
 

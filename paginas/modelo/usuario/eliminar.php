@@ -51,7 +51,7 @@ session_start();
             <?php
                 $id=$_GET['id'];
             
-               include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+               include_once ("usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 foreach ($UsuarioCollectorObj->showUsuarios() as $c){
                      $nombre=$c->getUsername();
