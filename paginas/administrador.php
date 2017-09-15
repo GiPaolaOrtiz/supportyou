@@ -65,6 +65,10 @@ session_start();
             
                <div class="topspace">
                      <h3 class="botspace">Saludos (administrador)</h3>
+
+                      <div class="col-md-4  col-sm-6">
+                        <a href="modelo/administrador/view.php" class="btn btn-info topspace">Administradores</a>
+                    </div>
                      <div class="row topspace center-block">
                      <div class="col-md-4  col-sm-6">
                         <a href="modelo/usuario/view.php" class="btn btn-info topspace">Usuarios</a>
@@ -73,15 +77,20 @@ session_start();
                     <div class="col-md-4  col-sm-6">
                         <a href="modelo/categoriaProducto/view.php" class="btn btn-info topspace">Categoria Productos</a>
                     </div>
-                      <div class="col-md-4  col-sm-6">
-                        <a href="modelo/banco/view.php" class="btn btn-info topspace">Bancos</a>
-                    </div>
-                    
+                
                      <div class="col-md-4  col-sm-6">
                         <a href="modelo/cliente/view.php" class="btn btn-info topspace2">Clientes</a>
                     </div>
+                   
                      <div class="col-md-4  col-sm-6">
                         <a href="modelo/rol/view.php" class="btn btn-info topspace2">Roles</a>
+                    </div>
+
+
+
+
+                    <div class="col-md-4  col-sm-6">
+                        <a href="modelo/banco/view.php" class="btn btn-info topspace2">Bancos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="modelo/ciudad/view.php" class="btn btn-info topspace2">Ciudades</a>
