@@ -41,7 +41,8 @@
                 </div>
             </nav>    <br><br><br>
               <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+              include_once('../../modelo/producto/ProductoCollector.php');
+
             $ProductoCollectorObj = new ProductoCollector();
                 echo '<h2 class="topspace text-center">Tabla Productos </h2>';
                 echo "<a href='FormularioNuevo.php' class='btn btn-warning center-block w10'><b>+</b></a>";

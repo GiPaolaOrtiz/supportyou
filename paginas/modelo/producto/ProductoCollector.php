@@ -1,7 +1,7 @@
 <?php
 
 
-include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
+include_once('../../modelo/producto/ProductoCollector.php');
 
 include_once('Producto.php');
 

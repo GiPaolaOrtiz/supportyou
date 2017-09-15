@@ -66,7 +66,7 @@
                 else if($idcategoriaproducto==4){
                      $imagen="/Juguetes/" . $img;
                 }
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+                include_once('../../modelo/producto/ProductoCollector.php');
                 $ProductoCollectorObj = new ProductoCollector();
                 $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $imagen, $estadoventa, $idfundacion, $idcategoriaproducto);
 
