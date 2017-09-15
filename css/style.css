@@ -20,6 +20,9 @@ footer {
     width: 80%;
     margin: 0 auto;
 }
+#imagen {
+    width: 40%;
+}
 #img {
     border-right: 0px;
 }

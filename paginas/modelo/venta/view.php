@@ -45,23 +45,29 @@ session_start();
                 </div>
             </nav>    
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
-            $rolCollectorObj = new rolCollector();
-                echo '<h2 class="topspace text-center">Roles</h2>';
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
+            $ventaCollectorObj = new ventaCollector();
+                echo '<h2 class="topspace text-center">Ventas</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
-                        echo '<th>Nombre del rol</th>';
+                        echo '<th>Total de venta</th>';
+                        echo '<th>ID cliente</th>';
+                        echo '<th>ID Metodo de Pago</th>';
+                        echo '<th>ID Producto</th>';
                         echo '<th>Acciones</th>';
                     echo '</tr> </thead><tbody>';            
-                      foreach ($rolCollectorObj->showRoles() as $c){
+                      foreach ($ventaCollectorObj->showVentas() as $c){
                           echo '<tr>'; 
-                              echo '<td>' . $c->getIdrol() . '</td>';
-                              echo '<td>' . $c->getNombre() . '</td>';
-                              echo "<td> <a href='formularioeditar.php?id=" . $c->getIdrol() . "' class='btn btn-info mg'>Editar</a>";
-                              echo "<a href='eliminar.php?id=" . $c->getIdrol() . "' class='btn btn-info'>Delete</a></td>";
+                              echo '<td>' . $c->getIdventa() . '</td>';
+                              echo '<td>' . $c->getTotal() . '</td>';
+                              echo '<td>' . $c->getIdclientefk() . '</td>';
+                              echo '<td>' . $c->getMetodopagofk() . '</td>';
+                              echo '<td>' . $c->getIdproductofk() . '</td>';
+                              echo "<td> <a href='formularioeditar.php?id=" . $c->getIdventa() . "' class='btn btn-info mg'>Editar</a>";
+                              echo "<a href='eliminar.php?id=" . $c->getIdventa() . "' class='btn btn-info'>Delete</a></td>";
                           echo '</tr>'; 
                       }
                      echo '</tbody><table>';

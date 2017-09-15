@@ -42,24 +42,30 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Cliente</h2>';
-            ?>
-            <?php
-                $idusuario=$_POST['idUsuario'];
-                $foto=$_POST['foto'];
-                $fechanacimiento=$_POST['fechaNacimiento'];
-                $fecharegistro=$_POST['fechaRegistro'];
-              
-            
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
-                $ClienteCollectorObj = new ClienteCollector();
-                $ClienteCollectorObj-> createCliente($idusuario,$foto,$fechanacimiento,$fecharegistro);
+                echo '<h2 class="topspace text-center">Categoria de Productos</h2>';
+                echo '<h3 class="text-center">Agregar</h3>';                
+        ?>
 
-                echo "<h3 class='topspace text-center'>El usuario <b>" . $idusuario . "</b> ha sido agregado como CLIENTE</h3>";
-            ?>
-            <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+     
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <form method="post" class="topspace" action="agregar.php">
+                
+                 <div class="form-group">
+                  <label for="metodo">Nombre</label>
+                  <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                </div>
+               
+                <button type="submit" class="btn btn-info center-block">Enviar</button>
+            </form>
+            
+                </div>
+                <div class="col-md-4"></div>
             </div>
+        </div>
+        <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

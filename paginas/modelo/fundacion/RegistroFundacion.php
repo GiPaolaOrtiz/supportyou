@@ -33,18 +33,6 @@
                 <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <br>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="../paginas/RegistroFundacion.html">FUNDACIONES</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="../paginas/contactos.html">CONTÁCTENOS</a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
@@ -56,25 +44,6 @@
         <br>
         <div class="row">
 
-            <div class="col-md-3">
-
-                <form action="" class="form-signin" method="post">
-                    <h2 class="form-signin-heading">Inicia Sesión</h2>
-                    <label for="inputEmail" class="sr-only">Email</label>
-                    <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" name="pass" id="inputPassword" class="form-control" placeholder="Contraseña" required>
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Recuérdame
-                        </label>
-                    </div>
-                    <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit">Iniciar sesión</button>
-
-                </form>
-
-            </div>
-
             <div class="col-md-9">
 
                 <div class="thumbnail">
@@ -82,7 +51,7 @@
 
 
                     <div>
-                        <h3 id="colorTexto"> <span>Completa los datos de la organización a la que perteneces</span> </h3>
+                        <h3 id="colorTexto"> <span>Completa los datos de la organización</span> </h3>
                         <hr>
 
                     </div>
@@ -119,7 +88,7 @@
                                                     <select id="selectbasic" method="post" name="categoria" class="form-control" required>
                                                         <option value="" selected>Selecione</option> 
                                                         <?php
-                                                        include_once("../fundacionCategoria/fundacionCategoriaCollector.php");
+                                                        include_once("../../modelo/fundacionCategoria/fundacionCategoriaCollector.php");
      
                                                             $id =1;
                                                             $CategoriaCollectorObj = new fundacionCategoriaCollector();
@@ -127,6 +96,10 @@
                                                             foreach ($CategoriaCollectorObj->showFundacionCategorias() as $c){
                                                                 $id =$c->getIdCategoria();
                                                                 echo "<option value= ".$c->getIdCategoria(). ">". $c->getNombre(). "</option>";
+
+
+
+
                                                             }
                                                         ?>
                                                     </select>
@@ -151,11 +124,11 @@
                                                     <label for="form_name">País *</label>
 
 
-                                                    <select name="pais" method="post" class="form-control" required>
+                                                    <select id="selectbasic" method="post" name="pais" class="form-control" required>
   
                                                         <option value="" selected>Selecione</option> 
                                                         <?php
-                                                        include_once("../pais/paisCollector.php");
+                                                        include_once("../../modelo/pais/paisCollector.php");
      
                                                             $id =1;
                                                             $PaisCollectorObj = new paisCollector();
@@ -166,6 +139,8 @@
                                                             }
                                                         ?>
                                                     </select>
+                                                    
+                                                    <div class="help-block with-errors"></div>
               
                                                     <div class="help-block with-errors"></div>
                                                 </div>
@@ -229,7 +204,18 @@
                                                 </div>
 
                                             </div>
+                                            
+                                             <div class="col-md-6">
+                                               <div class="form-group">
+                                                
+                                                
+                                                <label for="exampleInputFile">Subir Foto </label>
+                                                    <input type="file" name="foto" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                                                    <small id="fileHelp" class="form-text text-muted"></small>
+                                                </div>
 
+                                            </div>
+                                    
 
                                         </div>
 

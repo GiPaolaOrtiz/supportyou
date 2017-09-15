@@ -37,8 +37,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+        </div>
     </nav>
 
 
@@ -58,9 +59,6 @@ Nombre: <input type="text" name="nombre" autofocus required />
 
 
 </div>
-</div>
-</nav>
-
 
 </body>
 </html>

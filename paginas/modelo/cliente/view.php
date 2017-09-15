@@ -44,36 +44,63 @@
             include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
             $ClienteCollectorObj = new clienteCollector();
 
+            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+            $UsuarioCollectorObj = new usuarioCollector();
+
                 echo '<h2 class="topspace text-center">Clientes</h2>';
 
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
                 
-                echo "<a href='formularioagregarprueba.php' class='btn btn-warning center-block w10'><b>+</b></a>";    
+                
             
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
-                    echo ' <thead><tr>';   
-                        echo '<th>ID</th>';
-                        echo '<th>ID Usuario</th>';
+                    echo ' <thead><tr>';
+
+                        
+                       
+                        echo '<th>Email</th>';
+                        echo '<th>Nombre</th>';
+                        echo '<th>Username</th>';
+                        echo '<th>Contrasena</th>';
+
+
                         echo '<th>Fecha de Nacimiento</th>';
                         echo '<th>Fecha de registro</th>';
                         echo '</tr> </thead><tbody>';   
-            
+
+
+                     
                       foreach ($ClienteCollectorObj->showClientes() as $c){
-                          echo '<tr>'; 
-                              echo '<td>' . $c->getidcliente() . '</td>';
-                              echo '<td>' . $c->getidusuario() . '</td>';
+
+                           echo '<tr>'; 
+                         foreach ($UsuarioCollectorObj->showUsuarios() as $u) {
+
+
+                          if ($u->getIdusuario() == $c->getIdusuario()) {
+
+                              echo '<td>' . $u->getEmail() . '</td>';
+                              echo '<td>' . $u->getNombre() . '</td>';
+                              echo '<td>' . $u->getUsername() . '</td>';
+                              echo '<td>' . $u->getPass() . '</td>';
+                              
+                              echo '<td>' .$u->getIdusuario() . '</td>';
+
+
+                          }
+                               
+                          }
+                       
+                              echo '<td>' .$c->getidcliente() . '</td>';
                               echo '<td>' . $c->getFechanacimiento() . '</td>';
                               echo '<td>' . $c->getFecharegistro() . '</td>';
-                              
-                            echo "<td> <a href='verperfil.php?id=" . $c->getidusuario() . " idcliente=".$c->getidcliente() ."' class='btn btn-info mg'>Ver Perfil</a>";
-                          
-                           echo "<td> <a href='verperfilprueba.php?id=" . $c->getidcliente() ."' class='btn btn-info mg'>Ver PerfilPrueba</a>";
+                                                       
+                              echo "<td> <a href='verperfilprueba.php?id=" . $c->getidcliente() ."' class='btn btn-info mg'>Ver Perfil</a>";
                               echo "<td> <a href='formularioeditar.php?id=" . $c->getidusuario() . "' class='btn btn-info mg'>Editar</a>";
                           
                          
                               echo "<a href='eliminar.php?id=" . $c->getidusuario() . "' class='btn btn-info'>Delete</a></td>";
-                          echo '</tr>'; 
+                          echo '</tr>';
                       }
                      echo '</tbody><table>';
                  echo '</div>';

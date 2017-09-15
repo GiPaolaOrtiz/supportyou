@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -35,31 +32,30 @@ session_start();
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../../administrador.php">HOME</a>
+                               <a class="page-scroll" href="../index.php">HOME</a>
                             </li>
                             <li>
-                                <?php
-                                    echo"<a class='page-scroll' href='../../logout.php'>SALIR</a>"
-                                ?>
+                               <a class="page-scroll" href="../../../index.html">SALIR</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Ventas</h2>';
+                echo '<h2 class="topspace text-center">Editar Categoria Producto</h2>';
             ?>
             <?php
-                $total=$_POST['total'];
-                $cliente=$_POST['cliente'];
-                $metodo=$_POST['metodo'];
-                $producto=$_POST['producto'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
-                $ventaCollectorObj = new ventaCollector();
-                $ventaCollectorObj-> createventa($total, $cliente, $metodo, $producto);
+                $id=$_POST['id'];
+		      
+                $nombre=$_POST['nombre'];
+		     
+            
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+                $CategoriaProductoCollectorObj = new categoriaproductoCollector();
+                $CategoriaProductoCollectorObj-> updateCategoriaProducto($id,$nombre);
 
-                echo "<h3 class='topspace text-center'>La </b>venta </b> ha sido agregada</h3>";
+                echo "<h3 class='topspace text-center'>La categoria <span class='green'>" . $id . "</span> ha sido actualizada a <span class='green'>" . $nombre . "</span></h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>

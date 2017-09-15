@@ -21,6 +21,13 @@ class usuarioCollector extends Collector
     return $ObjDemo;        
   }
 
+  function ultimoUsuario() {
+    $row = self::$db->getRows("SELECT * FROM public.usuario ORDER BY idusuario DESC LIMIT 1");
+    $ObjDemo= new Usuario($row[0]{'idusuario'},$row[0]{'email'},$row[0]{'nombre'},$row[0]{'username'},$row[0]{'password'},$row[0]{'idrol'});
+    return $ObjDemo;        
+  }
+
+
   function updateUsuario($id, $email, $nombre, $username, $pass,$idrol){
       $insertrow= self::$db->updateRow
                   ("UPDATE public.usuario SET email= ?, nombre= ?, username= ?, password= ?, idrol= ? where idusuario = ?", 

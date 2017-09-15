@@ -47,84 +47,85 @@
             </div>
         </nav>
 
-        <div class="container">
+
+
+
+         <div class="container">
             <br><br> <br><br>
 
             <div class="jumbotron">
                 <h2>Agregar Cliente</h2>
                 <div class="row">
-                    <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                        <br><br> <br> <br><br><br><br>
-                        <form id="form1" enctype="multipart/form-data" method="post" action="recepcion.php">
-                            <label>Imagen
-                                <input id="campofotografia" name="campofotografia" type="file" />
-                            </label>
-                            <input id="enviar" name="enviar" type="submit" value="Enviar" />
-                        </form>
-                    </div>
-                    <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
+
+                    <div class="col-md-12 col-xs-12 col-sm-6 col-lg-12">
 
                         <form method="post" class="topspace" action="agregar.php">
-                            <div class="form-group">
 
-                                <label for="metodo">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Em@il" name="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="metodo">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
-                            </div>
-                            <div class="form-group">
-                                <label for="metodo">Nombre del usuario</label>
-                                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-                            </div>
-                            <div class="form-group">
-                                <label for="metodo">Contraseña del usuario</label>
-                                <input type="text" class="form-control" id="password" placeholder="Password" name="password">
-                            </div>
-                            <div class="form-group">
-                                <label for="metodo">Rol: 1=admin,2=cliente,3=fundacion</label>
-                                <input type="text" class="form-control" id="idrol" placeholder="rol" name="idrol">
-                            </div>
 
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary">
-                               IdUsuario</button>
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                <span class="caret"></span><span class="sr-only">Usuario</span>
-                            </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Twitter</a></li>
-                                    <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
-                                    <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Github</a></li>
-                                </ul>
-                            </div>
+                            <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
 
-                            <div class="form-group">
-                                <label for="metodo">Fecha de Nacimiento (Ejemplo: 1996-02-21)</label>
+                                <label>Imagen
+                                <input id="campofotografia" name="foto" type="file" />
+                                </label>
+
+                            </div>
+                            <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                               
+
+                                 <div class="form-group">
+
+                                    <label for="metodo">Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Em@il" name="email">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Username</label>
+                                    <input type="text" class="form-control" id="username" placeholder="Username" name="username">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Contraseña del usuario</label>
+                                    <input type="text" class="form-control" id="password" placeholder="Password" name="password">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Rol</label>
+                                    <input type="text" class="form-control" id="idrol" placeholder="rol" name="idrol" value="2" readonly="">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Fecha de Nacimiento (Ejemplo: 1996-02-21)</label>
+                                    <br>
+                                    <input type="date" name="fechaNacimiento">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="metodo">Fecha de Registro (Ejemplo: 1996-02-21)</label>
+                                    <br>
+                                    <input type="date" name="fechaRegistro">
+                                </div>
+
+                                <button type="submit" class="btn btn-info center-block">Enviar</button>
                                 <br>
-                                <input type="date" name="fechaNacimiento">
+                                <a href="view.php" class="btn btn-info center-block">Volver</a>
                             </div>
-
-                            <div class="form-group">
-                                <label for="metodo">Fecha de Registro (Ejemplo: 1996-02-21)</label>
-                                <br>
-                                <input type="date" name="fechaRegistro">
-                            </div>
-
-                            <button type="submit" class="btn btn-info center-block">Enviar</button>
-                            <br>
-                            <a href="view.php" class="btn btn-info center-block">Volver</a>
                         </form>
                     </div>
+
 
                 </div>
 
             </div>
 
         </div>
+
+
+
     </main>
 
     <script src="../../../js/jquery.js"></script>

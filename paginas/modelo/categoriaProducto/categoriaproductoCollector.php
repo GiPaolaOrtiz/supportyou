@@ -4,11 +4,10 @@ include_once('CategoriaProducto.php');
 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
 
 
-class CategoriaProductoCollector extends Collector
+class categoriaproductoCollector extends Collector
 {
-  
   function showCategoriaProductos() {
-    $rows = self::$db->getRows("SELECT * FROM categoriaproducto ");        
+    $rows = self::$db->getRows("SELECT * FROM categoriaproducto "); 
     $arrayCategoriaProducto= array();        
     foreach ($rows as $c){
       $aux = new CategoriaProducto($c{'idcategoriaproducto'},$c{'nombre'});
@@ -18,24 +17,25 @@ class CategoriaProductoCollector extends Collector
   }
   function showCategoriaProducto($id) {
     $row = self::$db->getRows("SELECT * FROM categoriaproducto where idcategoriaproducto= ?", array("{$id}"));
-    $ObjDemo= new Usuario($row[0]{'idusuario'},$row[0]{'email'},$row[0]{'nombre'},$row[0]{'username'},$row[0]{'password'},$row[0]{'idrol'});
-    return $ObjDemo;        
+    $ObjCategoriaProducto= new CategoriaProducto($row[0]{'idcategoriaproducto'},$row[0]{'nombre'});
+    return $ObjCategoriaProducto;        
   }
 
-  function updatecategoriaproducto($id, $nombre){
+ 
+  function updateCategoriaProducto($id, $nombre){
       $insertrow= self::$db->updateRow
-                  ("UPDATE public.categoriaproducto SET nombre= ? where id_categoriaproducto = ?", 
-                  array( "{$nombre}", $id ));
+                  ("UPDATE public.categoriaproducto SET  nombre= ? where idcategoriaproducto = ?", 
+                  array( "{$nombre}",$id ));
   }
 
-  function deletecategoriaproducto($id){
+  function deleteCategoriaProducto($id){
     $insertrow= self::$db->deleteRow
                   ("DELETE FROM public.categoriaproducto where idcategoriaproducto = ?", 
                   array( $id ));
   }
-  function createcategoriaproducto($nombre){
+  function createCategoriaProducto($nombre){
     $insertrow= self::$db->insertRow
                   ("INSERT INTO public.categoriaproducto (nombre) VALUES (?)", array("{$nombre}"));
-  }
+  }    
 }
 ?>
