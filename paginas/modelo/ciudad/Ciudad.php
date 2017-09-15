@@ -1,6 +1,6 @@
 <?php
 
-class Pais
+class Ciudad
 {
     private $idciudad;
     private $nombre;

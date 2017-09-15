@@ -48,7 +48,7 @@
 $nombre=$_POST["nombre"];
 $id_ciudad=$_POST["id_ciudad"];
 
-echo "Edicion en proceso... </br>";
+echo "Edicion en proceso.... </br>";
 
 include_once("CiudadCollector.php");
 
@@ -58,7 +58,7 @@ $CiudadCollectorObj->updateCiudad($id_ciudad,$nombre);
 echo "id : ".$id_ciudad. " actualizado a: ".$nombre." </br>";
 ?>
 
-<div><a href="view.php class="btn btn-danger pull-right"> Volver al inicio </a></div>
+<div><a href="view.php" class="btn btn-danger pull-right"> Volver al inicio </a></div>
 
 </div>
 </div>

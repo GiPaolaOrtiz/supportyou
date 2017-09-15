@@ -65,7 +65,7 @@ $CiudadCollectorObj->createCiudad($nombre);
 echo 'Ciudad registrada ' . htmlspecialchars($nombre) . '!';
 ?>
 
-<div><a href="view.php" class="btn btn-danger pull-right">Volver</a></div>
+<div><a href="view.php" class="btn btn-danger pull-right">Volver.</a></div>
 
 
                 

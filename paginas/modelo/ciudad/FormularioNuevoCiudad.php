@@ -43,6 +43,7 @@
 
 
 <div id="main">
+<br><br><br>
 
 <h2>Nueva Ciudad </h2>
 <form action="GuardarCiudad.php" method="post">
@@ -50,7 +51,7 @@
 Nombre: <input type="text" name="nombre" autofocus required />
 </p>
 
-<input type="submit" value="Guardar" />
+<input type="submit" value="Guardar." />
 
 </form>
 

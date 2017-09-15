@@ -93,10 +93,10 @@ session_start();
                         <a href="modelo/banco/view.php" class="btn btn-info topspace2">Bancos</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="ciudades/view.php" class="btn btn-info topspace2">Ciudades</a>
+                        <a href="modelo/ciudad/view.php" class="btn btn-info topspace2">Ciudades</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="comentarios/view.php" class="btn btn-info topspace2">Comentarios</a>
+                        <a href="modelo/comentarios/view.php" class="btn btn-info topspace2">Comentarios</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
                         <a href="cuentas/view.php" class="btn btn-info topspace2">Cuentas</a>

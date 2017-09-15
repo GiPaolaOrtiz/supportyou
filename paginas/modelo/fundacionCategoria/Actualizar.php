@@ -42,7 +42,9 @@
         </div>
     </nav>
 
-
+<br>
+    <br>
+    <br>
 <div id="main">
 
 <?php
@@ -57,9 +59,9 @@ $CategoriaCollectorObj = new fundacionCategoriaCollector();
 $CategoriaCollectorObj->updateFundacionCategoria($id_fundacioncategoria,$nombre);
 
 echo "id : ".$id_fundacioncategoria. " actualizado a: ".$nombre." </br>";
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
 
-<div><a href="view.php"> Volver al inicio </a></div>
 
 </div>
 

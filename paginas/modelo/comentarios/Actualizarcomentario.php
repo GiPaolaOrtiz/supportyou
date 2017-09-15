@@ -8,7 +8,6 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Administración</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -21,7 +20,6 @@
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
     <link href="../../../css/style.css" rel="stylesheet">
-    <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
@@ -39,46 +37,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../../../paginas/administrador/index.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
-        </div>
     </nav>
 
 
 <div id="main">
 
-
-
 <?php
+$descripcion=$_POST["descripcion"];
+$id_comentario=$_POST["id_comentario"];
+$email=$_POST["email"];
 
-include_once("CiudadCollector.php");
 
-$id;
 
-$CiudadCollectorObj = new CiudadCollector();
-echo '<h2 class="topspace text-center">Ciudades</h2>';
-echo "<a href='FormularioNuevoCiudad.php' class='btn btn-warning center-block w10'><b>+</b></a>";
-echo '<div class="">';                     
-                echo '<table class="table table-condensed">';
-                    echo ' <thead><tr>';   
-                        echo '<th>ID</th>';
-                        echo '<th>Nombre</th>';
-                    echo '</tr> </thead><tbody>';
+echo "Edicion en proceso.... </br>";
 
-foreach ($CiudadCollectorObj->showCiudades() as $c){
-   echo '<tr>'; 
-                echo '<td>' . $c->getIdCiudad() . '</td>';
-                echo '<td>' . $c->getNombre() . '</td>';
-  echo "<td> <a href='Editarciudad.php?id=".$c->getIdCiudad()."' class='btn btn-info mg'>  Editar</a>";
-  echo ' ';
-  echo "<a href='Eliminarciudad.php?id=".$c->getIdCiudad() . "' class='btn btn-info'> Eliminar. </a></td>";
-echo '</tr>'; 
-                      }
-                     echo '</tbody><table>';
-                 echo '</div>';
+include_once("ComentarioCollector.php");
+
+$ComentarioCollectorObj = new ComentarioCollector();
+$ComentarioCollectorObj->updateComentario($id_comentario,$descripcion, $email);
+
+echo "id : ".$id_comentario. " actualizado a: ".$descripcion." email: ".$email." </br>";
 ?>
 
+<div><a href="view.php" class="btn btn-danger pull-right"> Volver al inicio </a></div>
+
 </div>
+</div>
+</nav>
+
 
 </body>
 </html>

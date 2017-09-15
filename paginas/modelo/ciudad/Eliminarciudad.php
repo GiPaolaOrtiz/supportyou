@@ -61,12 +61,15 @@ echo "Se ha eliminado id : ".$id. " </br>";
         
               echo "<p>Se elimino la ciudad #" . $id ." :c </p>";
         $ciudadCollectorObj->deleteCiudad($id);
+
        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerPais.php'>";
                             }else{   
                                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
                              } 
                         ?>
-<div><a href="view.php" class="btn btn-info mg"> Ver lista de paises </a></div>
+
+                        <br><br>
+<div><a href="view.php" class="btn btn-info mg"> Ver lista de ciudades.. </a></div>
 
 
 </div>
