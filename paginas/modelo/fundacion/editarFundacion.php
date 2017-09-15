@@ -92,8 +92,16 @@
                             </div>
                             <div class="form-group">
                               <label for="idu">Logo</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getFoto(); ?>" name="foto">
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getFoto(); ?>" name="foto" readonly>
+                             
                             </div>
+                            <div class="form-group">
+                              <label for="exampleInputFile">Cambiar Foto </label>
+                              <input type="file" class="form-control-file" id="exampleInputFile" value="<?php echo $ObjFundacion->getFoto(); ?>"  name="foto">
+                              <small id="fileHelp" class="form-text text-muted"></small>
+                            </div>
+                            
+                            
                             <button type="submit" class="btn btn-info center-block">Enviar</button>
                         </form>
                     </div>
