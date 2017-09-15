@@ -44,7 +44,8 @@
         <?php 
                 $id= $_GET['id'];
                 echo '<h2 class="topspace text-center">Productos</h2>';
-                include_once('../../modelo/producto/ProductoCollector.php');
+
+                include_once('ProductoCollector.php');
 
                 $ProductoCollectorObj = new ProductoCollector();
                 $ObjProducto=$ProductoCollectorObj->showProducto($id);
