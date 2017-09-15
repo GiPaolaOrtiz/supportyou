@@ -1,7 +1,7 @@
 <?php
 
 include_once('venta.php');
-                include_once('../../modelo/venta/ventaCollector.php');
+include_once('../../modelo/Collector.php');
 
 
 class ventaCollector extends Collector
