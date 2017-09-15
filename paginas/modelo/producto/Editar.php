@@ -56,8 +56,8 @@
 				$estadoventa=$_POST['estadoventa'];
 
         
-            
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+                 include_once('../../modelo/producto/ProductoCollector.php');
+
                 $ProductoCollectorObj = new ProductoCollector();
                 $ProductoCollectorObj-> updateProductos($idproducto, $descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto);
 
