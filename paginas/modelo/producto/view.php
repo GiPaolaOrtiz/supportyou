@@ -44,7 +44,7 @@
             include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
             $ProductoCollectorObj = new ProductoCollector();
                 echo '<h2 class="topspace text-center">Tabla Productos </h2>';
-                echo "<a href='Agregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
+                echo "<a href='FormularioNuevo.php' class='btn btn-warning center-block w10'><b>+</b></a>";
                 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
                     echo ' <thead><tr>';   
@@ -61,7 +61,7 @@
                       foreach ($ProductoCollectorObj->showProductos() as $c){
                           echo '<tr>'; 
                               echo '<td>' . $c->getIdproducto() . '</td>';
-                              echo '<td>' . $c->getIdcategotiaproducto() . '</td>';
+                              echo '<td>' . $c->getIdcategoriaproducto() . '</td>';
                               echo '<td>' . $c->getIdfundacion() . '</td>';
                               echo '<td>' . $c->getDescripcion() . '</td>';
                               echo '<td>' . $c->getEstado() . '</td>';
@@ -87,7 +87,7 @@
 
         <script src="../../../js/bootstrap.js"></script>
         <footer id="footer1">
-        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
+        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved.</p>
 
     </footer>  
     </body>

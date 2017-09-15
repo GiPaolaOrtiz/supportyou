@@ -84,12 +84,14 @@
                               echo '<td>' . $u->getUsername() . '</td>';
                               echo '<td>' . $u->getPass() . '</td>';
                               
-                            
+                              echo '<td>' .$u->getIdusuario() . '</td>';
+
 
                           }
                                
                           }
                        
+                              echo '<td>' .$c->getidcliente() . '</td>';
                               echo '<td>' . $c->getFechanacimiento() . '</td>';
                               echo '<td>' . $c->getFecharegistro() . '</td>';
                                                        

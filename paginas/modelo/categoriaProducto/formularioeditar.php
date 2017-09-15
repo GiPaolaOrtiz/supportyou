@@ -42,30 +42,37 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Editar Usuario</h2>';
-            ?>
-            <?php
-                $idproducto=$_POST['idproducto'];
-		        $idcategoriaproducto=$_POST['idcategoriaproducto'];
-                $idfundacion=$_POST['idfundacion'];
-		        $descripcion=$_POST['descripcion'];
-                $estado=$_POST['estado'];
-                $precio=$_POST['precio'];
-                $img=$_POST['img'];
+                $id= $_GET['id'];
+                echo '<h2 class="topspace text-center">Categoria Productos</h2>';
 
-				$estadoventa=$_POST['estadoventa'];
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+                $CategoriaProductoCollectorObj = new categoriaproductoCollector();
 
-        
-            
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
-                $ProductoCollectorObj = new ProductoCollector();
-                $ProductoCollectorObj-> ProductoUsuario($idproducto,$idcategoriaproducto,$idfundacion,$descripcion,$estado,$precio, $img, $estadoventa);
-
-                echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $idproducto . "</span> ha sido actualizado a <span class='green'>" . $descripcion . "</span></h3>";
-            ?>
-            <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver...</a>
+                $ObjCategoriaProducto=$CategoriaProductoCollectorObj->showCategoriaProducto($id);
+        ?>
+         <div class="container topspace">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <form method="post" action="editar.php">
+                            <div class="form-group">
+                              <label for="idu">ID</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjCategoriaProducto->getIdcategoriaproducto(); ?>" readonly name="id">
+                            </div>
+                            
+                            <div class="form-group">
+                              <label for="idu">Nombre</label>
+                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjCategoriaProducto->getNombre(); ?>" name="nombre">
+                            </div>
+                          
+                          
+                            <button type="submit" class="btn btn-info center-block">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
             </div>
+             <a href="view.php" class="btn btn-danger pull-right">Volver</a>
         </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->

@@ -42,29 +42,26 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Editar Usuario</h2>';
+                echo '<h2 class="topspace text-center">Categoria Productos</h2>';
             ?>
             <?php
-                $idproducto=$_POST['idproducto'];
-		        $idcategoriaproducto=$_POST['idcategoriaproducto'];
-                $idfundacion=$_POST['idfundacion'];
-		        $descripcion=$_POST['descripcion'];
-                $estado=$_POST['estado'];
-                $precio=$_POST['precio'];
-                $img=$_POST['img'];
-
-				$estadoventa=$_POST['estadoventa'];
-
-        
+               
+                $nombre=$_POST['nombre'];
+              
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
-                $ProductoCollectorObj = new ProductoCollector();
-                $ProductoCollectorObj-> ProductoUsuario($idproducto,$idcategoriaproducto,$idfundacion,$descripcion,$estado,$precio, $img, $estadoventa);
+            
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+               
 
-                echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $idproducto . "</span> ha sido actualizado a <span class='green'>" . $descripcion . "</span></h3>";
+                $CategoriaproductoCollectorObj = new categoriaproductoCollector();
+
+                
+                $CategoriaproductoCollectorObj-> createCategoriaProducto($nombre);
+
+                echo "<h3 class='topspace text-center'>La categoria <b>" . $nombre . "</b> ha sido agregada</h3>";
             ?>
             <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver...</a>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
             </div>
         </main>
          <script src="../../js/jquery.js"></script>

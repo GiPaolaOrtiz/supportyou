@@ -49,19 +49,16 @@ session_start();
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="MiPerfil.html">MI PERFIL</a>
+                        <a class="page-scroll" href="MiPerfil.php">MI PERFIL</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="carrito.html">CARRITO</a>
+                        <a class="page-scroll" href="contactos.php">CONTÁCTENOS</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="contactos.html">CONTÁCTENOS</a>
+                        <a class="page-scroll" href="catalogo.php">CATÁLOGO</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="catalogo.html">CATÁLOGO</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="../index.html">SALIR</a>
+                        <a class="page-scroll" href="../index.php">SALIR</a>
 
                     </li>
                 </ul>
@@ -72,12 +69,7 @@ session_start();
         </div>
         <!-- /.container-fluid -->
     </nav>
-     <?php 
-               
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/CategoriaProductoCollector.php";
-                $categoriaProductoCollectorObj = new CategoriaProductoCollector();
-                $ObjCategoriaProducto=$CategoriaProductoCollectorObj->showCategoriaProducto($id);
-        ?>
+ 
 
 
     <div id="formulario">
@@ -130,7 +122,7 @@ session_start();
                 <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
                 <small id="fileHelp" class="form-text text-muted"></small>
             </div>
-            <button id="btn_mensaje" type="submit" class="btn btn-primary">Todo Listo!</button>
+            <input id="btn_mensaje"  type="submit" value="Todo Listo!" class="btn btn-primary" onclick = "location='MiPerfil.php'"/>
         </form>
 
     </div>

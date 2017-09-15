@@ -37,86 +37,91 @@
                     <br>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="page-scroll" href="../index.php">HOME</a>
+                            <a class="page-scroll" href="../../administrador.php">HOME</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="../../../index.html">SALIR</a>
+                            <a class="page-scroll" href="../../logout.php">SALIR</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+
+        <?php 
+                $id= $_GET['id'];
+                
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
+                $ClienteCollectorObj = new clienteCollector();
+                $ObjCliente=$ClienteCollectorObj->showCliente($id);
+
+
+
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                $UsuarioCollectorObj = new usuarioCollector();
+                $ObjUsuario=$UsuarioCollectorObj->showUsuario($ObjCliente->getIdUsuario());
+        ?>
+
+
+
         <div class="container">
             <br><br> <br><br>
-
             <div class="jumbotron">
-                <h2>Editar Cliente</h2>
+                <h2>Cliente</h2>
                 <div class="row">
                     <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-                        <br><br> <br> <br><br><br><br>
-                        <form id="form1" enctype="multipart/form-data" method="post" action="recepcion.php">
-                            <label>Imagen
-                                <input id="campofotografia" name="campofotografia" type="file" />
-                            </label>
-                            <input id="enviar" name="enviar" type="submit" value="Enviar" />
-                        </form>
+                       
+                        <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+
+                            <div>
+                                <img src="images/<?php echo $ObjCliente->getFoto(); ?>" alt="stack photo" class="img">
+                            </div>
+                                                    
+                        </div>
                     </div>
                     <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8">
 
                         <form method="post" class="topspace" action="agregar.php">
-                            <div class="form-group">
 
+
+                            <div class="form-group">
                                 <label for="metodo">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Em@il" name="email">
+                                <input type="email" class="form-control" id="email"  name="email" value="<?php echo $ObjUsuario->getEmail(); ?>">
                             </div>
+
                             <div class="form-group">
                                 <label for="metodo">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre">
-                            </div>
-                            <div class="form-group">
-                                <label for="metodo">Nombre del usuario</label>
-                                <input type="text" class="form-control" id="username" placeholder="Username" name="username">
-                            </div>
-                            <div class="form-group">
-                                <label for="metodo">Contraseña del usuario</label>
-                                <input type="text" class="form-control" id="password" placeholder="Password" name="password">
-                            </div>
-                            <div class="form-group">
-                                <label for="metodo">Rol: 1=admin,2=cliente,3=fundacion</label>
-                                <input type="text" class="form-control" id="idrol" placeholder="rol" name="idrol">
+                                <input type="text" class="form-control" id="nombre" name="nombre" value="<?php echo $ObjUsuario->getNombre(); ?>">
                             </div>
 
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary">
-                               IdUsuario</button>
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                                <span class="caret"></span><span class="sr-only">Usuario</span>
-                            </button>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Twitter</a></li>
-                                    <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
-                                    <li><a href="https://www.facebook.com/jquery2dotnet">Facebook</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="#">Github</a></li>
-                                </ul>
+
+                            <div class="form-group">
+                                <label for="metodo">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" value="<?php echo $ObjUsuario->getUsername(); ?>">
                             </div>
 
                             <div class="form-group">
-                                <label for="metodo">Fecha de Nacimiento (Ejemplo: 1996-02-21)</label>
-                                <br>
-                                <input type="date" name="fechaNacimiento">
+                                <label for="metodo">Contrasena</label>
+                                <input type="text" class="form-control" id="contrasena" name="contrasena" value="<?php echo $ObjUsuario->getPass(); ?>">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="metodo">FechaNacimiento</label>
+                                <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" value="<?php echo $ObjCliente->getFechanacimiento(); ?>">
                             </div>
 
                             <div class="form-group">
-                                <label for="metodo">Fecha de Registro (Ejemplo: 1996-02-21)</label>
-                                <br>
-                                <input type="date" name="fechaRegistro">
-                            </div>
+                                <label for="metodo">Nombre de registro</label>
+                                <input type="text" class="form-control" id="username" placeholder="Username" name="username" value="<?php echo $ObjCliente->getFecharegistro(); ?>">
+                        </div>
 
-                            <button type="submit" class="btn btn-info center-block">Enviar</button>
-                            <br>
-                            <a href="view.php" class="btn btn-info center-block">Volver</a>
+
+
+
+
+                        <br>
+                        <a href="view.php" class="btn btn-info center-block">Volver</a>
                         </form>
                     </div>
 
