@@ -77,6 +77,10 @@ Id: <input type="text" name="id_comentario" value="<?php echo $ObjComentario->ge
 Descripcion: <input type="text" name="descripcion" value="<?php echo $ObjComentario->getDescripcion(); ?>" autofocus required />
 </p>
 
+<p>
+Email: <input type="text" name="email" value="<?php echo $ObjComentario->getEmail(); ?>" autofocus required />
+</p>
+
 <a href="view.php" class="btn btn-info mg">  Cancelar</a>
 <input type="submit" value="Guardar." />
 

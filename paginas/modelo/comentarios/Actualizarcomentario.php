@@ -55,6 +55,7 @@
                 </div>
             </nav>  
 <div id="main">
+<br><br> <br><br><br> <br><br><br> <br>
 
 <?php
 $descripcion=$_POST["descripcion"];
