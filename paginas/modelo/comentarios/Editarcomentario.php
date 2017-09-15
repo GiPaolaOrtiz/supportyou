@@ -47,20 +47,20 @@
 <?php
 $id=$_GET["id"];
 echo "valor de id es ". $id;
-include_once("CiudadCollector.php");
-include_once("Ciudad.php");
-$CiudadCollectorObj = new CiudadCollector();
-$ObjCiudad = $CiudadCollectorObj->showCiudad($id);
+include_once("ComentarioCollector.php");
+include_once("comentario.php");
+$ComentarioCollectorObj = new ComentarioCollector();
+$ObjComentario = $ComentarioCollectorObj->showComentario($id);
 ?>
 <br><br>
-<h2>Editar Ciudad </h2>
-<form action="Actualizarciudad.php" method="post">
+<h2>Editar Comentario </h2>
+<form action="Actualizarcomentario.php" method="post">
 <p>
-Id: <input type="text" name="id_ciudad" value="<?php echo $ObjCiudad->getIdCiudad(); ?>" readonly />
+Id: <input type="text" name="id_comentario" value="<?php echo $ObjComentario->getIdComentarios(); ?>" readonly />
 </p>
 
 <p>
-Nombre: <input type="text" name="nombre" value="<?php echo $ObjCiudad->getNombre(); ?>" autofocus required />
+Descripcion: <input type="text" name="descripcion" value="<?php echo $ObjComentario->getDescripcion(); ?>" autofocus required />
 </p>
 
 <a href="view.php" class="btn btn-info mg">  Cancelar</a>
