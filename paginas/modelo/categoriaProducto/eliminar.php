@@ -58,7 +58,7 @@ session_start();
                  }
                 $CategoriaProductoCollectorObj-> deleteCategoriaProducto($id);
 
-                echo "<h3 class='topspace text-center'>La categoria <span class='red'>" . $nombre . "</span> ha sida eliminado</h3>";
+                echo "<h3 class='topspace text-center'>La categoria</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>

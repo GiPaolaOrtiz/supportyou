@@ -55,7 +55,7 @@
                  }
                 $rolCollectorObj-> deleteRol($id);
 
-                echo "<h3 class='topspace text-center'>El rol <span class='red'>" . $nombre . "</span> ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>El rol</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
