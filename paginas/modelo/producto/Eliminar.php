@@ -42,20 +42,28 @@
                 </div>
             </nav>    
         <?php 
-                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
+                echo '<h2 class="topspace text-center">Productos</h2>';
             ?>
             <?php
-                $idproducto =$_GET['idproducto'];
+            
+            $id=$_GET["id"];
+
             
                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
                 $ProductoCollectorObj = new ProductoCollector();
+           
+             
                 foreach ($ProductoCollectorObj->showProductos() as $c){
-                     $descripcion=$c->getDescripcion();
-                 }
-                $ProductoCollectorObj-> deleteProducto($idproducto);
-
-                echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $descripcion . "</span> ha sido eliminado</h3>";
+                     $estado=$c->getDescripcion();
+               
+               }
+                 $ProductoCollectorObj-> deleteProducto($id);
+            
+                echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $estado . "</span> ha sido eliminado</h3>";
+                
             ?>
+            
+           
             <div>
                 <a href="view.php" class="btn btn-info center-block w70"> Volver </a>
             </div>
