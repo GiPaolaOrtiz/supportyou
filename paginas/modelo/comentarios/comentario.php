@@ -1,28 +1,36 @@
 <?php
 
-class Ciudad
+class Comentarios
 {
-    private $idciudad;
-    private $nombre;
+    private $idcomentarios;
+    private $descripcion;
+    private $email;
     
-     function __construct($idciudad, $nombre) {
-       $this->idciudad = $idciudad;
-       $this->nombre = $nombre;
+     function __construct($idcomentarios, $descripcion, $email) {
+       $this->idcomentarios = $idcomentarios;
+       $this->descripcion = $descripcion;
      }
     //
-     function setIdciudad($idciudad){
-       $this->idciudad = $idciudad;
+     function setIdcomentarios($idcomentarios){
+       $this->idcomentarios = $idcomentarios;
      } 
-     function getIdCiudad(){
-       return $this->idciudad;
+     function getIdComentarios(){
+       return $this->idcomentarios;
      } 
     // 
-    function setNombre($nombre){
-       $this->nombre = $nombre;
+    function setDescripcion($descripcion){
+       $this->descripcion = $descripcion;
      } 
-     function getNombre(){
-       return $this->nombre;
+     function getDescripcion(){
+       return $this->descripcion;
      } 
+      function setEmail($email){
+       $this->email = $email;
+     } 
+     function getEmail(){
+       return $this->email;
+     } 
+
     
 }
 
