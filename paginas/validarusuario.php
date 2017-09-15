@@ -1,5 +1,5 @@
 <?php
-include_once("modelo/usuario/usuarioCollector.php");
+include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php");
 session_start();
 $username = $_POST['username'];
 $pass = $_POST['pass'];
@@ -26,12 +26,12 @@ $UsuarioCollectorObj = new UsuarioCollector();
                 
 
             if($c->getIdrol() == 1){
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=administrador.php?ID=". $c->getIdusuario(). "'>";
+                echo "<p>hola</p>";
 
             }
 
             if($c->getIdrol() == 2){
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=MiPerfil.php?ID=". $c->getIdusuario(). "'>";
+                 echo "<p>hola</p>";
 
             }
 
