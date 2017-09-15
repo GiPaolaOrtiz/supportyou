@@ -49,18 +49,18 @@
 
 $id=$_GET["id"];
 
-include_once("CiudadCollector.php");
+include_once("ComentarioCollector.php");
 
-$ciudadCollectorObj = new CiudadCollector();
-$ciudadCollectorObj->deleteCiudad($id);
+$ComentarioCollectorObj = new ComentarioCollector();
+$ComentarioCollectorObj->deleteComentario($id);
 
 echo "Se ha eliminado id : ".$id. " </br>";
 ?>
 <?php
 		  if (isset($_SESSION['supportyou'])){
         
-              echo "<p>Se elimino la ciudad #" . $id ." :c </p>";
-        $ciudadCollectorObj->deleteCiudad($id);
+              echo "<p>Se elimino el comentario #" . $id ." :c </p>";
+        $ComentarioCollectorObj->deleteComentario($id);
 
        echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerPais.php'>";
                             }else{   
