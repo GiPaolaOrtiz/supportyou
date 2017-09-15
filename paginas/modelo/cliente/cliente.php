@@ -3,14 +3,14 @@
 class Cliente{
 	private $idcliente;
 	private $idusuario;
-	private $foto;
+
 	private $fechanacimiento;
 	private $fecharegistro;
 
-	function __construct($idcliente, $idusuario,$foto,$fechanacimiento,$fecharegistro) {
+	function __construct($idcliente, $idusuario,$fechanacimiento,$fecharegistro) {
        $this->idcliente = $idcliente;
        $this->idusuario = $idusuario;
-       $this->foto = $foto;
+      
        $this->fechanacimiento = $fechanacimiento;
        $this->fecharegistro = $fecharegistro;
      }
@@ -28,12 +28,7 @@ class Cliente{
      function getIdusuario(){
        return $this->idusuario;
      } 
-     function setFoto($foto){
-       $this->foto = $foto;
-     } 
-     function getFoto(){
-       return $this->foto;
-     } 
+    
 
      function setFechanacimiento($fechanacimiento){
        $this->fechanacimiento = $fechanacimiento;

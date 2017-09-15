@@ -70,7 +70,7 @@ session_start();
             <br><br> <br><br>
 
             <div class="jumbotron">
-                <h2>Agregar Cliente</h2>
+                <h2>Editar Cliente</h2>
                 <div class="row">
 
                     <div class="col-md-12 col-xs-12 col-sm-6 col-lg-12">
@@ -78,13 +78,7 @@ session_start();
                         <form method="post" class="topspace" action="editar.php">
 
 
-                            <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-
-                                <label>Imagen
-                                <input id="campofotografia" name="foto" type="file" />
-                                </label>
-
-                            </div>
+                          
                             <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
                                 
 

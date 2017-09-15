@@ -48,6 +48,7 @@ session_start();
 
 
 
+
             <?php 
                 echo '<h2 class="topspace text-center">Cliente</h2>';
            
@@ -59,7 +60,7 @@ session_start();
                 $idrol=$_POST['idrol'];
 
 
-                $foto=$_POST['foto'];
+              
                 $fechanacimiento=$_POST['fechaNacimiento'];
                 $fecharegistro=$_POST['fechaRegistro'];
 
@@ -79,7 +80,7 @@ session_start();
 
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
                 $ClienteCollectorObj = new ClienteCollector();
-                $ClienteCollectorObj-> createCliente($usuario,$foto,$fechanacimiento,$fecharegistro);
+                $ClienteCollectorObj-> createCliente($usuario,$fechanacimiento,$fecharegistro);
 
 
 

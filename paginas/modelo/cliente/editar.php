@@ -45,6 +45,7 @@ session_start();
             </div>
         </nav>
 
+
         <?php 
                 echo '<h2 class="topspace text-center">Editar Cliente</h2>';
             ?>
@@ -59,7 +60,7 @@ session_start();
                 $idrol=$_POST['idrol'];
                 $fechanacimiento=$_POST['fechanacimiento'];
                 $fecharegistro=$_POST['fecharegistro'];
-                $foto=$_POST['foto'];
+              
 
 
             
@@ -70,7 +71,7 @@ session_start();
 
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
                 $ClienteCollectorObj = new ClienteCollector();
-                $ClienteCollectorObj-> updateCliente($idcliente,$idusuario,$foto,$fechanacimiento,$fecharegistro);
+                $ClienteCollectorObj-> updateCliente($idcliente,$idusuario,$fechanacimiento,$fecharegistro);
 
 
                 echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $idcliente . "</span> ha sido actualizado <span class='green'>" . $username ."</span></h3>";

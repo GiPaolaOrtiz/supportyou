@@ -53,6 +53,7 @@ session_start();
 
 
 
+
          <div class="container">
             <br><br> <br><br>
 
@@ -65,13 +66,7 @@ session_start();
                         <form method="post" class="topspace" action="agregar.php">
 
 
-                            <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
-
-                                <label>Imagen
-                                <input id="campofotografia" name="foto" type="file" />
-                                </label>
-
-                            </div>
+                          
                             <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
                                
 

@@ -33,6 +33,13 @@ class ventaCollector extends Collector
                   ("DELETE FROM public.venta where idventa = ?", 
                   array( $id ));
   }
+
+  function deleteVentaCliente($idcliente){
+    $insertrow= self::$db->deleteRow
+                  ("DELETE FROM public.venta where idclientefk = ?", 
+                  array( $idcliente));
+  }
+
   function createventa($nombre, $idclientefk, $metodopagofk, $idproductofk){
     $insertrow= self::$db->insertRow 
                   ("INSERT INTO public.venta (total, idclientefk, metodopagofk, idproductofk) VALUES (?, ?, ?, ?)", array("{$nombre}","{$idclientefk}","{$metodopagofk}","{$idproductofk}"));

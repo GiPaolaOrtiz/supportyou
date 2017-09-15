@@ -16,7 +16,7 @@ session_start();
     </head>
     <body>
         <main>
-                 <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+                  <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
@@ -43,6 +43,7 @@ session_start();
                 </div>
             </div>
         </nav>
+
  
         <?php 
             include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
@@ -67,8 +68,9 @@ session_start();
                         echo '<th>Nombre</th>';
                         echo '<th>Username</th>';
                         echo '<th>Contrasena</th>';
+                        echo '<th>ID Usuario</th>';
 
-
+                        echo '<th>ID Cliente</th>';
                         echo '<th>Fecha de Nacimiento</th>';
                         echo '<th>Fecha de registro</th>';
                         echo '</tr> </thead><tbody>';   
@@ -99,11 +101,11 @@ session_start();
                               echo '<td>' . $c->getFechanacimiento() . '</td>';
                               echo '<td>' . $c->getFecharegistro() . '</td>';
                                                        
-                              echo "<td> <a href='verperfilprueba.php?id=" . $c->getidcliente() ."' class='btn btn-info mg'>Ver Perfil</a>";
+                             
                               echo "<td> <a href='formularioeditar.php?id=" . $c->getidcliente() . "' class='btn btn-info mg'>Editar</a>";
                           
                          
-                              echo "<a href='eliminar.php?id=" . $u->getidusuario() . "&idcliente=". $c->getidcliente() . "' class='btn btn-info'>Eliminar</a></td>";
+                              echo "<a href='eliminar.php?id=" . $c->getidusuario() . "&idcliente=". $c->getidcliente() . "' class='btn btn-info'>Eliminar</a></td>";
                           echo '</tr>';
                       }
                      echo '</tbody><table>';

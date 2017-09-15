@@ -9,6 +9,7 @@ class Comentarios
      function __construct($idcomentarios, $descripcion, $email) {
        $this->idcomentarios = $idcomentarios;
        $this->descripcion = $descripcion;
+       $this->email = $email;
      }
     //
      function setIdcomentarios($idcomentarios){

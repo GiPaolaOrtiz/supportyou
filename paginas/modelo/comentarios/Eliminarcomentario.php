@@ -27,20 +27,33 @@
 </head>
 <body>
 <!-- Menu -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav">
-        <div class="container topnav">
+     <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span> 
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="../../administrador.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
+                    </div>
 
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
-            </div>
-        </div>
-    </nav>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <br>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                               <a class="page-scroll" href="../../administrador.php">HOME</a>
+                            </li>
+                            <li>
+                               <a class="page-scroll" href="../../logout.php">SALIR</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>  
 
 
 <div id="main">

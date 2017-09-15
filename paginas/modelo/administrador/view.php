@@ -104,7 +104,7 @@ session_start();
                               echo "<td> <a href='formularioeditar.php?id=" . $c->getIdadministrador() . "' class='btn btn-info mg'>Editar</a>";
                           
                          
-                              echo "<a href='eliminar.php?id=" . $u->getidusuario() . "&idadministrador=". $c->getIdadministrador() . "' class='btn btn-info'>Eliminar</a></td>";
+                              echo "<a href='eliminar.php?id=" . $c->getidusuario() . "&idadministrador=". $c->getIdadministrador() . "' class='btn btn-info'>Eliminar</a></td>";
                           echo '</tr>';
                       }
                      echo '</tbody><table>';

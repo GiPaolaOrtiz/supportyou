@@ -45,6 +45,7 @@ session_start();
             </div>
         </nav>
 
+
         <?php 
                 echo '<h2 class="topspace text-center">Eliminar Cliente</h2>';
             ?>
@@ -53,6 +54,10 @@ session_start();
                 $idcliente=$_GET['idcliente'];
 
 
+
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
+                $VentaCollectorObj = new VentaCollector();
+                $VentaCollectorObj-> deleteVentaCliente($idcliente);
 
 
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cliente/clienteCollector.php";
