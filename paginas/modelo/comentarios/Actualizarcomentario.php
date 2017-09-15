@@ -45,17 +45,20 @@
 <div id="main">
 
 <?php
-$nombre=$_POST["nombre"];
-$id_ciudad=$_POST["id_ciudad"];
+$descripcion=$_POST["descripcion"];
+$id_comentario=$_POST["id_comentario"];
+$email=$_POST["email"];
+
+
 
 echo "Edicion en proceso.... </br>";
 
-include_once("CiudadCollector.php");
+include_once("ComentarioCollector.php");
 
-$CiudadCollectorObj = new CiudadCollector();
-$CiudadCollectorObj->updateCiudad($id_ciudad,$nombre);
+$ComentarioCollectorObj = new ComentarioCollector();
+$ComentarioCollectorObj->updateComentario($id_comentario,$descripcion, $email);
 
-echo "id : ".$id_ciudad. " actualizado a: ".$nombre." </br>";
+echo "id : ".$id_comentario. " actualizado a: ".$descripcion." email: ".$email." </br>";
 ?>
 
 <div><a href="view.php" class="btn btn-danger pull-right"> Volver al inicio </a></div>
