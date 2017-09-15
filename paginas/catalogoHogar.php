@@ -65,64 +65,30 @@ session_start();
             </ul>
         </div>
 
-        <div class="container">
-
+         <div class="container">
+         
             <!-- Introduction Row -->
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header"></h2>
                 </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/almohada.jpeg" alt="Almohada"></a>
-                    <h3>Amohada</h3>
-                    <small>Sweet Dreams</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/ba%C3%B1o.jpg" alt="Baño"></a>
-                    <h3>Baño</h3>
-                    <small>Clean status</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/cortina.jpg" alt="Abrigo"></a>
-                    <h3>Cortinas</h3>
-                    <small>The sunny</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/cubito.jpeg" alt="Aparador"></a>
-                    <h3>Caja almacenadora</h3>
-                    <small>Madera de cedro</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/cuc.jpg" alt="Cucharas"></a>
-                    <h3>Cucharas</h3>
-                    <small>Grand Torino</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/espejo.jpeg" alt="Espejo"></a>
-                    <h3>Espejo</h3>
-                    <small>Big Mirror</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/mesita.jpeg" alt="mesita"></a>
-                    <h3>Mesita de noche</h3>
-                    <small>Le cuna</small>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/silla.jpeg" alt="Silla"></a>
-                    <h3>Silla</h3>
-                    <small>May wood</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/sofa.jpeg" alt="Sofa"></a>
-                    <h3>Sofa</h3>
-                    <small>Hunger Sofas</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Hogar/ventilador.jpeg" alt="ventilador"></a>
-                    <h3>Ventilador</h3>
-                    <small>Smart Air</small>
-                </div>
+                <?php 
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+                $ProductoCollectorObj = new ProductoCollector();
+                $ObjProducto=$ProductoCollectorObj->showProductos();
+                            foreach ($ProductoCollectorObj->showProductos() as $c){
+                                if($c->getIdcategoriaproducto()==2){
+                                    if($c->getEstadoventa()=="disponible"){
+                                        echo ' <div class="col-lg-4 col-sm-6 text-center">';
+                                        echo '<a href="pago.php"><img class="img-circle img-responsive img-center" src="../img' . $c->getImg() . '" alt="Vestido negro"></a>';
+                                        echo '<h3>' . $c->getDescripcion() . '</h3>';  
+                                        echo '<h3>$' . $c->getPrecio() . '</h3>';
+                                    echo'</div>';
+                                    }                                    
+                                }
+                              
+                      }
+        ?>
             </div>
         </div>
     </main>

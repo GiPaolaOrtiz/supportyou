@@ -68,64 +68,30 @@ session_start();
             </ul>
         </div>
 
-        <div class="container">
-
+         <div class="container">
+         
             <!-- Introduction Row -->
             <div class="row">
                 <div class="col-lg-12">
                     <h2 class="page-header"></h2>
                 </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/audifonos.jpeg" alt="Audifonos"></a>
-                    <h3>Audifonos</h3>
-                    <small>Audifonos 500w</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/celular.jpg" alt="Celular"></a>
-                    <h3>Nuevos Telefonos</h3>
-                    <small>LG</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/reloj.jpg" alt="Reloj"></a>
-                    <h3>Reloj</h3>
-                    <small>Cassio</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/tablet.png" alt="Tablet"></a>
-                    <h3>Tablet</h3>
-                    <small>12 pulgadas</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/camara.jpg" alt="Camara"></a>
-                    <h3>Camara</h3>
-                    <small>Sony</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/laptop.jpeg" alt="Laptop"></a>
-                    <h3>Laptop</h3>
-                    <small>Windows</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/usb.jpg" alt="Abrigo azul"></a>
-                    <h3>USB</h3>
-                    <small>New Frontier</small>
-                </div>
-
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/parlantes.jpg" alt="Camisa"></a>
-                    <h3>Parlantes</h3>
-                    <small>LG</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/gb.jpg" alt="Game boy"></a>
-                    <h3>Game boy</h3>
-                    <small>SP</small>
-                </div>
-                <div class="col-lg-4 col-sm-6 text-center">
-                    <a href="pago.php"><img class="img-circle img-responsive img-center" src="../img/Tecno/radio.jpeg" alt="Radio"></a>
-                    <h3>Radio</h3>
-                    <small>Green peace</small>
-                </div>
+                <?php 
+                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+                $ProductoCollectorObj = new ProductoCollector();
+                $ObjProducto=$ProductoCollectorObj->showProductos();
+                            foreach ($ProductoCollectorObj->showProductos() as $c){
+                                if($c->getIdcategoriaproducto()==3){
+                                    if($c->getEstadoventa()=="disponible"){
+                                        echo ' <div class="col-lg-4 col-sm-6 text-center">';
+                                        echo '<a href="pago.php"><img class="img-circle img-responsive img-center" src="../img' . $c->getImg() . '" alt="Vestido negro"></a>';
+                                        echo '<h3>' . $c->getDescripcion() . '</h3>';  
+                                        echo '<h3>$' . $c->getPrecio() . '</h3>';
+                                    echo'</div>';
+                                    }                                    
+                                }
+                              
+                      }
+        ?>
             </div>
         </div>
     </main>
