@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Paises</title>
+    <title>Comentarios</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -56,7 +56,7 @@ include_once("ComentarioCollector.php");
 $id;
 
 $ComentarioCollectorObj = new ComentarioCollector();
-echo '<h2 class="topspace text-center">Ciudades</h2>';
+echo '<h2 class="topspace text-center">Comentarios</h2>';
 echo "<a href='FormularioNuevoComentario.php' class='btn btn-warning center-block w10'><b>+</b></a>";
 echo '<div class="">';                     
                 echo '<table class="table table-condensed">';
@@ -71,9 +71,9 @@ foreach ($ComentarioCollectorObj->showComentarios() as $c){
                 echo '<td>' . $c->getIdComentarios() . '</td>';
                 echo '<td>' . $c->getDescripcion() . '</td>';
                 echo '<td>' . $c->getEmail() . '</td>';
-  echo "<td> <a href='Editarciudad.php?id=".$c->getIdComentarios()."' class='btn btn-info mg'>  Editar</a>";
+  echo "<td> <a href='Editarcomentario.php?id=".$c->getIdComentarios()."' class='btn btn-info mg'>  Editar</a>";
   echo ' ';
-  echo "<a href='Eliminarciudad.php?id=".$c->getIdComentarios() . "' class='btn btn-info'> Eliminar. </a></td>";
+  echo "<a href='Eliminarcomentario.php?id=".$c->getIdComentarios() . "' class='btn btn-info'> Eliminar. </a></td>";
 echo '</tr>'; 
                       }
                      echo '</tbody><table>';
