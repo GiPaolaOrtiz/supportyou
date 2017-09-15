@@ -16,10 +16,7 @@ session_start();
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
-        <?php
-if (isset($_SESSION['Misesion'])){
-$usuario = $_SESSION['Misesion'];
-?>
+        
         <main>
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
                 <div class="container">
@@ -60,12 +57,9 @@ $usuario = $_SESSION['Misesion'];
                 $producto=$_POST['producto'];
             
                 include_once('../../modelo/venta/ventaCollector.php');
-                include_once('../../modelo/producto/ProductoCollector.php');
 
                 $ventaCollectorObj = new ventaCollector();
-                $productoCollectorObj = new productoCollector();
                 $ventaCollectorObj-> createventa($total, $cliente, $metodo, $producto);
-                $vende="vendido";
                 echo "<h3 class='topspace text-center'>La </b>venta </b> ha sido agregada</h3>";
             ?>
             <div>
@@ -79,10 +73,5 @@ $usuario = $_SESSION['Misesion'];
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer> 
-    <?php
-}else{
-echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
-}
-?> 
     </body>
 </html>
