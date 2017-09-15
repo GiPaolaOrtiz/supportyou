@@ -91,7 +91,7 @@ session_start();
 
 
 
-                <form class="form-signin" action = "validarusuario.php" method = "post">
+                <form class="form-signin" action = "modelo/usuario/validarusuario.php" method = "post">
                     <h2 class="form-signin-heading">Inicia Sesión</h2>
                     <label for="inputUsername" class="sr-only">Usuario</label>
                     <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
