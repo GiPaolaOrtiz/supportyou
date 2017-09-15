@@ -12,7 +12,7 @@ session_start();
     <body>
         <?php
         
-    include_once("../modelo/usuario/usuarioCollector.php");
+    include_once("modelo/usuario/usuarioCollector.php");
         $username = $_POST['username'];
         $pass = $_POST['pass'];
         $UsuarioCollectorObj = new UsuarioCollector();
