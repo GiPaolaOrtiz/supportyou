@@ -62,9 +62,9 @@ session_start();
                 $productoCollectorObj = new productoCollector();
                 $ventaCollectorObj-> createventa($total, $cliente, $metodo, $producto);
                 $vende="vendido";
-                foreach ($ventaCollectorObj->showProductos() as $c){
+                foreach ($productoCollectorObj->showProductos() as $c){
                     if($c->getIdproducto()==$producto){
-                        $ventaCollectorObj->updateProductos($c->getIdproducto(), $c->getDescripcion(),$c->getEstado(), $c->getPrecio(),$c->getImg(),$vende, $c->getIdfundacion(),$c->getIdcategoriaproducto())
+                        $productoCollectorObj->updateProductos($c->getIdproducto(), $c->getDescripcion(),$c->getEstado(), $c->getPrecio(),$c->getImg(),$vende, $c->getIdfundacion(),$c->getIdcategoriaproducto());
                     }
                 }
 
