@@ -42,11 +42,11 @@
                 </div>
             </nav>    
         <?php 
-                $idproducto= $_GET['idproducto'];
+                $id= $_GET['id'];
                 echo '<h2 class="topspace text-center">Productos</h2>';
                 include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
                 $ProductoCollectorObj = new ProductoCollector();
-                $ObjProducto=$ProductoCollectorObj->showProductos($id);
+                $ObjProducto=$ProductoCollectorObj->showProducto($id);
         ?>
          <div class="container topspace">
                 <div class="row">
