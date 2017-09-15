@@ -54,7 +54,7 @@
                  }
                 $bancoCollectorObj-> deleteBanco($id);
 
-                echo "<h3 class='topspace text-center'>El banco <span class='red'>" . $nombre . "</span> ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>El banco ha sido eliminado</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>

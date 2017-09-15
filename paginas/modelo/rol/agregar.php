@@ -43,7 +43,7 @@
         </nav>
         </main>    
         <?php 
-                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
+                echo '<h2 class="topspace text-center">Roles</h2>';
             ?>
             <?php
                 $rol=$_POST['rol'];
