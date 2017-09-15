@@ -64,7 +64,7 @@
                 echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $idproducto . "</span> ha sido actualizado a <span class='green'>" . $descripcion . "</span></h3>";
             ?>
             <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+                <a href="view.php" class="btn btn-info center-block w70">Volver...</a>
             </div>
         </main>
          <script src="../../js/jquery.js"></script>
