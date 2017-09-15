@@ -76,7 +76,7 @@ session_start();
                     <h2 class="page-header"></h2>
                 </div>
                 <?php 
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+                include_once('../../modelo/producto/ProductoCollector.php');
                 $ProductoCollectorObj = new ProductoCollector();
                 $ObjProducto=$ProductoCollectorObj->showProductos();
                             foreach ($ProductoCollectorObj->showProductos() as $c){
