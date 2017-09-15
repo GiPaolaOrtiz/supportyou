@@ -49,8 +49,9 @@ session_start();
             <?php 
                     $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Roles</h2>';
-                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
-                    $ventaCollectorObj = new ventaCollector();
+                                  include_once('../../modelo/venta/ventaCollector.php');
+
+                                      $ventaCollectorObj = new ventaCollector();
                     $Objventa=$ventaCollectorObj->showventa($id);
             ?>
             <div class="container topspace">
