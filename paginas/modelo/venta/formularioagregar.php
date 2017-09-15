@@ -35,11 +35,11 @@ session_start();
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.php">HOME</a>
+                               <a class="page-scroll" href="../../administrador.php">HOME</a>
                             </li>
                             <li>
                                 <?php
-                                    echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                                    echo"<a class='page-scroll' href='../../logout.php'>SALIR</a>"
                                 ?>
                             </li>
                         </ul>

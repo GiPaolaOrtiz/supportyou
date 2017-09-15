@@ -37,7 +37,7 @@ session_start();
                             </li>
                             <li>
                                 <?php
-                                    echo"<a class='page-scroll' href='logout.php'>SALIR</a>"
+                                    echo"<a class='page-scroll' href='../../logout.php'>SALIR</a>"
                                 ?>
                             </li>
                         </ul>

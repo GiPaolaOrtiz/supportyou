@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -33,7 +36,9 @@
                                <a class="page-scroll" href="../../administrador.php">HOME</a>
                             </li>
                             <li>
-                               <a class="page-scroll" href="../../../../index.html">SALIR</a>
+                                <?php
+                                    echo"<a class='page-scroll' href='../../logout.php'>SALIR</a>"
+                                ?>
                             </li>
                         </ul>
                     </div>
