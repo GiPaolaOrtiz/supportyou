@@ -12,13 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Paises</title>
+    <title>Administracion</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../../../css/portfolio-item.css" rel="stylesheet">
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
+    <link href="../../../css/estiloadmin.css" rel="stylesheet">
     <link href="../../../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
@@ -46,6 +47,10 @@
     <br>
 
 <div id="main">
+    
+    <?php 
+                echo '<h2 class="topspace text-center"> Países </h2>';
+            ?>
 
 <?php
 
@@ -54,12 +59,20 @@ $id=$_GET["id"];
 include_once("paisCollector.php");
 
 $PaisCollectorObj = new paisCollector();
-$PaisCollectorObj->deletePais($id);
 
-echo "Se ha eliminado id : ".$id. " </br>";
-     echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
-?>                  
-    
+foreach ($PaisCollectorObj->showPaises() as $c){
+                     $nombre=$c->getNombre();
+               
+               }
+                 $PaisCollectorObj->deletePais($id);
+
+            
+                echo "<h3 class='topspace text-center'>El país <span class='red'> " . $nombre . " </span> ha sido eliminado</h3>";
+?>
+
+<div>
+                <a href="view.php" class="btn btn-info center-block w70"> Volver </a>
+            </div>  
 </div>
 </body>
 </html>

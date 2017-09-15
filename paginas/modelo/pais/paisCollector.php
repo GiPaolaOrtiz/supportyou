@@ -7,7 +7,7 @@ class paisCollector extends Collector
 {
   
   function showPaises() {
-    $rows = self::$db->getRows("SELECT * FROM pais ");        
+    $rows = self::$db->getRows("SELECT * FROM pais ORDER BY idpais ASC");        
     $arrayPais= array();        
     foreach ($rows as $c){
       $aux = new Pais($c{'idpais'},$c{'nombre'});

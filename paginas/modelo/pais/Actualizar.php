@@ -19,6 +19,7 @@
     <link href="../../../css/portfolio-item.css" rel="stylesheet">
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
+    <link href="../../../css/estiloadmin.css" rel="stylesheet">
     <link href="../../../css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
@@ -47,22 +48,25 @@
     <br>
     
 <div id="main">
+    
+    <?php 
+                echo '<h2 class="topspace text-center"> Países </h2>';
+            ?>
 
 <?php
 $nombre=$_POST["nombre"];
 $idpais=$_POST["idpais"];
-
-echo "Edicion en proceso... </br>";
 
 include_once("paisCollector.php");
 
 $PaisCollectorObj = new paisCollector();
 $PaisCollectorObj->updatePais($idpais,$nombre);
 
-echo "id : ".$idpais. " actualizado a: ".$nombre." </br>";
-    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
+echo "<h3 class='topspace text-center'>El id país<span class='green'> " . $idpais . " </span> ha sido actualizado a <span class='green'> ". $nombre ." </span></h3>";
 ?>
-
+<div>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+            </div>
 
 </div>
 </body>
