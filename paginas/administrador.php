@@ -105,7 +105,7 @@ session_start();
                         <a href="modelo/fundacion/view.php" class="btn btn-info topspace2">Fundaciones</a>
                     </div>
                     <div class="col-md-4  col-sm-6">
-                        <a href="modelo/CategoriaProducto/fundacionCategoria/view.php" class="btn btn-info topspace2">Fundacion Categorias</a>
+                        <a href="modelo/fundacionCategoria/view.php" class="btn btn-info topspace2">Fundacion Categorias</a>
                     </div>
                      <div class="col-md-4  col-sm-6">
                         <a href="metodopago/view.php" class="btn btn-info topspace2">Metodos Pago</a>
