@@ -27,6 +27,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+  
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -74,5 +75,6 @@ foreach ($PaisCollectorObj->showPaises() as $c){
                 <a href="view.php" class="btn btn-info center-block w70"> Volver </a>
             </div>  
 </div>
+    
 </body>
 </html>

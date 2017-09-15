@@ -69,5 +69,6 @@ echo "<h3 class='topspace text-center'>El id país<span class='green'> " . $idpa
             </div>
 
 </div>
+   
 </body>
 </html>

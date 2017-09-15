@@ -16,6 +16,10 @@ session_start();
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
+        <?php
+if (isset($_SESSION['Misesion'])){
+$usuario = $_SESSION['Misesion'];
+?>
         <main>
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
             <div class="container">
@@ -73,5 +77,10 @@ session_start();
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  
+        <?php
+}else{ 
+echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+} 
+?>
     </body>
 </html>
