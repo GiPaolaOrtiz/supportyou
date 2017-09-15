@@ -1,11 +1,7 @@
-
 <?php
-include_once("../paginas/modelo/usuario/usuarioCollector.php");
 session_start();
-$username = $_POST['username'];
-$pass = $_POST['pass'];
-$UsuarioCollectorObj = new UsuarioCollector();
 ?>
+
 <!DOCTYPE html>
 
 <html>
@@ -16,8 +12,13 @@ $UsuarioCollectorObj = new UsuarioCollector();
     <body>
        
 
-    
         <?php
+        
+    include_once("../paginas/modelo/usuario/usuarioCollector.php");
+        $username = $_POST['username'];
+        $pass = $_POST['pass'];
+        $UsuarioCollectorObj = new UsuarioCollector();
+        
         foreach ($UsuarioCollectorObj->showUsuarios() as $c){
             if($c->getUsername() == $username && $c->getPass() == $pass){
                
