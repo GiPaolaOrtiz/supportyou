@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -29,7 +32,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                    <a href="index.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
+                   <a href="../../administrador.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -37,10 +40,10 @@
                     <br>
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="page-scroll" href="../../administrador.php">HOME</a>
+                           <a class="page-scroll" href="../../administrador.php">HOME</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="../../logout.php">SALIR</a>
+                           <a class="page-scroll" href="../../logout.php">SALIR</a>
                         </li>
                     </ul>
                 </div>
