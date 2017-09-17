@@ -44,10 +44,10 @@ session_start();
                 </div>
             </nav>  
         <?php 
-            include_once("../../modelo/administrador/administradorCollector.php";
+            include_once("../../modelo/administrador/administradorCollector.php");
             $AdministradorCollectorObj = new administradorCollector();
 
-            include_once("../../modelo/usuario/usuarioCollector.php";
+            include_once("../../modelo/usuario/usuarioCollector.php");
             $UsuarioCollectorObj = new usuarioCollector();
 
                 echo '<h2 class="topspace text-center">Administradores</h2>';

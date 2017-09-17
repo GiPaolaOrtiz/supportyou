@@ -55,7 +55,7 @@ session_start();
                 $password=$_POST['password'];
                 $idrol=$_POST['idrol'];
             
-                include_once("../../modelo/usuario/usuarioCollector.php";
+                include_once("../../modelo/usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
 

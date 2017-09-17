@@ -48,7 +48,7 @@ session_start();
             <?php 
                     $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Roles</h2>';
-                    include_once("../../modelo/rol/rolCollector.php";
+                    include_once("../../modelo/rol/rolCollector.php");
                     $rolCollectorObj = new rolCollector();
                     $ObjRol=$rolCollectorObj->showRol($id);
             ?>

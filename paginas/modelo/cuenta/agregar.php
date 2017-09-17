@@ -48,7 +48,7 @@
                 $numero=$_POST['numero'];
                 $banco=$_POST['banco'];
             
-                include_once("../../modelo/cuenta/cuentaCollector.php";
+                include_once("../../modelo/cuenta/cuentaCollector.php");
                 $cuentaCollectorObj = new cuentaCollector();
                 $cuentaCollectorObj-> createcuenta($numero, $banco);
 

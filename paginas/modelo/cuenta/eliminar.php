@@ -47,7 +47,7 @@
             <?php
                 $id=$_GET['id'];
             
-                include_once("../../modelo/cuenta/cuentaCollector.php";
+                include_once("../../modelo/cuenta/cuentaCollector.php");
                 $cuentaCollectorObj = new cuentaCollector();
                 foreach ($cuentaCollectorObj->showcuentas() as $c){
                      $nombre=$c->getNrocuenta();

@@ -45,7 +45,7 @@ session_start();
                 </div>
             </nav>    
         <?php 
-            include_once("../../modelo/cuenta/cuentaCollector.php";
+            include_once("../../modelo/cuenta/cuentaCollector.php");
             $cuentaCollectorObj = new cuentaCollector();
                 echo '<h2 class="topspace text-center">Cuentas</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";

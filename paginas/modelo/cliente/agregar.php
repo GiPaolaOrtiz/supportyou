@@ -67,7 +67,7 @@ session_start();
               
             
 
-                include_once("../../modelo/usuario/usuarioCollector.php";
+                include_once("../../modelo/usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new UsuarioCollector();
                 $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
 
@@ -78,7 +78,7 @@ session_start();
 
                 $usuario = $ultimousuario->getIdusuario();
 
-                include_once("../../modelo/cliente/clienteCollector.php";
+                include_once("../../modelo/cliente/clienteCollector.php");
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> createCliente($usuario,$fechanacimiento,$fecharegistro);
 

@@ -41,7 +41,7 @@
                 </div>
             </nav>    
         <?php 
-            include_once("../../modelo/usuario/usuarioCollector.php";
+            include_once("../../modelo/usuario/usuarioCollector.php");
             $UsuarioCollectorObj = new usuarioCollector();
                 echo '<h2 class="topspace text-center">Usuarios</h2>';
               

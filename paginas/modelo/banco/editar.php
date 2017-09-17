@@ -49,7 +49,7 @@
                 $id=$_POST['id'];
 		        $banco=$_POST['banco'];
             
-                include_once("../../modelo/banco/bancoCollector.php";
+                include_once("../../modelo/banco/bancoCollector.php");
                 $bancoCollectorObj = new bancoCollector();
                 $bancoCollectorObj-> updateBanco($id,$banco);
 

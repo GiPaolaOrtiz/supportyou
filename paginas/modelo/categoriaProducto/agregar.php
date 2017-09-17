@@ -54,7 +54,7 @@ session_start();
               
             
             
-                include_once("../../modelo/categoriaProducto/categoriaproductoCollector.php";
+                include_once("../../modelo/categoriaProducto/categoriaproductoCollector.php");
                
 
                 $CategoriaproductoCollectorObj = new categoriaproductoCollector();

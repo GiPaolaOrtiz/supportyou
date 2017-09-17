@@ -48,7 +48,7 @@
             <?php
                 $id=$_GET['id'];
             
-                include_once("../../modelo/banco/bancoCollector.php";
+                include_once("../../modelo/banco/bancoCollector.php");
                 $bancoCollectorObj = new bancoCollector();
                 foreach ($bancoCollectorObj->showBancos() as $c){
                      $nombre=$c->getNombre();

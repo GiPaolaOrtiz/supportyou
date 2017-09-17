@@ -57,7 +57,7 @@
 
         
             
-                include_once("../../modelo/producto/ProductoCollector.php";
+                include_once("../../modelo/producto/ProductoCollector.php");
                 $ProductoCollectorObj = new ProductoCollector();
                 $ProductoCollectorObj-> updateProductos($idproducto, $descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto);
 

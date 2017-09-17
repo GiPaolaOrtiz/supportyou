@@ -55,17 +55,17 @@ session_start();
 
 
 
-                include_once("../../modelo/venta/ventaCollector.php";
+                include_once("../../modelo/venta/ventaCollector.php");
                 $VentaCollectorObj = new VentaCollector();
                 $VentaCollectorObj-> deleteVentaCliente($idcliente);
 
 
-                include_once("../../modelo/cliente/clienteCollector.php";
+                include_once("../../modelo/cliente/clienteCollector.php");
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> deleteCliente($idcliente);
 
 
-                include_once("../../modelo/usuario/usuarioCollector.php";
+                include_once("../../modelo/usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> deleteUsuario($idusuario);
 

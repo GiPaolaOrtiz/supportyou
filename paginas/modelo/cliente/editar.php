@@ -64,12 +64,12 @@ session_start();
 
 
             
-                include_once("../../modelo/usuario/usuarioCollector.php";
+                include_once("../../modelo/usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($idusuario,$email,$nombre,$username,$pass,$idrol);
 
 
-                include_once("../../modelo/cliente/clienteCollector.php";
+                include_once("../../modelo/cliente/clienteCollector.php");
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> updateCliente($idcliente,$idusuario,$fechanacimiento,$fecharegistro);
 

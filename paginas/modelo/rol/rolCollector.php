@@ -1,7 +1,7 @@
 <?php
 
 include_once('rol.php');
-include_once("../../modelo/Collector.php";
+include_once("../../modelo/Collector.php");
 
 
 class rolCollector extends Collector
