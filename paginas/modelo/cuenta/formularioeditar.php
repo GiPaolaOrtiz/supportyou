@@ -49,7 +49,7 @@ session_start();
             <?php 
                     $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Cuentas</h2>';
-                     include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cuenta/cuentaCollector.php";
+                    include_once('../../modelo/cuenta/cuentaCollector.php');
                     $cuentaCollectorObj = new cuentaCollector();
                     $Obj=$cuentaCollectorObj->showcuenta($id);
             ?>
@@ -68,7 +68,23 @@ session_start();
                             </div>
                             <div class="form-group">
                               <label for="metodo">ID del banco</label>
-                              <input type="text" class="form-control" id="banco" value="<?php echo $Obj->getIdBancofk(); ?>" name="banco">
+                              <select id="selectbasic" name="banco" method="post" class="form-control" required>
+                                    <?php
+                                        include_once("../../modelo/banco/bancoCollector.php");
+                                        $id =1;
+                                        $bancoCollectorObj = new bancoCollector();
+                                        foreach ($bancoCollectorObj->showbancos() as $c){
+                                            if($Obj->getIdBancofk()==$c->getIdbanco()){
+                                                echo "<option value= ".$c->getIdbanco(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                        foreach ($bancoCollectorObj->showbancos() as $c){
+                                            if($Obj->getIdBancofk()!=$c->getIdbanco()){
+                                                echo "<option value= ".$c->getIdbanco(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                    ?>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-info">Enviar</button>
                         </form>

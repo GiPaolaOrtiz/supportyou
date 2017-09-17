@@ -48,7 +48,7 @@
             <?php
                 $rol=$_POST['rol'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
+                include_once("../../modelo/rol/rolCollector.php";
                 $rolCollectorObj = new rolCollector();
                 $rolCollectorObj-> createRol($rol);
 

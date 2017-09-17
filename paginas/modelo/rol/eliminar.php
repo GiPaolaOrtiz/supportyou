@@ -48,7 +48,7 @@
             <?php
                 $id=$_GET['id'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/rol/rolCollector.php";
+                include_once("../../modelo/rol/rolCollector.php";
                 $rolCollectorObj = new rolCollector();
                 foreach ($rolCollectorObj->showRoles() as $c){
                      $nombre=$c->getNombre();

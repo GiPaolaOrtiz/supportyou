@@ -1,7 +1,7 @@
 <?php
 
 include_once('venta.php');
-include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/Collector.php";
+include_once('../../modelo/Collector.php');
 
 
 class ventaCollector extends Collector
@@ -12,6 +12,15 @@ class ventaCollector extends Collector
     $arrayVenta= array();        
     foreach ($rows as $c){
       $aux = new venta($c{'idventa'},$c{'total'},$c{'idclientefk'},$c{'metodopagofk'},$c{'idproductofk'});
+      array_push($arrayVenta, $aux);
+    }
+    return $arrayVenta;        
+  }
+  function showventasInner() {
+    $rows = self::$db->getRows("select v.idventa, v.total, u.nombre, m.nombre, p.description from venta as v inner join cliente as c on c.idcliente=v.idclientefk inner join metodopago as m on m.idmetodopago= v.metodopagofk inner join producto as p on p.idproducto= v.idproductofk inner join usuario as u on c.idusuario=u.idusuario;");   
+    $arrayVenta= array();        
+    foreach ($rows as $c){
+      $aux = new venta($c{'idventa'},$c{'total'},$c{'nombre'},$c{'nombre'},$c{'description'});
       array_push($arrayVenta, $aux);
     }
     return $arrayVenta;        

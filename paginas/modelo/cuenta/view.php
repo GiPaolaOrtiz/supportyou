@@ -45,7 +45,7 @@ session_start();
                 </div>
             </nav>    
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/cuenta/cuentaCollector.php";
+            include_once("../../modelo/cuenta/cuentaCollector.php";
             $cuentaCollectorObj = new cuentaCollector();
                 echo '<h2 class="topspace text-center">Cuentas</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
@@ -54,10 +54,10 @@ session_start();
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
                         echo '<th>Numero de la cuenta</th>';
-                        echo '<th>ID Banco</th>';
+                        echo '<th>Nombre del banco</th>';
                         echo '<th>Acciones</th>';
                     echo '</tr> </thead><tbody>';            
-                      foreach ($cuentaCollectorObj->showcuentas() as $c){
+                      foreach ($cuentaCollectorObj->showcuentasInner() as $c){
                           echo '<tr>'; 
                               echo '<td>' . $c->getIdcuenta() . '</td>';
                               echo '<td>' . $c->getNrocuenta() . '</td>';

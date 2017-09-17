@@ -56,7 +56,7 @@ session_start();
                 $metodo=$_POST['metodo'];
                 $producto=$_POST['producto'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
+                include_once('../../modelo/venta/ventaCollector.php');
                 $ventaCollectorObj = new ventaCollector();
                 $ventaCollectorObj-> updateventa($id, $total, $cliente, $metodo, $producto);
 

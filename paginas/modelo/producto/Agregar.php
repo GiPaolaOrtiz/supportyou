@@ -55,18 +55,18 @@
                 $estadoventa=$_POST['estadoventa'];
                 $imagen="";
                 if($idcategoriaproducto==1){
-                      $imagen="/Ropa/" . $img;
+                      $imagen="Ropa/" . $img;
                 }
                 else if($idcategoriaproducto==2){
-                     $imagen="/Hogar/" . $img;
+                     $imagen="Hogar/" . $img;
                 }
                 else if($idcategoriaproducto==3){
-                     $imagen="/Tecno/" . $img;
+                     $imagen="Tecno/" . $img;
                 }
                 else if($idcategoriaproducto==4){
-                     $imagen="/Juguetes/" . $img;
+                     $imagen="Juguetes/" . $img;
                 }
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/producto/ProductoCollector.php";
+                include_once("../../modelo/producto/ProductoCollector.php";
                 $ProductoCollectorObj = new ProductoCollector();
                 $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $imagen, $estadoventa, $idfundacion, $idcategoriaproducto);
 

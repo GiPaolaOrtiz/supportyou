@@ -36,7 +36,10 @@
 		    <input type="file" id="imagen" class="form-control center-block" name="img">
 
 		    <p class="text-center"><b>ESTADO DE VENTA </b></p>
-		    <input type="text" id="estven" class="form-control center-block" name="estadoventa">
+		    <select id="estven" name="estadoventa" method="post" class="form-control center-block" required>
+                 <option value="disponible">disponible</option>
+                 <option value="disponible">vendido</option>
+            </select>
 		    <br>
 		    <button class="center-block btn btn-lg btn-primary btn-block" type="submit">SAVE</button>
 		</form>

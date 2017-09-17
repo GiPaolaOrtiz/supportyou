@@ -47,7 +47,7 @@
             <?php
                 $metodo=$_GET['id'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
+                include_once("../../modelo/MetodoPago/MetodoPagoCollector.php";
                 $MetodoPagoCollectorObj = new metodopagoCollector();
                 foreach ($MetodoPagoCollectorObj->showMetodoPagos() as $c){
                      $nombremetodo=$c->getMetodo();

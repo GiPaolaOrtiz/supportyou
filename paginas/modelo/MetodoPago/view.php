@@ -45,7 +45,7 @@ session_start();
                 </div>
             </nav>    
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/MetodoPago/MetodoPagoCollector.php";
+            include_once("../../modelo/MetodoPago/MetodoPagoCollector.php";
             $MetodoPagoCollectorObj = new metodopagoCollector();
                 echo '<h2 class="topspace text-center">Metodos de pago</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";

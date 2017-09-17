@@ -48,7 +48,7 @@ session_start();
         <?php 
                 $id= $_GET['id'];
                 echo '<h2 class="topspace text-center">Usuarios</h2>';
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                include_once("../../modelo/usuario/usuarioCollector.php";
                 $UsuarioCollectorObj = new usuarioCollector();
                 $ObjUsuario=$UsuarioCollectorObj->showUsuario($id);
         ?>

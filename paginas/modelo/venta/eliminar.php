@@ -51,8 +51,7 @@ session_start();
             ?>
             <?php
                 $id=$_GET['id'];
-            
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/venta/ventaCollector.php";
+                include_once('../../modelo/venta/ventaCollector.php');
                 $ventaCollectorObj = new ventaCollector();
                 $ventaCollectorObj-> deleteventa($id);
 
