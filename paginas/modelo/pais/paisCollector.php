@@ -30,9 +30,10 @@ class paisCollector extends Collector
   }
 
   function deletePais($id){
-    $insertrow= self::$db->deleteRow
-                  ("DELETE FROM public.pais where idpais = ?", 
-                  array( $id ));
+    $insertrow= self::$db->deleteRow 
+        ("DELETE FROM public.fundacion where idpaisfk = ?", array( $id ));
+    $insertrow= self::$db->deleteRow 
+            ("DELETE FROM public.pais where idpais = ?", array( $id ));
   }
   function createPais($nombre){
     $insertrow= self::$db->insertRow

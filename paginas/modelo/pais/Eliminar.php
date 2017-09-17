@@ -38,7 +38,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
+                <a href="../../administrador.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
         </div>
     </nav>
@@ -46,6 +46,7 @@
     <br>
     <br>
 
+    
 <div id="main">
     
     <?php 
@@ -60,14 +61,10 @@ include_once("paisCollector.php");
 
 $PaisCollectorObj = new paisCollector();
 
-foreach ($PaisCollectorObj->showPaises() as $c){
-                     $nombre=$c->getNombre();
-               
-               }
-                 $PaisCollectorObj->deletePais($id);
+     $ObjPais = $PaisCollectorObj->showPais($id);
 
-            
-                echo "<h3 class='topspace text-center'>El país <span class='red'> " . $nombre . " </span> ha sido eliminado</h3>";
+            $PaisCollectorObj->deletePais($id);
+                echo "<h3 class='topspace text-center'>El país <span class='red'> " . $ObjPais->getNombre() . " </span> ha sido eliminado</h3>";
 ?>
 
 <div>
