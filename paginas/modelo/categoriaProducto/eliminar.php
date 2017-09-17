@@ -51,7 +51,7 @@ session_start();
             <?php
                 $id=$_GET['id'];
             
-               include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+               include_once("../../modelo/categoriaProducto/categoriaproductoCollector.php";
                 $CategoriaProductoCollectorObj = new categoriaproductoCollector();
                 foreach ($CategoriaProductoCollectorObj->showCategoriaProductos() as $c){
                      $nombre=$c->getNombre();

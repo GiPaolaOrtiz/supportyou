@@ -47,7 +47,7 @@
             <?php
                 $banco=$_POST['banco'];
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/banco/bancoCollector.php";
+                include_once("../../modelo/banco/bancoCollector.php";
                 $bancoCollectorObj = new bancoCollector();
                 $bancoCollectorObj-> createBanco($banco);
 

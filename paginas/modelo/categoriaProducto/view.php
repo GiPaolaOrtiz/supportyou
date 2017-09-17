@@ -45,7 +45,7 @@ session_start();
         </nav>
 
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/categoriaProducto/categoriaproductoCollector.php";
+            include_once("../../modelo/categoriaProducto/categoriaproductoCollector.php";
             $categoriaproductoCollectorObj = new categoriaproductoCollector();
 
                 echo '<h2 class="topspace text-center">Categoria de Productos</h2>';

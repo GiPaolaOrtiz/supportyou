@@ -61,12 +61,12 @@ session_start();
 
 
             
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php";
+                include_once("../../modelo/usuario/usuarioCollector.php";
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($idusuario,$email,$nombre,$username,$pass,$idrol);
 
 
-                include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/administrador/administradorCollector.php";
+                include_once("../../modelo/administrador/administradorCollector.php";
                 $AdministradorCollectorObj = new AdministradorCollector();
                 $AdministradorCollectorObj-> updateAdministrador($idadministrador,$cargo,$idusuario);
 

@@ -44,7 +44,7 @@ session_start();
         </nav>
 
         <?php 
-            include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/banco/bancoCollector.php";
+            include_once("../../modelo/banco/bancoCollector.php";
             $bancoCollectorObj = new bancoCollector();
                 echo '<h2 class="topspace text-center">Bancos</h2>';
 
