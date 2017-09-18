@@ -1,9 +1,17 @@
 <?php
+<<<<<<< HEAD:paginas/modelo/usuario/validarusuario.php
 include_once ("usuarioCollector.php");
+=======
+include_once("modelo/usuario/usuarioCollector.php");
+
+>>>>>>> 645a6099193794c978fbff591b9c2b8c2df03983:paginas/validarusuario.php
 session_start();
+
+
 $username = $_POST['username'];
 $pass = $_POST['pass'];
 $UsuarioCollectorObj = new UsuarioCollector();
+
 ?>
 <!DOCTYPE html>
 
@@ -40,7 +48,12 @@ $UsuarioCollectorObj = new UsuarioCollector();
         ?>
             
             <h4>Usuario o contraseña incorrecta</h4>
+<<<<<<< HEAD:paginas/modelo/usuario/validarusuario.php
             <a href="../../login.php"><button class="boton">Regresar</button></a>
+=======
+            <a href="login.php"><button class="boton">Regresar</button></a>
+        <a href="modelo/usuario/usuarioCollector.php"></a>
+>>>>>>> 645a6099193794c978fbff591b9c2b8c2df03983:paginas/validarusuario.php
                 
         
         <?php

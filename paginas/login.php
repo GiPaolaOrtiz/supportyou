@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +42,7 @@ session_start();
                 
                    <?php
                         echo"<a href='../index.php'><img alt='LogoAplicacion' id='estilo_logo' src='../img/LogoSupportYou.png'></a>"
-                  ?>
+                    ?>
                 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
