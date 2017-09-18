@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php");
+include_once ("usuarioCollector.php");
 session_start();
 $username = $_POST['username'];
 $pass = $_POST['pass'];
@@ -20,29 +20,27 @@ $UsuarioCollectorObj = new UsuarioCollector();
         foreach ($UsuarioCollectorObj->showUsuarios() as $c){
             if($c->getUsername() == $username && $c->getPass() == $pass){
                
-                $_SESSION['Misesion']= $username;
+                $_SESSION['user']= $username;
+                $_SESSION['rol']= $c->getIdrol();
                  
                 
-                
-
             if($c->getIdrol() == 1){
-                echo "<p>hola</p>";
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../administrador.php'>";
 
             }
-
             if($c->getIdrol() == 2){
-                 echo "<p>hola</p>";
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 
             }
 
             }
         }
         
-        if (!isset($_SESSION['Misesion'])){
+        if (!isset($_SESSION['user'])){
         ?>
             
             <h4>Usuario o contraseña incorrecta</h4>
-            <a href="login.php"><button class="boton">Regresar</button></a>
+            <a href="../../login.php"><button class="boton">Regresar</button></a>
                 
         
         <?php

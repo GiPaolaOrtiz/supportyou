@@ -91,7 +91,7 @@ session_start();
 
 
 
-                <form class="form-signin" action = "validarusuario.php" method = "post">
+                <form class="form-signin" action = "modelo/usuario/validarusuario.php" method = "post">
                     <h2 class="form-signin-heading">Inicia Sesión</h2>
                     <label for="inputUsername" class="sr-only">Usuario</label>
                     <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
@@ -102,7 +102,7 @@ session_start();
                             <input type="checkbox" value="remember-me"> Recuérdame
                         </label>
                     </div>
-                    <input type="submit" id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">
+                    <input id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">
                     <h5>¿No tienes una cuenta?<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../index.php'">Regístrate</button> </h5>
                 </form>
 
