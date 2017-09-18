@@ -32,10 +32,10 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.php">HOME</a>
+                               <a class="page-scroll" href="../../administrador.php">HOME</a>
                             </li>
                             <li>
-                               <a class="page-scroll" href="../../../index.html">SALIR</a>
+                               <a class="page-scroll" href="../../logout.php">SALIR</a>
                             </li>
                         </ul>
                     </div>
@@ -79,7 +79,7 @@
                             </div>
                             <div class="form-group">
                               <label for="idu">Imagen </label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjProducto->getImg(); ?>" name="img">
+                              <input type="file" class="form-control" id="idu" value="<?php echo $ObjProducto->getImg(); ?>" name="img">
                             </div>
                               <div class="form-group">
                               <label for="idu">Estado de Venta </label>
