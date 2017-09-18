@@ -1,9 +1,13 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . "/supportyou/paginas/modelo/usuario/usuarioCollector.php");
+include_once("modelo/usuario/usuarioCollector.php");
+
 session_start();
+
+
 $username = $_POST['username'];
 $pass = $_POST['pass'];
 $UsuarioCollectorObj = new UsuarioCollector();
+
 ?>
 <!DOCTYPE html>
 
@@ -43,6 +47,7 @@ $UsuarioCollectorObj = new UsuarioCollector();
             
             <h4>Usuario o contraseña incorrecta</h4>
             <a href="login.php"><button class="boton">Regresar</button></a>
+        <a href="modelo/usuario/usuarioCollector.php"></a>
                 
         
         <?php
