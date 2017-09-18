@@ -28,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+   
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -49,7 +50,7 @@
 
 <?php
 
-include_once("../../../paginas/modelo/fundacion/fundacionCollector.php");
+include_once("fundacionCollector.php");
 
 $id =1;
 

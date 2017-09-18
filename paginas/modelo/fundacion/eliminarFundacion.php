@@ -17,6 +17,7 @@
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
+        
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -47,7 +48,7 @@ $id=$_GET["id"];
         
         
 
-include_once("../../modelo/fundacion/fundacionCollector.php");
+include_once("fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
 

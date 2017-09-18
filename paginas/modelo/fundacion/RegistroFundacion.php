@@ -17,8 +17,7 @@
 </head>
 
 <body>
-
-
+   
     <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -236,7 +235,7 @@
                                                 
                                                 
                                                 <label for="exampleInputFile">Subir Foto </label>
-                                                    <input type="file" name="foto" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" accept="image/*">
+                                                    <input type="file" name="foto" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
                                                     <small id="fileHelp" class="form-text text-muted"></small>
                                                 </div>
 

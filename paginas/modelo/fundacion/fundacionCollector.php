@@ -1,5 +1,4 @@
 <?php
-
 include_once('claseRegistroFundacion.php');
 include_once('../Collector.php');
 

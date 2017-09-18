@@ -13,6 +13,7 @@
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
+        
         <main>
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
                 <div class="container">
@@ -33,7 +34,7 @@
         <?php 
                 $id= $_GET['id'];
                 echo '<h2 class="topspace text-center">Fundación</h2>';
-                include_once ("../../modelo/fundacion/fundacionCollector.php");
+                include_once ("fundacionCollector.php");
                 $FundacionCollectorObj = new fundacionCollector();
                 $ObjFundacion=$FundacionCollectorObj->showFundacion($id);
         ?>
@@ -41,7 +42,7 @@
                 <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
-                        <form method="post" action="Actualizar.php">
+                        <form method="post" action="Actualizar.php" enctype="multipart/form-data">
                             <div class="form-group">
                               <label for="idu">ID</label>
                               <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getIdFundacion(); ?>" readonly name="idFundacion">
@@ -93,7 +94,7 @@
                             <div class="form-group">
                               <label for="idu">Logo</label>
                               <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getFoto(); ?>" name="foto" readonly>
-                             
+                              <input type="text" style="display:none" class="form-control" id="idu" value="<?php echo $ObjFundacion->getFoto(); ?>" name="fotoOld" readonly>
                             </div>
                             <div class="form-group">
                               <label for="exampleInputFile">Cambiar Foto </label>
@@ -119,5 +120,6 @@
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  
+     
     </body>
 </html>

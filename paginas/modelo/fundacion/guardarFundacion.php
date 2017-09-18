@@ -26,6 +26,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+   
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -41,7 +42,7 @@
             </div>
         </div>
     </nav>
-
+    
   <br>
     <br>
     <br>
@@ -60,16 +61,18 @@ $email = $_POST['email'];
 $pass = $_POST['contraseña'];
 $cuenta = $_POST['cuenta'];
 $ruc = $_POST['ruc'];
-$foto = $_POST['foto'];
+$foto = $_FILES['foto'];
 
+move_uploaded_file($foto['tmp_name'],
+"../../../img/fundaciones/" . $foto['name']);
 
 
 include_once("fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
-$FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
+$FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto['name'],$categoria);
 
-    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
+    //echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 
 echo "  ". htmlspecialchars($nombre) . '   registrada!';
 
