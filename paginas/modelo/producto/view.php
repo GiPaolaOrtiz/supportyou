@@ -87,7 +87,7 @@
 
         <script src="../../../js/bootstrap.js"></script>
         <footer id="footer1">
-        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved.</p>
+        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved..</p>
 
     </footer>  
     </body>
