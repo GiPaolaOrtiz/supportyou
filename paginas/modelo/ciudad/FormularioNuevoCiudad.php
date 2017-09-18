@@ -39,6 +39,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+            </div>
     </nav>
 
 
@@ -55,12 +56,7 @@ Nombre: <input type="text" name="nombre" autofocus required />
 
 </form>
 
-
-
-
-</div>
-</div>
-</nav>
+ </div>
 
 
 </body>

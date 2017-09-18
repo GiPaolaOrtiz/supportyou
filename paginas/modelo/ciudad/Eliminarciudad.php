@@ -55,21 +55,20 @@ $ciudadCollectorObj = new CiudadCollector();
 $ciudadCollectorObj->deleteCiudad($id);
 
 echo "Se ha eliminado id : ".$id. " </br>";
-?>
-<?php
-		  if (isset($_SESSION['supportyou'])){
+
+		  if (isset($_SESSION['user'])){
         
               echo "<p>Se elimino la ciudad #" . $id ." :c </p>";
-        $ciudadCollectorObj->deleteCiudad($id);
+                 $ciudadCollectorObj->deleteCiudad($id);
 
-       echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=leerPais.php'>";
+                    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
                             }else{   
                                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
                              } 
                         ?>
 
                         <br><br>
-<div><a href="view.php" class="btn btn-info mg"> Ver lista de ciudades.. </a></div>
+                    <h3 class='topspace text-center'>Se elimino la ciudad</h3>
 
 
 </div>
