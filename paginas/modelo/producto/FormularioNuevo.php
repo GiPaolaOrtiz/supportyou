@@ -4,9 +4,55 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <meta charset="utf-8">
+        <title>Administración</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="../../../img/LogoSupportYou.png">
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet"  href="../../../css/style.css">        
+        <link rel="stylesheet"  href="../../../css/estiloCatalogo.css">
+        <link rel="stylesheet"  href="../../../css/estiloCarro.css">
+        <link rel="stylesheet"  href="../../../css/estiloadmin.css">
 	</head>
 	<body>	
+	  <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a href="../index.html"><img alt="LogoAplicacion" id="estilo_logo" src="../img/LogoSupportYou.png"></a>
+
+            </div>
+
+			       <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span> 
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="index.php"><img id="estilo_logo" alt="logo" src="../../../img/LogoSupportYou.png"></a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <br>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                               <a class="page-scroll" href="../../../administrador.php">HOME</a>
+                            </li>
+                            <li>
+                               <a class="page-scroll" href="../../logout.php">SALIR</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>  <br><br>
 		<?php 			
 			include_once("ProductoCollector.php");
 			include_once("Producto.php");
@@ -17,6 +63,10 @@
 		<br>
 		<br>
 		<br>
+		<div id="formulario">
+       
+            <div class="form-group">
+
 		<form class="form-signin" method="post" action="Agregar.php">
 		    <p class="text-center"><b>ID CATEGORIA PRODUCTO</b></p>
 		    <input type="text" id="catpro" class="form-control center-block" name="idcategoriaproducto">
@@ -41,8 +91,9 @@
                  <option value="disponible">vendido</option>
             </select>
 		    <br>
-		    <button class="center-block btn btn-lg btn-primary btn-block" type="submit">SAVE</button>
-		</form>
+		     </div>
+            <input id="btn_mensaje"  type="submit" value="Todo Listo!" class="btn btn-primary"/>
+        </form>
 
 		<div>
 			<a href="index.php">Volver al inicio...</a>
