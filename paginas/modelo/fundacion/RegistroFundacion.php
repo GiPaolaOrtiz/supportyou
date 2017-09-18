@@ -67,7 +67,7 @@
 
                                 <hr id="linea">
 
-                                <form action="guardarFundacion.php" id="contact-form" method="post">
+                                <form action="guardarFundacion.php" id="contact-form" method="post" enctype="multipart/form-data">
 
                                     <div class="messages"></div>
 
@@ -248,9 +248,9 @@
                                         
                                         <div class="row">
                                             <div class="col-md-12" id="boton">
-
-                                                <button id="botonRegFund" type="submit" class="btn btn-default">Registrar organización</button>
-
+                                                
+                                                <a href="view.php" id="botonRegresar" class="btn btn-info"> Volver </a>
+                                                <button id="botonRegFund" type="submit" class="btn btn-default" name="enviar" >Registrar organización</button>
 
                                             </div>
                                         </div>
