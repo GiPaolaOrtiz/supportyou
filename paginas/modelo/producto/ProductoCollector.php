@@ -24,10 +24,9 @@ class ProductoCollector extends Collector
   }
 
 
-  function updateProductos($id, $descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto){
-      $insertrow= self::$db->updateRow
-                  ("UPDATE public.producto SET description = ?, estado = ?, precio = ?, img = ?,  estadoventa = ?, idfundacionfk = ?, idcategoriaproductofk = ? where idproducto = ? ", 
-                  array( "{$descripcion}", "{$estado}", "{$precio}","{$img}", "{$estadoventa}","{$idfundacion}","{$idcategoriaproducto}", $id));
+  function updateProductos($id, $description, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto){
+      $insertrow= self::$db->updateRow("UPDATE public.producto SET description = ?, estado = ?, precio = ?, img = ?,  estadoventa = ?, idfundacionfk = ?, idcategoriaproductofk = ? where idproducto = ? ", 
+                  array( "{$description}", "{$estado}", "{$precio}","{$img}", "{$estadoventa}","{$idfundacion}","{$idcategoriaproducto}", $id));
   }
 
   function deleteProducto($id){
@@ -35,9 +34,8 @@ class ProductoCollector extends Collector
                   ("DELETE FROM public.producto where idproducto = ?", 
                   array( $id ));
   }
-   function createProducto($descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto){
-    $insertrow= self::$db->insertRow
-                  ("INSERT INTO public.producto (description, estado, precio, img, estadoventa, idfundacionfk, idcategoriaproductofk) VALUES (?,?,?,?,?,?,?)", array("{$descripcion}", "{$estado}", "{$precio}","{$img}", "{$estadoventa}","{$idfundacion}","{$idcategoriaproducto}"));
+   function createProducto($description, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto){
+    $insertrow= self::$db->insertRow("INSERT INTO public.producto (description, estado, precio, img, estadoventa, idfundacionfk, idcategoriaproductofk) VALUES (?,?,?,?,?,?,?)", array("{$description}", "{$estado}", "{$precio}","{$img}", "{$estadoventa}","{$idfundacion}","{$idcategoriaproducto}"));
   }  
 }
 ?>
