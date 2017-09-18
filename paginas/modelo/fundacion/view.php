@@ -75,7 +75,7 @@ echo '<div class="">';
                         echo '<th>Logo</th>';
                     echo '</tr> </thead><tbody>';
 
-foreach ($FundacionCollectorObj->showFundaciones() as $c){
+foreach ($FundacionCollectorObj->showFundacionesInner() as $c){
    echo '<tr>'; 
                 echo '<td>' . $c->getIdFundacion() . '</td>';
                 echo '<td>' . $c->getNombre() . '</td>';
