@@ -1,7 +1,7 @@
 <?php
 
 include_once('Pais.php');
-include_once('../../modelo/Collector.php');
+include_once('../Collector.php');
 
 class paisCollector extends Collector
 {
