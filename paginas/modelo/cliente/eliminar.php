@@ -78,7 +78,7 @@ session_start();
                 $UsuarioCollectorObj-> deleteUsuario($idusuario);
 
 
-                echo "<h3 class='topspace text-center'>El usuario ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>El cliente ha sido eliminado</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>

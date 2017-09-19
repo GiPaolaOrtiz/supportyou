@@ -79,7 +79,7 @@ session_start();
                 <br><br> <br><br>
 
                 <div class="jumbotron">
-                    <h2>Agregar Administrador</h2>
+                    <h2>Editar Administrador</h2>
                     <div class="row">
 
                         <div class="col-md-12 col-xs-12 col-sm-6 col-lg-12">
@@ -158,7 +158,7 @@ session_start();
                 </div>
 
 
-
+            </div>
         </main>
 
         <script src="../../../js/jquery.js"></script>
@@ -180,3 +180,9 @@ session_start();
     </body>
 
     </html>
+    <?php
+
+}
+
+    }
+?>

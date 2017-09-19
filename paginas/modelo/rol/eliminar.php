@@ -54,7 +54,7 @@ session_start();
         </nav>
 
         <?php 
-                echo '<h2 class="topspace text-center">Metodos de pago</h2>';
+                echo '<h2 class="topspace text-center">Roles</h2>';
             ?>
             <?php
                 $id=$_GET['id'];

@@ -59,7 +59,7 @@ session_start();
 
 
             <?php 
-                echo '<h2 class="topspace text-center">Cliente</h2>';
+                echo '<h2 class="topspace text-center">Administrador</h2>';
            
 
                 $email=$_POST['email'];

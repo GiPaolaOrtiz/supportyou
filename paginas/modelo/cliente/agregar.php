@@ -94,7 +94,7 @@ session_start();
 
 
 
-                echo "<h3 class='topspace text-center'>El usuario <b>" . $username . "</b> ha sido agregado como CLIENTE</h3>";
+                echo "<h3 class='topspace text-center'>El cliente <b>" . $username . "</b> ha sido agregado como CLIENTE</h3>";
 
             ?>
             <div>

@@ -83,7 +83,7 @@ session_start();
                 $ClienteCollectorObj-> updateCliente($idcliente,$idusuario,$fechanacimiento,$fecharegistro);
 
 
-                echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $idcliente . "</span> ha sido actualizado <span class='green'>" . $username ."</span></h3>";
+                echo "<h3 class='topspace text-center'>El cliente <span class='green'>" . $idcliente . "</span> ha sido actualizado <span class='green'>" . $username ."</span></h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
