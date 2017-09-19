@@ -69,7 +69,7 @@ session_start();
                                         foreach ($clienteCollectorObj->showClientes() as $d){
                                             foreach ($usuarioCollectorObj->showUsuarios() as $c){
                                                 if($d->getIdusuario() == $c->getIdusuario()){
-                                                    echo "<option value= " . $d->getIdusuario() . ">" . $c->getNombre(). "</option>";       
+                                                    echo "<option value= " . $d->getIdcliente() . ">" . $c->getNombre(). "</option>";       
                                                 }                                                
                                             }                                            
                                         }

@@ -58,6 +58,12 @@
         <div id="magenta">
             <h2>Pago</h2>
         </div>
+        <?php 
+                    $id= $_GET['id'];
+                    include_once('modelo/venta/vtacoll.php');
+                    $ventaCollectorObj = new ventaCollector();
+                    $Objventa=$ventaCollectorObj->showventa($id);
+            ?>
         <div class="container">
 
             <!-- Introduction Row -->
@@ -83,9 +89,26 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="bt">
-                        <p class="center"><span class="tt">Subtotal</span>: 82.5</p>
-                    </td>
+                <?php
+                include_once("modelo/producto/procll.php");
+                $total=20;    
+                $ProductoCollectorObj = new ProductoCollector();
+                $ObjProducto=$ProductoCollectorObj->showProductos();
+                            foreach ($ProductoCollectorObj->showProductos() as $c){
+                                if($c->getIdproducto()==$id){
+                                    echo '<td class="bt">
+                                        <p class="center"><span class="tt">Subtotal </span>: ' . $c->getPrecio() . '</p>
+                                    </td>';
+                                    $total+=$c->getPrecio();
+                                }                              
+                      }
+                    function pagof(){
+                        include_once("modelo/venta/vtacoll.php"); 
+                        $ventaCollectorObj = new ventaCollector();
+                        $ventaCollectorObj->createventa($total, 1, 1, $id);
+                    }
+                    
+        ?>                    
                 </tr>
                 <tr>
                     <td class="bt">
@@ -95,7 +118,7 @@
                 </tr>
                 <tr>
                     <td class="bt">
-                        <p class="center"><span class="tt">Total</span>: 102.5</p>
+                        <p class="center"><span class="tt">Total</span>: <?php echo '<p>' . $total . '</p>'?></p>
                     </td>
 
                 </tr>
