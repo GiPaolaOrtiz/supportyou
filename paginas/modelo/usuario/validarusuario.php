@@ -33,7 +33,7 @@ $UsuarioCollectorObj = new UsuarioCollector();
 
             }
             if($c->getIdrol() == 2){
-                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../MiPerfil.php'>";
 
             }
 
