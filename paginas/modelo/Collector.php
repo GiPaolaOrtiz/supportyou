@@ -2,10 +2,10 @@
 include_once('dataBase.php');
 
 // Define configuration
-define("DB_HOST", "ec2-54-225-88-199.compute-1.amazonaws.com");
-define("DB_USER", "xqpldvxbbydsqn");
-define("DB_PASS", "1dd837dbac8544481dba99ff59e804fe6e340ac1e9026bdb2df9880f9585523d");
-define("DB_NAME", "d1mpcvvssdtqms");
+define("DB_HOST", "ec2-23-23-248-247.compute-1.amazonaws.com");
+define("DB_USER", "lgjgrefbvyumaf");
+define("DB_PASS", "b9c2bb6707cccfda26a529e857c02f207e6f4534bf0ce6918cf047c43ba893ba");
+define("DB_NAME", "d40ls4mc63goeo");
 
 
 class Collector extends dataBase
