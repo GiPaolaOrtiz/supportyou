@@ -1,7 +1,12 @@
 <?php
   session_start();
+  if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,6 +32,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+    
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -53,7 +59,7 @@
     <?php 
                 echo '<h2 class="topspace text-center">Fundaciones </h2>';
             ?>
-
+ 
 <?php
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
@@ -66,13 +72,20 @@ $email = $_POST['email'];
 $pass = $_POST['pass'];
 $cuenta = $_POST['cuenta'];
 $ruc = $_POST['ruc'];
-$foto = $_POST['foto'];
+$fotoOld = $_POST['fotoOld'];
+$foto = $_FILES['foto'];
 $idfundacion=$_POST["idFundacion"];
+    
+    
+if($fotoOld != $foto['name']){
+move_uploaded_file($foto['tmp_name'],
+"../../../img/fundaciones/" . $foto['name']);  
+}
 
-include_once("../../modelo/fundacion/fundacionCollector.php");
+include_once("fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
-$FundacionCollectorObj->updateFundacion($idfundacion,$direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
+$FundacionCollectorObj->updateFundacion($idfundacion,$direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto['name'],$categoria);
 
 echo "<h3 class='topspace text-center'> La <span class='green'> " . $nombre . " </span> ha sido actualizada </h3>";
     
@@ -85,6 +98,10 @@ echo "<h3 class='topspace text-center'> La <span class='green'> " . $nombre . " 
 
 </div>
 </div>
-
 </body>
 </html>
+<?php
+
+}
+        }
+?>

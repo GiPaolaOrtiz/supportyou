@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -50,7 +58,11 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
                 </div>
             </nav>    
         <?php 
+<<<<<<< HEAD
             include_once('../../modelo/MetodoPago/MetodoPagoCollector.php');
+=======
+            include_once("../../modelo/MetodoPago/MetodoPagoCollector.php");
+>>>>>>> master
             $MetodoPagoCollectorObj = new metodopagoCollector();
                 echo '<h2 class="topspace text-center">Metodos de pago</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
@@ -87,3 +99,8 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 ?>
     </body>
 </html>
+<?php
+
+}
+        }
+?>

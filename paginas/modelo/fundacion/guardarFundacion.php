@@ -1,5 +1,11 @@
 <?php
   session_start();
+  if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
 
 <!DOCTYPE html>
@@ -20,12 +26,14 @@
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
     <link href="../../../css/style.css" rel="stylesheet">
+    <link href="../../../css/estiloRegistro.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+   
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -41,7 +49,7 @@
             </div>
         </div>
     </nav>
-
+    
   <br>
     <br>
     <br>
@@ -60,14 +68,16 @@ $email = $_POST['email'];
 $pass = $_POST['contraseña'];
 $cuenta = $_POST['cuenta'];
 $ruc = $_POST['ruc'];
-$foto = $_POST['foto'];
+$foto = $_FILES['foto'];
 
+move_uploaded_file($foto['tmp_name'],
+"../../../img/fundaciones/" . $foto['name']);
 
 
 include_once("fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
-$FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto,$categoria);
+$FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto['name'],$categoria);
 
     echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 
@@ -78,6 +88,10 @@ echo "  ". htmlspecialchars($nombre) . '   registrada!';
 
 
 </div>
-
 </body>
 </html>
+<?php
+
+}
+        }
+?>

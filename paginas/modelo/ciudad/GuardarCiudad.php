@@ -1,5 +1,13 @@
 <?php
-  session_start();
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +47,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+            </div>
     </nav>
 
 
@@ -55,7 +64,6 @@ $CiudadCollectorObj->createCiudad($nombre);
 ?>
 
 
-</div>
 
 <div class="col-md-12" id="divCentral">
 
@@ -63,15 +71,15 @@ $CiudadCollectorObj->createCiudad($nombre);
 
 <?php
 echo 'Ciudad registrada ' . htmlspecialchars($nombre) . '!';
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
-
-<div><a href="view.php" class="btn btn-danger pull-right">Volver.</a></div>
-
-
-                
 </div>
-
+         
 </div>
-
+</div>
 </body>
 </html>
+<?php
+}
+        }
+?>

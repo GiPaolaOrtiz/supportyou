@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -57,9 +65,13 @@ session_start();
                 $metodo=$_POST['metodo'];
                 $producto=$_POST['producto'];
             
+<<<<<<< HEAD
                                 include_once('../../modelo/venta/ventaCollector.php');
 
                 
+=======
+                include_once('../../modelo/venta/ventaCollector.php');
+>>>>>>> master
                 $ventaCollectorObj = new ventaCollector();
                 $ventaCollectorObj-> updateventa($id, $total, $cliente, $metodo, $producto);
 
@@ -79,3 +91,8 @@ session_start();
    
     </body>
 </html>
+<?php
+
+}
+        }
+?>

@@ -1,7 +1,18 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
 ?>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -53,7 +64,11 @@ $usuario = $_SESSION['Misesion'];
         <?php 
                 $id= $_GET['id'];
                 echo '<h2 class="topspace text-center">Usuarios</h2>';
+<<<<<<< HEAD
                 include_once ("usuarioCollector.php");
+=======
+                include_once("../../modelo/usuario/usuarioCollector.php");
+>>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $ObjUsuario=$UsuarioCollectorObj->showUsuario($id);
         ?>
@@ -108,3 +123,10 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 ?>
     </body>
 </html>
+
+<?php
+
+}
+
+    }
+?>

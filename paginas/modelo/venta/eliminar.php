@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -52,9 +60,13 @@ session_start();
             ?>
             <?php
                 $id=$_GET['id'];
+<<<<<<< HEAD
             
                             include_once('../../modelo/venta/ventaCollector.php');
 
+=======
+                include_once('../../modelo/venta/ventaCollector.php');
+>>>>>>> master
                 $ventaCollectorObj = new ventaCollector();
                 $ventaCollectorObj-> deleteventa($id);
 
@@ -74,3 +86,8 @@ session_start();
    
     </body>
 </html>
+<?php
+
+}
+        }
+?>

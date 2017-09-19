@@ -1,5 +1,13 @@
 <?php
-  session_start();
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +47,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+            </div>
     </nav>
 
 
@@ -55,13 +64,12 @@ Nombre: <input type="text" name="nombre" autofocus required />
 
 </form>
 
-
-
-
-</div>
-</div>
-</nav>
+ </div>
 
 
 </body>
 </html>
+<?php
+}
+        }
+?>

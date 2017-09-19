@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -52,7 +63,12 @@ $usuario = $_SESSION['Misesion'];
                 $id=$_POST['id'];
 		        $numero=$_POST['numero'];
 		        $banco=$_POST['banco'];            
+<<<<<<< HEAD
                 include_once('../../modelo/cuenta/cuentaCollector.php');
+=======
+            
+                include_once("../../modelo/cuenta/cuentaCollector.php");
+>>>>>>> master
                 $cuentaCollectorObj = new cuentaCollector();
                 $cuentaCollectorObj-> updatecuenta($id,$numero,$banco);
 
@@ -76,3 +92,8 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 ?>  
     </body>
 </html>
+<?php
+
+}
+        }
+?>

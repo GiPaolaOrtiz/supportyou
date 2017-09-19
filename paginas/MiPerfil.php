@@ -1,5 +1,11 @@
 <?php
-session_start();
+  session_start();
+  if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
 ?>
 <!DOCTYPE html>
 <html>
@@ -66,7 +72,7 @@ session_start();
             <div id="nombreUsuario">
                 
                 <h4><?php
-                    echo "Hola " .$_SESSION['Misesion']
+                    echo "Hola " .$_SESSION['user']
                     ?></h4>
                 
                 <button id="botonSubirObjeto" type="submit" onClick="location.href='../paginas/subir_objeto.php?>'">Subir Objeto</button>
@@ -156,3 +162,8 @@ session_start();
 </body>
 
 </html>
+<?php
+
+}
+        }
+?>

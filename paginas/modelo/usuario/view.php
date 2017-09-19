@@ -1,5 +1,15 @@
 <?php
 session_start();
+<<<<<<< HEAD
+=======
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
+>>>>>>> master
 ?>
 
 <!DOCTYPE HTML>
@@ -50,7 +60,11 @@ $usuario = $_SESSION['Misesion'];
                 </div>
             </nav>    
         <?php 
+<<<<<<< HEAD
             include_once ("usuarioCollector.php");
+=======
+            include_once("../../modelo/usuario/usuarioCollector.php");
+>>>>>>> master
             $UsuarioCollectorObj = new usuarioCollector();
                 echo '<h2 class="topspace text-center">Usuarios</h2>';
               
@@ -99,3 +113,9 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 ?>
     </body>
 </html>
+<?php
+
+}
+
+    }
+?>

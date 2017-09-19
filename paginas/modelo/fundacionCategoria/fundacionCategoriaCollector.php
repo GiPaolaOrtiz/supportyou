@@ -1,7 +1,7 @@
 <?php
 
 include_once('FundacionCategoria.php');
-include_once('../../modelo/Collector.php');
+include_once('../Collector.php');
 
 
 class fundacionCategoriaCollector extends Collector
@@ -32,8 +32,11 @@ class fundacionCategoriaCollector extends Collector
 
   function deleteFundacionCategoria($id){
     $insertrow= self::$db->deleteRow
-                  ("DELETE FROM public.fundacioncategoria where idfundacioncategoria = ?", 
-                  array( $id ));
+                  ("DELETE FROM public.fundacion where idfundacioncategoriafk = ?", array( $id ));
+    $insertrow= self::$db->deleteRow
+                  ("DELETE FROM public.fundacioncategoria where idfundacioncategoria = ?", array( $id ));
+      
+
   }
   function createFundacionCategoria($nombre){
     $insertrow= self::$db->insertRow

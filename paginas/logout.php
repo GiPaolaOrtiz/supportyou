@@ -74,7 +74,7 @@ session_start();
             <div id="logout">
 
                 <?php
-        if (isset($_SESSION['Misesion'])){
+        if (isset($_SESSION['user'])){
                 session_destroy();
               echo '<h2>Ha terminado la sesión </h2><p><a href="../index.php">INICIO</a></p>';
         }else{

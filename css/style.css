@@ -21,7 +21,7 @@ footer {
     margin: 0 auto;
 }
 #imagen {
-    width: 40%;
+    width: 25%;
 }
 #img {
     border-right: 0px;
@@ -228,6 +228,7 @@ body {
 #botonRegFund {
     background-color: deeppink;
     color: white;
+    margin-left: 20px;
 }
 #footer1 {
     background-color: white;

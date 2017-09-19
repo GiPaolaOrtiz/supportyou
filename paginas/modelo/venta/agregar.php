@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -55,11 +63,32 @@ session_start();
                 $cliente=$_POST['cliente'];
                 $metodo=$_POST['metodo'];
                 $producto=$_POST['producto'];
+<<<<<<< HEAD
             
                 include_once('../../modelo/venta/ventaCollector.php');
 
                 $ventaCollectorObj = new ventaCollector();
                 $ventaCollectorObj-> createventa($total, $cliente, $metodo, $producto);
+=======
+                
+                include_once('../../modelo/venta/ventaCollector.php');
+                $ventaCollectorObj = new ventaCollector();
+                $ventaCollectorObj-> createventa($total, $cliente, $metodo, $producto);
+            
+                include_once("../../modelo/producto/ProductoCollector.php");
+                $vendido="vendido";
+                $productoCollectorObj = new ProductoCollector();
+            
+                foreach ($productoCollectorObj->showProductos() as $c){                
+                    if($c->getIdproducto()==$producto){
+                        $vendido="vendido";
+                       $productoCollectorObj-> updateProductos($c->getIdproducto(), $c->getDescripcion(), $c->getEstado(), $c->getPrecio(), $c->getImg(), $vendido, $c->getIdfundacion(), $c->getIdcategoriaproducto());     
+                    }     
+                }
+                
+                
+
+>>>>>>> master
                 echo "<h3 class='topspace text-center'>La </b>venta </b> ha sido agregada</h3>";
             ?>
             <div>
@@ -75,3 +104,8 @@ session_start();
     </footer> 
     </body>
 </html>
+<?php
+
+}
+        }
+?>

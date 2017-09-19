@@ -1,6 +1,7 @@
 <?php
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,17 +39,17 @@ session_start();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                
-                   <?php
+
+                <?php
                         echo"<a href='../index.php'><img alt='LogoAplicacion' id='estilo_logo' src='../img/LogoSupportYou.png'></a>"
-                  ?>
-                
+                    ?>
+
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <br>
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                     <li>
                         <?php
                         echo"<a class='page-scroll' href='../paginas/RegistroFundacion.php'>FUNDACIONES</a>"
@@ -90,8 +91,12 @@ session_start();
                 <br>
 
 
+<<<<<<< HEAD
 
                 <form class="form-signin" action = "modelo/usuario/validarusuario.php" method = "post">
+=======
+                <form class="form-signin" action="modelo/usuario/validarusuario.php" method="post">
+>>>>>>> master
                     <h2 class="form-signin-heading">Inicia Sesión</h2>
                     <label for="inputUsername" class="sr-only">Usuario</label>
                     <input type="text" name="username" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
@@ -102,7 +107,7 @@ session_start();
                             <input type="checkbox" value="remember-me"> Recuérdame
                         </label>
                     </div>
-                    <input type="submit" id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">
+                    <input id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" value="IniciarSesion">
                     <h5>¿No tienes una cuenta?<button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='../index.php'">Regístrate</button> </h5>
                 </form>
 
@@ -158,9 +163,9 @@ session_start();
                 <p>Vende y dona a la vez, en cada venta apoyaras a las fundaciones que tu elijas y ayudarán a mejorar la vida de varias personas.</p>
 
             </div>
-        
+
         </div>
-     
+
     </div>
 
     <footer id="footer1">

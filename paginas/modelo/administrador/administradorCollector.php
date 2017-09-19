@@ -1,9 +1,13 @@
 <?php
 
 include_once('administrador.php');
+<<<<<<< HEAD
 
 include_once('../Collector.php');
 
+=======
+include_once("../../modelo/Collector.php");
+>>>>>>> master
 
 
 class administradorCollector extends Collector

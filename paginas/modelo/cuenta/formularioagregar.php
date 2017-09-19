@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -64,8 +72,20 @@ $usuario = $_SESSION['Misesion'];
                               <input type="text" class="form-control" id="numero" placeholder="Escriba el numero de la cuenta" name="numero">
                             </div>
                             <div class="form-group">
-                              <label for="banco">ID banco</label>
-                              <input type="text" class="form-control" id="banco" placeholder="Escriba el ID del banco" name="banco">
+                                <label for="banco">Banco</label>
+                                <select id="selectbasic" name="banco" method="post" class="form-control" required>
+                                    <?php
+                                        include_once("../../modelo/banco/bancoCollector.php");
+                                        $id =1;
+                                        $bancoCollectorObj = new bancoCollector();
+                                        
+                                        foreach ($bancoCollectorObj->showbancos() as $c){
+                                            $id =$c->getIdbanco();
+                                            echo "<option value= ".$c->getIdbanco(). ">". $c->getNombre(). "</option>";
+                                            
+                                        }
+                                    ?>
+                                </select>
                             </div>
                             <button type="submit" class="btn btn-info">Enviar</button>
                         </form>
@@ -89,3 +109,8 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 ?>
     </body>
 </html>
+<?php
+
+}
+        }
+?>

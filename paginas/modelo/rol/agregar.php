@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
+?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -48,7 +59,11 @@
             <?php
                 $rol=$_POST['rol'];
             
+<<<<<<< HEAD
                 include_once ("rolCollector.php");
+=======
+                include_once("../../modelo/rol/rolCollector.php");
+>>>>>>> master
                 $rolCollectorObj = new rolCollector();
                 $rolCollectorObj-> createRol($rol);
 
@@ -69,3 +84,10 @@
                 
     </body>
 </html>
+
+    <?php
+
+}
+
+    }
+?>

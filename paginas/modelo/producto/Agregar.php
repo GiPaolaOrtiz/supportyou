@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -52,21 +63,26 @@
                 $estado=$_POST['estado'];
                 $precio=$_POST['precio'];
                 $img=$_POST['img'];
+
                 $estadoventa=$_POST['estadoventa'];
                 $imagen="";
                 if($idcategoriaproducto==1){
-                      $imagen="/Ropa/" . $img;
+                      $imagen="../../../img/Ropa/". $img;
                 }
                 else if($idcategoriaproducto==2){
-                     $imagen="/Hogar/" . $img;
+                     $imagen="../../../img/Hogar/". $img;
                 }
                 else if($idcategoriaproducto==3){
-                     $imagen="/Tecno/" . $img;
+                     $imagen="../../../img/Tecno/". $img;
                 }
                 else if($idcategoriaproducto==4){
-                     $imagen="/Juguetes/" . $img;
+                     $imagen="../../../img/Tecno/". $img;
                 }
+<<<<<<< HEAD
                 include_once('ProductoCollector.php');
+=======
+                include_once("ProductoCollector.php");
+>>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
 
                 $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $imagen, $estadoventa, $idfundacion, $idcategoriaproducto);
@@ -88,3 +104,7 @@
     </footer>  
     </body>
 </html>
+<?php
+}
+        }
+?>

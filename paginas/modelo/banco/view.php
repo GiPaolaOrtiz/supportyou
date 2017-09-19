@@ -1,6 +1,14 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
 ?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -44,7 +52,11 @@ session_start();
         </nav>
 
         <?php 
+<<<<<<< HEAD
             include_once('../../modelo/banco/bancoCollector.php');
+=======
+            include_once("../../modelo/banco/bancoCollector.php");
+>>>>>>> master
             $bancoCollectorObj = new bancoCollector();
                 echo '<h2 class="topspace text-center">Bancos</h2>';
 
@@ -87,3 +99,8 @@ session_start();
         
     </body>
 </html>
+<?php
+
+}
+        }
+?>

@@ -1,5 +1,11 @@
 <?php
   session_start();
+  if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
 
 <!DOCTYPE HTML>
@@ -40,30 +46,31 @@
         
          <?php 
                 echo '<h2 class="topspace text-center"> Fundaciones </h2>';
-            ?>
-<?php
+         
 
 $id=$_GET["id"];
         
         
 
-include_once("../../modelo/fundacion/fundacionCollector.php");
+include_once("fundacionCollector.php");
 
 $FundacionCollectorObj = new fundacionCollector();
 
- foreach ($FundacionCollectorObj->showFundaciones() as $c){
-                     $nombre=$c->getNombre();
-               
-               }
+        $ObjFundacion = $FundacionCollectorObj->showFundacion($id);
+ 
                  $FundacionCollectorObj->deleteFundacion($id);
 
             
-                echo "<h3 class='topspace text-center'>La <span class='red'>" . $nombre . "</span> ha sido eliminada</h3>";
+                echo "<h3 class='topspace text-center'>La <span class='red'>" . $ObjFundacion->getNombre() . "</span> ha sido eliminada</h3>";
 ?>
 
 <div>
                 <a href="view.php" class="btn btn-info center-block w70"> Volver </a>
-            </div>
-        
+            </div>   
 </body>
 </html>
+<?php
+
+}
+        }
+?>

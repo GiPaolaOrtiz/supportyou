@@ -1,7 +1,16 @@
-
 <?php
 session_start();
-?><!DOCTYPE HTML>
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
+?>
+
+
+<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
@@ -63,17 +72,25 @@ session_start();
 
 
             
+<<<<<<< HEAD
                 include_once ("../../modelo/usuario/usuarioCollector.php");
+=======
+                include_once("../../modelo/usuario/usuarioCollector.php");
+>>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($idusuario,$email,$nombre,$username,$pass,$idrol);
 
 
+<<<<<<< HEAD
                 include_once ("clienteCollector.php");
+=======
+                include_once("../../modelo/cliente/clienteCollector.php");
+>>>>>>> master
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> updateCliente($idcliente,$idusuario,$fechanacimiento,$fecharegistro);
 
 
-                echo "<h3 class='topspace text-center'>El usuario <span class='green'>" . $idcliente . "</span> ha sido actualizado <span class='green'>" . $username ."</span></h3>";
+                echo "<h3 class='topspace text-center'>El cliente <span class='green'>" . $idcliente . "</span> ha sido actualizado <span class='green'>" . $username ."</span></h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
@@ -88,3 +105,8 @@ session_start();
     </footer>  
     </body>
 </html>
+    <?php
+
+}
+        }
+?>

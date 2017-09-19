@@ -1,4 +1,15 @@
-<!DOCTYPE HTML>
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
+?>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -40,9 +51,14 @@
                     </div>
                 </div>
             </nav>    <br><br><br>
+<<<<<<< HEAD
               <?php
               include_once('../../modelo/producto/ProductoCollector.php');
 
+=======
+              <?php 
+            include_once("../../modelo/producto/ProductoCollector.php");
+>>>>>>> master
             $ProductoCollectorObj = new ProductoCollector();
                 echo '<h2 class="topspace text-center">Tabla Productos </h2>';
                 echo "<a href='FormularioNuevo.php' class='btn btn-warning center-block w10'><b>+</b></a>";
@@ -88,8 +104,12 @@
 
         <script src="../../../js/bootstrap.js"></script>
         <footer id="footer1">
-        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved.</p>
+        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved..</p>
 
     </footer>  
     </body>
 </html>
+<?php
+}
+        }
+?>

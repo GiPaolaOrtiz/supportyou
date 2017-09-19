@@ -1,5 +1,6 @@
 function pagar(){
     alert("Gracias por su compra")
+    document.write('<?php pagof() ?>');" 
 }
 
 function seleccion(){

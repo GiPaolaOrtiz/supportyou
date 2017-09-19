@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -45,9 +53,14 @@ session_start();
                     </div>
                 </div>
             </nav>    
+<<<<<<< HEAD
         <?php 
                 include_once('../../modelo/venta/ventaCollector.php');
 
+=======
+        <?php
+            include_once('../../modelo/venta/ventaCollector.php');
+>>>>>>> master
             $ventaCollectorObj = new ventaCollector();
                 echo '<h2 class="topspace text-center">Ventas</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
@@ -56,12 +69,12 @@ session_start();
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
                         echo '<th>Total de venta</th>';
-                        echo '<th>ID cliente</th>';
-                        echo '<th>ID Metodo de Pago</th>';
-                        echo '<th>ID Producto</th>';
+                        echo '<th>Cliente</th>';
+                        echo '<th>Metodo de Pago</th>';
+                        echo '<th>Producto</th>';
                         echo '<th>Acciones</th>';
                     echo '</tr> </thead><tbody>';            
-                      foreach ($ventaCollectorObj->showVentas() as $c){
+                      foreach ($ventaCollectorObj->showVentasInner() as $c){
                           echo '<tr>'; 
                               echo '<td>' . $c->getIdventa() . '</td>';
                               echo '<td>' . $c->getTotal() . '</td>';
@@ -84,3 +97,8 @@ session_start();
     </footer>
     </body>
 </html>
+<?php
+
+}
+        }
+?>

@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -51,7 +62,12 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
             ?>
             <?php
                 $metodo=$_GET['id'];
+<<<<<<< HEAD
                 include_once('../../modelo/MetodoPago/MetodoPagoCollector.php');
+=======
+            
+                include_once("../../modelo/MetodoPago/MetodoPagoCollector.php");
+>>>>>>> master
                 $MetodoPagoCollectorObj = new metodopagoCollector();
                 foreach ($MetodoPagoCollectorObj->showMetodoPagos() as $c){
                      $nombremetodo=$c->getMetodo();
@@ -78,3 +94,8 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 ?>
     </body>
 </html>
+<?php
+
+}
+        }
+?>

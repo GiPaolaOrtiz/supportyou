@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -53,18 +64,37 @@
                 $precio=$_POST['precio'];
                 $img=$_POST['img'];
 
-				$estadoventa=$_POST['estadoventa'];
+         
 
+                $estadoventa=$_POST['estadoventa'];
+                $imagen="";
+                if($idcategoriaproducto==1){
+                      $imagen="../../../img/Ropa/". $img;
+                }
+                else if($idcategoriaproducto==2){
+                     $imagen="../../../img/Hogar/". $img;
+                }
+                else if($idcategoriaproducto==3){
+                     $imagen="../../../img/Tecno/". $img;
+                }
+                else if($idcategoriaproducto==4){
+                     $imagen="../../../img/Tecno/". $img;
+                }
         
+<<<<<<< HEAD
                  include_once('../../modelo/producto/ProductoCollector.php');
 
+=======
+            
+                include_once("../../modelo/producto/ProductoCollector.php");
+>>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
                 $ProductoCollectorObj-> updateProductos($idproducto, $descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto);
 
-                echo "<h3 class='topspace text-center'>El producto <span class='green'>" . $idproducto . "</span> ha sido actualizado a <span class='green'>" . $descripcion . "</span></h3>";
+                echo "<h3 class='topspace text-center'>El producto <span class='green'>" . $idproducto . "</span> ha sido actualizado</h3>";
             ?>
             <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver...</a>
+                <a href="view.php" class="btn btn-info center-block w70">Volver..</a>
             </div>
         </main>
          <script src="../../js/jquery.js"></script>
@@ -76,3 +106,7 @@
     </footer>  
     </body>
 </html>
+<?php
+}
+        }
+?>

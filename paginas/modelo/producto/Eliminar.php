@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -32,10 +43,10 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.php">HOME</a>
+                               <a class="page-scroll" href="../../administrador.php">HOME</a>
                             </li>
                             <li>
-                               <a class="page-scroll" href="../../../index.html">SALIR</a>
+                               <a class="page-scroll" href="../../logout.php">SALIR</a>
                             </li>
                         </ul>
                     </div>
@@ -49,8 +60,12 @@
             $id=$_GET["id"];
 
             
+<<<<<<< HEAD
                  include_once('ProductoCollector.php');
 
+=======
+               include_once("../../modelo/producto/ProductoCollector.php");
+>>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
            
              
@@ -78,3 +93,7 @@
     </footer>  
     </body>
 </html>
+<?php
+}
+        }
+?>

@@ -1,5 +1,11 @@
   <?php
   session_start();
+ if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +34,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+  
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -49,7 +56,7 @@
 
 <?php
 
-include_once("../../../paginas/modelo/fundacion/fundacionCollector.php");
+include_once("fundacionCollector.php");
 
 $id =1;
 
@@ -75,7 +82,7 @@ echo '<div class="">';
                         echo '<th>Logo</th>';
                     echo '</tr> </thead><tbody>';
 
-foreach ($FundacionCollectorObj->showFundaciones() as $c){
+foreach ($FundacionCollectorObj->showFundacionesInner() as $c){
    echo '<tr>'; 
                 echo '<td>' . $c->getIdFundacion() . '</td>';
                 echo '<td>' . $c->getNombre() . '</td>';
@@ -102,6 +109,10 @@ echo '</tr>';
 
 
 </div>
-
 </body>
 </html>
+<?php
+
+}
+        }
+?>

@@ -1,5 +1,13 @@
 <?php
-  session_start();
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 
 <!DOCTYPE html>
@@ -39,6 +47,7 @@
                 </button>
                 <a href="../fundacion/PerfilFundacion.php"><img alt="LogoAplicacion" id="estilo_logo" src="../../../img/LogoSupportYou.png"></a>
             </div>
+            </div>
     </nav>
 
 
@@ -56,14 +65,17 @@ $CiudadCollectorObj = new CiudadCollector();
 $CiudadCollectorObj->updateCiudad($id_ciudad,$nombre);
 
 echo "id : ".$id_ciudad. " actualizado a: ".$nombre." </br>";
+echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 ?>
 
-<div><a href="view.php" class="btn btn-danger pull-right"> Volver al inicio </a></div>
+                    <h3 class='topspace text-center'>Se actualizó la ciudad</h3>
+</div>
 
-</div>
-</div>
-</nav>
 
 
 </body>
 </html>
+<?php
+}
+        }
+?>

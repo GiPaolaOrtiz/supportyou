@@ -1,5 +1,18 @@
-<!DOCTYPE HTML>
-<html>
+<?php
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
+?>
+
+
+    <!DOCTYPE HTML>
+    <html>
+
     <head>
         <meta charset="utf-8">
         <title>Administración</title>
@@ -7,11 +20,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../../../img/LogoSupportYou.png">
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet"  href="../../../css/style.css">        
-        <link rel="stylesheet"  href="../../../css/estiloCatalogo.css">
-        <link rel="stylesheet"  href="../../../css/estiloCarro.css">
-        <link rel="stylesheet"  href="../../../css/estiloadmin.css">
+        <link rel="stylesheet" href="../../../css/style.css">
+        <link rel="stylesheet" href="../../../css/estiloCatalogo.css">
+        <link rel="stylesheet" href="../../../css/estiloCarro.css">
+        <link rel="stylesheet" href="../../../css/estiloadmin.css">
     </head>
+
     <body>
         <main>
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
@@ -32,20 +46,25 @@
                         <br>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                               <a class="page-scroll" href="../index.php">HOME</a>
+                                <a class="page-scroll" href="../index.php">HOME</a>
                             </li>
                             <li>
-                               <a class="page-scroll" href="../../../index.html">SALIR</a>
+                                <a class="page-scroll" href="../../../index.html">SALIR</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-            </nav>    
-        <?php 
+            </nav>
+            <?php 
                 echo '<h2 class="topspace text-center">Bancos</h2>';
             ?>
             <?php
+<<<<<<< HEAD
                 $banco=$_POST['banco'];  
+=======
+                $banco=$_POST['banco'];
+            
+>>>>>>> master
                 include_once("../../modelo/banco/bancoCollector.php");
                 $bancoCollectorObj = new bancoCollector();
                 $bancoCollectorObj-> createBanco($banco);
@@ -53,16 +72,23 @@
                 echo "<h3 class='topspace text-center'> El Banco <b>" . $banco . "</b> ha sido agregado</h3>";
             ?>
 
-            <div>
-                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
-            </div>
+                <div>
+                    <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+                </div>
         </main>
-         <script src="../../js/jquery.js"></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="../../js/bootstrap.min.js"></script>
         <footer id="footer1">
-        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
+            <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
-    </footer>  
+        </footer>
     </body>
-</html>
+
+    </html>
+
+    <?php
+
+}
+        }
+?>

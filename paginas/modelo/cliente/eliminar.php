@@ -1,6 +1,14 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
 ?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -55,22 +63,34 @@ session_start();
 
 
 
+<<<<<<< HEAD
                 include_once ("../venta/ventaCollector.php");
+=======
+                include_once("../../modelo/venta/ventaCollector.php");
+>>>>>>> master
                 $VentaCollectorObj = new VentaCollector();
                 $VentaCollectorObj-> deleteVentaCliente($idcliente);
 
 
+<<<<<<< HEAD
                 include_once ("clienteCollector.php");
+=======
+                include_once("../../modelo/cliente/clienteCollector.php");
+>>>>>>> master
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> deleteCliente($idcliente);
 
 
+<<<<<<< HEAD
                include_once ("../usuario/usuarioCollector.php");
+=======
+                include_once("../../modelo/usuario/usuarioCollector.php");
+>>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> deleteUsuario($idusuario);
 
 
-                echo "<h3 class='topspace text-center'>El usuario ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>El cliente ha sido eliminado</h3>";
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>
@@ -85,3 +105,8 @@ session_start();
     </footer>  
     </body>
 </html>
+    <?php
+
+}
+        }
+?>

@@ -1,6 +1,14 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
 ?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -59,18 +67,25 @@ session_start();
                
                 $cargo=$_POST['cargo'];
 
-
             
+<<<<<<< HEAD
             
             
             
                 include_once ("../usuario/usuarioCollector.php");
             
+=======
+                include_once("../../modelo/usuario/usuarioCollector.php");
+>>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($idusuario,$email,$nombre,$username,$pass,$idrol);
 
 
+<<<<<<< HEAD
                 include_once ("administradorCollector.php");
+=======
+                include_once("../../modelo/administrador/administradorCollector.php");
+>>>>>>> master
                 $AdministradorCollectorObj = new AdministradorCollector();
                 $AdministradorCollectorObj-> updateAdministrador($idadministrador,$cargo,$idusuario);
 
@@ -90,3 +105,10 @@ session_start();
     </footer>  
     </body>
 </html>
+
+    <?php
+
+}
+
+    }
+?>

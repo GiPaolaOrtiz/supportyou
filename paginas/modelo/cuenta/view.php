@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -48,8 +56,13 @@ $usuario = $_SESSION['Misesion'];
                     </div>
                 </div>
             </nav>    
+<<<<<<< HEAD
         <?php
             include_once('../../modelo/cuenta/cuentaCollector.php');
+=======
+        <?php 
+            include_once("../../modelo/cuenta/cuentaCollector.php");
+>>>>>>> master
             $cuentaCollectorObj = new cuentaCollector();
                 echo '<h2 class="topspace text-center">Cuentas</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";
@@ -58,10 +71,10 @@ $usuario = $_SESSION['Misesion'];
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
                         echo '<th>Numero de la cuenta</th>';
-                        echo '<th>ID Banco</th>';
+                        echo '<th>Nombre del banco</th>';
                         echo '<th>Acciones</th>';
                     echo '</tr> </thead><tbody>';            
-                      foreach ($cuentaCollectorObj->showcuentas() as $c){
+                      foreach ($cuentaCollectorObj->showcuentasInner() as $c){
                           echo '<tr>'; 
                               echo '<td>' . $c->getIdcuenta() . '</td>';
                               echo '<td>' . $c->getNrocuenta() . '</td>';
@@ -88,3 +101,8 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 ?>  
     </body>
 </html>
+<?php
+
+}
+        }
+?>

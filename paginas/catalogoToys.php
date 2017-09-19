@@ -76,14 +76,18 @@ session_start();
                     <h2 class="page-header"></h2>
                 </div>
                 <?php 
+<<<<<<< HEAD
                 include_once('modelo/producto/ProductoCollector.php');
+=======
+                include_once("modelo/producto/procll.php");
+>>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
                 $ObjProducto=$ProductoCollectorObj->showProductos();
                             foreach ($ProductoCollectorObj->showProductos() as $c){
                                 if($c->getIdcategoriaproducto()==4){
                                     if($c->getEstadoventa()=="disponible"){
                                         echo ' <div class="col-lg-4 col-sm-6 text-center">';
-                                        echo '<a href="pago.php"><img class="img-circle img-responsive img-center" src="../img' . $c->getImg() . '" alt="Vestido negro"></a>';
+                                        echo '<a href="pago.php?id=' . $c->getIdproducto() . '"><img class="img-circle img-responsive img-center" src="../img/' . $c->getImg() . '" alt="Sin imagen"></a>';
                                         echo '<h3>' . $c->getDescripcion() . '</h3>';  
                                         echo '<h3>$' . $c->getPrecio() . '</h3>';
                                     echo'</div>';
