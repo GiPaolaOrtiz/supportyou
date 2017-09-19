@@ -27,7 +27,7 @@ class monedaCollector extends Collector
   }    
     function showmoneda($id) {
     $row = self::$db->getRows("SELECT * FROM moneda where id= ?", array("{$id}"));
-    $Obj= new cuenta($row[0]{'id'},$row[0]{'nombre'},$row[0]{'id_ciudad_fk'});
+    $Obj= new moneda($row[0]{'id'},$row[0]{'nombre'},$row[0]{'id_ciudad_fk'});
     return $Obj;        
   }
 

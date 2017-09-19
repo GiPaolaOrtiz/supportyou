@@ -65,23 +65,11 @@ session_start();
                          <form method="post" action="agregar.php">
                             <div class="form-group">
                               <label for="nombre">Nombre</label>
-                              <input type="text" class="form-control" id="nombre" placeholder="Escriba el nombre de la cuenta" name="nombre">
+                              <input type="text" class="form-control" id="nombre" placeholder="Escriba" name="nombre">
                             </div>
                             <div class="form-group">
                                 <label for="ciudad">Ciudad</label>
-                                <select id="ciudad" name="ciudad" method="post" class="form-control" required>
-                                    <?php
-                                        include_once("../../modelo/ciudad2/ciudadCollector.php");
-                                        $id =1;
-                                        $ciudadCollectorObj = new ciudadCollector();
-                                        
-                                        foreach ($ciudadCollectorObj->showciudades() as $c){
-                                            $id =$c->getId();
-                                            echo "<option value= '".$c->getId(). "'>". $c->getNombre(). "</option>";
-                                            
-                                        }
-                                    ?>
-                                </select>
+                                <input type="text" class="form-control" id="ciudad" placeholder="Escriba"  name="ciudad" >
                             </div>
                             <button type="submit" class="btn btn-info">Enviar</button>
                         </form>

@@ -76,23 +76,7 @@ session_start();
                             </div>
                             <div class="form-group">
                               <label for="ciudad">Ciudad</label>
-                              <select id="ciudad" name="ciudad" method="post" class="form-control" required>
-                                    <?php
-                                        include_once("../../modelo/ciudad2/ciudadCollector.php");
-                                        $id =1;
-                                        $ciudadCollectorObj = new ciudadCollector();
-                                        foreach ($ciudadCollectorObj->showciudades() as $c){
-                                            if($Obj->getIdciudad()==$c->getId()){
-                                                echo "<option value= ".$c->getId(). ">". $c->getNombre(). "</option>";
-                                            }                                         
-                                        }
-                                        foreach ($bancoCollectorObj->showciudades() as $c){
-                                            if($Obj->getIdciudad()!=$c->getId()){
-                                                echo "<option value= ".$c->getId(). ">". $c->getNombre(). "</option>";
-                                            }                                         
-                                        }
-                                    ?>
-                                </select>
+                              <input type="text" class="form-control" id="ciudad" value="<?php echo $Obj->getIdciudad(); ?>" name="ciudad">
                             </div>
                             <button type="submit" class="btn btn-info">Enviar</button>
                         </form>
