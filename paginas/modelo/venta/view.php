@@ -54,9 +54,9 @@ session_start();
                     echo ' <thead><tr>';   
                         echo '<th>ID</th>';
                         echo '<th>Total de venta</th>';
-                        echo '<th>ID cliente</th>';
-                        echo '<th>ID Metodo de Pago</th>';
-                        echo '<th>ID Producto</th>';
+                        echo '<th>Cliente</th>';
+                        echo '<th>Metodo de Pago</th>';
+                        echo '<th>Producto</th>';
                         echo '<th>Acciones</th>';
                     echo '</tr> </thead><tbody>';            
                       foreach ($ventaCollectorObj->showVentasInner() as $c){

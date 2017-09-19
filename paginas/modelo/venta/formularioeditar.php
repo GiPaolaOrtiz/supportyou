@@ -65,11 +65,47 @@ session_start();
                              <label for="total">Total</label>
                               <input type="text" class="form-control" id="total" value="<?php echo $Objventa->getTotal(); ?>"  name="total">
                               <label for="cliente">ID Cliente</label>
-                              <input type="text" class="form-control" id="cliente" value="<?php echo $Objventa->getIdclientefk(); ?>"  name="cliente">
-                              <label for="metodo">ID Metodo Pago</label>
-                              <input type="text" class="form-control" id="metodo" value="<?php echo $Objventa->getMetodopagofk(); ?>"  name="metodo">
+                              <select id="cliente" name="cliente" method="post" class="form-control" required>
+                                    <?php
+                                        include_once("../../modelo/cliente/clienteCollector.php");
+                                        include_once("../../modelo/usuario/usuarioCollector.php");
+                                        $clienteCollectorObj = new clienteCollector();
+                                        $usuarioCollectorObj = new usuarioCollector();
+                                        
+                                        foreach ($clienteCollectorObj->showClientes() as $d){
+                                            foreach ($usuarioCollectorObj->showUsuarios() as $c){
+                                                if($d->getIdusuario() == $c->getIdusuario()){
+                                                    echo "<option value= " . $d->getIdcliente() . ">" . $c->getNombre(). "</option>";       
+                                                }                                                
+                                            }                                            
+                                        }
+                                    ?>
+                                </select>
+                              <label for="metodo">Metodo Pago</label>
+                              <select id="metodo" name="metodo" method="post" class="form-control" required>
+                                    <?php
+                                        include_once("../../modelo/MetodoPago/MetodoPagoCollector.php");
+                                        $metodopagoCollectorObj = new metodopagoCollector();
+                                        
+                                        foreach ($metodopagoCollectorObj->showMetodoPagos() as $c){
+                                            echo "<option value= ".$c->getIdmetodopago(). ">". $c->getMetodo(). "</option>";
+                                            
+                                        }
+                                    ?>
+                                </select>
                               <label for="producto">ID Producto</label>
-                              <input type="text" class="form-control" id="producto" value="<?php echo $Objventa->getIdproductofk(); ?>"  name="producto">
+                               <select id="producto" name="producto" method="post" class="form-control" required>
+                                    <?php
+                                        include_once("../../modelo/producto/ProductoCollector.php");
+                                        $productoCollectorObj = new ProductoCollector();
+                                        
+                                        foreach ($productoCollectorObj->showProductos() as $c){
+                                            if($c->getEstadoventa()!="vendido"){
+                                                echo "<option value= ".$c->getIdproducto(). ">". $c->getDescripcion(). "</option>";                                                
+                                            }                                            
+                                        }
+                                    ?>
+                                </select>
                               <button type="submit" class="btn btn-info">Enviar</button>
                         </form>
                     </div>
