@@ -160,6 +160,7 @@
     <script type="text/javascript" src="../js/uploadPreview.min.js"></script>
 
 </body>
+
 </html>
 <?php
 
