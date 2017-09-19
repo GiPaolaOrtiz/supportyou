@@ -53,8 +53,22 @@
                 $precio=$_POST['precio'];
                 $img=$_POST['img'];
 
-				$estadoventa=$_POST['estadoventa'];
+         
 
+                $estadoventa=$_POST['estadoventa'];
+                $imagen="";
+                if($idcategoriaproducto==1){
+                      $imagen="../../../img/Ropa/". $img;
+                }
+                else if($idcategoriaproducto==2){
+                     $imagen="../../../img/Hogar/". $img;
+                }
+                else if($idcategoriaproducto==3){
+                     $imagen="../../../img/Tecno/". $img;
+                }
+                else if($idcategoriaproducto==4){
+                     $imagen="../../../img/Tecno/". $img;
+                }
         
             
                 include_once("../../modelo/producto/ProductoCollector.php");
