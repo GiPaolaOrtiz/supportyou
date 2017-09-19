@@ -1,5 +1,13 @@
 <?php
-  session_start();
+session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
+            }else{
+               
 ?>
 
 <!DOCTYPE html>
@@ -76,3 +84,7 @@ Nombre: <input type="text" name="nombre" value="<?php echo $ObjCiudad->getNombre
 
 </body>
 </html>
+<?php
+}
+        }
+?>
