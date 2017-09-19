@@ -52,6 +52,10 @@
                 $estado=$_POST['estado'];
                 $precio=$_POST['precio'];
                 $img=$_POST['img'];
+
+                move_uploaded_file($foto['tmp_name'],
+                "../../../img/fundaciones/" . $foto['name']);
+
                 $estadoventa=$_POST['estadoventa'];
                 $imagen="";
                 if($idcategoriaproducto==1){
