@@ -1,5 +1,11 @@
 <?php
   session_start();
+ if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +23,6 @@
 </head>
 
 <body>
-   
     <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -306,7 +311,11 @@
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js" type="text/javascript"></script>
     <script src="../js/bootstrap.min.js" type="text/javascript"></script>
-
 </body>
 
 </html>
+<?php
+
+}
+        }
+?>

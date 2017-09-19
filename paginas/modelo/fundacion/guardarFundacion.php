@@ -1,5 +1,11 @@
 <?php
   session_start();
+  if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +26,7 @@
     <link href="../../../css/estiloFundacionLogin.css" rel="stylesheet">
     <link rel="icon" href="../../../img/LogoSupportYou.png">
     <link href="../../../css/style.css" rel="stylesheet">
+    <link href="../../../css/estiloRegistro.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 
     <script src="../../../js/main.js" type="text/javascript"></script>
@@ -72,7 +79,7 @@ include_once("fundacionCollector.php");
 $FundacionCollectorObj = new fundacionCollector();
 $FundacionCollectorObj->createFundacion($direccion,$actividad,$email,$pass,$ruc,$pais,$ciudad,$cuenta,$nombre,$telefono,$foto['name'],$categoria);
 
-    //echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
+    echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=view.php'>";
 
 echo "  ". htmlspecialchars($nombre) . '   registrada!';
 
@@ -81,6 +88,10 @@ echo "  ". htmlspecialchars($nombre) . '   registrada!';
 
 
 </div>
-
 </body>
 </html>
+<?php
+
+}
+        }
+?>

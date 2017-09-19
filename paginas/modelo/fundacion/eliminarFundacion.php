@@ -1,5 +1,11 @@
 <?php
   session_start();
+  if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
 
 <!DOCTYPE HTML>
@@ -17,7 +23,6 @@
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
-        
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -61,7 +66,11 @@ $FundacionCollectorObj = new fundacionCollector();
 
 <div>
                 <a href="view.php" class="btn btn-info center-block w70"> Volver </a>
-            </div>
-        
+            </div>   
 </body>
 </html>
+<?php
+
+}
+        }
+?>

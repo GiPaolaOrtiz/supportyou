@@ -1,7 +1,12 @@
 <?php
   session_start();
+  if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +59,7 @@
     <?php 
                 echo '<h2 class="topspace text-center">Fundaciones </h2>';
             ?>
-
+ 
 <?php
 $nombre = $_POST['nombre'];
 $categoria = $_POST['categoria'];
@@ -93,6 +98,10 @@ echo "<h3 class='topspace text-center'> La <span class='green'> " . $nombre . " 
 
 </div>
 </div>
-
 </body>
 </html>
+<?php
+
+}
+        }
+?>
