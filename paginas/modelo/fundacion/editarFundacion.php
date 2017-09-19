@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -52,8 +55,24 @@
                               <input type="text" class="form-control" id="metodo" value="<?php echo $ObjFundacion->getNombre(); ?>" name="nombre">
                             </div>
                             <div class="form-group">
-                              <label for="idu">Categoría</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getCategoria(); ?>" name="categoria">
+                               <label for="metodo">Categoría</label>
+                                  <select id="selectbasic" name="categoria"  method="post" class="form-control" required>
+                                     <?php                  
+                                        include_once("../../modelo/fundacionCategoria/fundacionCategoriaCollector.php");
+                                        $id =1;
+                                        $fundacionCollectorObj = new fundacionCategoriaCollector();
+                                        foreach ($fundacionCollectorObj->showFundacionCategorias() as $c){
+                                            if($ObjFundacion->getCategoria()==$c->getIdCategoria()){
+                                                echo "<option value= ".$c->getIdCategoria(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                        foreach ($fundacionCollectorObj->showFundacionCategorias() as $c){
+                                            if($ObjFundacion->getCategoria()!=$c->getIdCategoria()){
+                                                echo "<option value= ".$c->getIdCategoria(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                    ?>
+                                  </select>      
                             </div>
                             <div class="form-group">
                               <label for="idu">Actividad</label>
@@ -76,20 +95,68 @@
                               <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getRuc(); ?>" name="ruc">
                             </div>
                             <div class="form-group">
-                              <label for="idu">País</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getIdpaisfk(); ?>" name="pais">
+                               <label for="metodo">País</label>
+                                  <select id="selectbasic" name="pais"  method="post" class="form-control" required>
+                                     <?php                  
+                                        include_once("../../modelo/pais/paisCollector.php");
+                                        $id =1;
+                                        $paisCollectorObj = new paisCollector();
+                                        foreach ($paisCollectorObj->showPaises() as $c){
+                                            if($ObjFundacion->getIdpaisfk()==$c->getIdPais()){
+                                                echo "<option value= ".$c->getIdPais(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                        foreach ($paisCollectorObj->showPaises() as $c){
+                                            if($ObjFundacion->getIdpaisfk()!=$c->getIdPais()){
+                                                echo "<option value= ".$c->getIdPais(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                    ?>
+                                  </select>      
                             </div>
                             <div class="form-group">
-                              <label for="idu">Ciudad</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getIdciudadfk(); ?>" name="ciudad">
+                              <label for="metodo">Ciudad</label>
+                                  <select id="selectbasic" name="ciudad" method="post" class="form-control" required>
+                                     <?php                  
+                                        include_once("../../modelo/ciudad/CiudadCollector.php");
+                                        $id =1;
+                                        $ciudadCollectorObj = new CiudadCollector();
+                                        foreach ($ciudadCollectorObj->showCiudades() as $c){
+                                            if($ObjFundacion->getIdciudadfk()==$c->getIdCiudad()){
+                                                echo "<option value= ".$c->getIdCiudad(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                        foreach ($ciudadCollectorObj->showCiudades() as $c){
+                                            if($ObjFundacion->getIdciudadfk()!=$c->getIdCiudad()){
+                                                echo "<option value= ".$c->getIdCiudad(). ">". $c->getNombre(). "</option>";
+                                            }                                         
+                                        }
+                                    ?>
+                                  </select>  
                             </div>
                             <div class="form-group">
                               <label for="idu">Teléfono</label>
                               <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getTelefono(); ?>" name="telefono">
                             </div>
                             <div class="form-group">
-                              <label for="idu">Cuenta</label>
-                              <input type="text" class="form-control" id="idu" value="<?php echo $ObjFundacion->getIdcuentafk(); ?>" name="cuenta">
+                              <label for="metodo">Cuenta</label>
+                                  <select id="selectbasic" name="cuenta" method="post" class="form-control" required>
+                                     <?php                  
+                                        include_once("../../modelo/cuenta/cuentaCollector.php");
+                                        $id =1;
+                                        $cuentaCollectorObj = new cuentaCollector();
+                                        foreach ($cuentaCollectorObj->showcuentas() as $c){
+                                            if($ObjFundacion->getIdcuentafk()==$c->getIdcuenta()){
+                                                echo "<option value= ".$c->getIdcuenta(). ">". $c->getNrocuenta(). "</option>";
+                                            }                                         
+                                        }
+                                        foreach ($cuentaCollectorObj->showcuentas() as $c){
+                                            if($ObjFundacion->getIdcuentafk()!=$c->getIdcuenta()){
+                                                echo "<option value= ".$c->getIdcuenta(). ">". $c->getNrocuenta(). "</option>";
+                                            }                                         
+                                        }
+                                    ?>
+                                  </select>
                             </div>
                             <div class="form-group">
                               <label for="idu">Logo</label>

@@ -28,9 +28,9 @@ class ProductoCollector extends Collector
   }
      
   function deleteProducto($id){
-    $insertrow= self::$db->deleteRow
-                  ("DELETE FROM public.producto where idproducto = ?", 
-                  array( $id ));
+   
+   $deletetrow = self::$db->deleteRow("DELETE FROM public.venta WHERE idproductofk = ? ", array( "{$id}"));
+    $deletetrow = self::$db->deleteRow("DELETE FROM public.producto WHERE idproducto = ? ", array( "{$id}")); 
   }
    function createProducto($description, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto){
     $insertrow= self::$db->insertRow("INSERT INTO public.producto (description, estado, precio, img, estadoventa, idfundacionfk, idcategoriaproductofk) VALUES (?,?,?,?,?,?,?)", array("{$description}", "{$estado}", "{$precio}","{$img}", "{$estadoventa}","{$idfundacion}","{$idcategoriaproducto}"));

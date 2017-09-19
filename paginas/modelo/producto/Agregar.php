@@ -52,19 +52,20 @@
                 $estado=$_POST['estado'];
                 $precio=$_POST['precio'];
                 $img=$_POST['img'];
+
                 $estadoventa=$_POST['estadoventa'];
                 $imagen="";
                 if($idcategoriaproducto==1){
-                      $imagen="Ropa/" . $img;
+                      $imagen="../../../img/Ropa/". $img;
                 }
                 else if($idcategoriaproducto==2){
-                     $imagen="Hogar/" . $img;
+                     $imagen="../../../img/Hogar/". $img;
                 }
                 else if($idcategoriaproducto==3){
-                     $imagen="Tecno/" . $img;
+                     $imagen="../../../img/Tecno/". $img;
                 }
                 else if($idcategoriaproducto==4){
-                     $imagen="Juguetes/" . $img;
+                     $imagen="../../../img/Tecno/". $img;
                 }
                 include_once("ProductoCollector.php");
                 $ProductoCollectorObj = new ProductoCollector();
