@@ -1,5 +1,11 @@
 <?php
   session_start();
+ if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{
 ?>
 
 <!DOCTYPE html>
@@ -27,6 +33,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 </head>
 <body>
+    
 <!-- Menu -->
     <nav class="navbar navbar-default navbar-fixed-top topnav">
         <div class="container topnav">
@@ -70,7 +77,10 @@ echo "<h3 class='topspace text-center'>La categoría fundación <span class='gre
 
 
 </div>
-
-
 </body>
 </html>
+<?php
+
+}
+        }
+?>
