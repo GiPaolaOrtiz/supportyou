@@ -81,13 +81,8 @@ session_start();
                      $imagen="../../../img/Tecno/". $img;
                 }
         
-<<<<<<< HEAD
-                 include_once('../../modelo/producto/ProductoCollector.php');
-
-=======
             
                 include_once("../../modelo/producto/ProductoCollector.php");
->>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
                 $ProductoCollectorObj-> updateProductos($idproducto, $descripcion, $estado, $precio, $img, $estadoventa, $idfundacion, $idcategoriaproducto);
 

@@ -56,19 +56,10 @@ session_start();
 
 
         <?php 
-<<<<<<< HEAD
-            include_once ("clienteCollector.php");
-            $ClienteCollectorObj = new clienteCollector();
-
-            
-            
-            include_once ("../usuario/usuarioCollector.php");
-=======
             include_once("../../modelo/cliente/clienteCollector.php");
             $ClienteCollectorObj = new clienteCollector();
 
             include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
             $UsuarioCollectorObj = new usuarioCollector();
 
                 echo '<h2 class="topspace text-center">Clientes</h2>';

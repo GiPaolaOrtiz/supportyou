@@ -53,18 +53,12 @@ session_start();
                         </ul>
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div>
-        </nav>
-            
-=======
             </nav>
 
 
 
 
 
->>>>>>> master
             <?php 
                 echo '<h2 class="topspace text-center">Cliente</h2>';
            
@@ -83,11 +77,7 @@ session_start();
               
             
 
-<<<<<<< HEAD
-                include_once ("../usuario/usuarioCollector.php");
-=======
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new UsuarioCollector();
                 $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
 
@@ -98,11 +88,7 @@ session_start();
 
                 $usuario = $ultimousuario->getIdusuario();
 
-<<<<<<< HEAD
-                include_once ("clienteCollector.php");
-=======
                 include_once("../../modelo/cliente/clienteCollector.php");
->>>>>>> master
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> createCliente($usuario,$fechanacimiento,$fecharegistro);
 

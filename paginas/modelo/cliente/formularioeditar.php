@@ -57,26 +57,12 @@ session_start();
                         </ul>
                     </div>
                 </div>
-<<<<<<< HEAD
-            </div>
-        </nav>
-        
-    </main>
-=======
             </nav>
->>>>>>> master
 
 
             <?php 
                 $id= $_GET['id'];
                 
-<<<<<<< HEAD
-                include_once ("clienteCollector.php");
-                $ClienteCollectorObj = new clienteCollector();
-                $ObjCliente=$ClienteCollectorObj->showCliente($id);
-
-                include_once ("../usuario/usuarioCollector.php");
-=======
                 include_once("../../modelo/cliente/clienteCollector.php");
                 $ClienteCollectorObj = new clienteCollector();
                 $ObjCliente=$ClienteCollectorObj->showCliente($id);
@@ -84,7 +70,6 @@ session_start();
 
 
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $ObjUsuario=$UsuarioCollectorObj->showUsuario($ObjCliente->getIdusuario());
         ?>
@@ -157,15 +142,6 @@ session_start();
                                         <input type="text" class="form-control" id="username" placeholder="Username" name="fecharegistro" value="<?php echo $ObjCliente->getFecharegistro(); ?>">
                                     </div>
 
-<<<<<<< HEAD
-    </div>
-    <script src="../../../js/jquery.js"></script>
-    <script type="text/javascript" src=""></script>
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../../js/bootstrap.min.js"></script>
-    <footer id="footer1">
-        <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
-=======
                                     <button type="submit" class="btn btn-info center-block">Enviar</button>
                                     <br>
                                     <a href="view.php" class="btn btn-info center-block">Volver</a>
@@ -177,7 +153,6 @@ session_start();
                     </div>
 
                 </div>
->>>>>>> master
 
 
             </div>

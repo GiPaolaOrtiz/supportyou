@@ -52,11 +52,7 @@ session_start();
         </nav>
 
         <?php 
-<<<<<<< HEAD
-            include_once('../../modelo/banco/bancoCollector.php');
-=======
             include_once("../../modelo/banco/bancoCollector.php");
->>>>>>> master
             $bancoCollectorObj = new bancoCollector();
                 echo '<h2 class="topspace text-center">Bancos</h2>';
 
@@ -89,14 +85,7 @@ session_start();
         <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
-    </footer> 
-        
-                        <?php
-                          }else{   
-                               echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../index.php'>";
-                             } 
-                        ?>
-        
+    </footer>  
     </body>
 </html>
 <?php

@@ -59,20 +59,12 @@ session_start();
             <?php
                 $id=$_GET['id'];
             
-<<<<<<< HEAD
-                include_once ("rolCollector.php");
-=======
                 include_once("../../modelo/rol/rolCollector.php");
->>>>>>> master
                 $rolCollectorObj = new rolCollector();
                
                 $rolCollectorObj-> deleteRol($id);
 
-<<<<<<< HEAD
-                echo "<h3 class='topspace text-center'>El rol</h3>";
-=======
                 echo "<h3 class='topspace text-center'>El rol ha sido eliminado</h3>";
->>>>>>> master
             ?>
             <div>
                 <a href="view.php" class="btn btn-info center-block w70">Volver</a>

@@ -63,21 +63,13 @@ session_start();
             <?php 
                 $id= $_GET['id'];
                 
-<<<<<<< HEAD
-                include_once ("administradorCollector.php");
-=======
                 include_once("../../modelo/administrador/administradorCollector.php");
->>>>>>> master
                 $AdministradorCollectorObj = new administradorCollector();
                 $ObjAdministrador=$AdministradorCollectorObj->showAdministrador($id);
 
 
 
-<<<<<<< HEAD
-                include_once ("../usuario/usuarioCollector.php");
-=======
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $ObjUsuario=$UsuarioCollectorObj->showUsuario($ObjAdministrador->getIdusuario());
         ?>

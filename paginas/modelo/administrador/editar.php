@@ -68,24 +68,12 @@ session_start();
                 $cargo=$_POST['cargo'];
 
             
-<<<<<<< HEAD
-            
-            
-            
-                include_once ("../usuario/usuarioCollector.php");
-            
-=======
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($idusuario,$email,$nombre,$username,$pass,$idrol);
 
 
-<<<<<<< HEAD
-                include_once ("administradorCollector.php");
-=======
                 include_once("../../modelo/administrador/administradorCollector.php");
->>>>>>> master
                 $AdministradorCollectorObj = new AdministradorCollector();
                 $AdministradorCollectorObj-> updateAdministrador($idadministrador,$cargo,$idusuario);
 

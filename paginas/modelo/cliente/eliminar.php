@@ -52,7 +52,7 @@ session_start();
                 </div>
             </div>
         </nav>
-            
+
 
         <?php 
                 echo '<h2 class="topspace text-center">Eliminar Cliente</h2>';
@@ -63,29 +63,17 @@ session_start();
 
 
 
-<<<<<<< HEAD
-                include_once ("../venta/ventaCollector.php");
-=======
                 include_once("../../modelo/venta/ventaCollector.php");
->>>>>>> master
                 $VentaCollectorObj = new VentaCollector();
                 $VentaCollectorObj-> deleteVentaCliente($idcliente);
 
 
-<<<<<<< HEAD
-                include_once ("clienteCollector.php");
-=======
                 include_once("../../modelo/cliente/clienteCollector.php");
->>>>>>> master
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> deleteCliente($idcliente);
 
 
-<<<<<<< HEAD
-               include_once ("../usuario/usuarioCollector.php");
-=======
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> deleteUsuario($idusuario);
 

@@ -57,11 +57,7 @@ session_start();
             <?php 
                     $id= $_GET['id'];
                     echo '<h2 class="topspace text-center">Roles</h2>';
-<<<<<<< HEAD
-                    include_once('../../modelo/banco/bancoCollector.php');
-=======
                     include_once("../../modelo/banco/bancoCollector.php");
->>>>>>> master
                     $bancoCollectorObj = new bancoCollector();
                     $ObjBanco=$bancoCollectorObj->showBanco($id);
             ?>

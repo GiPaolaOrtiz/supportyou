@@ -1,11 +1,7 @@
 <?php
 
 include_once('MetodoPago.php');
-<<<<<<< HEAD
-include_once('../../modelo/Collector.php');
-=======
 include_once("../../modelo/Collector.php");
->>>>>>> master
 
 class metodopagoCollector extends Collector
 {

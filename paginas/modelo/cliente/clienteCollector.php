@@ -1,11 +1,7 @@
 <?php
 
 include_once('cliente.php');
-<<<<<<< HEAD
-include_once ("../Collector.php");
-=======
 include_once("../../modelo/Collector.php");
->>>>>>> master
 
 
 class clienteCollector extends Collector

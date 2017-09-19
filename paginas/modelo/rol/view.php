@@ -52,11 +52,7 @@ session_start();
         </nav>
 
         <?php 
-<<<<<<< HEAD
-            include_once ("rolCollector.php");
-=======
             include_once("../../modelo/rol/rolCollector.php");
->>>>>>> master
             $rolCollectorObj = new rolCollector();
                 echo '<h2 class="topspace text-center">Roles</h2>';
                 echo "<a href='formularioagregar.php' class='btn btn-warning center-block w10'><b>+</b></a>";

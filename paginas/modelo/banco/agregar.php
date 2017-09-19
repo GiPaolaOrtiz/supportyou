@@ -59,12 +59,8 @@ session_start();
                 echo '<h2 class="topspace text-center">Bancos</h2>';
             ?>
             <?php
-<<<<<<< HEAD
-                $banco=$_POST['banco'];  
-=======
                 $banco=$_POST['banco'];
             
->>>>>>> master
                 include_once("../../modelo/banco/bancoCollector.php");
                 $bancoCollectorObj = new bancoCollector();
                 $bancoCollectorObj-> createBanco($banco);

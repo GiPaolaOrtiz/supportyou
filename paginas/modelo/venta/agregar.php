@@ -24,7 +24,6 @@ session_start();
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
-        
         <main>
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
                 <div class="container">
@@ -63,13 +62,6 @@ session_start();
                 $cliente=$_POST['cliente'];
                 $metodo=$_POST['metodo'];
                 $producto=$_POST['producto'];
-<<<<<<< HEAD
-            
-                include_once('../../modelo/venta/ventaCollector.php');
-
-                $ventaCollectorObj = new ventaCollector();
-                $ventaCollectorObj-> createventa($total, $cliente, $metodo, $producto);
-=======
                 
                 include_once('../../modelo/venta/ventaCollector.php');
                 $ventaCollectorObj = new ventaCollector();
@@ -88,7 +80,6 @@ session_start();
                 
                 
 
->>>>>>> master
                 echo "<h3 class='topspace text-center'>La </b>venta </b> ha sido agregada</h3>";
             ?>
             <div>
@@ -101,7 +92,7 @@ session_start();
         <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
-    </footer> 
+    </footer>  
     </body>
 </html>
 <?php

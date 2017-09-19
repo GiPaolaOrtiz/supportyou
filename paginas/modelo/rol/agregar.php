@@ -52,28 +52,23 @@ session_start();
                 </div>
             </div>
         </nav>
-        </main>    
+
         <?php 
                 echo '<h2 class="topspace text-center">Roles</h2>';
             ?>
             <?php
                 $rol=$_POST['rol'];
             
-<<<<<<< HEAD
-                include_once ("rolCollector.php");
-=======
                 include_once("../../modelo/rol/rolCollector.php");
->>>>>>> master
                 $rolCollectorObj = new rolCollector();
                 $rolCollectorObj-> createRol($rol);
 
                 echo "<h3 class='topspace text-center'>El rol <b>" . $rol . "</b> ha sido agregado</h3>";
             ?>
-        
-        
-               
-            <div><a href="view.php" class="btn btn-info center-block w70">Volver</a></div>
-        
+            <div>
+                <a href="view.php" class="btn btn-info center-block w70">Volver</a>
+            </div>
+        </main>
          <script src="../../js/jquery.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../../js/bootstrap.min.js"></script>
@@ -81,7 +76,6 @@ session_start();
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>  
-                
     </body>
 </html>
 

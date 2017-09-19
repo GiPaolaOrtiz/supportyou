@@ -11,27 +11,6 @@ session_start();
 
 <!DOCTYPE HTML>
 <html>
-<<<<<<< HEAD
-    <head>
-        <meta charset="utf-8">
-        <title>Administración</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="../../../img/LogoSupportYou.png">
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet"  href="../../../css/style.css">        
-        <link rel="stylesheet"  href="../../../css/estiloCatalogo.css">
-        <link rel="stylesheet"  href="../../../css/estiloCarro.css">
-        <link rel="stylesheet"  href="../../../css/estiloadmin.css">
-    </head>
-    <body>
-        <?php
-if (isset($_SESSION['Misesion'])){
-$usuario = $_SESSION['Misesion'];
-?>
-        <main>
-           <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
-=======
 
 <head>
     <meta charset="utf-8">
@@ -49,7 +28,6 @@ $usuario = $_SESSION['Misesion'];
 <body>
     <main>
         <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
->>>>>>> master
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
@@ -123,15 +101,6 @@ $usuario = $_SESSION['Misesion'];
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
     </footer>
-<<<<<<< HEAD
-        <?php
-}else{ 
-echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
-} 
-?>
-    </body>
-</html>
-=======
 </body>
 
 </html>
@@ -141,4 +110,3 @@ echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
 
     }
 ?>
->>>>>>> master

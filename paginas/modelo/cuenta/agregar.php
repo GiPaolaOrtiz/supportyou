@@ -24,10 +24,6 @@ session_start();
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
-    <?php
-if (isset($_SESSION['Misesion'])){
-$usuario = $_SESSION['Misesion'];
-?>
         <main>
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
                 <div class="container">
@@ -62,12 +58,8 @@ $usuario = $_SESSION['Misesion'];
             <?php
                 $numero=$_POST['numero'];
                 $banco=$_POST['banco'];
-<<<<<<< HEAD
-                include_once('../../modelo/cuenta/cuentaCollector.php');
-=======
             
                 include_once("../../modelo/cuenta/cuentaCollector.php");
->>>>>>> master
                 $cuentaCollectorObj = new cuentaCollector();
                 $cuentaCollectorObj-> createcuenta($numero, $banco);
 
@@ -85,18 +77,9 @@ $usuario = $_SESSION['Misesion'];
 
     </footer>  
     </body>
-<<<<<<< HEAD
-    <?php
-}else{
-echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
-}
-?>
-</html>
-=======
 </html>
 <?php
 
 }
         }
 ?>
->>>>>>> master

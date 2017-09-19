@@ -61,23 +61,15 @@ session_start();
                 $idusuario=$_GET['id'];
                 $idadministrador=$_GET['idadministrador'];
 
-<<<<<<< HEAD
-                include_once ("administradorCollector.php");
-=======
 
 
 
                 include_once("../../modelo/administrador/administradorCollector.php");
->>>>>>> master
                 $AdministradorCollectorObj = new administradorCollector();
                 $AdministradorCollectorObj-> deleteAdministrador($idadministrador);
 
 
-<<<<<<< HEAD
-               include_once ("../usuario/usuarioCollector.php");
-=======
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> deleteUsuario($idusuario);
 

@@ -57,6 +57,7 @@ session_start();
             </nav>
 
 
+
             <?php 
                 echo '<h2 class="topspace text-center">Administrador</h2>';
            
@@ -70,14 +71,7 @@ session_start();
                 $cargo=$_POST['cargo'];
                
 
-<<<<<<< HEAD
-            
-              
-            
-            include_once ("../usuario/usuarioCollector.php");
-=======
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new UsuarioCollector();
                 $UsuarioCollectorObj-> createUsuario($email,$nombre,$username,$password,$idrol);
 
@@ -86,14 +80,7 @@ session_start();
 
                 $usuario = $ultimousuario->getIdusuario();
 
-<<<<<<< HEAD
-            
-                include_once ("administradorCollector.php");
-            
-               
-=======
                 include_once("../../modelo/administrador/administradorCollector.php");
->>>>>>> master
                 $AdministradorCollectorObj = new AdministradorCollector();
                 $AdministradorCollectorObj-> createAdministrador($usuario,$cargo);
 

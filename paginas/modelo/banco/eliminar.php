@@ -60,12 +60,8 @@ session_start();
             ?>
             <?php
                 $id=$_GET['id'];
-<<<<<<< HEAD
-                include_once('../../modelo/banco/bancoCollector.php');
-=======
             
                 include_once("../../modelo/banco/bancoCollector.php");
->>>>>>> master
                 $bancoCollectorObj = new bancoCollector();
                 foreach ($bancoCollectorObj->showBancos() as $c){
                      $nombre=$c->getNombre();

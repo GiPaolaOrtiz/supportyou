@@ -63,12 +63,8 @@ session_start();
                 $nombre=$_POST['nombre'];
               
             
-<<<<<<< HEAD
-                include_once('../../modelo/categoriaProducto/categoriaproductoCollector.php');
-=======
             
                 include_once("../../modelo/categoriaProducto/categoriaproductoCollector.php");
->>>>>>> master
                
 
                 $CategoriaproductoCollectorObj = new categoriaproductoCollector();

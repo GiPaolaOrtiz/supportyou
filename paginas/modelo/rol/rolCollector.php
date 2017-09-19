@@ -1,16 +1,12 @@
 <?php
 
 include_once('rol.php');
-<<<<<<< HEAD
-include_once ("../Collector.php");
-=======
 include_once("../../modelo/Collector.php");
->>>>>>> master
 
 
 class rolCollector extends Collector
 {
-    
+  
   function showroles() {
     $rows = self::$db->getRows("SELECT * FROM rol ");   
     $arrayRol= array();        

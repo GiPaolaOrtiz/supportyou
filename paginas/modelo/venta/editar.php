@@ -24,7 +24,6 @@ session_start();
         <link rel="stylesheet"  href="../../../css/estiloadmin.css">
     </head>
     <body>
-   
         <main>
             <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
                 <div class="container">
@@ -65,13 +64,7 @@ session_start();
                 $metodo=$_POST['metodo'];
                 $producto=$_POST['producto'];
             
-<<<<<<< HEAD
-                                include_once('../../modelo/venta/ventaCollector.php');
-
-                
-=======
                 include_once('../../modelo/venta/ventaCollector.php');
->>>>>>> master
                 $ventaCollectorObj = new ventaCollector();
                 $ventaCollectorObj-> updateventa($id, $total, $cliente, $metodo, $producto);
 
@@ -87,8 +80,7 @@ session_start();
         <footer id="footer1">
         <p class="copyright text-muted small">Copyright &copy; SupportYou 2017. All Rights Reserved</p>
 
-    </footer> 
-   
+    </footer>  
     </body>
 </html>
 <?php

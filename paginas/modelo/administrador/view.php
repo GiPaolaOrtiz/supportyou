@@ -52,29 +52,13 @@ session_start();
                         </ul>
                     </div>
                 </div>
-<<<<<<< HEAD
-            </nav>  
-            
-         
-        <?php 
-            include_once ("administradorCollector.php");
-            $AdministradorCollectorObj = new administradorCollector();
-
-     
-            include_once ("../usuario/usuarioCollector.php");
-=======
             </nav>
             <?php 
             include_once("../../modelo/administrador/administradorCollector.php");
             $AdministradorCollectorObj = new administradorCollector();
 
             include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
             $UsuarioCollectorObj = new usuarioCollector();
-            
-            include_once('../Collector.php');
-
-
 
                 echo '<h2 class="topspace text-center">Administradores</h2>';
 

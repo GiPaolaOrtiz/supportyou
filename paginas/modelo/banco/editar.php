@@ -61,12 +61,8 @@ session_start();
             <?php
                 $id=$_POST['id'];
 		        $banco=$_POST['banco'];
-<<<<<<< HEAD
-                include_once('../../modelo/banco/bancoCollector.php');
-=======
             
                 include_once("../../modelo/banco/bancoCollector.php");
->>>>>>> master
                 $bancoCollectorObj = new bancoCollector();
                 $bancoCollectorObj-> updateBanco($id,$banco);
 

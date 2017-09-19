@@ -62,8 +62,10 @@ session_start();
                 </div>
             </nav>  <br><br>
 		<?php 			
-		 echo '<h2 class="topspace text-center">PRODUCTOS</h2>';
-                    echo '<h3 class="text-center">Agregar</h3>';         
+			include_once("ProductoCollector.php");
+			include_once("Producto.php");
+
+			$ProductoCollectorObj = new ProductoCollector();
 		?>	
 		<h2 class="text-center">Agrega nuevo Producto</h2>
 		<br>

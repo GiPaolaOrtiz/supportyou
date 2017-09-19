@@ -60,11 +60,7 @@ session_start();
                 $id= $_GET['id'];
                 echo '<h2 class="topspace text-center">Categoria Productos</h2>';
 
-<<<<<<< HEAD
-               include_once('../../modelo/categoriaProducto/categoriaproductoCollector.php');
-=======
                 include_once("../../modelo/categoriaProducto/categoriaproductoCollector.php");
->>>>>>> master
                 $CategoriaProductoCollectorObj = new categoriaproductoCollector();
 
                 $ObjCategoriaProducto=$CategoriaProductoCollectorObj->showCategoriaProducto($id);

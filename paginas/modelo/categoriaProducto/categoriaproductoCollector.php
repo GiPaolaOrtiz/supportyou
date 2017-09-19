@@ -1,11 +1,7 @@
 <?php
 
 include_once('CategoriaProducto.php');
-<<<<<<< HEAD
-include_once('../../modelo/Collector.php');
-=======
 include_once("../../modelo/Collector.php");
->>>>>>> master
 
 
 class categoriaproductoCollector extends Collector

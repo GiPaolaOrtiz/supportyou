@@ -78,13 +78,8 @@ session_start();
                 else if($idcategoriaproducto==4){
                      $imagen="../../../img/Tecno/". $img;
                 }
-<<<<<<< HEAD
-                include_once('ProductoCollector.php');
-=======
                 include_once("ProductoCollector.php");
->>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
-
                 $ProductoCollectorObj-> createProducto($descripcion, $estado, $precio, $imagen, $estadoventa, $idfundacion, $idcategoriaproducto);
 
                      echo "<h3 class='topspace text-center'> El Producto <span class='green'> " . $descripcion . " </span> ha sido agregado</h3>";

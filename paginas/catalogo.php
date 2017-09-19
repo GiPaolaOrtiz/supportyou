@@ -77,10 +77,6 @@ session_start();
                     <h2 class="page-header"></h2>
                 </div>
                 <?php 
-<<<<<<< HEAD
-                include_once('modelo/producto/ProductoCollector.php');
-=======
->>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
                 $ObjProducto=$ProductoCollectorObj->showProductos();
                             foreach ($ProductoCollectorObj->showProductos() as $c){

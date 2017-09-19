@@ -52,7 +52,7 @@ session_start();
                 </div>
             </div>
         </nav>
-            
+
         <?php 
                 echo '<h2 class="topspace text-center">Roles</h2>';
             ?>
@@ -60,11 +60,7 @@ session_start();
                 $id=$_POST['id'];
 		        $rol=$_POST['rol'];
             
-<<<<<<< HEAD
-                include_once ("rolCollector.php");
-=======
                 include_once("../../modelo/rol/rolCollector.php");
->>>>>>> master
                 $rolCollectorObj = new rolCollector();
                 $rolCollectorObj-> updateRol($id,$rol);
 

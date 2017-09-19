@@ -60,22 +60,17 @@ session_start();
             $id=$_GET["id"];
 
             
-<<<<<<< HEAD
-                 include_once('ProductoCollector.php');
-
-=======
                include_once("../../modelo/producto/ProductoCollector.php");
->>>>>>> master
                 $ProductoCollectorObj = new ProductoCollector();
            
              
                 foreach ($ProductoCollectorObj->showProductos() as $c){
-                     $descripcion=$c->getDescripcion();
+                     $estado=$c->getDescripcion();
                
                }
                  $ProductoCollectorObj-> deleteProducto($id);
             
-                echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $descripcion . "</span> ha sido eliminado</h3>";
+                echo "<h3 class='topspace text-center'>El producto <span class='red'>" . $estado . "</span> ha sido eliminado</h3>";
                 
             ?>
             

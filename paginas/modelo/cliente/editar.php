@@ -53,7 +53,8 @@ session_start();
                 </div>
             </div>
         </nav>
-            
+
+
         <?php 
                 echo '<h2 class="topspace text-center">Editar Cliente</h2>';
             ?>
@@ -72,20 +73,12 @@ session_start();
 
 
             
-<<<<<<< HEAD
-                include_once ("../../modelo/usuario/usuarioCollector.php");
-=======
                 include_once("../../modelo/usuario/usuarioCollector.php");
->>>>>>> master
                 $UsuarioCollectorObj = new usuarioCollector();
                 $UsuarioCollectorObj-> updateUsuario($idusuario,$email,$nombre,$username,$pass,$idrol);
 
 
-<<<<<<< HEAD
-                include_once ("clienteCollector.php");
-=======
                 include_once("../../modelo/cliente/clienteCollector.php");
->>>>>>> master
                 $ClienteCollectorObj = new ClienteCollector();
                 $ClienteCollectorObj-> updateCliente($idcliente,$idusuario,$fechanacimiento,$fecharegistro);
 

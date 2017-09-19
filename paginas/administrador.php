@@ -1,11 +1,4 @@
 <?php
-<<<<<<< HEAD
-	session_start();
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-=======
 session_start();
 
        if (!isset($_SESSION['user'])){
@@ -20,7 +13,6 @@ session_start();
     <html lang="en">
 
     <head>
->>>>>>> master
 
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -59,26 +51,6 @@ session_start();
                     <?php
                         echo"<a href='administrador.php'><img alt='LogoAplicacion' id='estilo_logo' src='../img/LogoSupportYou.png'></a>"
                   ?>
-<<<<<<< HEAD
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            
-
-            
-            
-            
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <br>
-                <ul class="nav navbar-nav navbar-right">
-    
-                     <li>
-                         
-                       
-                         
-                         
-                    </li>
-                </ul>
-=======
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -93,7 +65,6 @@ session_start();
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
->>>>>>> master
             </div>
             <!-- /.container -->
         </nav>
@@ -160,12 +131,7 @@ session_start();
                     </div>
                 </div>
             </div>
-<<<<<<< HEAD
-            
-
-=======
         </div>
->>>>>>> master
     </body>
 
     </html>
