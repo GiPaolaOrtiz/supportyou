@@ -1,7 +1,16 @@
-
 <?php
 session_start();
-?><!DOCTYPE HTML>
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
+?>
+
+
+<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
@@ -89,3 +98,8 @@ session_start();
     </footer>  
     </body>
 </html>
+    <?php
+
+}
+        }
+?>

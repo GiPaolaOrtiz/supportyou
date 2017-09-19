@@ -1,6 +1,14 @@
 <?php
 session_start();
+
+       if (!isset($_SESSION['user'])){
+            echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+        }else{
+            if(!$_SESSION['rol']==1){
+                echo "<meta HTTP-EQUIV='REFRESH' CONTENT='1;URL=../../../index.php'>";
+            }else{           
 ?>
+
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -59,7 +67,6 @@ session_start();
                
                 $cargo=$_POST['cargo'];
 
-
             
                 include_once("../../modelo/usuario/usuarioCollector.php");
                 $UsuarioCollectorObj = new usuarioCollector();
@@ -86,3 +93,10 @@ session_start();
     </footer>  
     </body>
 </html>
+
+    <?php
+
+}
+
+    }
+?>

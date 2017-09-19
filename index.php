@@ -42,13 +42,13 @@
                 <?php
                 echo"<a href='index.php'><img alt='LogoAplicacion' id='estilo_logo' src='img/LogoSupportYou.png'></a>"
                 ?>
-                
+
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <br>
                 <ul class="nav navbar-nav navbar-right">
-                    
+
                     <li>
                         <?php
                         echo"<a class='page-scroll' href='paginas/RegistroFundacion.php'>FUNDACIONES</a>"
@@ -118,10 +118,10 @@
                         <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
 
                         <button class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='paginas/RegistroConfirmacion.html'">Regístrate</button>
-                        
-                        
+
+
                         <button id="boton2" class="btn btn-lg btn-primary btn-block" type="submit" onClick="location.href='paginas/login.php'">Iniciar sesion</button>
-                        
+
                         <br>
                         <h4 id="styleh4">Mucha gente pequeña, en lugares pequeños, haciendo cosas pequeñas, puede cambiar el mundo.</h4>
                     </form>
